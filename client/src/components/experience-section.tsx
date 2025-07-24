@@ -40,25 +40,62 @@ const ExperienceSection = () => {
       ],
     },
     {
+      title: "Project Manager - Mainframe Upgrade",
+      company: "Dell Technologies",
+      period: "Jan 2011 - Jan 2013",
+      location: "Louisville, KY",
+      status: "completed",
+      description: "Led comprehensive 2-year mainframe infrastructure upgrade project for critical healthcare systems. Coordinated cross-functional teams, managed transitions, and ensured zero-downtime deployment for patient-critical operations.",
+      achievements: [
+        "Coordinated logistics and downtime planning for 2-year mainframe upgrade",
+        "Managed cross-regional team communications and stakeholder coordination",
+        "Verified successful deployment and documentation compliance",
+        "Ensured continuity of critical healthcare operations throughout transition",
+        "Delivered project on schedule with zero patient care disruption",
+      ],
+      highlights: [
+        "Complex healthcare system upgrade",
+        "Multi-year project lifecycle management",
+        "Zero-downtime deployment success",
+        "Cross-functional team leadership",
+      ],
+      stats: [
+        { label: "Project Duration", value: "2 Years" },
+        { label: "System Uptime", value: "100%" },
+        { label: "Regional Impact", value: "3 States" },
+        { label: "Patient Safety", value: "0 Incidents" },
+      ],
+    },
+    {
       title: "System Analyst & Team Lead",
       company: "Dell Technologies",
       period: "Oct 1997 - Jun 2016",
       location: "Louisville, KY",
       status: "completed",
-      description: "Led mainframe operations and infrastructure services for Jewish Hospital and KentuckyOne Healthcare. Promoted to Team Lead, managing 12 staff across 24/7 operations with full P&L responsibility.",
+      description: "Led mainframe operations and infrastructure services for Jewish Hospital and KentuckyOne Healthcare through organizational transitions from Perot Systems to Dell Technologies to Wipro. Promoted to Team Lead with full P&L responsibility for 24/7 operations.",
       achievements: [
-        "Managed 14,000 tape backup infrastructure",
-        "Led annual disaster recovery operations in NJ",
-        "Generated department profit through value-added services",
-        "Coordinated multi-region hospital data integration",
-        "Authored comprehensive SOPs and technical documentation",
-        "Maintained critical systems across KY, IN, and OH",
+        "Managed 14,000 tape backup infrastructure with daily, weekly, quarterly, and yearly retention cycles",
+        "Led annual disaster recovery operations at off-site New Jersey recovery center",
+        "Generated department profit by offering and billing high-value services beyond standard SLA",
+        "Coordinated multi-region hospital data integration across KY, IN, and OH",
+        "Authored thousands of step-by-step guides, SOPs, and technical procedures for SharePoint archives",
+        "Executed monthly system updates and time-sensitive IPLs across multiple time zones",
+        "Maintained 100% SLA compliance with PeopleSoft ticket monitoring and escalation follow-through",
+        "Coordinated with Dell support in Plano, TX and global teams in India for incident resolution",
+      ],
+      highlights: [
+        "Mainframe Upgrade Project Leadership (2011-2013)",
+        "Cross-functional team coordination",
+        "Critical healthcare system reliability",
+        "24/7 shift management and escalation chains",
       ],
       stats: [
         { label: "Years Experience", value: "18.75" },
         { label: "Team Members", value: "12" },
         { label: "Operations", value: "24/7" },
         { label: "SLA Compliance", value: "100%" },
+        { label: "Tape Infrastructure", value: "14,000" },
+        { label: "Regional Coverage", value: "3 States" },
       ],
     },
   ];
@@ -68,7 +105,7 @@ const ExperienceSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Professional Experience</h2>
-          <p className="text-xl text-gray-600">Two decades of progressive leadership in IT infrastructure and operations</p>
+          <p className="text-xl text-gray-600">Two decades of progressive leadership in IT infrastructure, operations, and project management</p>
         </div>
         
         <div className="relative">
@@ -115,12 +152,27 @@ const ExperienceSection = () => {
                     )}
                     
                     <div className="space-y-2">
-                      {(exp.achievements || []).slice(0, 3).map((achievement, achIndex) => (
-                        <div key={achIndex} className="flex items-center gap-2 text-sm">
-                          <CheckCircle className="h-4 w-4 text-success-green flex-shrink-0" />
+                      {(exp.achievements || []).slice(0, 4).map((achievement, achIndex) => (
+                        <div key={achIndex} className="flex items-start gap-2 text-sm">
+                          <CheckCircle className="h-4 w-4 text-success-green flex-shrink-0 mt-0.5" />
                           <span className="text-gray-700">{achievement}</span>
                         </div>
                       ))}
+                      {(exp.achievements || []).length > 4 && (
+                        <details className="group">
+                          <summary className="cursor-pointer text-sm text-accent-blue hover:text-accent-blue/80 font-medium">
+                            Show {(exp.achievements || []).length - 4} more achievements...
+                          </summary>
+                          <div className="mt-2 space-y-2">
+                            {(exp.achievements || []).slice(4).map((achievement, achIndex) => (
+                              <div key={achIndex + 4} className="flex items-start gap-2 text-sm">
+                                <CheckCircle className="h-4 w-4 text-success-green flex-shrink-0 mt-0.5" />
+                                <span className="text-gray-700">{achievement}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </details>
+                      )}
                     </div>
                   </div>
                 </div>
