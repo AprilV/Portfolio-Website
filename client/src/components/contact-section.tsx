@@ -65,8 +65,8 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "aprilv120@gmail.com",
-      link: "mailto:aprilv120@gmail.com",
+      value: "april_sykes@proton.me",
+      link: "mailto:april_sykes@proton.me",
     },
     {
       icon: MapPin,

@@ -21,6 +21,7 @@ This is a professional portfolio website built as a full-stack application showc
 - Included CCNA certification details from Cisco
 - Enhanced overall color scheme with vibrant professional palette
 - Updated skills to reflect LinkedIn top skills and contact information
+- Updated contact email to april_sykes@proton.me for enhanced privacy and security
 
 ## User Preferences
 

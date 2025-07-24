@@ -84,7 +84,7 @@ const ATSResumeGenerator = () => {
       name: "April V. Sykes",
       title: "Assistant Project Manager | IT Professional | CAPM Candidate",
       location: "Bremerton, WA",
-      email: "aprilv120@gmail.com",
+      email: "april_sykes@proton.me",
       phone: "(360) 555-0123"
     },
     summary: {
