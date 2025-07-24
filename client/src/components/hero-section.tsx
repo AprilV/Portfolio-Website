@@ -1,5 +1,6 @@
 import { ArrowRight, Download, CheckCircle, GraduationCap, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profilePhoto from "@assets/april_sykes_profile.jpg";
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -69,14 +70,13 @@ const HeroSection = () => {
           
           <div className="lg:text-right">
             <div className="relative inline-block">
-              <div className="w-80 h-80 bg-gradient-to-br from-purple-accent/20 via-accent-blue/15 to-orange-accent/20 rounded-2xl shadow-2xl flex items-center justify-center">
-                {/* Professional headshot placeholder */}
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-navy/20 to-accent-blue/20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-accent/30 to-orange-accent/30 rounded-full"></div>
-                  </div>
-                  <p className="text-sm text-gray-600">Professional Photo</p>
-                </div>
+              <div className="w-80 h-80 rounded-2xl shadow-2xl overflow-hidden relative">
+                <img 
+                  src={profilePhoto} 
+                  alt="April V. Sykes - Professional Photo" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-accent/10 via-transparent to-orange-accent/10"></div>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-4">
                 <div className="text-center">
