@@ -59,7 +59,7 @@ const ProjectsSection = () => {
         "Professional PowerPoint presentation with multimedia",
         "Covers Deep Blue, AlphaGo, transformer models, and ethics",
       ],
-      link: "/attached_assets/Presentation - The Evolution of Artificial Intelligence_1753389595761.pptx",
+      link: "/attached_assets/Presentation - The Evolution of Artificial Intelligence2_1753390635100.pptx",
       videoLink: "https://www.youtube.com/watch?v=kVlNcL9oR6Q",
     },
     {
