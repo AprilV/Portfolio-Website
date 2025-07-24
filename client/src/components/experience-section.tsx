@@ -102,16 +102,16 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-12 bg-gradient-to-b from-gray-50/30 to-white">
+    <section id="experience" className="py-12 bg-section-gradient">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-block">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 relative">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 relative">
               Professional Experience
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-success-green to-accent-blue rounded-full"></div>
             </h2>
           </div>
-          <p className="text-xl text-gray-600 mt-6">Twenty years of IT infrastructure experience with six years of team leadership</p>
+          <p className="text-xl text-muted-foreground mt-6">Twenty years of IT infrastructure experience with six years of team leadership</p>
         </div>
         
         <div className="relative">
@@ -123,7 +123,7 @@ const ExperienceSection = () => {
             {experiences.map((exp, index) => (
               <div key={index} className="relative flex flex-col lg:flex-row items-start lg:items-center">
                 <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8 lg:order-2'} mb-8 lg:mb-0`}>
-                  <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-card-gradient p-8 rounded-xl shadow-lg border border-border">
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`w-3 h-3 rounded-full ${
                         exp.status === 'current' ? 'bg-success-green' : 'bg-accent-blue'
@@ -132,9 +132,9 @@ const ExperienceSection = () => {
                         <span className="text-sm font-medium text-success-green">Current</span>
                       )}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{exp.title}</h3>
-                    <p className="text-accent-blue font-medium mb-1">{exp.company}</p>
-                    <div className="flex items-center gap-4 mb-3 text-sm text-gray-600">
+                    <h3 className="text-xl font-bold text-card-foreground mb-2">{exp.title}</h3>
+                    <p className="text-electric-blue font-medium mb-1">{exp.company}</p>
+                    <div className="flex items-center gap-4 mb-3 text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">
                         <Clock className="h-4 w-4" />
                         <span>{exp.period}</span>
@@ -144,14 +144,14 @@ const ExperienceSection = () => {
                         <span>{exp.location}</span>
                       </div>
                     </div>
-                    <p className="text-gray-700 mb-4">{exp.description}</p>
+                    <p className="text-card-foreground mb-4">{exp.description}</p>
                     
                     {exp.stats && (
                       <div className="grid grid-cols-2 gap-4 mb-4">
                         {exp.stats.map((stat, statIndex) => (
                           <div key={statIndex} className="text-center">
-                            <div className="text-2xl font-bold text-navy">{stat.value}</div>
-                            <div className="text-xs text-gray-600">{stat.label}</div>
+                            <div className="text-2xl font-bold text-primary">{stat.value}</div>
+                            <div className="text-xs text-muted-foreground">{stat.label}</div>
                           </div>
                         ))}
                       </div>

@@ -18,20 +18,20 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-hero-gradient opacity-15"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-transparent to-white/70"></div>
+      <div className="absolute inset-0 bg-hero-gradient opacity-80"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50"></div>
       
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                April V. <span className="text-navy">Sykes</span>
+              <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
+                April V. <span className="text-primary">Sykes</span>
               </h1>
-              <h2 className="text-xl lg:text-2xl text-dark-gray font-medium">
+              <h2 className="text-xl lg:text-2xl text-foreground/90 font-medium">
                 Aspiring Assistant Project Manager | Senior BAS-IS Student | CAPM Candidate (2025)
               </h2>
-              <p className="text-lg text-gray-600 max-w-xl">
+              <p className="text-lg text-muted-foreground max-w-xl">
                 Two decades of progressive leadership experience in IT infrastructure, team management, and project coordination, 
                 now transitioning into formal project management. Combining deep operational knowledge with formal 
                 project leadership training and modern technical tools.
