@@ -62,6 +62,7 @@ const ProjectsSection = () => {
       link: "/attached_assets/Presentation - The Evolution of Artificial Intelligence2_1753390635100.pptx",
       videoLink: "https://www.youtube.com/watch?v=kVlNcL9oR6Q",
       paperLink: "/attached_assets/The Evolution of Artificial Intelligence_1753389614635.docx",
+      blogLink: "https://aprilv.github.io/AprilsBlog/#/blog",
     },
   ];
 
@@ -186,6 +187,18 @@ const ProjectsSection = () => {
                       >
                         Download Paper
                         <FileText className="ml-2 h-4 w-4" />
+                      </Button>
+                    )}
+                    {project.blogLink && (
+                      <Button 
+                        variant="ghost" 
+                        className="text-accent-blue hover:text-accent-blue/80 p-0 h-auto font-medium justify-start"
+                        onClick={() => {
+                          window.open(project.blogLink, '_blank');
+                        }}
+                      >
+                        View Research Blog Journal
+                        <ExternalLink className="ml-2 h-4 w-4" />
                       </Button>
                     )}
                   </div>
