@@ -31,7 +31,8 @@ The application follows a monorepo structure with clear separation between clien
 ### Backend Architecture
 - **Express.js Server** with TypeScript for type safety
 - **RESTful API** design for contact form submissions
-- **Memory Storage** implementation with interface for future database integration
+- **PostgreSQL Database** with Drizzle ORM for persistent data storage
+- **Database Storage** implementation replacing memory storage
 - **Error Handling**: Centralized error management with proper HTTP status codes
 - **Development Tools**: Vite integration for hot module replacement
 
