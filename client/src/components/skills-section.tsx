@@ -8,11 +8,11 @@ const SkillsSection = () => {
       icon: ClipboardCheck,
       color: "navy",
       skills: [
-        { name: "Agile Methodologies", level: 90, proficiency: "Advanced" },
-        { name: "Risk Management", level: 85, proficiency: "Proficient" },
-        { name: "Stakeholder Communication", level: 95, proficiency: "Expert" },
-        { name: "Team Leadership", level: 92, proficiency: "Expert" },
-        { name: "Documentation", level: 98, proficiency: "Expert" },
+        { name: "Agile Methodologies", experience: "Academic + Projects", description: "Coursework & capstone implementation" },
+        { name: "Risk Management", experience: "Academic", description: "Project Management I & II coursework" },
+        { name: "Stakeholder Communication", experience: "20+ Years", description: "Extensive professional experience" },
+        { name: "Team Leadership", experience: "18+ Years", description: "Led 12-person teams at Dell Technologies" },
+        { name: "Documentation", experience: "20+ Years", description: "Authored thousands of SOPs and procedures" },
       ],
     },
     {
@@ -20,11 +20,11 @@ const SkillsSection = () => {
       icon: Code,
       color: "accent-blue",
       skills: [
-        { name: "React/JavaScript", level: 85, proficiency: "Proficient" },
-        { name: "Node.js/REST APIs", level: 80, proficiency: "Proficient" },
-        { name: "Network Administration", level: 95, proficiency: "Expert" },
-        { name: "Linux/Windows Systems", level: 90, proficiency: "Expert" },
-        { name: "Database Management", level: 78, proficiency: "Proficient" },
+        { name: "React/JavaScript", experience: "Academic + Projects", description: "TimelyRx and PMP Quiz apps" },
+        { name: "Node.js/REST APIs", experience: "Academic + Projects", description: "Full-stack capstone development" },
+        { name: "Network Administration", experience: "20+ Years", description: "Cisco networking, mainframe operations" },
+        { name: "Linux/Windows Systems", experience: "20+ Years", description: "Enterprise system administration" },
+        { name: "Database Management", experience: "Academic", description: "Coursework in database structures" },
       ],
     },
     {
@@ -32,11 +32,11 @@ const SkillsSection = () => {
       icon: BarChart3,
       color: "success-green",
       skills: [
-        { name: "Business Process Analysis", level: 88, proficiency: "Advanced" },
-        { name: "Data Analysis", level: 82, proficiency: "Proficient" },
-        { name: "Excel/Power Query", level: 90, proficiency: "Advanced" },
-        { name: "Statistical Reporting", level: 85, proficiency: "Proficient" },
-        { name: "Technical Writing", level: 95, proficiency: "Expert" },
+        { name: "Business Process Analysis", experience: "Academic", description: "Information Systems coursework" },
+        { name: "Data Analysis", experience: "Academic", description: "Business Statistics and Analytics courses" },
+        { name: "Excel/Power Query", experience: "Professional", description: "Business reporting and data analysis" },
+        { name: "Statistical Reporting", experience: "Academic", description: "Business Statistics coursework" },
+        { name: "Technical Writing", experience: "20+ Years", description: "Extensive documentation and procedures" },
       ],
     },
   ];
@@ -85,16 +85,16 @@ const SkillsSection = () => {
     }
   };
 
-  const getProgressColor = (color: string) => {
+  const getExperienceTagClass = (color: string) => {
     switch (color) {
       case "navy":
-        return "bg-navy";
+        return "text-navy bg-navy/10";
       case "accent-blue":
-        return "bg-accent-blue";
+        return "text-accent-blue bg-accent-blue/10";
       case "success-green":
-        return "bg-success-green";
+        return "text-success-green bg-success-green/10";
       default:
-        return "bg-gray-600";
+        return "text-gray-600 bg-gray-100";
     }
   };
 
@@ -118,17 +118,14 @@ const SkillsSection = () => {
               
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-700">{skill.name}</span>
-                      <span className={`text-sm font-medium text-${category.color}`}>{skill.proficiency}</span>
+                  <div key={skillIndex} className="border-l-4 border-gray-200 pl-4 py-2">
+                    <div className="flex justify-between items-start mb-1">
+                      <span className="text-sm font-medium text-gray-900">{skill.name}</span>
+                      <span className={`text-xs font-medium px-2 py-1 rounded ${getExperienceTagClass(category.color)}`}>
+                        {skill.experience}
+                      </span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div 
-                        className={`h-2 rounded-full transition-all duration-500 ${getProgressColor(category.color)}`}
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                    <p className="text-xs text-gray-600">{skill.description}</p>
                   </div>
                 ))}
               </div>
