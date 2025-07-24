@@ -1,4 +1,4 @@
-import { Clock, Code, Users, ExternalLink } from "lucide-react";
+import { Clock, Code, Users, ExternalLink, FileText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -59,7 +59,8 @@ const ProjectsSection = () => {
         "Professional PowerPoint presentation with multimedia",
         "Covers Deep Blue, AlphaGo, transformer models, and ethics",
       ],
-      link: "https://www.youtube.com/watch?v=kVlNcL9oR6Q",
+      link: "/attached_assets/Presentation - The Evolution of Artificial Intelligence_1753389595761.pptx",
+      videoLink: "https://www.youtube.com/watch?v=kVlNcL9oR6Q",
     },
     {
       title: "Blog Research Project",
@@ -143,16 +144,41 @@ const ProjectsSection = () => {
                 </div>
                 
                 {project.link !== "#" ? (
-                  <Button 
-                    variant="ghost" 
-                    className="text-navy hover:text-navy/80 p-0 h-auto font-medium"
-                    onClick={() => {
-                      window.open(project.link, '_blank');
-                    }}
-                  >
-                    {project.link.includes('youtube') ? 'View Video Content' : 'View Project'}
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
+                  <div className="flex gap-3">
+                    <Button 
+                      variant="ghost" 
+                      className="text-navy hover:text-navy/80 p-0 h-auto font-medium"
+                      onClick={() => {
+                        if (project.link.includes('.pptx')) {
+                          // For PowerPoint files, create a download link
+                          const link = document.createElement('a');
+                          link.href = project.link;
+                          link.download = 'The Evolution of Artificial Intelligence.pptx';
+                          document.body.appendChild(link);
+                          link.click();
+                          document.body.removeChild(link);
+                        } else {
+                          window.open(project.link, '_blank');
+                        }
+                      }}
+                    >
+                      {project.link.includes('youtube') ? 'View Video Content' : 
+                       project.link.includes('.pptx') ? 'Download Presentation' : 'View Project'}
+                      <FileText className="ml-2 h-4 w-4" />
+                    </Button>
+                    {project.videoLink && (
+                      <Button 
+                        variant="outline" 
+                        className="text-navy hover:text-navy/80 p-0 h-auto font-medium px-3 py-1 border-navy/20"
+                        onClick={() => {
+                          window.open(project.videoLink, '_blank');
+                        }}
+                      >
+                        Watch Video
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Button>
+                    )}
+                  </div>
                 ) : (
                   <Button 
                     variant="ghost" 
