@@ -49,7 +49,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-2 bg-gradient-to-r from-orange-accent/10 to-orange-accent/5 px-4 py-2 rounded-lg border border-orange-accent/20">
                 <Briefcase className="h-5 w-5 text-orange-accent" />
-                <span className="text-sm font-medium">20+ Years IT Experience</span>
+                <span className="text-sm font-medium">20+ Years IT Experience & Leadership</span>
               </div>
             </div>
             
