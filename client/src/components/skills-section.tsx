@@ -1,4 +1,4 @@
-import { ClipboardCheck, Code, BarChart3, Award } from "lucide-react";
+import { ClipboardCheck, Code, BarChart3, Award, Shield } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 
 const SkillsSection = () => {
@@ -71,48 +71,48 @@ const SkillsSection = () => {
       credentialId: null
     },
     {
-      name: "TestOut Linux Pro",
-      description: "Academic - Linux I Course",
+      name: "CompTIA Linux+",
+      description: "CompTIA Certification (via TestOut)",
       detail: "ID: 6-2C6-VCQ5KS",
-      icon: ClipboardCheck,
+      icon: Shield,
       color: "success-green",
-      link: "https://www.testout.com/",
+      link: "https://www.comptia.org/certifications/linux",
       credentialId: "6-2C6-VCQ5KS"
     },
     {
-      name: "TestOut Security Pro",
-      description: "Security Certification",
+      name: "CompTIA Security+",
+      description: "CompTIA Security Certification (via TestOut)",
       detail: "ID: 6-2C6-V9F5UG",
-      icon: ClipboardCheck,
+      icon: Shield,
       color: "orange-accent",
-      link: "https://www.testout.com/",
+      link: "https://www.comptia.org/certifications/security", 
       credentialId: "6-2C6-V9F5UG"
     },
     {
-      name: "Certified Client Pro",
-      description: "TestOut Certification",
+      name: "CompTIA A+ Client",
+      description: "CompTIA A+ Certification (via TestOut)",
       detail: "ID: 6-2c6-v3pmva",
-      icon: ClipboardCheck,
+      icon: Shield,
       color: "accent-blue",
-      link: "https://www.testout.com/",
+      link: "https://www.comptia.org/certifications/a",
       credentialId: "6-2c6-v3pmva"
     },
     {
-      name: "Certified PC Pro",
-      description: "TestOut Certification", 
+      name: "CompTIA A+ PC Pro",
+      description: "CompTIA A+ Certification (via TestOut)", 
       detail: "ID: 6-2c6-v3p73s",
-      icon: ClipboardCheck,
+      icon: Shield,
       color: "purple-accent",
-      link: "https://www.testout.com/",
+      link: "https://www.comptia.org/certifications/a",
       credentialId: "6-2c6-v3p73s"
     },
     {
-      name: "Network Professional (CNP)",
-      description: "TestOut Certification",
+      name: "CompTIA Network+",
+      description: "CompTIA Network Professional (via TestOut)",
       detail: "ID: 6-2c6-vv5625",
-      icon: ClipboardCheck,
+      icon: Shield,
       color: "success-green",
-      link: "https://www.testout.com/",
+      link: "https://www.comptia.org/certifications/network",
       credentialId: "6-2c6-vv5625"
     },
     {
