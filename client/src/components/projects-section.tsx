@@ -49,7 +49,7 @@ const ProjectsSection = () => {
     },
     {
       title: "The Evolution of Artificial Intelligence",
-      description: "Comprehensive research paper and PowerPoint presentation examining AI's transformation from science fiction to societal infrastructure for IS390, with supplementary video content.",
+      description: "Comprehensive research paper and PowerPoint presentation examining AI's transformation from science fiction to societal infrastructure for IS390. Includes downloadable presentation and YouTube video.",
       icon: Users,
       color: "accent-blue",
       technologies: ["Research", "PowerPoint", "IS390", "APA"],
@@ -150,17 +150,29 @@ const ProjectsSection = () => {
                       className="text-navy hover:text-navy/80 p-0 h-auto font-medium"
                       onClick={() => {
                         if (project.link.includes('.pptx')) {
-                          // For PowerPoint files, use Office Online viewer
-                          const encodedUrl = encodeURIComponent(window.location.origin + project.link);
-                          const viewerUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodedUrl}`;
-                          window.open(viewerUrl, '_blank');
+                          // Check if running on localhost (development)
+                          if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                            // During development, direct download
+                            const link = document.createElement('a');
+                            link.href = project.link;
+                            link.download = 'The Evolution of Artificial Intelligence.pptx';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                            alert('Development mode: Presentation downloaded. When deployed, visitors can view it directly in their browser!');
+                          } else {
+                            // In production, use online viewer
+                            const fullUrl = window.location.origin + project.link;
+                            const viewerUrl = `https://docs.google.com/gview?url=${encodeURIComponent(fullUrl)}&embedded=true`;
+                            window.open(viewerUrl, '_blank');
+                          }
                         } else {
                           window.open(project.link, '_blank');
                         }
                       }}
                     >
                       {project.link.includes('youtube') ? 'View Video Content' : 
-                       project.link.includes('.pptx') ? 'View Presentation' : 'View Project'}
+                       project.link.includes('.pptx') ? 'Open Presentation' : 'View Project'}
                       <FileText className="ml-2 h-4 w-4" />
                     </Button>
                     {project.videoLink && (
