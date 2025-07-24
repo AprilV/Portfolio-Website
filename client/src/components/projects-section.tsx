@@ -56,8 +56,8 @@ const ProjectsSection = () => {
       features: [
         "From Science Fiction to Societal Infrastructure analysis",
         "Academic research paper with APA formatting and citations",
-        "Professional PowerPoint presentation with multimedia",
-        "Covers Deep Blue, AlphaGo, transformer models, and ethics",
+        "Professional PowerPoint presentation with multimedia content",
+        "Covers AI evolution, Deep Blue, AlphaGo, transformer models, and ethics",
       ],
       link: "/attached_assets/Presentation - The Evolution of Artificial Intelligence2_1753390635100.pptx",
       videoLink: "https://www.youtube.com/watch?v=kVlNcL9oR6Q",
@@ -159,7 +159,10 @@ const ProjectsSection = () => {
                             document.body.appendChild(link);
                             link.click();
                             document.body.removeChild(link);
-                            alert('Development mode: Presentation downloaded. When deployed, visitors can view it directly in their browser!');
+                            // Show a more professional message
+                            setTimeout(() => {
+                              alert('📄 Presentation downloaded!\n\nNote: When your portfolio is deployed online, visitors will be able to view this presentation directly in their browser without downloading it.');
+                            }, 100);
                           } else {
                             // In production, use online viewer
                             const fullUrl = window.location.origin + project.link;
