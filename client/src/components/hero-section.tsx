@@ -1,4 +1,4 @@
-import { ArrowRight, Download, CheckCircle, GraduationCap, Briefcase } from "lucide-react";
+import { ArrowRight, Download, CheckCircle, GraduationCap, Briefcase, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePhoto from "@assets/april_sykes_profile.jpg";
 
@@ -49,7 +49,11 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-2 bg-gradient-to-r from-orange-accent/10 to-orange-accent/5 px-4 py-2 rounded-lg border border-orange-accent/20">
                 <Briefcase className="h-5 w-5 text-orange-accent" />
-                <span className="text-sm font-medium">20+ Years IT Experience & Leadership</span>
+                <span className="text-sm font-medium">20+ Years IT Experience</span>
+              </div>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-accent-blue/10 to-accent-blue/5 px-4 py-2 rounded-lg border border-accent-blue/20">
+                <Users className="h-5 w-5 text-accent-blue" />
+                <span className="text-sm font-medium">6 Years Team Leadership</span>
               </div>
             </div>
             
