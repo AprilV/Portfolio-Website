@@ -48,20 +48,71 @@ const SkillsSection = () => {
       detail: "Summer 2025",
       icon: Award,
       color: "navy",
+      link: null,
+      credentialId: null
     },
     {
-      name: "CCNA",
+      name: "CCNA: Switching & Routing",
       description: "Cisco Networking",
-      detail: "Switching & Routing",
+      detail: "Issued Mar 2024",
       icon: Code,
       color: "accent-blue",
+      link: "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications.html",
+      credentialId: null
     },
     {
-      name: "TestOut Pro",
-      description: "Security & Network",
-      detail: "Multiple Certifications",
+      name: "CCNA: Intro to Networks",
+      description: "Cisco Networking",
+      detail: "Issued Dec 2023",
+      icon: Code,
+      color: "purple-accent",
+      link: "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications.html",
+      credentialId: null
+    },
+    {
+      name: "TestOut Linux Pro",
+      description: "CompTIA",
+      detail: "ID: 6-2C6-VCQ5KS",
       icon: ClipboardCheck,
       color: "success-green",
+      link: "https://www.testout.com/",
+      credentialId: "6-2C6-VCQ5KS"
+    },
+    {
+      name: "TestOut Security Pro",
+      description: "Security Certification",
+      detail: "ID: 6-2C6-V9F5UG",
+      icon: ClipboardCheck,
+      color: "orange-accent",
+      link: "https://www.testout.com/",
+      credentialId: "6-2C6-V9F5UG"
+    },
+    {
+      name: "Certified Client Pro",
+      description: "TestOut Certification",
+      detail: "ID: 6-2c6-v3pmva",
+      icon: ClipboardCheck,
+      color: "accent-blue",
+      link: "https://www.testout.com/",
+      credentialId: "6-2c6-v3pmva"
+    },
+    {
+      name: "Certified PC Pro",
+      description: "TestOut Certification", 
+      detail: "ID: 6-2c6-v3p73s",
+      icon: ClipboardCheck,
+      color: "purple-accent",
+      link: "https://www.testout.com/",
+      credentialId: "6-2c6-v3p73s"
+    },
+    {
+      name: "Network Professional (CNP)",
+      description: "TestOut Certification",
+      detail: "ID: 6-2c6-vv5625",
+      icon: ClipboardCheck,
+      color: "success-green",
+      link: "https://www.testout.com/",
+      credentialId: "6-2c6-vv5625"
     },
     {
       name: "BAS-IS",
@@ -69,6 +120,8 @@ const SkillsSection = () => {
       detail: "Spring 2026",
       icon: BarChart3,
       color: "navy",
+      link: null,
+      credentialId: null
     },
   ];
 
@@ -80,6 +133,10 @@ const SkillsSection = () => {
         return "text-accent-blue bg-accent-blue/10";
       case "success-green":
         return "text-success-green bg-success-green/10";
+      case "purple-accent":
+        return "text-purple-accent bg-purple-accent/10";
+      case "orange-accent":
+        return "text-orange-accent bg-orange-accent/10";
       default:
         return "text-gray-600 bg-gray-100";
     }
@@ -157,15 +214,45 @@ const SkillsSection = () => {
         {/* Certifications */}
         <div>
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Certifications & Education</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center">
-                <div className={`w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 ${getColorClass(cert.color)}`}>
-                  <cert.icon className="w-8 h-8" />
+              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div className="flex items-start gap-4">
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
+                    <cert.icon className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-gray-900 mb-1 text-sm leading-tight">{cert.name}</h4>
+                    <p className="text-xs text-gray-600 mb-1">{cert.description}</p>
+                    <p className="text-xs text-gray-500 mb-2">{cert.detail}</p>
+                    {cert.link && (
+                      <a 
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-xs text-accent-blue hover:text-accent-blue/80 transition-colors font-medium"
+                      >
+                        <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Verify Credential
+                        <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    )}
+                    {cert.credentialId && (
+                      <div className="mt-1">
+                        <span className="inline-flex items-center text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
+                          <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                          </svg>
+                          ID: {cert.credentialId}
+                        </span>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">{cert.name}</h4>
-                <p className="text-sm text-gray-600">{cert.description}</p>
-                <p className="text-xs text-gray-500">{cert.detail}</p>
               </div>
             ))}
           </div>

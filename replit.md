@@ -4,6 +4,16 @@
 
 This is a professional portfolio website built as a full-stack application showcasing April V. Sykes, an aspiring Assistant Project Manager transitioning from IT infrastructure to project management. The application features a modern React frontend with a Node.js/Express backend, styled with shadcn/ui components and Tailwind CSS.
 
+## Recent Changes
+
+**January 2025**: Enhanced certifications section with detailed credential information
+- Added comprehensive TestOut certification details with credential IDs
+- Included CCNA certification details from Cisco
+- Added interactive verification links for authentic credential verification
+- Improved certification layout with better visual organization
+- Added color-coded skill indicators with individual accent colors
+- Enhanced overall color scheme with vibrant professional palette
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
