@@ -18,8 +18,8 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-hero-gradient opacity-80"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50"></div>
+      <div className="absolute inset-0 bg-hero-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20"></div>
       
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
