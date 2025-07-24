@@ -13,6 +13,10 @@ This is a professional portfolio website built as a full-stack application showc
 - Improved certification layout with better visual organization
 - Added color-coded skill indicators with individual accent colors
 - Enhanced overall color scheme with vibrant professional palette
+- Integrated professional photo from GitHub website
+- Updated hero section with LinkedIn profile summary
+- Updated skills to reflect LinkedIn top skills (Information Systems Integration, LAN Administration, Node.js)
+- Ensured all contact information matches LinkedIn profile (aprilv120@gmail.com, Bremerton, WA)
 
 ## User Preferences
 

@@ -26,11 +26,12 @@ const HeroSection = () => {
                 April V. <span className="text-navy">Sykes</span>
               </h1>
               <h2 className="text-xl lg:text-2xl text-dark-gray font-medium">
-                Aspiring Assistant Project Manager
+                Aspiring Assistant Project Manager | BAS-IS Student | CAPM Candidate (2025)
               </h2>
               <p className="text-lg text-gray-600 max-w-xl">
-                IT Professional with 20+ years of experience transitioning into Project Management. 
-                Bridging deep technical expertise with formal PM training and CAPM certification.
+                IT professional with over twenty years of hands-on infrastructure and data center experience, 
+                now transitioning into project management. Combining deep operational knowledge with formal 
+                project leadership training and modern technical tools.
               </p>
             </div>
             

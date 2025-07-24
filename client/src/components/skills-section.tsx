@@ -22,7 +22,7 @@ const SkillsSection = () => {
       skills: [
         { name: "React/JavaScript", experience: "Academic + Projects", description: "TimelyRx and PMP Quiz apps", accent: "accent-blue" },
         { name: "Node.js/REST APIs", experience: "Academic + Projects", description: "Full-stack capstone development", accent: "purple-accent" },
-        { name: "Network Administration", experience: "20+ Years", description: "Cisco networking, mainframe operations", accent: "orange-accent" },
+        { name: "LAN Administration", experience: "20+ Years", description: "Cisco networking, mainframe operations", accent: "orange-accent" },
         { name: "Linux/Windows Systems", experience: "20+ Years", description: "Enterprise system administration", accent: "success-green" },
         { name: "Database Management", experience: "Academic", description: "Coursework in database structures", accent: "navy" },
       ],
@@ -32,7 +32,7 @@ const SkillsSection = () => {
       icon: BarChart3,
       color: "success-green",
       skills: [
-        { name: "Business Process Analysis", experience: "Academic", description: "Information Systems coursework", accent: "purple-accent" },
+        { name: "Information Systems Integration", experience: "Academic + Professional", description: "Top LinkedIn skill - systems integration", accent: "purple-accent" },
         { name: "Data Analysis", experience: "Academic", description: "Business Statistics and Analytics courses", accent: "accent-blue" },
         { name: "Excel/Power Query", experience: "Professional", description: "Business reporting and data analysis", accent: "orange-accent" },
         { name: "Statistical Reporting", experience: "Academic", description: "Business Statistics coursework", accent: "navy" },
