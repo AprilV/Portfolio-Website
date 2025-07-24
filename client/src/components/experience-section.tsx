@@ -111,7 +111,7 @@ const ExperienceSection = () => {
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-success-green to-accent-blue rounded-full"></div>
             </h2>
           </div>
-          <p className="text-xl text-gray-600 mt-6">Twenty years of IT infrastructure experience with six years of team leadership and project coordination</p>
+          <p className="text-xl text-gray-600 mt-6">Twenty years of IT infrastructure experience with six years of team leadership</p>
         </div>
         
         <div className="relative">
