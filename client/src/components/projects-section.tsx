@@ -49,14 +49,14 @@ const ProjectsSection = () => {
     },
     {
       title: "The Evolution of Artificial Intelligence",
-      description: "Comprehensive research paper and 20-minute presentation examining AI's transformation from science fiction to societal infrastructure, with YouTube video presentation for IS390.",
+      description: "Comprehensive research paper and PowerPoint presentation examining AI's transformation from science fiction to societal infrastructure for IS390, with supplementary video content.",
       icon: Users,
       color: "accent-blue",
-      technologies: ["Research", "APA", "IS390", "YouTube"],
+      technologies: ["Research", "PowerPoint", "IS390", "APA"],
       features: [
         "From Science Fiction to Societal Infrastructure analysis",
-        "Academic research with APA formatting and citations",
-        "20-minute video presentation on YouTube",
+        "Academic research paper with APA formatting and citations",
+        "Professional PowerPoint presentation with multimedia",
         "Covers Deep Blue, AlphaGo, transformer models, and ethics",
       ],
       link: "https://www.youtube.com/watch?v=kVlNcL9oR6Q",
@@ -96,7 +96,7 @@ const ProjectsSection = () => {
 
   const getBadgeVariant = (tech: string) => {
     if (["React", "Full-Stack", "Research", "HTML"].includes(tech)) return "default";
-    if (["WCAG", "Agile", "APA", "IS320", "PM450", "IS390", "YouTube"].includes(tech)) return "secondary";
+    if (["WCAG", "Agile", "APA", "IS320", "PM450", "IS390", "PowerPoint"].includes(tech)) return "secondary";
     return "outline";
   };
 
@@ -150,7 +150,7 @@ const ProjectsSection = () => {
                       window.open(project.link, '_blank');
                     }}
                   >
-                    {project.link.includes('youtube') ? 'Watch Presentation' : 'View Project'}
+                    {project.link.includes('youtube') ? 'View Video Content' : 'View Project'}
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 ) : (
