@@ -26,7 +26,7 @@ const HeroSection = () => {
                 April V. <span className="text-navy">Sykes</span>
               </h1>
               <h2 className="text-xl lg:text-2xl text-dark-gray font-medium">
-                Aspiring Assistant Project Manager | BAS-IS Student | CAPM Candidate (2025)
+                Aspiring Assistant Project Manager | Senior BAS-IS Student | CAPM Candidate (2025)
               </h2>
               <p className="text-lg text-gray-600 max-w-xl">
                 IT professional with over twenty years of hands-on infrastructure and data center experience, 
@@ -42,7 +42,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-2 bg-gradient-to-r from-purple-accent/10 to-purple-accent/5 px-4 py-2 rounded-lg border border-purple-accent/20">
                 <GraduationCap className="h-5 w-5 text-purple-accent" />
-                <span className="text-sm font-medium">BAS-IS Student</span>
+                <span className="text-sm font-medium">Senior BAS-IS Student</span>
               </div>
               <div className="flex items-center gap-2 bg-gradient-to-r from-orange-accent/10 to-orange-accent/5 px-4 py-2 rounded-lg border border-orange-accent/20">
                 <Briefcase className="h-5 w-5 text-orange-accent" />
