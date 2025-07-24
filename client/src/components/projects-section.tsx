@@ -48,18 +48,18 @@ const ProjectsSection = () => {
       link: "#",
     },
     {
-      title: "AI Research Presentation",
-      description: "20-minute academic presentation on AI evolution and societal impact with APA formatting, multimedia content, and visual delivery for IS390.",
+      title: "The Evolution of Artificial Intelligence",
+      description: "Comprehensive research paper and 20-minute presentation examining AI's transformation from science fiction to societal infrastructure, with YouTube video presentation for IS390.",
       icon: Users,
       color: "accent-blue",
-      technologies: ["Research", "APA", "IS390", "Academic"],
+      technologies: ["Research", "APA", "IS390", "YouTube"],
       features: [
-        "APA formatting and citations",
-        "Multimedia content integration",
-        "Visual delivery and presentation",
-        "Academic research methodology",
+        "From Science Fiction to Societal Infrastructure analysis",
+        "Academic research with APA formatting and citations",
+        "20-minute video presentation on YouTube",
+        "Covers Deep Blue, AlphaGo, transformer models, and ethics",
       ],
-      link: "#",
+      link: "https://www.youtube.com/watch?v=kVlNcL9oR6Q",
     },
     {
       title: "Blog Research Project",
@@ -96,7 +96,7 @@ const ProjectsSection = () => {
 
   const getBadgeVariant = (tech: string) => {
     if (["React", "Full-Stack", "Research", "HTML"].includes(tech)) return "default";
-    if (["WCAG", "Agile", "APA", "IS320", "PM450", "IS390"].includes(tech)) return "secondary";
+    if (["WCAG", "Agile", "APA", "IS320", "PM450", "IS390", "YouTube"].includes(tech)) return "secondary";
     return "outline";
   };
 
@@ -150,7 +150,7 @@ const ProjectsSection = () => {
                       window.open(project.link, '_blank');
                     }}
                   >
-                    View Project
+                    {project.link.includes('youtube') ? 'Watch Presentation' : 'View Project'}
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 ) : (
