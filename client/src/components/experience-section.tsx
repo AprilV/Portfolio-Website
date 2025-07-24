@@ -107,11 +107,11 @@ const ExperienceSection = () => {
         <div className="text-center mb-10">
           <div className="inline-block">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 relative">
-              Experience & Leadership
+              Professional Experience
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-success-green to-accent-blue rounded-full"></div>
             </h2>
           </div>
-          <p className="text-xl text-gray-600 mt-6">Two decades of progressive leadership experience in IT infrastructure, team management, and project coordination</p>
+          <p className="text-xl text-gray-600 mt-6">Twenty years of IT infrastructure experience with six years of team leadership and project coordination</p>
         </div>
         
         <div className="relative">
