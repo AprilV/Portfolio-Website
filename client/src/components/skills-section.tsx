@@ -134,7 +134,7 @@ const SkillsSection = () => {
       detail: "ID: 6-2c6-v3p73s",
       icon: Shield,
       color: "purple-accent",
-      link: "https://www.comptia.org/certifications/a",
+      link: "https://certification.testout.com/verifycert/6-2c6-v3p73s",
       credentialId: "6-2c6-v3p73s"
     },
     {
