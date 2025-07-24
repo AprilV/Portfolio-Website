@@ -71,7 +71,7 @@ const SkillsSection = () => {
     },
     {
       name: "TestOut Linux Pro",
-      description: "CompTIA",
+      description: "Academic - Linux I Course",
       detail: "ID: 6-2C6-VCQ5KS",
       icon: ClipboardCheck,
       color: "success-green",
