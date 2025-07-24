@@ -24,23 +24,34 @@
   --ring: hsl(222, 84%, 4.9%);
   --radius: 0.5rem;
   
-  /* Modern 2025 Tech Professional Colors */
-  --navy: hsl(215, 85%, 28%);
-  --dark-gray: hsl(225, 40%, 18%);
-  --accent-blue: hsl(203, 89%, 53%);
-  --success-green: hsl(156, 73%, 50%);
-  --light-bg: hsl(210, 45%, 97%);
-  --purple-accent: hsl(260, 85%, 65%);
-  --orange-accent: hsl(14, 100%, 57%);
+  /* Modern 2025 Tech Professional Colors - Updated */
+  --navy: hsl(215, 85%, 25%);
+  --dark-gray: hsl(225, 40%, 15%);
+  --accent-blue: hsl(195, 100%, 50%);
+  --success-green: hsl(142, 76%, 45%);
+  --light-bg: hsl(210, 45%, 98%);
+  --purple-accent: hsl(260, 85%, 60%);
+  --orange-accent: hsl(25, 95%, 53%);
   --coral: hsl(16, 100%, 66%);
   --teal: hsl(186, 100%, 44%);
   --rose: hsl(330, 100%, 70%);
   
-  /* Dynamic Gradients */
-  --primary-gradient: linear-gradient(135deg, hsl(203, 89%, 53%) 0%, hsl(260, 85%, 65%) 100%);
-  --hero-gradient: linear-gradient(135deg, hsl(215, 85%, 28%) 0%, hsl(203, 89%, 53%) 50%, hsl(260, 85%, 65%) 100%);
-  --section-gradient: linear-gradient(135deg, hsl(210, 45%, 97%) 0%, hsl(203, 20%, 96%) 100%);
-  --accent-gradient: linear-gradient(135deg, hsl(14, 100%, 57%) 0%, hsl(330, 100%, 70%) 100%);
+  /* Modern Electric Accents */
+  --electric-blue: hsl(195, 100%, 50%);
+  --neon-green: hsl(120, 100%, 50%);
+  --cyber-purple: hsl(270, 100%, 65%);
+  --tech-orange: hsl(25, 95%, 53%);
+  
+  /* Dynamic Gradients - 2025 Update */
+  --primary-gradient: linear-gradient(135deg, hsl(195, 100%, 50%) 0%, hsl(270, 100%, 65%) 100%);
+  --hero-gradient: linear-gradient(135deg, hsl(215, 85%, 25%) 0%, hsl(195, 100%, 50%) 30%, hsl(270, 100%, 65%) 70%, hsl(25, 95%, 53%) 100%);
+  --section-gradient: linear-gradient(135deg, hsl(210, 45%, 98%) 0%, hsl(203, 20%, 97%) 100%);
+  --accent-gradient: linear-gradient(135deg, hsl(25, 95%, 53%) 0%, hsl(330, 100%, 70%) 100%);
+  
+  /* Tech Glow Effects */
+  --glow-blue: 0 0 20px hsl(195, 100%, 50%, 0.3);
+  --glow-purple: 0 0 20px hsl(270, 100%, 65%, 0.3);
+  --glow-orange: 0 0 20px hsl(25, 95%, 53%, 0.3);
 }
 
 .dark {
@@ -206,6 +217,67 @@
     background: var(--accent-gradient);
   }
   
+  /* Electric Colors */
+  .text-electric-blue {
+    color: var(--electric-blue);
+  }
+  
+  .bg-electric-blue {
+    background-color: var(--electric-blue);
+  }
+  
+  .text-neon-green {
+    color: var(--neon-green);
+  }
+  
+  .bg-neon-green {
+    background-color: var(--neon-green);
+  }
+  
+  .text-cyber-purple {
+    color: var(--cyber-purple);
+  }
+  
+  .bg-cyber-purple {
+    background-color: var(--cyber-purple);
+  }
+  
+  .text-tech-orange {
+    color: var(--tech-orange);
+  }
+  
+  .bg-tech-orange {
+    background-color: var(--tech-orange);
+  }
+  
+  /* Modern Glow Effects */
+  .glow-blue {
+    box-shadow: var(--glow-blue);
+  }
+  
+  .glow-purple {
+    box-shadow: var(--glow-purple);
+  }
+  
+  .glow-orange {
+    box-shadow: var(--glow-orange);
+  }
+  
+  .hover-glow-blue:hover {
+    box-shadow: var(--glow-blue);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .hover-glow-purple:hover {
+    box-shadow: var(--glow-purple);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .hover-glow-orange:hover {
+    box-shadow: var(--glow-orange);
+    transition: box-shadow 0.3s ease;
+  }
+
   /* Enhanced visual effects */
   .glassmorphism {
     background: rgba(255, 255, 255, 0.1);
@@ -220,5 +292,16 @@
   .card-hover:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Modern button effects */
+  .btn-electric {
+    background: var(--primary-gradient);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-electric:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-blue);
   }
 }

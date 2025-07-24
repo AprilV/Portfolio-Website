@@ -39,28 +39,28 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 bg-gradient-to-r from-success-green/10 to-success-green/5 px-4 py-2 rounded-lg border border-success-green/20">
+              <div className="flex items-center gap-2 bg-gradient-to-r from-neon-green/15 to-success-green/10 px-4 py-2 rounded-xl border border-success-green/30 hover-glow-blue transition-all duration-300">
                 <CheckCircle className="h-5 w-5 text-success-green" />
-                <span className="text-sm font-medium">CAPM Candidate 2025</span>
+                <span className="text-sm font-semibold">CAPM Candidate 2025</span>
               </div>
-              <div className="flex items-center gap-2 bg-gradient-to-r from-purple-accent/10 to-purple-accent/5 px-4 py-2 rounded-lg border border-purple-accent/20">
-                <GraduationCap className="h-5 w-5 text-purple-accent" />
-                <span className="text-sm font-medium">Senior BAS-IS Student</span>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-cyber-purple/15 to-purple-accent/10 px-4 py-2 rounded-xl border border-purple-accent/30 hover-glow-purple transition-all duration-300">
+                <GraduationCap className="h-5 w-5 text-cyber-purple" />
+                <span className="text-sm font-semibold">Senior BAS-IS Student</span>
               </div>
-              <div className="flex items-center gap-2 bg-gradient-to-r from-orange-accent/10 to-orange-accent/5 px-4 py-2 rounded-lg border border-orange-accent/20">
-                <Briefcase className="h-5 w-5 text-orange-accent" />
-                <span className="text-sm font-medium">20+ Years IT Experience</span>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-tech-orange/15 to-orange-accent/10 px-4 py-2 rounded-xl border border-tech-orange/30 hover-glow-orange transition-all duration-300">
+                <Briefcase className="h-5 w-5 text-tech-orange" />
+                <span className="text-sm font-semibold">20+ Years IT Experience</span>
               </div>
-              <div className="flex items-center gap-2 bg-gradient-to-r from-accent-blue/10 to-accent-blue/5 px-4 py-2 rounded-lg border border-accent-blue/20">
-                <Users className="h-5 w-5 text-accent-blue" />
-                <span className="text-sm font-medium">6 Years Team Leadership</span>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-electric-blue/15 to-accent-blue/10 px-4 py-2 rounded-xl border border-electric-blue/30 hover-glow-blue transition-all duration-300">
+                <Users className="h-5 w-5 text-electric-blue" />
+                <span className="text-sm font-semibold">6 Years Team Leadership</span>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={scrollToContact}
-                className="bg-primary-gradient text-white hover:opacity-90 px-8 py-3 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="btn-electric text-white px-8 py-3 font-semibold tracking-wide"
               >
                 Get In Touch
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -68,7 +68,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline"
                 onClick={downloadResume}
-                className="border-2 border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-white px-8 py-3 transition-all duration-300"
+                className="border-2 border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-white px-8 py-3 transition-all duration-300 hover-glow-blue"
               >
                 Download Resume
                 <Download className="ml-2 h-5 w-5" />

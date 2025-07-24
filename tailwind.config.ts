@@ -61,6 +61,11 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
+        // Modern 2025 Electric Colors
+        "electric-blue": "var(--electric-blue)",
+        "neon-green": "var(--neon-green)",
+        "cyber-purple": "var(--cyber-purple)",
+        "tech-orange": "var(--tech-orange)",
       },
       keyframes: {
         "accordion-down": {
