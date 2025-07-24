@@ -178,9 +178,9 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-gray-50/50 to-white">
+    <section id="skills" className="py-12 bg-gradient-to-b from-gray-50/50 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <div className="inline-block">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 relative">
               Skills & Competencies
@@ -190,7 +190,7 @@ const SkillsSection = () => {
           <p className="text-xl text-gray-600 mt-6">Technical expertise and project management capabilities</p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {skillCategories.map((category, index) => (
             <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-gray-200">
               <div className="flex items-center gap-3 mb-6">

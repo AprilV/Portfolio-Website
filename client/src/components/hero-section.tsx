@@ -17,11 +17,11 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="pt-16 min-h-screen flex items-center relative overflow-hidden">
+    <section id="home" className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-accent/15 via-accent-blue/10 to-orange-accent/10"></div>
       <div className="absolute inset-0 bg-white/85"></div>
       
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">

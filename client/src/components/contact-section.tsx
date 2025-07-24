@@ -95,11 +95,16 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-light-bg">
+    <section id="contact" className="py-12 bg-light-bg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Let's Connect</h2>
-          <p className="text-xl text-gray-600">Ready to bring technical expertise and project management skills to your team</p>
+        <div className="text-center mb-10">
+          <div className="inline-block">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 relative">
+              Let's Connect
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-navy to-purple-accent rounded-full"></div>
+            </h2>
+          </div>
+          <p className="text-xl text-gray-600 mt-6">Ready to bring technical expertise and project management skills to your team</p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12">
