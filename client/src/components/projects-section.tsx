@@ -49,7 +49,7 @@ const ProjectsSection = () => {
     },
     {
       title: "The Evolution of Artificial Intelligence",
-      description: "Comprehensive research paper and PowerPoint presentation examining AI's transformation from science fiction to societal infrastructure for IS390. Full presentation available for download plus YouTube video.",
+      description: "Comprehensive research paper and PowerPoint presentation examining AI's transformation from science fiction to societal infrastructure for IS390. Full presentation and research paper available for download plus YouTube video.",
       icon: Users,
       color: "accent-blue",
       technologies: ["Research", "PowerPoint", "IS390", "APA"],
@@ -61,20 +61,7 @@ const ProjectsSection = () => {
       ],
       link: "/attached_assets/Presentation - The Evolution of Artificial Intelligence2_1753390635100.pptx",
       videoLink: "https://www.youtube.com/watch?v=kVlNcL9oR6Q",
-    },
-    {
-      title: "Blog Research Project",
-      description: "Academic research and analysis project exploring industry trends and technical topics with structured writing and citation standards.",
-      icon: Users,
-      color: "orange-accent",
-      technologies: ["Research", "Technical Writing", "Analysis"],
-      features: [
-        "Industry trend analysis",
-        "Technical topic exploration",
-        "Structured academic writing",
-        "Citation and reference standards",
-      ],
-      link: "#",
+      paperLink: "/attached_assets/The Evolution of Artificial Intelligence_1753389614635.docx",
     },
   ];
 
@@ -179,20 +166,20 @@ const ProjectsSection = () => {
                         <ExternalLink className="ml-2 h-4 w-4" />
                       </Button>
                     )}
-                    {project.link.includes('.pptx') && (
+                    {project.paperLink && (
                       <Button 
                         variant="outline" 
                         className="text-gray-600 hover:text-gray-800 p-0 h-auto font-medium px-3 py-1 border-gray-300"
                         onClick={() => {
                           const link = document.createElement('a');
-                          link.href = project.link;
-                          link.download = 'The Evolution of Artificial Intelligence.pptx';
+                          link.href = project.paperLink;
+                          link.download = 'The Evolution of Artificial Intelligence - Research Paper.docx';
                           document.body.appendChild(link);
                           link.click();
                           document.body.removeChild(link);
                         }}
                       >
-                        Download
+                        Download Paper
                         <FileText className="ml-2 h-4 w-4" />
                       </Button>
                     )}
