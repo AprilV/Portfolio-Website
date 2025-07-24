@@ -23,6 +23,8 @@ This is a professional portfolio website built as a full-stack application showc
 - Updated skills to reflect LinkedIn top skills and contact information
 - Updated contact email to april_sykes@proton.me for enhanced privacy and security
 - Enhanced navigation to "Experience & Leadership" emphasizing management capabilities for PM roles
+- Integrated official Credly verified badges with authentic issue dates and verification links
+- Added 5 verified Cisco certifications: CCNA Switching/Routing, CCNA Intro to Networks, Cybersecurity, Data Science, Learn-A-Thon 2024
 
 ## User Preferences
 

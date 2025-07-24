@@ -114,14 +114,29 @@ export const resumeData: ResumeData = {
       credentialId: "6-2c6-vv5625"
     },
     {
-      name: "CCNA: Switching & Routing",
-      issuer: "Cisco",
-      date: "March 2024"
+      name: "CCNA: Switching, Routing, and Wireless Essentials",
+      issuer: "Cisco (Credly Verified)",
+      date: "March 20, 2024"
     },
     {
-      name: "CCNA: Intro to Networks",
-      issuer: "Cisco", 
-      date: "December 2023"
+      name: "CCNA: Introduction to Networks",
+      issuer: "Cisco (Credly Verified)", 
+      date: "December 7, 2023"
+    },
+    {
+      name: "Introduction to Cybersecurity",
+      issuer: "Cisco (Credly Verified)",
+      date: "November 11, 2024"
+    },
+    {
+      name: "Introduction to Data Science",
+      issuer: "Cisco (Credly Verified)",
+      date: "February 26, 2024"
+    },
+    {
+      name: "Networking Academy Learn-A-Thon 2024",
+      issuer: "Cisco (Credly Verified)",
+      date: "February 26, 2024"
     }
   ],
   skills: {

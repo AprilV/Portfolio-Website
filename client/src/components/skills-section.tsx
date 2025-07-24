@@ -57,22 +57,49 @@ const SkillsSection = () => {
       credentialId: null
     },
     {
-      name: "CCNA: Switching & Routing",
-      description: "Cisco Networking - CIS 271 (4.0 GPA)",
-      detail: "Issued Mar 2024",
+      name: "CCNA: Switching, Routing, and Wireless Essentials",
+      description: "Cisco Verified Badge",
+      detail: "Issued Mar 20, 2024",
       icon: Code,
       color: "accent-blue",
-      link: "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications.html",
-      credentialId: null
+      link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
+      credentialId: "Credly Verified"
     },
     {
-      name: "CCNA: Intro to Networks",
-      description: "Cisco Networking - CIS 270 (4.0 GPA)",
-      detail: "Issued Dec 2023",
+      name: "CCNA: Introduction to Networks",
+      description: "Cisco Verified Badge",
+      detail: "Issued Dec 7, 2023",
       icon: Code,
       color: "purple-accent",
-      link: "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications.html",
-      credentialId: null
+      link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
+      credentialId: "Credly Verified"
+    },
+    {
+      name: "Introduction to Cybersecurity",
+      description: "Cisco Verified Badge",
+      detail: "Issued Nov 11, 2024",
+      icon: Shield,
+      color: "success-green",
+      link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
+      credentialId: "Credly Verified"
+    },
+    {
+      name: "Introduction to Data Science",
+      description: "Cisco Verified Badge",
+      detail: "Issued Feb 26, 2024",
+      icon: BarChart3,
+      color: "orange-accent",
+      link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
+      credentialId: "Credly Verified"
+    },
+    {
+      name: "Networking Academy Learn-A-Thon 2024",
+      description: "Cisco Verified Badge",
+      detail: "Issued Feb 26, 2024",
+      icon: Award,
+      color: "coral",
+      link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
+      credentialId: "Credly Verified"
     },
     {
       name: "CompTIA Linux+",
