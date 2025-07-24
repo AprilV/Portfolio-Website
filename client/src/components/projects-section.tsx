@@ -131,10 +131,10 @@ const ProjectsSection = () => {
                 </div>
                 
                 {project.link !== "#" ? (
-                  <div className="flex gap-3">
+                  <div className="flex flex-col gap-2">
                     <Button 
                       variant="ghost" 
-                      className="text-navy hover:text-navy/80 p-0 h-auto font-medium"
+                      className="text-navy hover:text-navy/80 p-0 h-auto font-medium justify-start"
                       onClick={() => {
                         if (project.link.includes('.pptx')) {
                           // Always use direct download for PowerPoint files
@@ -156,8 +156,8 @@ const ProjectsSection = () => {
                     </Button>
                     {project.videoLink && (
                       <Button 
-                        variant="outline" 
-                        className="text-navy hover:text-navy/80 p-0 h-auto font-medium px-3 py-1 border-navy/20"
+                        variant="ghost" 
+                        className="text-navy hover:text-navy/80 p-0 h-auto font-medium justify-start"
                         onClick={() => {
                           window.open(project.videoLink, '_blank');
                         }}
@@ -168,8 +168,8 @@ const ProjectsSection = () => {
                     )}
                     {project.paperLink && (
                       <Button 
-                        variant="outline" 
-                        className="text-gray-600 hover:text-gray-800 p-0 h-auto font-medium px-3 py-1 border-gray-300"
+                        variant="ghost" 
+                        className="text-gray-600 hover:text-gray-800 p-0 h-auto font-medium justify-start"
                         onClick={() => {
                           const link = document.createElement('a');
                           link.href = project.paperLink;
@@ -187,7 +187,7 @@ const ProjectsSection = () => {
                 ) : (
                   <Button 
                     variant="ghost" 
-                    className="text-gray-500 p-0 h-auto font-medium cursor-not-allowed"
+                    className="text-gray-500 p-0 h-auto font-medium cursor-not-allowed justify-start"
                     disabled
                   >
                     Capstone Project
