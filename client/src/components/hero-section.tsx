@@ -8,9 +8,12 @@ const HeroSection = () => {
   };
 
   const downloadResume = () => {
-    // In a real implementation, this would trigger a download of the resume PDF
-    console.log("Download resume functionality would be implemented here");
-    alert("Resume download would be implemented here with actual PDF file");
+    const link = document.createElement('a');
+    link.href = '/attached_assets/April_Sykes_Assistant_Project_Manager_Resume_1753385857678.docx';
+    link.download = 'April_Sykes_Assistant_Project_Manager_Resume.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
