@@ -21,10 +21,10 @@ const ProjectsSection = () => {
     },
     {
       title: "TimelyRx Medication App",
-      description: "React-based medication reminder application featuring caregiver tracking, WCAG accessibility compliance, and local data management for IS320 capstone. Currently in alpha development.",
+      description: "React-based medication reminder application featuring caregiver tracking, WCAG accessibility compliance, and local data management for IS320 capstone project. Currently in alpha development.",
       icon: Clock,
       color: "success-green",
-      technologies: ["React", "WCAG", "Healthcare", "IS320"],
+      technologies: ["React", "WCAG", "Healthcare", "IS320 Capstone"],
       features: [
         "Caregiver notification system",
         "WCAG accessibility compliance",
