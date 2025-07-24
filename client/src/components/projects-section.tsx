@@ -90,16 +90,16 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-12 bg-gradient-to-b from-white to-gray-50/50">
+    <section id="projects" className="py-12 bg-section-gradient">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-block">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 relative">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 relative">
               Featured Projects
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-orange-accent to-purple-accent rounded-full"></div>
             </h2>
           </div>
-          <p className="text-xl text-gray-600 mt-6">Demonstrating technical skills and project management capabilities</p>
+          <p className="text-xl text-muted-foreground mt-6">Demonstrating technical skills and project management capabilities</p>
         </div>
         
         <div className="grid lg:grid-cols-3 gap-8">
@@ -111,11 +111,11 @@ const ProjectsSection = () => {
                     <div className={`w-16 h-16 bg-${project.color}/20 rounded-xl flex items-center justify-center mx-auto mb-3`}>
                       <project.icon className="w-8 h-8" />
                     </div>
-                    <p className="text-sm text-gray-600">{project.title.split(' ')[0]} Interface</p>
+                    <p className="text-sm text-muted-foreground">{project.title.split(' ')[0]} Interface</p>
                   </div>
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900">{project.title}</CardTitle>
-                <CardDescription className="text-gray-700">{project.description}</CardDescription>
+                <CardTitle className="text-xl font-bold text-card-foreground">{project.title}</CardTitle>
+                <CardDescription className="text-muted-foreground">{project.description}</CardDescription>
               </CardHeader>
               
               <CardContent className="space-y-6">
@@ -131,7 +131,7 @@ const ProjectsSection = () => {
                   {project.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-2 text-sm">
                       <div className="w-2 h-2 bg-success-green rounded-full flex-shrink-0"></div>
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-card-foreground">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -140,7 +140,7 @@ const ProjectsSection = () => {
                   <div className="flex flex-col gap-2">
                     <Button 
                       variant="ghost" 
-                      className="text-navy hover:text-navy/80 p-0 h-auto font-medium justify-start"
+                      className="text-primary hover:text-primary/80 p-0 h-auto font-medium justify-start"
                       onClick={() => {
                         if (project.link.includes('.pptx')) {
                           // Always use direct download for PowerPoint files
@@ -163,7 +163,7 @@ const ProjectsSection = () => {
                     {project.videoLink && (
                       <Button 
                         variant="ghost" 
-                        className="text-navy hover:text-navy/80 p-0 h-auto font-medium justify-start"
+                        className="text-primary hover:text-primary/80 p-0 h-auto font-medium justify-start"
                         onClick={() => {
                           window.open(project.videoLink, '_blank');
                         }}
@@ -175,7 +175,7 @@ const ProjectsSection = () => {
                     {project.paperLink && (
                       <Button 
                         variant="ghost" 
-                        className="text-gray-600 hover:text-gray-800 p-0 h-auto font-medium justify-start"
+                        className="text-muted-foreground hover:text-foreground p-0 h-auto font-medium justify-start"
                         onClick={() => {
                           const link = document.createElement('a');
                           link.href = project.paperLink;
@@ -192,7 +192,7 @@ const ProjectsSection = () => {
                     {project.blogLink && (
                       <Button 
                         variant="ghost" 
-                        className="text-accent-blue hover:text-accent-blue/80 p-0 h-auto font-medium justify-start"
+                        className="text-electric-blue hover:text-electric-blue/80 p-0 h-auto font-medium justify-start"
                         onClick={() => {
                           window.open(project.blogLink, '_blank');
                         }}
