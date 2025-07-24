@@ -31,7 +31,7 @@ const ProjectsSection = () => {
         "Local data tracking",
         "Interface design and scheduling logic",
       ],
-      link: "#",
+      link: "https://timely-rx-pro-aprilv120.replit.app/",
     },
     {
       title: "PMP Quiz App",
