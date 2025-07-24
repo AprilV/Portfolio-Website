@@ -49,14 +49,14 @@ const ProjectsSection = () => {
     },
     {
       title: "The Evolution of Artificial Intelligence",
-      description: "Comprehensive research paper and PowerPoint presentation examining AI's transformation from science fiction to societal infrastructure for IS390. Full presentation and research paper available for download plus YouTube video.",
+      description: "Comprehensive research paper and PowerPoint presentation examining AI's transformation from science fiction to societal infrastructure for IS390. Features creative FAL-9000 interview (female voice) reimagining HAL-9000 from 2001: A Space Odyssey.",
       icon: Users,
       color: "accent-blue",
       technologies: ["Research", "PowerPoint", "IS390", "APA"],
       features: [
         "From Science Fiction to Societal Infrastructure analysis",
-        "Academic research paper with APA formatting and citations",
-        "Professional PowerPoint presentation with multimedia content",
+        "Academic research paper with APA formatting and citations", 
+        "Creative FAL-9000 interview with female voice (reimagining HAL-9000)",
         "Covers AI evolution, Deep Blue, AlphaGo, transformer models, and ethics",
       ],
       link: "/attached_assets/Presentation - The Evolution of Artificial Intelligence2_1753390635100.pptx",
@@ -162,7 +162,7 @@ const ProjectsSection = () => {
                           window.open(project.videoLink, '_blank');
                         }}
                       >
-                        Watch Video
+                        Watch FAL-9000 Interview
                         <ExternalLink className="ml-2 h-4 w-4" />
                       </Button>
                     )}
