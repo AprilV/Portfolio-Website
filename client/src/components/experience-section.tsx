@@ -102,11 +102,16 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 bg-gradient-to-b from-gray-50/30 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Professional Experience</h2>
-          <p className="text-xl text-gray-600">Two decades of progressive leadership in IT infrastructure, operations, and project management</p>
+          <div className="inline-block">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 relative">
+              Professional Experience
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-success-green to-accent-blue rounded-full"></div>
+            </h2>
+          </div>
+          <p className="text-xl text-gray-600 mt-6">Two decades of progressive leadership in IT infrastructure, operations, and project management</p>
         </div>
         
         <div className="relative">

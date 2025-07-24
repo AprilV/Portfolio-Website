@@ -89,11 +89,16 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-light-bg">
+    <section id="projects" className="py-20 bg-gradient-to-b from-white to-gray-50/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-          <p className="text-xl text-gray-600">Demonstrating technical skills and project management capabilities</p>
+          <div className="inline-block">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 relative">
+              Featured Projects
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-orange-accent to-purple-accent rounded-full"></div>
+            </h2>
+          </div>
+          <p className="text-xl text-gray-600 mt-6">Demonstrating technical skills and project management capabilities</p>
         </div>
         
         <div className="grid lg:grid-cols-3 gap-8">

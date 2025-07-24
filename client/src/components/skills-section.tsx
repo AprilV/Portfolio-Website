@@ -178,16 +178,21 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 bg-gradient-to-b from-gray-50/50 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Skills & Competencies</h2>
-          <p className="text-xl text-gray-600">Technical expertise and project management capabilities</p>
+          <div className="inline-block">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 relative">
+              Skills & Competencies
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-navy to-accent-blue rounded-full"></div>
+            </h2>
+          </div>
+          <p className="text-xl text-gray-600 mt-6">Technical expertise and project management capabilities</p>
         </div>
         
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
+            <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-gray-200">
               <div className="flex items-center gap-3 mb-6">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${getColorClass(category.color)}`}>
                   <category.icon className="w-6 h-6" />
@@ -213,8 +218,13 @@ const SkillsSection = () => {
         </div>
         
         {/* Certifications */}
-        <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Certifications & Education</h3>
+        <div className="bg-gradient-to-r from-gray-50/80 to-gray-50/40 py-12 px-8 rounded-2xl">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 relative inline-block">
+              Certifications & Education
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-purple-accent to-success-green rounded-full"></div>
+            </h3>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
