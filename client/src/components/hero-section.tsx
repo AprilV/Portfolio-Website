@@ -32,8 +32,8 @@ const HeroSection = () => {
                 Aspiring Assistant Project Manager | Senior BAS-IS Student | CAPM Candidate (2025)
               </h2>
               <p className="text-lg text-gray-600 max-w-xl">
-                IT professional with over twenty years of hands-on infrastructure and data center experience, 
-                now transitioning into project management. Combining deep operational knowledge with formal 
+                Two decades of progressive leadership experience in IT infrastructure, team management, and project coordination, 
+                now transitioning into formal project management. Combining deep operational knowledge with formal 
                 project leadership training and modern technical tools.
               </p>
             </div>
@@ -49,7 +49,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-2 bg-gradient-to-r from-orange-accent/10 to-orange-accent/5 px-4 py-2 rounded-lg border border-orange-accent/20">
                 <Briefcase className="h-5 w-5 text-orange-accent" />
-                <span className="text-sm font-medium">20+ Years IT Experience & Leadership</span>
+                <span className="text-sm font-medium">20+ Years IT Experience</span>
               </div>
             </div>
             
