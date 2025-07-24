@@ -6,41 +6,72 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const ProjectsSection = () => {
   const projects = [
     {
+      title: "Personal Portfolio Website",
+      description: "Professional portfolio website built from scratch using HTML, CSS, and JavaScript with responsive design and accessibility features.",
+      icon: Code,
+      color: "navy",
+      technologies: ["HTML", "CSS", "JavaScript", "Responsive"],
+      features: [
+        "Custom navigation with Font Awesome icons",
+        "Professional photo integration",
+        "Mobile-responsive design",
+        "Cross-browser compatibility",
+      ],
+      link: "https://aprilv.github.io/my-website/",
+    },
+    {
       title: "TimelyRx Medication App",
-      description: "React-based medication reminder application featuring caregiver tracking, WCAG accessibility compliance, and local data management.",
+      description: "React-based medication reminder application featuring caregiver tracking, WCAG accessibility compliance, and local data management for IS320 capstone.",
       icon: Clock,
       color: "success-green",
-      technologies: ["React", "WCAG", "Healthcare"],
+      technologies: ["React", "WCAG", "Healthcare", "IS320"],
       features: [
         "Caregiver notification system",
-        "Accessibility compliance",
+        "WCAG accessibility compliance",
         "Local data tracking",
+        "Interface design and scheduling logic",
       ],
       link: "#",
     },
     {
-      title: "PMP Exam Simulator",
-      description: "Full-stack exam preparation tool with live scoring, randomized questions, and responsive design built using Agile development practices.",
+      title: "PMP Quiz App",
+      description: "Full-stack exam simulator with timer, randomized questions, and dynamic scoring developed using Agile methodology for PM450 capstone project.",
       icon: Code,
-      color: "navy",
-      technologies: ["Full-Stack", "Agile", "Education"],
+      color: "purple-accent",
+      technologies: ["Full-Stack", "Agile", "PM450", "Education"],
       features: [
+        "Timer and randomized questions",
         "Dynamic scoring system",
-        "Randomized question logic",
-        "Agile sprint planning",
+        "Agile sprint planning and iterations",
+        "Scope management using Agile methodology",
       ],
       link: "#",
     },
     {
       title: "AI Research Presentation",
-      description: "Comprehensive 20-minute academic presentation on the societal impact of artificial intelligence with APA citations and visual media integration.",
+      description: "20-minute academic presentation on AI evolution and societal impact with APA formatting, multimedia content, and visual delivery for IS390.",
       icon: Users,
       color: "accent-blue",
-      technologies: ["Research", "APA", "Academic"],
+      technologies: ["Research", "APA", "IS390", "Academic"],
       features: [
-        "Structured narrative design",
-        "Visual media integration",
-        "Academic formatting",
+        "APA formatting and citations",
+        "Multimedia content integration",
+        "Visual delivery and presentation",
+        "Academic research methodology",
+      ],
+      link: "#",
+    },
+    {
+      title: "Blog Research Project",
+      description: "Academic research and analysis project exploring industry trends and technical topics with structured writing and citation standards.",
+      icon: Users,
+      color: "orange-accent",
+      technologies: ["Research", "Technical Writing", "Analysis"],
+      features: [
+        "Industry trend analysis",
+        "Technical topic exploration",
+        "Structured academic writing",
+        "Citation and reference standards",
       ],
       link: "#",
     },
@@ -54,14 +85,18 @@ const ProjectsSection = () => {
         return "from-navy/25 via-accent-blue/15 to-purple-accent/20 text-navy";
       case "accent-blue":
         return "from-accent-blue/25 via-orange-accent/15 to-success-green/20 text-accent-blue";
+      case "purple-accent":
+        return "from-purple-accent/25 via-navy/15 to-accent-blue/20 text-purple-accent";
+      case "orange-accent":
+        return "from-orange-accent/25 via-success-green/15 to-purple-accent/20 text-orange-accent";
       default:
         return "from-gray-100 to-gray-200 text-gray-600";
     }
   };
 
   const getBadgeVariant = (tech: string) => {
-    if (["React", "Full-Stack", "Research"].includes(tech)) return "default";
-    if (["WCAG", "Agile", "APA"].includes(tech)) return "secondary";
+    if (["React", "Full-Stack", "Research", "HTML"].includes(tech)) return "default";
+    if (["WCAG", "Agile", "APA", "IS320", "PM450", "IS390"].includes(tech)) return "secondary";
     return "outline";
   };
 
@@ -107,17 +142,27 @@ const ProjectsSection = () => {
                   ))}
                 </div>
                 
-                <Button 
-                  variant="ghost" 
-                  className="text-navy hover:text-navy/80 p-0 h-auto font-medium"
-                  onClick={() => {
-                    console.log(`View project: ${project.title}`);
-                    alert("Project links would be implemented with actual repositories or demos");
-                  }}
-                >
-                  View Project
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
+                {project.link !== "#" ? (
+                  <Button 
+                    variant="ghost" 
+                    className="text-navy hover:text-navy/80 p-0 h-auto font-medium"
+                    onClick={() => {
+                      window.open(project.link, '_blank');
+                    }}
+                  >
+                    View Project
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                ) : (
+                  <Button 
+                    variant="ghost" 
+                    className="text-gray-500 p-0 h-auto font-medium cursor-not-allowed"
+                    disabled
+                  >
+                    Capstone Project
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
