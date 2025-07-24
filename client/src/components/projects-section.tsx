@@ -208,7 +208,7 @@ const ProjectsSection = () => {
                     className="text-gray-500 p-0 h-auto font-medium cursor-not-allowed justify-start"
                     disabled
                   >
-                    Capstone Project
+                    Academic Project
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 )}
