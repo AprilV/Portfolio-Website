@@ -182,13 +182,14 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-12 bg-gradient-to-b from-gray-50/50 to-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-12 bg-section-gradient relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 via-purple-accent/5 to-success-green/5"></div>
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-block">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 relative">
               Skills & Competencies
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-navy to-accent-blue rounded-full"></div>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary-gradient rounded-full"></div>
             </h2>
           </div>
           <p className="text-xl text-gray-600 mt-6">Technical expertise and project management capabilities</p>
@@ -196,12 +197,22 @@ const SkillsSection = () => {
         
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-gray-200">
+            <div key={index} className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 card-hover relative overflow-hidden">
+              <div className={`absolute inset-0 opacity-5 ${
+                category.color === 'navy' ? 'bg-gradient-to-br from-navy via-accent-blue to-transparent' : 
+                category.color === 'accent-blue' ? 'bg-gradient-to-br from-accent-blue via-purple-accent to-transparent' : 
+                'bg-gradient-to-br from-success-green via-teal to-transparent'
+              }`}></div>
+              <div className="relative">
               <div className="flex items-center gap-3 mb-6">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${getColorClass(category.color)}`}>
                   <category.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">{category.title}</h3>
+                <h3 className={`text-xl font-bold bg-gradient-to-r ${
+                  category.color === 'navy' ? 'from-navy to-accent-blue' : 
+                  category.color === 'accent-blue' ? 'from-accent-blue to-purple-accent' : 
+                  'from-success-green to-teal'
+                } bg-clip-text text-transparent`}>{category.title}</h3>
               </div>
               
               <div className="space-y-4">
@@ -217,16 +228,19 @@ const SkillsSection = () => {
                   </div>
                 ))}
               </div>
+              </div>
             </div>
           ))}
         </div>
         
         {/* Certifications */}
-        <div className="bg-gradient-to-r from-gray-50/80 to-gray-50/40 py-12 px-8 rounded-2xl">
+        <div className="bg-gradient-to-r from-navy/5 via-accent-blue/5 to-purple-accent/5 py-12 px-8 rounded-2xl relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-white/60"></div>
+          <div className="relative">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 relative inline-block">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-accent via-accent-blue to-success-green bg-clip-text text-transparent mb-4 relative inline-block">
               Certifications & Education
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-purple-accent to-success-green rounded-full"></div>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent-gradient rounded-full"></div>
             </h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -270,6 +284,7 @@ const SkillsSection = () => {
                 </div>
               </div>
             ))}
+          </div>
           </div>
         </div>
       </div>

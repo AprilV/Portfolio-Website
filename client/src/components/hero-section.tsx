@@ -18,8 +18,8 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-accent/15 via-accent-blue/10 to-orange-accent/10"></div>
-      <div className="absolute inset-0 bg-white/85"></div>
+      <div className="absolute inset-0 bg-hero-gradient opacity-15"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-transparent to-white/70"></div>
       
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -56,7 +56,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={scrollToContact}
-                className="bg-navy text-white hover:bg-navy/90 px-8 py-3"
+                className="bg-primary-gradient text-white hover:opacity-90 px-8 py-3 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get In Touch
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -64,7 +64,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline"
                 onClick={downloadResume}
-                className="border-navy text-navy hover:bg-navy hover:text-white px-8 py-3"
+                className="border-2 border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-white px-8 py-3 transition-all duration-300"
               >
                 Download Resume
                 <Download className="ml-2 h-5 w-5" />

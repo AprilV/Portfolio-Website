@@ -24,14 +24,23 @@
   --ring: hsl(222, 84%, 4.9%);
   --radius: 0.5rem;
   
-  /* Professional IT/PM Theme Colors - Updated */
-  --navy: hsl(230, 85%, 35%);
-  --dark-gray: hsl(225, 35%, 20%);
-  --accent-blue: hsl(205, 100%, 55%);
-  --success-green: hsl(155, 75%, 42%);
-  --light-bg: hsl(210, 40%, 98%);
-  --purple-accent: hsl(270, 75%, 60%);
-  --orange-accent: hsl(25, 95%, 55%);
+  /* Modern 2025 Tech Professional Colors */
+  --navy: hsl(215, 85%, 28%);
+  --dark-gray: hsl(225, 40%, 18%);
+  --accent-blue: hsl(203, 89%, 53%);
+  --success-green: hsl(156, 73%, 50%);
+  --light-bg: hsl(210, 45%, 97%);
+  --purple-accent: hsl(260, 85%, 65%);
+  --orange-accent: hsl(14, 100%, 57%);
+  --coral: hsl(16, 100%, 66%);
+  --teal: hsl(186, 100%, 44%);
+  --rose: hsl(330, 100%, 70%);
+  
+  /* Dynamic Gradients */
+  --primary-gradient: linear-gradient(135deg, hsl(203, 89%, 53%) 0%, hsl(260, 85%, 65%) 100%);
+  --hero-gradient: linear-gradient(135deg, hsl(215, 85%, 28%) 0%, hsl(203, 89%, 53%) 50%, hsl(260, 85%, 65%) 100%);
+  --section-gradient: linear-gradient(135deg, hsl(210, 45%, 97%) 0%, hsl(203, 20%, 96%) 100%);
+  --accent-gradient: linear-gradient(135deg, hsl(14, 100%, 57%) 0%, hsl(330, 100%, 70%) 100%);
 }
 
 .dark {
@@ -153,5 +162,63 @@
   
   .text-orange-accent {
     color: var(--orange-accent);
+  }
+  
+  /* New vibrant color utilities */
+  .text-coral {
+    color: var(--coral);
+  }
+  
+  .bg-coral {
+    background-color: var(--coral);
+  }
+  
+  .text-teal {
+    color: var(--teal);
+  }
+  
+  .bg-teal {
+    background-color: var(--teal);
+  }
+  
+  .text-rose {
+    color: var(--rose);
+  }
+  
+  .bg-rose {
+    background-color: var(--rose);
+  }
+  
+  /* Modern gradient utilities */
+  .bg-primary-gradient {
+    background: var(--primary-gradient);
+  }
+  
+  .bg-hero-gradient {
+    background: var(--hero-gradient);
+  }
+  
+  .bg-section-gradient {
+    background: var(--section-gradient);
+  }
+  
+  .bg-accent-gradient {
+    background: var(--accent-gradient);
+  }
+  
+  /* Enhanced visual effects */
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
 }
