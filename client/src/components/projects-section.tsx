@@ -21,7 +21,7 @@ const ProjectsSection = () => {
     },
     {
       title: "TimelyRx Medication App",
-      description: "React-based medication reminder application featuring caregiver tracking, WCAG accessibility compliance, and local data management for IS320 capstone.",
+      description: "React-based medication reminder application featuring caregiver tracking, WCAG accessibility compliance, and local data management for IS320 capstone. Currently in alpha development.",
       icon: Clock,
       color: "success-green",
       technologies: ["React", "WCAG", "Healthcare", "IS320"],
@@ -31,7 +31,7 @@ const ProjectsSection = () => {
         "Local data tracking",
         "Interface design and scheduling logic",
       ],
-      link: "#",
+      link: "https://timelyrx-medication-reminder.april-sykes2.repl.co/",
     },
     {
       title: "PMP Quiz App",
