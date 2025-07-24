@@ -22,10 +22,12 @@ const SkillsSection = () => {
       skills: [
         { name: "React/JavaScript", experience: "Academic + Projects", description: "TimelyRx and PMP Quiz apps", accent: "accent-blue" },
         { name: "Node.js/REST APIs", experience: "Academic + Projects", description: "Full-stack capstone development", accent: "purple-accent" },
-        { name: "LAN Administration", experience: "20+ Years", description: "Cisco networking, mainframe operations", accent: "orange-accent" },
-        { name: "Windows Systems", experience: "20+ Years", description: "Enterprise system administration", accent: "success-green" },
-        { name: "Linux Systems", experience: "Academic", description: "Linux I course and certification", accent: "purple-accent" },
-        { name: "Database Management", experience: "Academic", description: "Coursework in database structures", accent: "navy" },
+        { name: "LAN Administration", experience: "20+ Years + Academic", description: "Professional experience + LAN Administration IV (4.0 GPA)", accent: "orange-accent" },
+        { name: "Windows Systems", experience: "20+ Years + Academic", description: "Professional + Windows/Professionals course (4.0 GPA)", accent: "success-green" },
+        { name: "Linux Systems", experience: "Academic", description: "Linux I course (4.0 GPA) with CompTIA certification", accent: "purple-accent" },
+        { name: "Web Development", experience: "Academic", description: "Web Development I (4.0 GPA)", accent: "accent-blue" },
+        { name: "Network Security", experience: "Academic", description: "Info System Security I (4.0 GPA)", accent: "navy" },
+        { name: "Technical Support", experience: "Academic + Professional", description: "Technical Support Skills (4.0 GPA) + 20+ years experience", accent: "success-green" },
       ],
     },
     {
@@ -33,23 +35,24 @@ const SkillsSection = () => {
       icon: BarChart3,
       color: "success-green",
       skills: [
-        { name: "Information Systems Integration", experience: "Academic + Professional", description: "Top LinkedIn skill - systems integration", accent: "purple-accent" },
-        { name: "Data Analysis", experience: "Academic", description: "Business Statistics and Analytics courses", accent: "accent-blue" },
-        { name: "Excel/Power Query", experience: "Professional", description: "Business reporting and data analysis", accent: "orange-accent" },
-        { name: "Statistical Reporting", experience: "Academic", description: "Business Statistics coursework", accent: "navy" },
-        { name: "Technical Writing", experience: "20+ Years", description: "Extensive documentation and procedures", accent: "success-green" },
+        { name: "Information Systems Integration", experience: "Academic + Professional", description: "IS302 (4.0 GPA) + Top LinkedIn skill", accent: "purple-accent" },
+        { name: "Business Statistics", experience: "Academic", description: "BUS215 Business Statistics (3.7 GPA)", accent: "accent-blue" },
+        { name: "Research & Analysis", experience: "Academic", description: "IS390 Reading and Research (4.0 GPA)", accent: "orange-accent" },
+        { name: "Digital Leadership", experience: "Academic", description: "IS320 Leading in the Digital World (4.0 GPA)", accent: "navy" },
+        { name: "Technical Writing", experience: "Academic + Professional", description: "ENGL235 Technical Writing (4.0 GPA) + 20+ years experience", accent: "success-green" },
+        { name: "Organizational Communication", experience: "Academic", description: "CMST242 Intro Comm in Organizations (4.0 GPA)", accent: "purple-accent" },
       ],
     },
   ];
 
   const certifications = [
     {
-      name: "CAPM",
-      description: "In Progress",
-      detail: "Summer 2025",
+      name: "CAPM Candidate",
+      description: "Project Management Institute",
+      detail: "Summer 2025 - PM I & II Complete (4.0 GPA)",
       icon: Award,
       color: "navy",
-      link: null,
+      link: "https://www.pmi.org/certifications/certified-associate-capm",
       credentialId: null
     },
     {
@@ -116,9 +119,9 @@ const SkillsSection = () => {
       credentialId: "6-2c6-vv5625"
     },
     {
-      name: "BAS-IS",
-      description: "Olympic College",
-      detail: "Spring 2026",
+      name: "BAS-IS Student",
+      description: "Olympic College - 3.94 GPA",
+      detail: "President's Scholar (8 terms) | Spring 2026",
       icon: BarChart3,
       color: "navy",
       link: null,
