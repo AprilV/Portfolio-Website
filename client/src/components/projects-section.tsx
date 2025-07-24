@@ -150,20 +150,17 @@ const ProjectsSection = () => {
                       className="text-navy hover:text-navy/80 p-0 h-auto font-medium"
                       onClick={() => {
                         if (project.link.includes('.pptx')) {
-                          // For PowerPoint files, create a download link
-                          const link = document.createElement('a');
-                          link.href = project.link;
-                          link.download = 'The Evolution of Artificial Intelligence.pptx';
-                          document.body.appendChild(link);
-                          link.click();
-                          document.body.removeChild(link);
+                          // For PowerPoint files, use Office Online viewer
+                          const encodedUrl = encodeURIComponent(window.location.origin + project.link);
+                          const viewerUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodedUrl}`;
+                          window.open(viewerUrl, '_blank');
                         } else {
                           window.open(project.link, '_blank');
                         }
                       }}
                     >
                       {project.link.includes('youtube') ? 'View Video Content' : 
-                       project.link.includes('.pptx') ? 'Download Presentation' : 'View Project'}
+                       project.link.includes('.pptx') ? 'View Presentation' : 'View Project'}
                       <FileText className="ml-2 h-4 w-4" />
                     </Button>
                     {project.videoLink && (
@@ -176,6 +173,23 @@ const ProjectsSection = () => {
                       >
                         Watch Video
                         <ExternalLink className="ml-2 h-4 w-4" />
+                      </Button>
+                    )}
+                    {project.link.includes('.pptx') && (
+                      <Button 
+                        variant="outline" 
+                        className="text-gray-600 hover:text-gray-800 p-0 h-auto font-medium px-3 py-1 border-gray-300"
+                        onClick={() => {
+                          const link = document.createElement('a');
+                          link.href = project.link;
+                          link.download = 'The Evolution of Artificial Intelligence.pptx';
+                          document.body.appendChild(link);
+                          link.click();
+                          document.body.removeChild(link);
+                        }}
+                      >
+                        Download
+                        <FileText className="ml-2 h-4 w-4" />
                       </Button>
                     )}
                   </div>
