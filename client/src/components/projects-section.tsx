@@ -49,7 +49,7 @@ const ProjectsSection = () => {
     },
     {
       title: "The Evolution of Artificial Intelligence",
-      description: "Comprehensive research paper and PowerPoint presentation examining AI's transformation from science fiction to societal infrastructure for IS390. Includes downloadable presentation and YouTube video.",
+      description: "Comprehensive research paper and PowerPoint presentation examining AI's transformation from science fiction to societal infrastructure for IS390. Full presentation available for download plus YouTube video.",
       icon: Users,
       color: "accent-blue",
       technologies: ["Research", "PowerPoint", "IS390", "APA"],
@@ -150,32 +150,21 @@ const ProjectsSection = () => {
                       className="text-navy hover:text-navy/80 p-0 h-auto font-medium"
                       onClick={() => {
                         if (project.link.includes('.pptx')) {
-                          // Check if running on localhost (development)
-                          if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-                            // During development, direct download
-                            const link = document.createElement('a');
-                            link.href = project.link;
-                            link.download = 'The Evolution of Artificial Intelligence.pptx';
-                            document.body.appendChild(link);
-                            link.click();
-                            document.body.removeChild(link);
-                            // Show a more professional message
-                            setTimeout(() => {
-                              alert('📄 Presentation downloaded!\n\nNote: When your portfolio is deployed online, visitors will be able to view this presentation directly in their browser without downloading it.');
-                            }, 100);
-                          } else {
-                            // In production, use online viewer
-                            const fullUrl = window.location.origin + project.link;
-                            const viewerUrl = `https://docs.google.com/gview?url=${encodeURIComponent(fullUrl)}&embedded=true`;
-                            window.open(viewerUrl, '_blank');
-                          }
+                          // Always use direct download for PowerPoint files
+                          // This provides the most reliable experience across all environments
+                          const link = document.createElement('a');
+                          link.href = project.link;
+                          link.download = 'The Evolution of Artificial Intelligence.pptx';
+                          document.body.appendChild(link);
+                          link.click();
+                          document.body.removeChild(link);
                         } else {
                           window.open(project.link, '_blank');
                         }
                       }}
                     >
                       {project.link.includes('youtube') ? 'View Video Content' : 
-                       project.link.includes('.pptx') ? 'Open Presentation' : 'View Project'}
+                       project.link.includes('.pptx') ? 'Download Presentation' : 'View Project'}
                       <FileText className="ml-2 h-4 w-4" />
                     </Button>
                     {project.videoLink && (
