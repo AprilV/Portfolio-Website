@@ -49,11 +49,11 @@ const ProjectsSection = () => {
   const getColorClasses = (color: string) => {
     switch (color) {
       case "success-green":
-        return "from-success-green/20 to-accent-blue/20 text-success-green";
+        return "from-success-green/25 via-purple-accent/15 to-accent-blue/20 text-success-green";
       case "navy":
-        return "from-navy/20 to-accent-blue/20 text-navy";
+        return "from-navy/25 via-accent-blue/15 to-purple-accent/20 text-navy";
       case "accent-blue":
-        return "from-accent-blue/20 to-navy/20 text-accent-blue";
+        return "from-accent-blue/25 via-orange-accent/15 to-success-green/20 text-accent-blue";
       default:
         return "from-gray-100 to-gray-200 text-gray-600";
     }

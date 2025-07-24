@@ -24,12 +24,14 @@
   --ring: hsl(222, 84%, 4.9%);
   --radius: 0.5rem;
   
-  /* Professional IT/PM Theme Colors */
-  --navy: hsl(222, 84%, 27%);
-  --dark-gray: hsl(215, 28%, 17%);
-  --accent-blue: hsl(213, 94%, 68%);
-  --success-green: hsl(142, 71%, 45%);
+  /* Professional IT/PM Theme Colors - Updated */
+  --navy: hsl(230, 85%, 35%);
+  --dark-gray: hsl(225, 35%, 20%);
+  --accent-blue: hsl(205, 100%, 55%);
+  --success-green: hsl(155, 75%, 42%);
   --light-bg: hsl(210, 40%, 98%);
+  --purple-accent: hsl(270, 75%, 60%);
+  --orange-accent: hsl(25, 95%, 55%);
 }
 
 .dark {
@@ -127,5 +129,29 @@
   
   .bg-light-bg {
     background-color: var(--light-bg);
+  }
+  
+  .purple-accent {
+    color: var(--purple-accent);
+  }
+  
+  .bg-purple-accent {
+    background-color: var(--purple-accent);
+  }
+  
+  .text-purple-accent {
+    color: var(--purple-accent);
+  }
+  
+  .orange-accent {
+    color: var(--orange-accent);
+  }
+  
+  .bg-orange-accent {
+    background-color: var(--orange-accent);
+  }
+  
+  .text-orange-accent {
+    color: var(--orange-accent);
   }
 }

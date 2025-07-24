@@ -8,11 +8,11 @@ const SkillsSection = () => {
       icon: ClipboardCheck,
       color: "navy",
       skills: [
-        { name: "Agile Methodologies", experience: "Academic + Projects", description: "Coursework & capstone implementation" },
-        { name: "Risk Management", experience: "Academic", description: "Project Management I & II coursework" },
-        { name: "Stakeholder Communication", experience: "20+ Years", description: "Extensive professional experience" },
-        { name: "Team Leadership", experience: "18+ Years", description: "Led 12-person teams at Dell Technologies" },
-        { name: "Documentation", experience: "20+ Years", description: "Authored thousands of SOPs and procedures" },
+        { name: "Agile Methodologies", experience: "Academic + Projects", description: "Coursework & capstone implementation", accent: "purple-accent" },
+        { name: "Risk Management", experience: "Academic", description: "Project Management I & II coursework", accent: "accent-blue" },
+        { name: "Stakeholder Communication", experience: "20+ Years", description: "Extensive professional experience", accent: "success-green" },
+        { name: "Team Leadership", experience: "18+ Years", description: "Led 12-person teams at Dell Technologies", accent: "orange-accent" },
+        { name: "Documentation", experience: "20+ Years", description: "Authored thousands of SOPs and procedures", accent: "navy" },
       ],
     },
     {
@@ -20,11 +20,11 @@ const SkillsSection = () => {
       icon: Code,
       color: "accent-blue",
       skills: [
-        { name: "React/JavaScript", experience: "Academic + Projects", description: "TimelyRx and PMP Quiz apps" },
-        { name: "Node.js/REST APIs", experience: "Academic + Projects", description: "Full-stack capstone development" },
-        { name: "Network Administration", experience: "20+ Years", description: "Cisco networking, mainframe operations" },
-        { name: "Linux/Windows Systems", experience: "20+ Years", description: "Enterprise system administration" },
-        { name: "Database Management", experience: "Academic", description: "Coursework in database structures" },
+        { name: "React/JavaScript", experience: "Academic + Projects", description: "TimelyRx and PMP Quiz apps", accent: "accent-blue" },
+        { name: "Node.js/REST APIs", experience: "Academic + Projects", description: "Full-stack capstone development", accent: "purple-accent" },
+        { name: "Network Administration", experience: "20+ Years", description: "Cisco networking, mainframe operations", accent: "orange-accent" },
+        { name: "Linux/Windows Systems", experience: "20+ Years", description: "Enterprise system administration", accent: "success-green" },
+        { name: "Database Management", experience: "Academic", description: "Coursework in database structures", accent: "navy" },
       ],
     },
     {
@@ -32,11 +32,11 @@ const SkillsSection = () => {
       icon: BarChart3,
       color: "success-green",
       skills: [
-        { name: "Business Process Analysis", experience: "Academic", description: "Information Systems coursework" },
-        { name: "Data Analysis", experience: "Academic", description: "Business Statistics and Analytics courses" },
-        { name: "Excel/Power Query", experience: "Professional", description: "Business reporting and data analysis" },
-        { name: "Statistical Reporting", experience: "Academic", description: "Business Statistics coursework" },
-        { name: "Technical Writing", experience: "20+ Years", description: "Extensive documentation and procedures" },
+        { name: "Business Process Analysis", experience: "Academic", description: "Information Systems coursework", accent: "purple-accent" },
+        { name: "Data Analysis", experience: "Academic", description: "Business Statistics and Analytics courses", accent: "accent-blue" },
+        { name: "Excel/Power Query", experience: "Professional", description: "Business reporting and data analysis", accent: "orange-accent" },
+        { name: "Statistical Reporting", experience: "Academic", description: "Business Statistics coursework", accent: "navy" },
+        { name: "Technical Writing", experience: "20+ Years", description: "Extensive documentation and procedures", accent: "success-green" },
       ],
     },
   ];
@@ -85,16 +85,37 @@ const SkillsSection = () => {
     }
   };
 
-  const getExperienceTagClass = (color: string) => {
-    switch (color) {
+  const getExperienceTagClass = (accent: string) => {
+    switch (accent) {
       case "navy":
-        return "text-navy bg-navy/10";
+        return "text-navy bg-navy/10 border border-navy/20";
       case "accent-blue":
-        return "text-accent-blue bg-accent-blue/10";
+        return "text-accent-blue bg-accent-blue/10 border border-accent-blue/20";
       case "success-green":
-        return "text-success-green bg-success-green/10";
+        return "text-success-green bg-success-green/10 border border-success-green/20";
+      case "purple-accent":
+        return "text-purple-accent bg-purple-accent/10 border border-purple-accent/20";
+      case "orange-accent":
+        return "text-orange-accent bg-orange-accent/10 border border-orange-accent/20";
       default:
         return "text-gray-600 bg-gray-100";
+    }
+  };
+
+  const getBorderClass = (accent: string) => {
+    switch (accent) {
+      case "navy":
+        return "border-navy";
+      case "accent-blue":
+        return "border-accent-blue";
+      case "success-green":
+        return "border-success-green";
+      case "purple-accent":
+        return "border-purple-accent";
+      case "orange-accent":
+        return "border-orange-accent";
+      default:
+        return "border-gray-200";
     }
   };
 
@@ -118,10 +139,10 @@ const SkillsSection = () => {
               
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="border-l-4 border-gray-200 pl-4 py-2">
+                  <div key={skillIndex} className={`border-l-4 ${getBorderClass(skill.accent)} pl-4 py-2`}>
                     <div className="flex justify-between items-start mb-1">
                       <span className="text-sm font-medium text-gray-900">{skill.name}</span>
-                      <span className={`text-xs font-medium px-2 py-1 rounded ${getExperienceTagClass(category.color)}`}>
+                      <span className={`text-xs font-medium px-2 py-1 rounded ${getExperienceTagClass(skill.accent)}`}>
                         {skill.experience}
                       </span>
                     </div>
