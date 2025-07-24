@@ -17,9 +17,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-hero-gradient"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20"></div>
+    <section id="home" className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden bg-hero-gradient">
+      <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-white/30"></div>
+      <div className="absolute inset-0 bg-vibrant-gradient opacity-5"></div>
       
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -39,28 +39,29 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 bg-gradient-to-r from-neon-green/15 to-success-green/10 px-4 py-2 rounded-xl border border-success-green/30 hover-glow-blue transition-all duration-300">
+              <div className="flex items-center gap-2 bg-gradient-to-r from-success-green/15 to-success-green/5 px-4 py-2 rounded-xl border border-success-green/30 hover-glow-teal transition-all duration-300 backdrop-blur-sm">
                 <CheckCircle className="h-5 w-5 text-success-green" />
-                <span className="text-sm font-semibold">CAPM Candidate 2025</span>
+                <span className="text-sm font-semibold text-success-green">CAPM Candidate 2025</span>
               </div>
-              <div className="flex items-center gap-2 bg-gradient-to-r from-cyber-purple/15 to-purple-accent/10 px-4 py-2 rounded-xl border border-purple-accent/30 hover-glow-purple transition-all duration-300">
-                <GraduationCap className="h-5 w-5 text-cyber-purple" />
-                <span className="text-sm font-semibold">Senior BAS-IS Student</span>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-purple-accent/15 to-purple-accent/5 px-4 py-2 rounded-xl border border-purple-accent/30 hover-glow-purple transition-all duration-300 backdrop-blur-sm">
+                <GraduationCap className="h-5 w-5 text-purple-accent" />
+                <span className="text-sm font-semibold text-purple-accent">Senior BAS-IS Student</span>
               </div>
-              <div className="flex items-center gap-2 bg-gradient-to-r from-tech-orange/15 to-orange-accent/10 px-4 py-2 rounded-xl border border-tech-orange/30 hover-glow-orange transition-all duration-300">
-                <Briefcase className="h-5 w-5 text-tech-orange" />
-                <span className="text-sm font-semibold">20+ Years IT Experience</span>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-coral/15 to-coral/5 px-4 py-2 rounded-xl border border-coral/30 hover-glow-coral transition-all duration-300 backdrop-blur-sm">
+                <Briefcase className="h-5 w-5 text-coral" />
+                <span className="text-sm font-semibold text-coral">20+ Years IT Experience</span>
               </div>
-              <div className="flex items-center gap-2 bg-gradient-to-r from-electric-blue/15 to-accent-blue/10 px-4 py-2 rounded-xl border border-electric-blue/30 hover-glow-blue transition-all duration-300">
-                <Users className="h-5 w-5 text-electric-blue" />
-                <span className="text-sm font-semibold">6 Years Team Leadership</span>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-teal/15 to-teal/5 px-4 py-2 rounded-xl border border-teal/30 hover-glow-teal transition-all duration-300 backdrop-blur-sm">
+                <Users className="h-5 w-5 text-teal" />
+                <span className="text-sm font-semibold text-teal">6 Years Team Leadership</span>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={scrollToContact}
-                className="btn-electric text-white px-8 py-3 font-semibold tracking-wide"
+                size="lg"
+                className="bg-vibrant-gradient text-white font-semibold px-8 py-3 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover-glow-teal"
               >
                 Get In Touch
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -68,10 +69,11 @@ const HeroSection = () => {
               <Button 
                 variant="outline"
                 onClick={downloadResume}
-                className="border-2 border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-white px-8 py-3 transition-all duration-300 hover-glow-blue"
+                size="lg"
+                className="font-semibold px-8 py-3 rounded-xl hover:scale-105 transition-all duration-300 border-2 border-teal/40 text-teal hover:bg-teal/10 hover-glow-teal backdrop-blur-sm"
               >
+                <Download className="mr-2 h-5 w-5" />
                 Download Resume
-                <Download className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -84,12 +86,12 @@ const HeroSection = () => {
                   alt="April V. Sykes - Professional Photo" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-accent/10 via-transparent to-orange-accent/10"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-teal/10 via-purple-accent/5 to-coral/10"></div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-4">
+              <div className="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 border border-teal/20">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-navy">3.94</div>
-                  <div className="text-sm text-gray-600">GPA</div>
+                  <div className="text-2xl font-bold text-gradient">3.94</div>
+                  <div className="text-sm text-muted-foreground">GPA</div>
                 </div>
               </div>
             </div>

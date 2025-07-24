@@ -3,58 +3,87 @@
 @tailwind utilities;
 
 :root {
-  /* Professional Light Theme */
+  /* 2025 Modern Professional - Sophisticated Tech Palette */
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(222, 84%, 4.9%);
+  --foreground: hsl(218, 41%, 15%);
   --muted: hsl(210, 40%, 98%);
-  --muted-foreground: hsl(215, 16%, 46.9%);
+  --muted-foreground: hsl(215, 20%, 65%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(222, 84%, 4.9%);
+  --popover-foreground: hsl(218, 41%, 15%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222, 84%, 4.9%);
-  --border: hsl(214, 32%, 91%);
-  --input: hsl(214, 32%, 91%);
-  --primary: hsl(221, 83%, 53%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(210, 40%, 96%);
-  --secondary-foreground: hsl(222, 84%, 4.9%);
-  --accent: hsl(210, 40%, 96%);
-  --accent-foreground: hsl(222, 84%, 4.9%);
-  --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(221, 83%, 53%);
+  --card-foreground: hsl(218, 41%, 15%);
+  --border: hsl(220, 13%, 91%);
+  --input: hsl(220, 13%, 91%);
+  --primary: hsl(179, 65%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(220, 14%, 96%);
+  --secondary-foreground: hsl(218, 41%, 15%);
+  --accent: hsl(220, 14%, 96%);
+  --accent-foreground: hsl(218, 41%, 15%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(179, 65%, 53%);
   --radius: 0.5rem;
   
-  /* Modern 2025 Tech Professional Colors - Updated */
-  --navy: hsl(215, 85%, 25%);
+  /* 2025 Sophisticated Tech Professional Colors */
+  --navy: hsl(218, 41%, 15%);
   --dark-gray: hsl(225, 40%, 15%);
-  --accent-blue: hsl(195, 100%, 50%);
-  --success-green: hsl(142, 76%, 45%);
+  --accent-blue: hsl(179, 65%, 53%);
+  --success-green: hsl(142, 71%, 45%);
   --light-bg: hsl(210, 45%, 98%);
-  --purple-accent: hsl(260, 85%, 60%);
-  --orange-accent: hsl(25, 95%, 53%);
-  --coral: hsl(16, 100%, 66%);
-  --teal: hsl(186, 100%, 44%);
+  --purple-accent: hsl(262, 83%, 58%);
+  --orange-accent: hsl(14, 100%, 57%);
+  --coral: hsl(348, 100%, 61%);
+  --teal: hsl(179, 65%, 53%);
   --rose: hsl(330, 100%, 70%);
+  --golden-yellow: hsl(45, 93%, 58%);
   
-  /* Modern Electric Accents */
-  --electric-blue: hsl(195, 100%, 50%);
-  --neon-green: hsl(120, 100%, 50%);
-  --cyber-purple: hsl(270, 100%, 65%);
-  --tech-orange: hsl(25, 95%, 53%);
+  /* Modern Professional Accents */
+  --electric-blue: hsl(179, 65%, 53%);
+  --neon-green: hsl(142, 71%, 45%);
+  --cyber-purple: hsl(262, 83%, 58%);
+  --tech-orange: hsl(14, 100%, 57%);
+  --coral-pink: hsl(348, 100%, 61%);
   
-  /* Professional Light Gradients */
-  --primary-gradient: linear-gradient(135deg, hsl(221, 83%, 53%) 0%, hsl(262, 83%, 58%) 100%);
-  --hero-gradient: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(0, 0%, 100%) 50%, hsl(210, 40%, 98%) 100%);
+  /* 2025 Sophisticated Tech Gradients */
+  --primary-gradient: linear-gradient(135deg, hsl(179, 65%, 53%) 0%, hsl(262, 83%, 58%) 100%);
+  --hero-gradient: linear-gradient(135deg, 
+    hsl(179, 65%, 96%) 0%,
+    hsl(348, 100%, 96%) 25%, 
+    hsl(262, 83%, 96%) 50%,
+    hsl(45, 93%, 96%) 75%,
+    hsl(179, 65%, 96%) 100%);
   --section-gradient: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(0, 0%, 100%) 100%);
-  --accent-gradient: linear-gradient(135deg, hsl(25, 95%, 53%) 0%, hsl(330, 100%, 70%) 100%);
+  --accent-gradient: linear-gradient(135deg, hsl(179, 65%, 53%) 0%, hsl(348, 100%, 61%) 100%);
   --card-gradient: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(210, 40%, 98%) 100%);
+  --vibrant-gradient: linear-gradient(135deg, 
+    hsl(179, 65%, 53%) 0%, 
+    hsl(262, 83%, 58%) 25%, 
+    hsl(348, 100%, 61%) 50%, 
+    hsl(45, 93%, 58%) 75%, 
+    hsl(142, 71%, 45%) 100%);
   
-  /* Tech Glow Effects */
-  --glow-blue: 0 0 20px hsl(195, 100%, 50%, 0.3);
-  --glow-purple: 0 0 20px hsl(270, 100%, 65%, 0.3);
-  --glow-orange: 0 0 20px hsl(25, 95%, 53%, 0.3);
+  /* Modern Glow Effects */
+  --glow-teal: 0 0 20px hsl(179, 65%, 53%, 0.3);
+  --glow-purple: 0 0 20px hsl(262, 83%, 58%, 0.3);
+  --glow-coral: 0 0 20px hsl(348, 100%, 61%, 0.3);
+  --glow-gold: 0 0 20px hsl(45, 93%, 58%, 0.3);
 }
+
+/* 2025 Modern Utility Classes */
+.bg-hero-gradient { background: var(--hero-gradient); }
+.bg-vibrant-gradient { background: var(--vibrant-gradient); }
+.text-gradient {
+  background: var(--primary-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hover-glow-teal:hover { box-shadow: var(--glow-teal); }
+.hover-glow-purple:hover { box-shadow: var(--glow-purple); }
+.hover-glow-coral:hover { box-shadow: var(--glow-coral); }
+.hover-glow-gold:hover { box-shadow: var(--glow-gold); }
 
 .dark {
   --background: hsl(222, 84%, 4.9%);

@@ -61,11 +61,22 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
-        // Modern 2025 Electric Colors
+        // 2025 Sophisticated Tech Colors
+        "navy": "var(--navy)",
+        "dark-gray": "var(--dark-gray)",
+        "accent-blue": "var(--accent-blue)",
+        "purple-accent": "var(--purple-accent)",
+        "orange-accent": "var(--orange-accent)",
+        "success-green": "var(--success-green)",
+        "coral": "var(--coral)",
+        "teal": "var(--teal)",
+        "rose": "var(--rose)",
+        "golden-yellow": "var(--golden-yellow)",
         "electric-blue": "var(--electric-blue)",
         "neon-green": "var(--neon-green)",
         "cyber-purple": "var(--cyber-purple)",
         "tech-orange": "var(--tech-orange)",
+        "coral-pink": "var(--coral-pink)",
       },
       keyframes: {
         "accordion-down": {
