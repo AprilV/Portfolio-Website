@@ -140,7 +140,7 @@ const ExperienceSection = () => {
             <div className="role-impact-banner">
               <div className="impact-icon">💼</div>
               <p className="impact-text">
-                18+ years healthcare IT operations at Dell Technologies - 6 years as Team Lead, 12+ years as Systems Analyst and Operations Technician, plus recent higher education IT experience
+                20+ years IT operations experience: 15 years at Dell Technologies (6 years Team Lead, 9 years Systems Analyst/Operations Tech), 5 years PNC Computer Operator, plus recent higher education IT support
               </p>
             </div>
           </motion.div>

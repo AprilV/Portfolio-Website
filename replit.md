@@ -11,7 +11,7 @@ This is a professional portfolio website built as a full-stack application showc
 - **Company Logo Integration**: Custom SVG logos for Dell Technologies and Olympic College with professional styling
 - **Enhanced Visual Design**: 6px Tech Blue left borders, role impact summary banner, interactive job titles with hover effects
 - **Floating Navigation System**: Scroll snapping with sticky dot navigation and real-time section highlighting
-- **Accurate Career Representation**: Updated role impact banner to correctly reflect 6 years team leadership + 12+ years analyst/operations experience
+- **Accurate Career Representation**: Updated role impact banner to correctly reflect complete career history: 15 years Dell (6 years Team Lead + 9 years analyst/operations), 5 years PNC Computer Operator
 - **Professional Micro-interactions**: Skill badge animations, hover effects, and comprehensive scroll-based animations
 
 **Previous Update - January 25, 2025**: Professional Portfolio Deployment Complete - Live at aprilsykes.com
