@@ -75,16 +75,21 @@ ${contactData.message}
 Reply directly to this email to respond to ${contactData.name}.
     `;
 
-    await mailService.send({
+    const emailPayload = {
       to: 'april_sykes@proton.me',
       from: 'april_sykes@proton.me', // Now verified!
       replyTo: contactData.email,
       subject: `New Contact Message from ${contactData.name}`,
       text: emailText,
       html: emailHtml,
-    });
+    };
 
-    console.log(`Contact notification email sent for ${contactData.name}`);
+    console.log('Sending notification email with payload:', JSON.stringify(emailPayload, null, 2));
+    
+    const result = await mailService.send(emailPayload);
+    
+    console.log('SendGrid response for notification:', JSON.stringify(result, null, 2));
+    console.log(`Contact notification email sent for ${contactData.name} - Message ID: ${result[0]?.headers?.['x-message-id']}`);
     return true;
   } catch (error: any) {
     console.error('Failed to send contact notification email:', error);
