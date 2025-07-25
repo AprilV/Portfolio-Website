@@ -25,36 +25,37 @@
   --ring: hsl(179, 65%, 53%);
   --radius: 0.5rem;
   
-  /* Consistent Professional Color System */
-  --background-neutral: hsl(210, 25%, 98%);
-  --charcoal-black: hsl(0, 0%, 12%);
-  --cool-gray: hsl(213, 13%, 32%);
-  --tech-blue: hsl(214, 76%, 49%);
-  --teal-blue: hsl(174, 66%, 54%);
+  /* Enterprise Professional Color System */
+  --background-neutral: hsl(0, 0%, 100%);
+  --charcoal-black: hsl(220, 20%, 15%);
+  --cool-gray: hsl(213, 10%, 45%);
+  --primary-blue: hsl(220, 45%, 35%);
+  --accent-gray: hsl(210, 15%, 55%);
   --success-green: hsl(142, 71%, 45%);
   --coral-alert: hsl(354, 89%, 68%);
-  --card-background: hsl(0, 0%, 96%);
+  --card-background: hsl(210, 25%, 98%);
   --divider-gray: hsl(220, 13%, 91%);
   
   /* Legacy color mappings for compatibility */
-  --navy: hsl(0, 0%, 12%);
-  --teal: hsl(174, 66%, 54%);
-  --purple-accent: hsl(214, 76%, 49%);
+  --navy: hsl(220, 20%, 15%);
+  --teal: hsl(210, 15%, 55%);
+  --purple-accent: hsl(220, 45%, 35%);
   --coral: hsl(354, 89%, 68%);
+  --tech-blue: hsl(220, 45%, 35%);
+  --teal-blue: hsl(210, 15%, 55%);
   
-  /* Consistent Professional Gradients */
-  --primary-gradient: linear-gradient(135deg, hsl(214, 76%, 49%) 0%, hsl(174, 66%, 54%) 100%);
+  /* Enterprise Professional Gradients */
+  --primary-gradient: linear-gradient(135deg, hsl(220, 45%, 35%) 0%, hsl(210, 15%, 55%) 100%);
   --hero-gradient: linear-gradient(135deg, 
     hsl(0, 0%, 100%) 0%,
-    hsl(210, 25%, 98%) 30%, 
+    hsl(210, 25%, 98%) 50%, 
     hsl(0, 0%, 100%) 100%);
   --section-gradient: linear-gradient(135deg, hsl(210, 25%, 98%) 0%, hsl(0, 0%, 100%) 100%);
-  --accent-gradient: linear-gradient(135deg, hsl(0, 0%, 12%) 0%, hsl(214, 76%, 49%) 100%);
-  --card-gradient: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 96%) 100%);
+  --accent-gradient: linear-gradient(135deg, hsl(220, 20%, 15%) 0%, hsl(220, 45%, 35%) 100%);
+  --card-gradient: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(210, 25%, 98%) 100%);
   --professional-gradient: linear-gradient(135deg, 
-    hsl(0, 0%, 12%) 0%, 
-    hsl(214, 76%, 49%) 50%, 
-    hsl(174, 66%, 54%) 100%);
+    hsl(220, 20%, 15%) 0%, 
+    hsl(220, 45%, 35%) 100%);
   
   /* Modern Glow Effects */
   --glow-teal: 0 0 20px hsl(179, 65%, 53%, 0.3);

@@ -61,16 +61,18 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
-        // Consistent Professional Color System
+        // Enterprise Professional Color System
         "background-neutral": "var(--background-neutral)",
         "charcoal-black": "var(--charcoal-black)",
         "cool-gray": "var(--cool-gray)",
-        "tech-blue": "var(--tech-blue)",
-        "teal-blue": "var(--teal-blue)",
+        "primary-blue": "var(--primary-blue)",
+        "accent-gray": "var(--accent-gray)",
         "success-green": "var(--success-green)",
         "coral-alert": "var(--coral-alert)",
         "card-background": "var(--card-background)",
         "divider-gray": "var(--divider-gray)",
+        "tech-blue": "var(--tech-blue)",
+        "teal-blue": "var(--teal-blue)",
         // Legacy compatibility colors
         "navy": "var(--navy)",
         "teal": "var(--teal)",
