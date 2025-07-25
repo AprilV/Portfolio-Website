@@ -27,6 +27,9 @@ export const insertContactSchema = createInsertSchema(contactSubmissions).pick({
   email: true,
   company: true,
   message: true,
+}).extend({
+  captchaAnswer: z.number().optional(),
+  captchaExpected: z.number().optional(),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;

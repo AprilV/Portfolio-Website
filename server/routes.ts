@@ -50,7 +50,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      const contactData = insertContactSchema.parse(req.body);
+      // Validate CAPTCHA
+      const { captchaAnswer, captchaExpected, ...contactFields } = req.body;
+      
+      if (captchaAnswer === undefined || captchaExpected === undefined) {
+        return res.status(400).json({
+          success: false,
+          message: "CAPTCHA verification is required to prevent spam."
+        });
+      }
+      
+      if (typeof captchaAnswer !== 'number' || typeof captchaExpected !== 'number') {
+        return res.status(400).json({
+          success: false,
+          message: "Invalid CAPTCHA format."
+        });
+      }
+      
+      if (captchaAnswer !== captchaExpected) {
+        console.log(`🤖 CAPTCHA FAILED: Expected ${captchaExpected}, got ${captchaAnswer} from ${req.ip} at ${new Date().toISOString()}`);
+        return res.status(400).json({
+          success: false,
+          message: "CAPTCHA verification failed. Please solve the math problem correctly."
+        });
+      }
+
+      console.log(`✅ CAPTCHA VERIFIED: Correct answer ${captchaAnswer} from ${req.ip} at ${new Date().toISOString()}`);
+
+      const contactData = insertContactSchema.parse(contactFields);
       const submission = await storage.createContactSubmission(contactData);
       
       // Send email notifications

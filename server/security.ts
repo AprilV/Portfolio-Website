@@ -290,10 +290,20 @@ export const isValidEmail = (email: string): boolean => {
   return emailRegex.test(email) && email.length <= 254;
 };
 
-// Validate contact form data
+// Enhanced spam detection patterns
+const spamPatterns = [
+  /https?:\/\/[^\s]+.*https?:\/\/[^\s]+/gi, // Multiple URLs
+  /\b(buy now|click here|free money|guaranteed|urgent|act now|limited time|earn money|investment opportunity)\b/gi,
+  /(.)\1{8,}/gi, // Repeated characters
+  /(viagra|cialis|pharmacy|crypto|bitcoin|forex|casino|lottery)/gi, // Spam topics
+  /\b\w+@\w+\.\w+.*\b\w+@\w+\.\w+/gi, // Multiple email addresses
+];
+
+// Validate contact form data with enhanced spam detection
 export const validateContactData = (data: any): { isValid: boolean; errors: string[] } => {
   const errors: string[] = [];
 
+  // Basic field validation
   if (!data.name || typeof data.name !== 'string' || data.name.trim().length < 2) {
     errors.push('Name must be at least 2 characters long');
   }
@@ -306,6 +316,7 @@ export const validateContactData = (data: any): { isValid: boolean; errors: stri
     errors.push('Message must be at least 10 characters long');
   }
 
+  // Length validation
   if (data.name && data.name.length > 100) {
     errors.push('Name must be less than 100 characters');
   }
@@ -316,6 +327,22 @@ export const validateContactData = (data: any): { isValid: boolean; errors: stri
 
   if (data.message && data.message.length > 5000) {
     errors.push('Message must be less than 5000 characters');
+  }
+
+  // Enhanced spam detection
+  const messageContent = `${data.name || ''} ${data.email || ''} ${data.message || ''}`.toLowerCase();
+  let spamScore = 0;
+  
+  spamPatterns.forEach(pattern => {
+    if (pattern.test(messageContent)) {
+      spamScore++;
+    }
+  });
+  
+  // If multiple spam indicators, likely spam
+  if (spamScore >= 2) {
+    errors.push('Message flagged as potential spam');
+    console.warn(`🚨 SPAM DETECTED: Score ${spamScore}/5 - Content: ${messageContent.substring(0, 100)}...`);
   }
 
   return {

@@ -12,6 +12,12 @@ interface ContactFormData {
   email: string;
   company: string;
   message: string;
+  captchaAnswer: string;
+}
+
+interface CaptchaChallenge {
+  question: string;
+  answer: number;
 }
 
 const ContactSection = () => {
@@ -21,11 +27,57 @@ const ContactSection = () => {
     email: "",
     company: "",
     message: "",
+    captchaAnswer: "",
   });
+
+  // Generate a simple math CAPTCHA
+  const generateCaptcha = (): CaptchaChallenge => {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    const operations = ['+', '-', '×'];
+    const operation = operations[Math.floor(Math.random() * operations.length)];
+    
+    let question: string;
+    let answer: number;
+    
+    switch (operation) {
+      case '+':
+        question = `${num1} + ${num2}`;
+        answer = num1 + num2;
+        break;
+      case '-':
+        // Ensure positive result
+        const larger = Math.max(num1, num2);
+        const smaller = Math.min(num1, num2);
+        question = `${larger} - ${smaller}`;
+        answer = larger - smaller;
+        break;
+      case '×':
+        // Use smaller numbers for multiplication
+        const smallNum1 = Math.floor(Math.random() * 5) + 1;
+        const smallNum2 = Math.floor(Math.random() * 5) + 1;
+        question = `${smallNum1} × ${smallNum2}`;
+        answer = smallNum1 * smallNum2;
+        break;
+      default:
+        question = `${num1} + ${num2}`;
+        answer = num1 + num2;
+    }
+    
+    return { question, answer };
+  };
+
+  const [captcha, setCaptcha] = useState<CaptchaChallenge>(generateCaptcha());
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
+      // Include CAPTCHA verification in the request
+      const requestData = {
+        ...data,
+        captchaAnswer: parseInt(data.captchaAnswer),
+        captchaExpected: captcha.answer
+      };
+      const response = await apiRequest("POST", "/api/contact", requestData);
       return response.json();
     },
     onSuccess: (data) => {
@@ -33,7 +85,8 @@ const ContactSection = () => {
         title: "Message sent successfully!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
-      setFormData({ name: "", email: "", company: "", message: "" });
+      setFormData({ name: "", email: "", company: "", message: "", captchaAnswer: "" });
+      setCaptcha(generateCaptcha()); // Generate new CAPTCHA
     },
     onError: (error: any) => {
       toast({
@@ -41,6 +94,9 @@ const ContactSection = () => {
         description: error.message || "Please try again or contact me directly.",
         variant: "destructive",
       });
+      // Generate new CAPTCHA on error
+      setCaptcha(generateCaptcha());
+      setFormData(prev => ({ ...prev, captchaAnswer: "" }));
     },
   });
 
@@ -50,6 +106,8 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate required fields
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Please fill in all required fields",
@@ -58,6 +116,29 @@ const ContactSection = () => {
       });
       return;
     }
+    
+    // Validate CAPTCHA
+    if (!formData.captchaAnswer) {
+      toast({
+        title: "Please solve the math problem",
+        description: "CAPTCHA verification is required to prevent spam.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    const userAnswer = parseInt(formData.captchaAnswer);
+    if (isNaN(userAnswer) || userAnswer !== captcha.answer) {
+      toast({
+        title: "Incorrect answer",
+        description: "Please solve the math problem correctly.",
+        variant: "destructive",
+      });
+      setCaptcha(generateCaptcha()); // Generate new CAPTCHA
+      setFormData(prev => ({ ...prev, captchaAnswer: "" }));
+      return;
+    }
+    
     contactMutation.mutate(formData);
   };
 
@@ -217,6 +298,42 @@ const ContactSection = () => {
                   placeholder="Tell me about the opportunity or project you'd like to discuss..."
                   className="w-full resize-none transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
                 />
+              </div>
+              
+              {/* CAPTCHA Section */}
+              <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <label htmlFor="captcha" className="block text-sm font-medium text-gray-700 mb-2">
+                  Security Verification *
+                </label>
+                <div className="flex items-center gap-4">
+                  <div className="bg-white px-4 py-2 rounded border border-gray-300 font-mono text-lg">
+                    {captcha.question} = ?
+                  </div>
+                  <Input
+                    id="captcha"
+                    type="number"
+                    required
+                    value={formData.captchaAnswer}
+                    onChange={(e) => handleInputChange("captchaAnswer", e.target.value)}
+                    placeholder="Answer"
+                    className="w-24 text-center"
+                  />
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={() => {
+                      setCaptcha(generateCaptcha());
+                      setFormData(prev => ({ ...prev, captchaAnswer: "" }));
+                    }}
+                    className="text-xs"
+                  >
+                    New Problem
+                  </Button>
+                </div>
+                <p className="text-xs text-gray-600 mt-2">
+                  Please solve this simple math problem to verify you're human and prevent spam.
+                </p>
               </div>
               
               <Button 
