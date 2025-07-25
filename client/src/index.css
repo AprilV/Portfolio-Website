@@ -243,6 +243,31 @@
     transform: scale(1.05);
   }
 
+  /* Role Impact Summary Banner */
+  .role-impact-banner {
+    background: linear-gradient(135deg, #2C73D2 0%, #43D8C9 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(44, 115, 210, 0.2);
+  }
+
+  .impact-icon {
+    font-size: 1.5rem;
+    opacity: 0.9;
+  }
+
+  .impact-text {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
   /* Professional Experience Card Styles */
   .experience-card {
     background: white;
@@ -252,6 +277,9 @@
     margin: 1.5rem 0;
     transition: all 0.3s ease;
     border: 1px solid #E0E6ED;
+    border-left: 6px solid #2C73D2;
+    position: relative;
+    overflow: hidden;
   }
 
   .experience-card:hover {
@@ -314,6 +342,13 @@
     font-size: 1.5rem;
     color: #1E1E1E;
     margin-bottom: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .job-title-hover:hover {
+    color: #2C73D2;
+    text-shadow: 0 0 8px rgba(44, 115, 210, 0.3);
   }
 
   .company-name {
@@ -471,6 +506,11 @@
     color: #1E1E1E;
     margin-bottom: 0.75rem;
     font-size: 0.9rem;
+  }
+
+  .tech-icon {
+    color: #FFC93C;
+    font-size: 1rem;
   }
 
   .tech-stack {

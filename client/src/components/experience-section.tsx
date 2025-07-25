@@ -1,4 +1,22 @@
 import { CheckCircle, Clock, MapPin, Building2, Calendar, Award, Users, Target } from "lucide-react";
+import { motion } from "framer-motion";
+
+// Company logo components
+const DellLogo = () => (
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="32" height="32" rx="6" fill="#007DB8"/>
+    <text x="16" y="22" textAnchor="middle" fill="white" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="10">DELL</text>
+  </svg>
+);
+
+const OlympicLogo = () => (
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="32" height="32" rx="6" fill="#1E3A8A"/>
+    <circle cx="16" cy="12" r="4" fill="white"/>
+    <rect x="12" y="18" width="8" height="6" fill="white"/>
+    <rect x="10" y="24" width="12" height="2" fill="white"/>
+  </svg>
+);
 
 const ExperienceSection = () => {
   const experiences = [
@@ -8,7 +26,7 @@ const ExperienceSection = () => {
       period: "Aug 2023 - Jul 2024",
       location: "Bremerton, WA",
       type: "work",
-      logo: "🎓", // Educational institution
+      logo: <OlympicLogo />,
       description: "Provided comprehensive IT support across campus systems while pursuing education. Strengthened communication and coordination skills in project-based environments.",
       achievements: [
         "Supported helpdesk operations using ServiceNow and Microsoft Endpoint Manager",
@@ -29,7 +47,7 @@ const ExperienceSection = () => {
       period: "Jan 2023 - Present",
       location: "Bremerton, WA", 
       type: "education",
-      logo: "🎓", // Educational institution
+      logo: <OlympicLogo />,
       description: "Information Systems (BASIS) program with concentration in Project Management. Completing comprehensive PM coursework with academic distinction.",
       achievements: [
         "Project Management I & II Completed with distinction",
@@ -54,7 +72,7 @@ const ExperienceSection = () => {
       period: "Jan 2011 - Jun 2016",
       location: "Louisville, KY",
       type: "work",
-      logo: "💻", // Technology company
+      logo: <DellLogo />,
       description: "Operations Lead for mainframe infrastructure upgrade and McKesson/Cerner migration project. Managed cross-functional teams and maintained critical healthcare operations during complex system transitions.",
       achievements: [
         "Coordinated upgrade phases and collaborated cross-functionally to ensure uninterrupted operations during migration",
@@ -81,7 +99,7 @@ const ExperienceSection = () => {
       period: "Oct 1997 - Jun 2016",
       location: "Louisville, KY",
       type: "work",
-      logo: "💻", // Technology company
+      logo: <DellLogo />,
       description: "Led mainframe operations and infrastructure services for Jewish Hospital and KentuckyOne Healthcare through organizational transitions from Perot Systems to Dell Technologies to Wipro. Promoted to Team Lead with full P&L responsibility for 24/7 operations.",
       achievements: [
         "Led 24/7 operations with 12-person team maintaining 100% SLA across KY, IN, and OH",
@@ -104,23 +122,46 @@ const ExperienceSection = () => {
     <section id="experience" className="py-20 bg-white" style={{paddingTop: '80px', paddingBottom: '60px'}}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="section-header">
-            Experience & Leadership
-            <div className="section-underline"></div>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Progressive career advancement from technical specialist to team leadership and project coordination
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="section-header">
+              Experience & Leadership
+              <div className="section-underline"></div>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+              Progressive career advancement from technical specialist to team leadership and project coordination
+            </p>
+            
+            {/* Role Impact Summary Banner */}
+            <div className="role-impact-banner">
+              <div className="impact-icon">💼</div>
+              <p className="impact-text">
+                Successfully led IT infrastructure operations across healthcare, enterprise, and technical support domains over 20+ years
+              </p>
+            </div>
+          </motion.div>
         </div>
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="experience-card">
+            <motion.div 
+              key={index} 
+              className="experience-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+            >
               {/* Experience Header */}
               <div className="experience-header">
                 <div className="company-logo-container">
                   <div className="company-logo">
-                    <span className="text-2xl">{exp.logo}</span>
+                    {exp.logo}
                   </div>
                   <div className="timeline-connector">
                     <div className="timeline-dot"></div>
@@ -131,7 +172,13 @@ const ExperienceSection = () => {
                 <div className="flex-1">
                   <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
                     <div>
-                      <h3 className="job-title">{exp.title}</h3>
+                      <motion.h3 
+                        className="job-title job-title-hover"
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {exp.title}
+                      </motion.h3>
                       <p className="company-name">{exp.company}</p>
                       <div className="job-meta">
                         <span className="flex items-center gap-1">
@@ -196,20 +243,38 @@ const ExperienceSection = () => {
                     )}
                   </div>
 
-                  {/* Tech Stack */}
+                  {/* Mini Skill Badges per Job */}
                   {exp.techStack && (
                     <div className="tech-stack-section">
-                      <h5 className="tech-stack-title">Technologies & Skills</h5>
-                      <div className="tech-stack">
+                      <h5 className="tech-stack-title">
+                        <span className="flex items-center gap-2">
+                          <span className="tech-icon">⚡</span>
+                          Key Technologies & Skills
+                        </span>
+                      </h5>
+                      <motion.div 
+                        className="tech-stack"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
+                        viewport={{ once: true }}
+                      >
                         {exp.techStack.map((tech, idx) => (
-                          <span key={idx} className="tech-chip">{tech}</span>
+                          <motion.span 
+                            key={idx} 
+                            className="tech-chip"
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            {tech}
+                          </motion.span>
                         ))}
-                      </div>
+                      </motion.div>
                     </div>
                   )}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         
