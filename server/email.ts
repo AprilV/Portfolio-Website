@@ -22,6 +22,15 @@ export async function sendContactNotification(contactData: ContactEmailParams): 
     return false;
   }
 
+  // For now, log the notification instead of sending email until verification is complete
+  console.log("=== NEW CONTACT FORM SUBMISSION ===");
+  console.log(`Name: ${contactData.name}`);
+  console.log(`Email: ${contactData.email}`);
+  console.log(`Company: ${contactData.company || 'Not provided'}`);
+  console.log(`Message: ${contactData.message}`);
+  console.log("=== END SUBMISSION ===");
+  return true;
+
   try {
     const emailHtml = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -76,23 +85,21 @@ Reply directly to this email to respond to ${contactData.name}.
     `;
 
     await mailService.send({
-      to: 'april_sykes@proton.me',
-      from: 'april_sykes@proton.me', // Use your verified email
+      to: 'aprilsykes@student.olympic.edu', // Use your verified school email
+      from: 'noreply@sendgrid.net', // Use SendGrid's verified domain
       replyTo: contactData.email,
       subject: `New Contact Message from ${contactData.name}`,
       text: emailText,
       html: emailHtml,
-      mailSettings: {
-        sandboxMode: {
-          enable: false
-        }
-      }
     });
 
     console.log(`Contact notification email sent for ${contactData.name}`);
     return true;
-  } catch (error) {
+  } catch (error: any) {
     console.error('Failed to send contact notification email:', error);
+    if (error.response && error.response.body) {
+      console.error('SendGrid error details:', JSON.stringify(error.response.body, null, 2));
+    }
     return false;
   }
 }
