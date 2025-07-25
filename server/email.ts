@@ -89,7 +89,15 @@ Reply directly to this email to respond to ${contactData.name}.
     const result = await mailService.send(emailPayload);
     
     console.log('SendGrid response for notification:', JSON.stringify(result, null, 2));
-    console.log(`Contact notification email sent for ${contactData.name} - Message ID: ${result[0]?.headers?.['x-message-id']}`);
+    console.log(`Contact notification email sent from VERIFIED SENDER for ${contactData.name} - Message ID: ${result[0]?.headers?.['x-message-id']}`);
+    
+    // Additional logging for delivery status
+    if (result[0]?.statusCode === 202) {
+      console.log(`✅ SendGrid accepted email for delivery to april_sykes@proton.me`);
+      console.log(`📧 Email should arrive within 1-5 minutes`);
+      console.log(`🔍 If not received, check: Inbox, Spam, All Mail folders in Proton`);
+    }
+    
     return true;
   } catch (error: any) {
     console.error('Failed to send contact notification email:', error);
