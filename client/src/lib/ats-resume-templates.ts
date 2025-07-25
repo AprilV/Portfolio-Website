@@ -51,6 +51,10 @@ export const resumeData: ResumeData = {
     
     wastate: "Dedicated IT professional with 20+ years of experience serving Washington State communities, seeking Assistant Project Manager role in state government. Currently completing Bachelor of Applied Science in Information Systems at Olympic College (3.94 GPA) with specialized Project Management coursework. Committed to public service excellence with proven track record of managing critical infrastructure supporting citizens and government operations. Strong background in compliance, documentation, and stakeholder collaboration essential for effective public sector project management.",
     
+    internship: "Motivated IT professional with 20+ years of hands-on experience transitioning to project management through formal education. Currently pursuing Bachelor of Applied Science in Information Systems (3.94 GPA) with specialized Project Management I & II coursework (4.0 GPA). Strong academic foundation combined with extensive technical background provides unique perspective for project management internships. Eager to apply classroom learning and technical expertise to real-world project challenges while contributing to organizational success.",
+    
+    assistant: "Results-oriented IT professional with 20+ years of technical experience seeking Assistant Project Manager role to leverage deep infrastructure knowledge in project coordination. Currently completing Bachelor of Applied Science in Information Systems (3.94 GPA) with formal Project Management education (4.0 GPA in PM courses). Proven ability to support cross-functional teams, document processes, and facilitate stakeholder communication. Ready to transition technical expertise into project support role while pursuing CAPM certification.",
+    
     federal: "Highly qualified IT professional with two decades of enterprise infrastructure experience seeking Assistant Project Manager role in federal/government environment. Currently completing Bachelor of Applied Science in Information Systems (3.94 GPA) with specialized Project Management coursework. Security-conscious with extensive compliance and documentation experience. President's Scholar with proven academic excellence and commitment to continuous professional development.",
     
     executive: "Strategic IT leader with 20+ years of progressive experience managing complex technical initiatives and leading high-performance teams. Currently advancing project management expertise through formal CAPM certification track. Demonstrated success in cross-functional collaboration, stakeholder management, and operational excellence at Fortune 500 organizations. Proven ability to deliver results while mentoring technical professionals and driving organizational transformation."
@@ -209,6 +213,10 @@ CORE COMPETENCIES`;
     resumeContent += `\n• ${data.skills.technical.slice(0, 4).join(' • ')}\n• ${data.skills.projectManagement.slice(0, 4).join(' • ')}\n• ${data.skills.software.slice(0, 4).join(' • ')}`;
   } else if (format === 'wastate') {
     resumeContent += `\n• ${data.skills.projectManagement.slice(0, 4).join(' • ')}\n• Public sector experience • Stakeholder collaboration • Process improvement • Community service\n• ${data.skills.technical.slice(0, 3).join(' • ')} • Government compliance`;
+  } else if (format === 'internship') {
+    resumeContent += `\n• Academic Excellence: 3.94 GPA • Project Management Coursework (4.0 GPA) • CAPM Candidate\n• ${data.skills.technical.slice(0, 4).join(' • ')}\n• Strong foundation in ${data.skills.methodologies.slice(0, 3).join(', ')} methodologies`;
+  } else if (format === 'assistant') {
+    resumeContent += `\n• ${data.skills.projectManagement.slice(0, 4).join(' • ')}\n• Process documentation • Team support • Stakeholder coordination • Technical communication\n• ${data.skills.technical.slice(0, 3).join(' • ')} • ${data.skills.software.slice(0, 2).join(' • ')}`;
   } else if (format === 'federal') {
     resumeContent += `\n• ${data.skills.projectManagement.slice(0, 6).join(' • ')}\n• ${data.skills.methodologies.slice(0, 4).join(' • ')}`;
   } else {
@@ -275,5 +283,17 @@ export const atsKeywords = {
     "Washington State", "local government", "community engagement",
     "public sector", "government contracting", "transparency",
     "accountability", "civic responsibility", "public interest"
+  ],
+  internship: [
+    "internship", "entry level", "recent graduate", "academic excellence",
+    "coursework", "GPA", "learning oriented", "growth potential",
+    "educational background", "project management student", "CAPM candidate",
+    "fresh perspective", "eager to learn", "strong foundation"
+  ],
+  assistant: [
+    "assistant project manager", "project coordinator", "project analyst",
+    "project support", "team collaboration", "process documentation",
+    "stakeholder coordination", "project administration", "meeting coordination",
+    "status reporting", "project tracking", "administrative support"
   ]
 };
