@@ -38,7 +38,7 @@ const ProjectsSection = () => {
       description: "Full-stack exam simulator with timer, randomized questions, and dynamic scoring developed using Agile methodology for PM450 capstone project.",
       icon: Code,
       color: "purple-accent",
-      technologies: ["Full-Stack", "Agile", "PM450", "Education"],
+      technologies: ["Full-Stack", "Agile", "PM450 Capstone", "Education"],
       features: [
         "Timer and randomized questions",
         "Dynamic scoring system",
