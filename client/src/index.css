@@ -305,8 +305,8 @@
     background: white;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 2rem;
-    margin: 1.5rem 0;
+    padding: 1.5rem;
+    margin: 1rem 0;
     transition: all 0.3s ease;
     border: 1px solid #E0E6ED;
     border-left: 6px solid #2C73D2;
@@ -322,7 +322,7 @@
   .experience-header {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     gap: 1rem;
   }
 
