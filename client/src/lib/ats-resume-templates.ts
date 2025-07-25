@@ -97,9 +97,9 @@ export const resumeData: ResumeData = {
   },
   certifications: [
     {
-      name: "CAPM (Certified Associate in Project Management)",
+      name: "CAPM (Certified Associate in Project Management) - In Progress",
       issuer: "Project Management Institute (PMI)",
-      date: "Summer 2025 - In Progress"
+      date: "Summer 2025"
     },
     {
       name: "CompTIA Linux+ Professional",

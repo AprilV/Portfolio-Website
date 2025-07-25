@@ -49,12 +49,13 @@ const SkillsSection = () => {
   const certifications = [
     {
       name: "CAPM Candidate",
-      description: "Project Management Institute",
+      description: "Project Management Institute - In Progress",
       detail: "Summer 2025 - PM I & II Complete (4.0 GPA)",
       icon: Award,
       color: "primary-blue",
-      link: "https://www.pmi.org/certifications/certified-associate-capm",
-      credentialId: null
+      link: null,
+      credentialId: "In Progress",
+      status: "in-progress"
     },
     {
       name: "CCNA: Switching, Routing, and Wireless Essentials",
@@ -326,11 +327,17 @@ const SkillsSection = () => {
                     )}
                     {cert.credentialId && (
                       <div className="mt-1">
-                        <span className="inline-flex items-center text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
+                        <span className={`inline-flex items-center text-xs px-2 py-1 rounded ${
+                          cert.credentialId === 'In Progress' ? 'badge-progress' : 'bg-gray-100 text-gray-700'
+                        }`}>
                           <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={
+                              cert.credentialId === 'In Progress' 
+                                ? "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                : "M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z"
+                            } />
                           </svg>
-                          ID: {cert.credentialId}
+                          {cert.credentialId === 'In Progress' ? 'In Progress' : `ID: ${cert.credentialId}`}
                         </span>
                       </div>
                     )}
