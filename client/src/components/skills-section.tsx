@@ -80,7 +80,7 @@ const SkillsSection = () => {
       description: "Cisco Verified Badge",
       detail: "Issued Nov 11, 2024",
       icon: Shield,
-      color: "success-green",
+      color: "primary-blue",
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
       credentialId: "Credly Verified"
     },
@@ -89,7 +89,7 @@ const SkillsSection = () => {
       description: "Cisco Verified Badge",
       detail: "Issued Feb 26, 2024",
       icon: BarChart3,
-      color: "orange-accent",
+      color: "teal-blue",
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
       credentialId: "Credly Verified"
     },
@@ -98,7 +98,7 @@ const SkillsSection = () => {
       description: "Cisco Verified Badge",
       detail: "Issued Feb 26, 2024",
       icon: Award,
-      color: "coral",
+      color: "primary-blue",
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
       credentialId: "Credly Verified"
     },
@@ -107,7 +107,7 @@ const SkillsSection = () => {
       description: "CompTIA Certification (via TestOut)",
       detail: "ID: 6-2C6-VCQ5KS",
       icon: Shield,
-      color: "success-green",
+      color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-vcq5ks",
       credentialId: "6-2C6-VCQ5KS"
     },
@@ -116,7 +116,7 @@ const SkillsSection = () => {
       description: "CompTIA Security Certification (via TestOut)",
       detail: "ID: 6-2C6-V9F5UG",
       icon: Shield,
-      color: "orange-accent",
+      color: "primary-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-v9f5ug", 
       credentialId: "6-2C6-V9F5UG"
     },
@@ -125,7 +125,7 @@ const SkillsSection = () => {
       description: "CompTIA A+ Certification (via TestOut)",
       detail: "ID: 6-2c6-v3pmva",
       icon: Shield,
-      color: "accent-blue",
+      color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-v3pmva",
       credentialId: "6-2c6-v3pmva"
     },
@@ -134,7 +134,7 @@ const SkillsSection = () => {
       description: "CompTIA A+ Certification (via TestOut)", 
       detail: "ID: 6-2c6-v3p73s",
       icon: Shield,
-      color: "purple-accent",
+      color: "primary-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-v3p73s",
       credentialId: "6-2c6-v3p73s"
     },
@@ -143,7 +143,7 @@ const SkillsSection = () => {
       description: "CompTIA Network Professional (via TestOut)",
       detail: "ID: 6-2c6-vv5625",
       icon: Shield,
-      color: "success-green",
+      color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-vv5625",
       credentialId: "6-2c6-vv5625"
     },
@@ -152,7 +152,7 @@ const SkillsSection = () => {
       description: "Olympic College - 3.94 GPA",
       detail: "President's Scholar (8 terms) | Spring 2026",
       icon: BarChart3,
-      color: "navy",
+      color: "primary-blue",
       link: null,
       credentialId: null
     },
