@@ -21,17 +21,20 @@ const ProjectsSection = () => {
     },
     {
       title: "TimelyRx Medication App",
-      description: "React-based medication reminder application featuring caregiver tracking, WCAG accessibility compliance, and local data management for IS320 App Development capstone. Currently in alpha development.",
+      description: "React-based medication reminder application featuring caregiver tracking, WCAG accessibility compliance, and local data management for IS320 App Development capstone. Initial design phase available on GitHub as ElderCare project. Currently in alpha development.",
       icon: Clock,
       color: "success-green",
       technologies: ["React", "WCAG", "Healthcare", "IS320 Capstone"],
       features: [
-        "Caregiver notification system",
-        "WCAG accessibility compliance",
-        "Local data tracking",
-        "Interface design and scheduling logic",
+        "Comprehensive design architecture (GitHub: ElderCare)",
+        "Caregiver notification system implementation", 
+        "WCAG accessibility compliance and testing",
+        "Local data tracking and management",
+        "Professional interface design and scheduling logic",
+        "Iterative development from initial concept to alpha release",
       ],
       link: "https://timely-rx-pro-aprilv120.replit.app/",
+      githubLink: "https://github.com/AprilV/ElderCare",
     },
     {
       title: "PMP Quiz App",
@@ -192,6 +195,18 @@ const ProjectsSection = () => {
                       >
                         Download Paper
                         <FileText className="ml-2 h-4 w-4" />
+                      </Button>
+                    )}
+                    {project.githubLink && (
+                      <Button 
+                        variant="ghost" 
+                        className="text-primary-blue hover:text-primary-blue/80 p-0 h-auto font-medium justify-start hover-lift"
+                        onClick={() => {
+                          window.open(project.githubLink, '_blank');
+                        }}
+                      >
+                        View Initial Design (GitHub)
+                        <ExternalLink className="ml-2 h-4 w-4" />
                       </Button>
                     )}
                     {project.blogLink && (
