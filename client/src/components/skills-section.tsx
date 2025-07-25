@@ -243,15 +243,10 @@ const SkillsSection = () => {
         
         <div className="grid lg:grid-cols-3 gap-8 mb-12 scroll-snap-x lg:grid">
           {skillCategories.map((category, index) => (
-            <div key={index} className={`professional-card glassmorphism relative overflow-hidden group animate-slide-in-bottom ${
+            <div key={index} className={`bg-white rounded-xl border border-border shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl relative overflow-hidden group animate-slide-in-bottom ${
               index === 0 ? 'animation-delay-100' : 
               index === 1 ? 'animation-delay-200' : 'animation-delay-300'
-            }`}>
-              <div className={`absolute inset-0 opacity-5 ${
-                category.color === 'primary-blue' ? 'bg-gradient-to-br from-primary-blue via-teal-blue to-transparent' : 
-                'bg-gradient-to-br from-teal-blue via-primary-blue to-transparent'
-              }`}></div>
-              <div className="relative">
+            } p-8`}>
               <div className="flex items-center gap-3 mb-6">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center progress-ring ${getColorClass(category.color)}`}>
                   <category.icon className="w-6 h-6" />
@@ -278,7 +273,6 @@ const SkillsSection = () => {
                     <p className="text-xs text-gray-600">{skill.description}</p>
                   </div>
                 ))}
-              </div>
               </div>
             </div>
           ))}
