@@ -3,10 +3,28 @@ import { CheckCircle, Clock, MapPin } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Bachelor of Applied Science Student",
+      title: "IT Technician",
+      company: "Olympic College", 
+      period: "Aug 2023 - Jul 2024",
+      location: "Bremerton, WA",
+      status: "completed",
+      description: "Provided comprehensive IT support across campus systems while pursuing education. Strengthened communication and coordination skills in project-based environments.",
+      achievements: [
+        "Windows systems troubleshooting and repair",
+        "Network device configuration and maintenance", 
+        "Technical documentation and knowledge base contributions",
+      ],
+      highlights: [
+        "Stakeholder support",
+        "Cross-departmental coordination",
+        "Service continuity planning",
+      ],
+    },
+    {
+      title: "Bachelor of Applied Science Student", 
       company: "Olympic College",
       period: "Jan 2023 - Present",
-      location: "Bremerton, WA",
+      location: "Bremerton, WA", 
       status: "current",
       description: "Information Systems (BASIS) program with concentration in Project Management. Maintaining 3.94 GPA while completing comprehensive PM coursework.",
       achievements: [
@@ -19,24 +37,6 @@ const ExperienceSection = () => {
         "Active mental health advocate (NAMI Tacoma)",
         "Built TimelyRx medication reminder app",
         "Developed PMP exam simulator using Agile methods",
-      ],
-    },
-    {
-      title: "IT Technician",
-      company: "Olympic College",
-      period: "Aug 2023 - Jul 2024",
-      location: "Bremerton, WA",
-      status: "completed",
-      description: "Provided comprehensive IT support across campus systems while pursuing education. Strengthened communication and coordination skills in project-based environments.",
-      achievements: [
-        "Windows systems troubleshooting and repair",
-        "Network device configuration and maintenance",
-        "Technical documentation and knowledge base contributions",
-      ],
-      highlights: [
-        "Stakeholder support",
-        "Cross-departmental coordination",
-        "Service continuity planning",
       ],
     },
     {
@@ -189,23 +189,53 @@ const ExperienceSection = () => {
                 }`}></div>
                 
                 <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pl-8 lg:order-2' : 'lg:pr-8'}`}>
-                  <div className={`p-8 rounded-xl ${
-                    exp.status === 'current' 
-                      ? 'bg-gradient-to-br from-teal-blue/10 to-primary-blue/10'
-                      : 'bg-light-bg'
-                  }`}>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                  <div className="bg-card-gradient p-8 rounded-xl shadow-lg border border-border">
+                    <h4 className="text-lg font-semibold text-card-foreground mb-4">
                       {exp.status === 'current' ? 'Key Achievements' : 'Major Accomplishments'}
                     </h4>
-                    <ul className="space-y-2 text-gray-700 text-sm">
+                    <ul className="space-y-2 text-card-foreground text-sm">
                       {(exp.highlights || []).map((highlight, highlightIndex) => (
-                        <li key={highlightIndex}>• {highlight}</li>
+                        <li key={highlightIndex} className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-primary-blue rounded-full flex-shrink-0 mt-2"></div>
+                          <span>{highlight}</span>
+                        </li>
                       ))}
                     </ul>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        
+        {/* Professional Summary CTA */}
+        <div className="mt-16 text-center">
+          <div className="bg-card-gradient p-8 rounded-xl shadow-lg border border-border max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-card-foreground mb-4">Ready to Lead Your Next IT Project?</h3>
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Two decades of IT infrastructure expertise combined with formal project management education. 
+              Proven track record of leading teams, managing complex systems, and delivering results in high-stakes environments.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="#resume" 
+                className="inline-flex items-center gap-2 bg-primary-blue text-white px-6 py-3 rounded-lg hover:bg-primary-blue/90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                View Resume Templates
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </a>
+              <a 
+                href="#contact" 
+                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white rounded-lg transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Let's Connect
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
