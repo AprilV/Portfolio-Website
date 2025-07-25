@@ -21,7 +21,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden bg-hero-gradient">
+    <section id="hero" className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden bg-hero-gradient">
       <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-transparent to-teal-blue/5"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

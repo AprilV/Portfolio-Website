@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("hero");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
-      const sections = ["home", "about", "experience", "projects", "skills", "resume", "contact"];
+      const sections = ["hero", "about", "experience", "projects", "skills", "ats-resume", "contact"];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -41,12 +41,12 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { id: "home", label: "Home" },
+    { id: "hero", label: "Home" },
     { id: "about", label: "About" },
     { id: "experience", label: "Professional Experience" },
     { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
-    { id: "resume", label: "ATS Resume" },
+    { id: "ats-resume", label: "ATS Resume" },
     { id: "contact", label: "Contact" },
   ];
 
