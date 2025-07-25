@@ -7,10 +7,10 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "Personal Portfolio Website",
-      description: "Professional portfolio website built from scratch using HTML, CSS, and JavaScript with responsive design and accessibility features.",
+      description: "Professional portfolio website built from scratch using HTML, CSS, and JavaScript with responsive design and accessibility features for CIS151 Web Development capstone.",
       icon: Code,
       color: "navy",
-      technologies: ["HTML", "CSS", "JavaScript", "Responsive"],
+      technologies: ["HTML", "CSS", "JavaScript", "CIS151 Capstone"],
       features: [
         "Custom navigation with Font Awesome icons",
         "Professional photo integration",
@@ -21,7 +21,7 @@ const ProjectsSection = () => {
     },
     {
       title: "TimelyRx Medication App",
-      description: "React-based medication reminder application featuring caregiver tracking, WCAG accessibility compliance, and local data management for IS320 capstone project. Currently in alpha development.",
+      description: "React-based medication reminder application featuring caregiver tracking, WCAG accessibility compliance, and local data management for IS320 App Development capstone. Currently in alpha development.",
       icon: Clock,
       color: "success-green",
       technologies: ["React", "WCAG", "Healthcare", "IS320 Capstone"],
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
     },
     {
       title: "PMP Quiz App",
-      description: "Full-stack exam simulator with timer, randomized questions, and dynamic scoring developed using Agile methodology for PM450 capstone project.",
+      description: "Full-stack exam simulator with timer, randomized questions, and dynamic scoring developed using Agile methodology for PM450 Project Management capstone.",
       icon: Code,
       color: "purple-accent",
       technologies: ["Full-Stack", "Agile", "PM450 Capstone", "Education"],
@@ -49,10 +49,10 @@ const ProjectsSection = () => {
     },
     {
       title: "The Evolution of Artificial Intelligence",
-      description: "Comprehensive research paper and PowerPoint presentation examining AI's transformation from science fiction to societal infrastructure for IS390. Features creative FAL-9000 interview (female voice) reimagining HAL-9000 from 2001: A Space Odyssey.",
+      description: "Comprehensive research paper and PowerPoint presentation examining AI's transformation from science fiction to societal infrastructure for IS390 AI Research capstone. Features creative FAL-9000 interview (female voice) reimagining HAL-9000 from 2001: A Space Odyssey.",
       icon: Users,
       color: "accent-blue",
-      technologies: ["Research", "PowerPoint", "IS390", "APA"],
+      technologies: ["Research", "PowerPoint", "IS390 Capstone", "APA"],
       features: [
         "From Science Fiction to Societal Infrastructure analysis",
         "Academic research paper with APA formatting and citations", 
@@ -95,11 +95,11 @@ const ProjectsSection = () => {
         <div className="text-center mb-10">
           <div className="inline-block">
             <h2 className="section-header">
-              Featured Projects
+              Featured Capstone Projects
               <div className="section-underline"></div>
             </h2>
           </div>
-          <p className="text-xl text-muted-foreground mt-6">Demonstrating technical skills and project management capabilities</p>
+          <p className="text-xl text-muted-foreground mt-6">Four comprehensive capstone projects demonstrating technical skills and project management capabilities across multiple disciplines</p>
         </div>
         
         <div className="grid lg:grid-cols-3 gap-8 scroll-snap-x lg:grid">
