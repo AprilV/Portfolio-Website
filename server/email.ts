@@ -77,12 +77,13 @@ ${contactData.message}
 Reply directly to this email to respond to ${contactData.name}.
     `;
 
-    // Create backup notification to alternative email if needed
-    const primaryEmail = 'april_sykes@proton.me';
+    // Use Gmail for reliable email delivery
+    const notificationEmail = 'aprilv120@gmail.com';
+    const fromEmail = 'april_sykes@proton.me'; // Keep verified sender
     
     const emailPayload = {
-      to: primaryEmail,
-      from: primaryEmail,
+      to: notificationEmail,
+      from: fromEmail,
       replyTo: contactData.email, 
       subject: `🚨 PORTFOLIO CONTACT: ${contactData.name} - ${contactData.company || 'Individual'}`,
       text: emailText,
@@ -106,11 +107,9 @@ Reply directly to this email to respond to ${contactData.name}.
     
     // Additional logging for delivery status
     if (result[0]?.statusCode === 202) {
-      console.log(`✅ SendGrid accepted email for delivery to april_sykes@proton.me`);
-      console.log(`📧 Email should arrive within 1-5 minutes`);
-      console.log(`🔍 If not received, check: Inbox, Spam, All Mail folders in Proton`);
+      console.log(`✅ SendGrid accepted email for delivery to aprilv120@gmail.com`);
+      console.log(`📧 Email should arrive within 1-5 minutes in Gmail inbox`);
       console.log(`🆔 Message ID for tracking: ${result[0]?.headers?.['x-message-id']}`);
-      console.log(`📊 Full headers:`, JSON.stringify(result[0]?.headers, null, 2));
     } else {
       console.log(`❌ Unexpected SendGrid response status: ${result[0]?.statusCode}`);
     }
@@ -174,7 +173,7 @@ export async function sendAutoReply(contactData: ContactEmailParams): Promise<bo
         
         <div style="background: #f0f8ff; padding: 15px; border-radius: 8px; text-align: center; margin-top: 20px;">
           <p style="margin: 0; color: #666; font-size: 14px;">
-            📧 april_sykes@proton.me | 📍 Bremerton, WA | 💼 LinkedIn: /in/april-sykes
+            📧 aprilv120@gmail.com | 📍 Bremerton, WA | 💼 LinkedIn: /in/april-sykes
           </p>
         </div>
       </div>
@@ -199,7 +198,7 @@ Best regards,
 April V. Sykes
 Assistant Project Manager | IT Professional | CAPM Candidate
 
-📧 april_sykes@proton.me | 📍 Bremerton, WA | 💼 LinkedIn: /in/april-sykes
+📧 aprilv120@gmail.com | 📍 Bremerton, WA | 💼 LinkedIn: /in/april-sykes
     `;
 
     await mailService.send({

@@ -37,7 +37,7 @@ export default function AdminContacts() {
           <p className="text-gray-600">Total submissions: {contacts?.length || 0}</p>
           <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
             <p className="text-blue-800 text-sm">
-              <strong>Note:</strong> Email notifications are being sent to april_sykes@proton.me but may be filtered. 
+              <strong>Note:</strong> Email notifications are now being sent to aprilv120@gmail.com for reliable delivery. 
               All submissions are safely stored here. Check for job opportunities from Sarah Johnson and John Smith!
             </p>
           </div>
