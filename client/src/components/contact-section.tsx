@@ -146,7 +146,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Contact",
-      value: "Use the secure contact form below",
+      value: "Use the secure contact form",
       link: null,
     },
     {
