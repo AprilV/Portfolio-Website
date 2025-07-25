@@ -20,6 +20,7 @@ This is a professional portfolio website built as a full-stack application showc
 - **Anti-Bot CAPTCHA System**: Math-based CAPTCHA verification with dynamic problem generation (addition, subtraction, multiplication) to prevent automated spam submissions
 - **Enhanced Spam Detection**: Multi-pattern spam filtering with scoring system detecting suspicious content including multiple URLs, spam keywords, repeated characters, and common spam topics
 - **CAPTCHA Logging**: Real-time monitoring of CAPTCHA verification attempts with detailed logging of failed attempts and IP tracking for bot detection
+- **Dependency Scanning**: Automated npm audit integration with vulnerability assessment, severity classification (critical/high/moderate/low), and real-time security monitoring for supply chain threats
 
 **Previous Update - January 25, 2025**: Complete Admin Platform Deployment - Professional Career Management System
 - **Comprehensive Admin Suite**: Full admin platform with main dashboard (/admin), contact management (/admin/contacts), and settings (/admin/settings)
