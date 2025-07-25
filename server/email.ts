@@ -76,8 +76,8 @@ Reply directly to this email to respond to ${contactData.name}.
     `;
 
     await mailService.send({
-      to: 'aprilsykes@student.olympic.edu', // Use school email temporarily
-      from: 'april_sykes@proton.me', // This will work once verified
+      to: 'april_sykes@proton.me',
+      from: 'april_sykes@proton.me', // Now verified!
       replyTo: contactData.email,
       subject: `New Contact Message from ${contactData.name}`,
       text: emailText,
