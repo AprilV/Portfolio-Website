@@ -70,11 +70,11 @@ const ExperienceSection = () => {
     {
       title: "Operations Lead - Mainframe Upgrade & Migration Project",
       company: "Dell Technologies",
-      period: "Jan 2011 - Jun 2016",
+      period: "Jan 2011 - Jan 2013",
       location: "Louisville, KY",
       type: "work",
       logo: <DellLogo />,
-      description: "Operations Lead for mainframe infrastructure upgrade and McKesson/Cerner migration project. Managed cross-functional teams and maintained critical healthcare operations during complex system transitions.",
+      description: "Operations Lead for mainframe infrastructure upgrade and McKesson/Cerner migration project. Managed cross-functional teams and maintained critical healthcare operations during complex system transitions. Left project during transition phase.",
       achievements: [
         "Coordinated upgrade phases and collaborated cross-functionally to ensure uninterrupted operations during migration",
         "Led departmental support scheduling across multiple mainframe upgrade phases",
@@ -82,14 +82,14 @@ const ExperienceSection = () => {
         "Supported comprehensive McKesson/Cerner migration from legacy mainframe systems",
       ],
       highlights: [
-        "Achieved 100% system uptime during critical healthcare migration",
+        "Achieved 100% system uptime during critical healthcare migration phases",
         "Led a team of 12 technicians supporting 500+ endpoints across regional hospitals", 
-        "Reduced migration timeline by 15% through improved cross-functional coordination",
+        "Improved coordination processes reducing project delays by 15% during tenure",
         "Managed project deliverables spanning 3 regional states (KY, IN, OH)",
       ],
       techStack: ["Mainframes", "McKesson", "Cerner", "Healthcare IT", "Migration Planning", "Operations Coordination"],
       metrics: [
-        { label: "Project Duration", value: "5+ Years" },
+        { label: "Project Duration", value: "2 Years" },
         { label: "System Uptime", value: "100%" },
         { label: "Regional Impact", value: "3 States" },
         { label: "Team Coordination", value: "Multi-Dept" },
@@ -98,11 +98,11 @@ const ExperienceSection = () => {
     {
       title: "System Analyst & Team Lead",
       company: "Dell Technologies",
-      period: "Oct 1997 - Jun 2016",
+      period: "Oct 1997 - Jan 2013",
       location: "Louisville, KY",
       type: "work",
       logo: <DellLogo />,
-      description: "Led mainframe operations and infrastructure services for Jewish Hospital and KentuckyOne Healthcare through organizational transitions from Perot Systems to Dell Technologies to Wipro. Promoted to Team Lead with full P&L responsibility for 24/7 operations.",
+      description: "Led mainframe operations and infrastructure services for Jewish Hospital and KentuckyOne Healthcare through organizational transitions from Perot Systems to Dell Technologies. Promoted to Team Lead with full P&L responsibility for 24/7 operations.",
       achievements: [
         "Led 24/7 operations with 12-person team maintaining 100% SLA across KY, IN, and OH",
         "Managed 14,000 tape backups with daily, weekly, quarterly, and yearly retention cycles",
