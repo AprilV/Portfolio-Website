@@ -140,7 +140,7 @@ export const authenticateAdmin = (password: string): string | null => {
   }
   
   // Generate secure session token
-  const sessionToken = require('crypto').randomBytes(32).toString('hex');
+  const sessionToken = crypto.randomBytes(32).toString('hex');
   adminSessions.add(sessionToken);
   
   // Auto-expire session after 4 hours
