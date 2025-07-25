@@ -25,7 +25,7 @@ const AboutSection = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center scroll-snap-x lg:grid">
           <div className="space-y-6">
             <div className="prose prose-lg text-gray-700 space-y-6">
               <p>

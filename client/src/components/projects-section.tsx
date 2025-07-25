@@ -102,9 +102,12 @@ const ProjectsSection = () => {
           <p className="text-xl text-muted-foreground mt-6">Demonstrating technical skills and project management capabilities</p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 scroll-snap-x lg:grid">
           {projects.map((project, index) => (
-            <Card key={index} className="professional-card border-0 shadow-lg group">
+            <Card key={index} className={`professional-card glassmorphism border-0 shadow-lg group animate-slide-in-bottom ${
+              index === 0 ? 'animation-delay-100' : 
+              index === 1 ? 'animation-delay-200' : 'animation-delay-300'
+            }`}>
               <CardHeader className="pb-4">
                 <div className={`h-48 bg-gradient-to-br ${getColorClasses(project.color)} flex items-center justify-center rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300`}>
                   <div className="text-center">

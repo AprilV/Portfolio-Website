@@ -240,23 +240,31 @@ const SkillsSection = () => {
           <p className="text-xl text-gray-600 mt-6">Technical expertise and project management capabilities</p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid lg:grid-cols-3 gap-8 mb-12 scroll-snap-x lg:grid">
           {skillCategories.map((category, index) => (
-            <div key={index} className="professional-card relative overflow-hidden">
+            <div key={index} className={`professional-card glassmorphism relative overflow-hidden group animate-slide-in-bottom ${
+              index === 0 ? 'animation-delay-100' : 
+              index === 1 ? 'animation-delay-200' : 'animation-delay-300'
+            }`}>
               <div className={`absolute inset-0 opacity-5 ${
                 category.color === 'primary-blue' ? 'bg-gradient-to-br from-primary-blue via-teal-blue to-transparent' : 
                 'bg-gradient-to-br from-teal-blue via-primary-blue to-transparent'
               }`}></div>
               <div className="relative">
               <div className="flex items-center gap-3 mb-6">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${getColorClass(category.color)}`}>
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center progress-ring ${getColorClass(category.color)}`}>
                   <category.icon className="w-6 h-6" />
                 </div>
-                <h3 className={`text-xl font-bold bg-gradient-to-r ${
-                  category.color === 'navy' ? 'from-navy to-accent-blue' : 
-                  category.color === 'accent-blue' ? 'from-accent-blue to-purple-accent' : 
-                  'from-success-green to-teal'
-                } bg-clip-text text-transparent`}>{category.title}</h3>
+                <div className="flex-1">
+                  <h3 className={`text-xl font-bold bg-gradient-to-r ${
+                    category.color === 'navy' ? 'from-navy to-accent-blue' : 
+                    category.color === 'accent-blue' ? 'from-accent-blue to-purple-accent' : 
+                    'from-success-green to-teal'
+                  } bg-clip-text text-transparent group-hover:from-primary-blue group-hover:to-teal-blue transition-all duration-300`}>{category.title}</h3>
+                  <div className="w-16 h-1 bg-primary-blue/20 rounded-full mt-1 overflow-hidden">
+                    <div className="w-full h-full bg-primary-blue rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                  </div>
+                </div>
               </div>
               
               <div className="space-y-4">
@@ -264,7 +272,9 @@ const SkillsSection = () => {
                   <div key={skillIndex} className={`border-l-4 ${getBorderClass(skill.accent)} pl-4 py-2`}>
                     <div className="flex justify-between items-start mb-1">
                       <span className="text-sm font-medium text-gray-900">{skill.name}</span>
-                      <span className={`text-xs font-medium px-2 py-1 rounded ${getExperienceTagClass(skill.accent)}`}>
+                      <span className={`text-xs font-medium px-2 py-1 rounded hover:font-bold transition-all duration-200 ${
+                        skill.experience === 'In Progress' ? 'badge-progress-shimmer' : getExperienceTagClass(skill.accent)
+                      }`}>
                         {skill.experience}
                       </span>
                     </div>
