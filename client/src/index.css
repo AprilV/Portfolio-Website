@@ -45,23 +45,22 @@
   --tech-orange: hsl(14, 100%, 57%);
   --coral-pink: hsl(348, 100%, 61%);
   
-  /* 2025 Sophisticated Tech Gradients */
-  --primary-gradient: linear-gradient(135deg, hsl(179, 65%, 53%) 0%, hsl(262, 83%, 58%) 100%);
+  /* Professional Tech Leadership Gradients */
+  --primary-gradient: linear-gradient(135deg, hsl(218, 41%, 15%) 0%, hsl(179, 65%, 53%) 100%);
   --hero-gradient: linear-gradient(135deg, 
-    hsl(179, 65%, 96%) 0%,
-    hsl(348, 100%, 96%) 25%, 
-    hsl(262, 83%, 96%) 50%,
-    hsl(45, 93%, 96%) 75%,
-    hsl(179, 65%, 96%) 100%);
+    hsl(0, 0%, 100%) 0%,
+    hsl(210, 40%, 98%) 30%, 
+    hsl(220, 13%, 95%) 60%,
+    hsl(0, 0%, 100%) 100%);
   --section-gradient: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(0, 0%, 100%) 100%);
-  --accent-gradient: linear-gradient(135deg, hsl(179, 65%, 53%) 0%, hsl(348, 100%, 61%) 100%);
+  --accent-gradient: linear-gradient(135deg, hsl(218, 41%, 15%) 0%, hsl(179, 65%, 53%) 100%);
   --card-gradient: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(210, 40%, 98%) 100%);
-  --vibrant-gradient: linear-gradient(135deg, 
-    hsl(179, 65%, 53%) 0%, 
-    hsl(262, 83%, 58%) 25%, 
-    hsl(348, 100%, 61%) 50%, 
-    hsl(45, 93%, 58%) 75%, 
-    hsl(142, 71%, 45%) 100%);
+  --professional-gradient: linear-gradient(135deg, 
+    hsl(218, 41%, 15%) 0%, 
+    hsl(218, 41%, 20%) 25%, 
+    hsl(179, 65%, 53%) 50%, 
+    hsl(218, 41%, 20%) 75%, 
+    hsl(218, 41%, 15%) 100%);
   
   /* Modern Glow Effects */
   --glow-teal: 0 0 20px hsl(179, 65%, 53%, 0.3);
@@ -70,9 +69,9 @@
   --glow-gold: 0 0 20px hsl(45, 93%, 58%, 0.3);
 }
 
-/* 2025 Modern Utility Classes */
+/* Professional Tech Leadership Utility Classes */
 .bg-hero-gradient { background: var(--hero-gradient); }
-.bg-vibrant-gradient { background: var(--vibrant-gradient); }
+.bg-professional-gradient { background: var(--professional-gradient); }
 .text-gradient {
   background: var(--primary-gradient);
   background-clip: text;

@@ -18,8 +18,7 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden bg-hero-gradient">
-      <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-white/30"></div>
-      <div className="absolute inset-0 bg-vibrant-gradient opacity-5"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-navy/5 via-transparent to-teal/5"></div>
       
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -61,7 +60,7 @@ const HeroSection = () => {
               <Button 
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-vibrant-gradient text-white font-semibold px-8 py-3 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover-glow-teal"
+                className="bg-professional-gradient text-white font-semibold px-8 py-3 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover-glow-teal"
               >
                 Get In Touch
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -70,7 +69,7 @@ const HeroSection = () => {
                 variant="outline"
                 onClick={downloadResume}
                 size="lg"
-                className="font-semibold px-8 py-3 rounded-xl hover:scale-105 transition-all duration-300 border-2 border-teal/40 text-teal hover:bg-teal/10 hover-glow-teal backdrop-blur-sm"
+                className="font-semibold px-8 py-3 rounded-xl hover:scale-105 transition-all duration-300 border-2 border-navy/50 text-navy hover:bg-navy hover:text-white hover-glow-teal"
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
@@ -86,11 +85,11 @@ const HeroSection = () => {
                   alt="April V. Sykes - Professional Photo" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-teal/10 via-purple-accent/5 to-coral/10"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-navy/10 via-transparent to-teal/10"></div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 border border-teal/20">
+              <div className="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 border border-navy/20">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gradient">3.94</div>
+                  <div className="text-2xl font-bold text-navy">3.94</div>
                   <div className="text-sm text-muted-foreground">GPA</div>
                 </div>
               </div>
