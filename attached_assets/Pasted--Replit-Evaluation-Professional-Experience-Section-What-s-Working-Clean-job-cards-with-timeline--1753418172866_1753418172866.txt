@@ -1,0 +1,146 @@
+ Replit Evaluation: Professional Experience Section
+✅ What’s Working:
+Clean job cards with timeline headers.
+
+Role titles are bold and clear.
+
+Responsibilities are broken into bullets.
+
+Font hierarchy is readable.
+
+Background and spacing are consistent with the rest of the site.
+
+🔴 Problems Identified (UI + UX + Content):
+1. Layout Weaknesses
+Cards are too tall vertically — forcing scroll fatigue.
+
+Section lacks visual grouping or a clear chronological flow.
+
+No way to quickly scan company names, years, or roles.
+
+2. Missing Visual Anchors
+No company logos, section divider lines, or career progression indicators.
+
+Lacks interactivity (no hover or animation effects).
+
+3. No Highlights or Achievements Called Out
+All bullets are same style — makes it difficult to tell which accomplishments were standout.
+
+No quantitative metrics are visually emphasized (e.g., reduced ticket resolution time by 30%).
+
+4. No Tech Stack or Skills Integration
+Skills used per job are buried in the paragraph instead of shown in a quick-scan format.
+
+You’ve already listed strong platforms (e.g., Cisco, Linux, Perot’s systems), but they’re not highlighted.
+
+✅ Replit Developer Instructions
+🔧 OVERHAUL THE SECTION FOR PROFESSIONAL CREDIBILITY
+1. 🧱 Wrap the Entire Experience Section in a Unified Container
+Use a 2-column flex grid to show:
+
+Left = Logo + Years + Role Title + Location
+
+Right = Bullets + Achievements + Stack Chips
+
+2. 💼 Card Redesign Layout (React JSX)
+Here’s the structure to follow for each job:
+
+jsx
+Copy
+Edit
+<div className="experience-card">
+  <div className="experience-header">
+    <img src="/logos/dell.png" alt="Dell Technologies Logo" className="company-logo" />
+    <div>
+      <h3>Dell Technologies</h3>
+      <p className="job-title">Infrastructure Services Lead</p>
+      <p className="job-dates">2008 – 2011 | Louisville, KY</p>
+    </div>
+  </div>
+  
+  <ul className="responsibilities">
+    <li>Managed data center support and team leadership for regional clients.</li>
+    <li><span className="highlight">Reduced outage response time by 40%</span> using proactive ticket management.</li>
+    <li>Supported mainframes, Cisco networks, and Linux systems across transitions.</li>
+  </ul>
+
+  <div className="tech-stack">
+    <span>Cisco</span><span>Linux</span><span>ServiceNow</span><span>Mainframes</span>
+  </div>
+</div>
+3. 🎨 Add These Styles (CSS or Module CSS)
+css
+Copy
+Edit
+.experience-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.2s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  margin-right: 1rem;
+  border-radius: 6px;
+}
+
+.job-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.job-dates {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.responsibilities {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.responsibilities li {
+  margin-bottom: 0.5rem;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #2c73d2;
+}
+
+.tech-stack {
+  margin-top: 1rem;
+}
+
+.tech-stack span {
+  display: inline-block;
+  background: #e6f0fa;
+  color: #2c73d2;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+✅ Summary for Replit Deployment
+Change	Type	Purpose
+New 2-column experience layout	UI	Improves structure and flow
+Add logos, titles, location, dates	Content/UX	Helps scan roles visually
+Highlight 1–2 key metrics	Content	Makes accomplishments stand out
+Add stack chips per role	UX	Reinforces technical capabilities
+Hover animation on card	UI polish	Modern feel, adds life
+
+✅ Result: Clean, visually engaging, resume-style layout that ATS reviewers and hiring managers can both appreciate. Makes April’s career experience easier to absorb, shows achievements clearly, and reinforces credibility for PM or IT leadership roles.
