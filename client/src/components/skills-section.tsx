@@ -6,15 +6,15 @@ const SkillsSection = () => {
     {
       title: "Project Management Core",
       icon: ClipboardCheck,
-      color: "tech-blue",
+      color: "primary-blue",
       skills: [
-        { name: "CAPM Certification", experience: "In Progress", description: "Summer 2025 - Based on IS 350/450 PM coursework (4.0 GPA)", accent: "success-green" },
-        { name: "Project Management I", experience: "Academic", description: "IS 350 - Project Management I (4.0 GPA)", accent: "tech-blue" },
-        { name: "Project Management II", experience: "Academic", description: "IS 450 - Project Management II (4.0 GPA)", accent: "tech-blue" },
+        { name: "CAPM Certification", experience: "In Progress", description: "Summer 2025 - Based on IS 350/450 PM coursework (4.0 GPA)", accent: "primary-blue" },
+        { name: "Project Management I", experience: "Academic", description: "IS 350 - Project Management I (4.0 GPA)", accent: "primary-blue" },
+        { name: "Project Management II", experience: "Academic", description: "IS 450 - Project Management II (4.0 GPA)", accent: "primary-blue" },
         { name: "Team Leadership", experience: "18+ Years", description: "Led 12-person teams at Dell Technologies", accent: "teal-blue" },
-        { name: "Stakeholder Communication", experience: "20+ Years + Academic", description: "Professional experience + CMST 242 Organizational Comm (4.0)", accent: "tech-blue" },
+        { name: "Stakeholder Communication", experience: "20+ Years + Academic", description: "Professional experience + CMST 242 Organizational Comm (4.0)", accent: "primary-blue" },
         { name: "Project Documentation", experience: "20+ Years + Academic", description: "SOPs/procedures + ENGL& 235 Technical Writing (4.0)", accent: "teal-blue" },
-        { name: "Risk Management", experience: "Academic", description: "Project Management I & II coursework", accent: "tech-blue" },
+        { name: "Risk Management", experience: "Academic", description: "Project Management I & II coursework", accent: "primary-blue" },
         { name: "Agile Methodologies", experience: "Academic + Projects", description: "Coursework & capstone implementation", accent: "teal-blue" },
       ],
     },
@@ -23,25 +23,25 @@ const SkillsSection = () => {
       icon: BarChart3,
       color: "teal-blue",
       skills: [
-        { name: "Information Systems Integration", experience: "Academic + Professional", description: "IS 302 (4.0 GPA) + Top LinkedIn skill", accent: "tech-blue" },
+        { name: "Information Systems Integration", experience: "Academic + Professional", description: "IS 302 (4.0 GPA) + Top LinkedIn skill", accent: "primary-blue" },
         { name: "Digital Leadership", experience: "Academic", description: "IS 320 - Leading in the Digital World (4.0 GPA)", accent: "teal-blue" },
-        { name: "Business Analysis", experience: "Academic", description: "BUS 215 Business Statistics (3.7) + BUS& 101 Intro (4.0)", accent: "tech-blue" },
+        { name: "Business Analysis", experience: "Academic", description: "BUS 215 Business Statistics (3.7) + BUS& 101 Intro (4.0)", accent: "primary-blue" },
         { name: "Process Improvement", experience: "20+ Years", description: "Operational efficiency and system optimization", accent: "teal-blue" },
-        { name: "Research & Analysis", experience: "Academic", description: "IS 390 - Reading and Research (4.0 GPA)", accent: "tech-blue" },
+        { name: "Research & Analysis", experience: "Academic", description: "IS 390 - Reading and Research (4.0 GPA)", accent: "primary-blue" },
         { name: "Cross-functional Coordination", experience: "20+ Years", description: "Multi-departmental project coordination", accent: "teal-blue" },
       ],
     },
     {
       title: "Technical Foundation",
       icon: Code,
-      color: "tech-blue",
+      color: "primary-blue",
       skills: [
         { name: "LAN Administration", experience: "20+ Years + Academic", description: "Professional experience + IS 346 LAN Administration IV (4.0)", accent: "teal-blue" },
-        { name: "Windows Systems", experience: "20+ Years + Academic", description: "Professional + CIS 212 Windows/Professionals (4.0)", accent: "tech-blue" },
+        { name: "Windows Systems", experience: "20+ Years + Academic", description: "Professional + CIS 212 Windows/Professionals (4.0)", accent: "primary-blue" },
         { name: "Network Security", experience: "Academic", description: "CIS 236 - Info System Security I (4.0 GPA)", accent: "teal-blue" },
-        { name: "Cisco Networking", experience: "Academic", description: "CIS 270 Cisco I (4.0) + CIS 271 Cisco II (4.0)", accent: "tech-blue" },
+        { name: "Cisco Networking", experience: "Academic", description: "CIS 270 Cisco I (4.0) + CIS 271 Cisco II (4.0)", accent: "primary-blue" },
         { name: "Technical Support", experience: "20+ Years + Academic", description: "CIS 172 Technical Support Skills (4.0) + professional experience", accent: "teal-blue" },
-        { name: "Server Support", experience: "Academic", description: "CIS 241 - Applications Server Support (4.0 GPA)", accent: "tech-blue" },
+        { name: "Server Support", experience: "Academic", description: "CIS 241 - Applications Server Support (4.0 GPA)", accent: "primary-blue" },
       ],
     },
   ];
@@ -52,7 +52,7 @@ const SkillsSection = () => {
       description: "Project Management Institute",
       detail: "Summer 2025 - PM I & II Complete (4.0 GPA)",
       icon: Award,
-      color: "success-green",
+      color: "primary-blue",
       link: "https://www.pmi.org/certifications/certified-associate-capm",
       credentialId: null
     },
@@ -61,7 +61,7 @@ const SkillsSection = () => {
       description: "Cisco Verified Badge",
       detail: "Issued Mar 20, 2024",
       icon: Code,
-      color: "tech-blue",
+      color: "primary-blue",
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
       credentialId: "Credly Verified"
     },
@@ -159,52 +159,70 @@ const SkillsSection = () => {
 
   const getColorClass = (color: string) => {
     switch (color) {
+      case "primary-blue":
+        return "text-primary-blue bg-primary-blue/10";
+      case "teal-blue":
+        return "text-teal-blue bg-teal-blue/10";
       case "navy":
-        return "text-navy bg-navy/10";
+        return "text-primary-blue bg-primary-blue/10";
       case "accent-blue":
-        return "text-accent-blue bg-accent-blue/10";
+        return "text-primary-blue bg-primary-blue/10";
       case "success-green":
-        return "text-success-green bg-success-green/10";
+        return "text-teal-blue bg-teal-blue/10";
       case "purple-accent":
-        return "text-purple-accent bg-purple-accent/10";
+        return "text-primary-blue bg-primary-blue/10";
       case "orange-accent":
-        return "text-orange-accent bg-orange-accent/10";
+        return "text-teal-blue bg-teal-blue/10";
+      case "coral":
+        return "text-primary-blue bg-primary-blue/10";
       default:
-        return "text-gray-600 bg-gray-100";
+        return "text-primary-blue bg-primary-blue/10";
     }
   };
 
   const getExperienceTagClass = (accent: string) => {
     switch (accent) {
+      case "primary-blue":
+        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
+      case "teal-blue":
+        return "text-teal-blue bg-teal-blue/10 border border-teal-blue/20";
       case "navy":
-        return "text-navy bg-navy/10 border border-navy/20";
+        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
       case "accent-blue":
-        return "text-accent-blue bg-accent-blue/10 border border-accent-blue/20";
+        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
       case "success-green":
-        return "text-success-green bg-success-green/10 border border-success-green/20";
+        return "text-teal-blue bg-teal-blue/10 border border-teal-blue/20";
       case "purple-accent":
-        return "text-purple-accent bg-purple-accent/10 border border-purple-accent/20";
+        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
       case "orange-accent":
-        return "text-orange-accent bg-orange-accent/10 border border-orange-accent/20";
+        return "text-teal-blue bg-teal-blue/10 border border-teal-blue/20";
+      case "coral":
+        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
       default:
-        return "text-gray-600 bg-gray-100";
+        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
     }
   };
 
   const getBorderClass = (accent: string) => {
     switch (accent) {
+      case "primary-blue":
+        return "border-primary-blue";
+      case "teal-blue":
+        return "border-teal-blue";
       case "navy":
-        return "border-navy";
+        return "border-primary-blue";
       case "accent-blue":
-        return "border-accent-blue";
+        return "border-primary-blue";
       case "success-green":
-        return "border-success-green";
+        return "border-teal-blue";
       case "purple-accent":
-        return "border-purple-accent";
+        return "border-primary-blue";
       case "orange-accent":
-        return "border-orange-accent";
+        return "border-teal-blue";
+      case "coral":
+        return "border-primary-blue";
       default:
-        return "border-gray-200";
+        return "border-primary-blue";
     }
   };
 
@@ -226,9 +244,8 @@ const SkillsSection = () => {
           {skillCategories.map((category, index) => (
             <div key={index} className="professional-card relative overflow-hidden">
               <div className={`absolute inset-0 opacity-5 ${
-                category.color === 'navy' ? 'bg-gradient-to-br from-navy via-accent-blue to-transparent' : 
-                category.color === 'accent-blue' ? 'bg-gradient-to-br from-accent-blue via-purple-accent to-transparent' : 
-                'bg-gradient-to-br from-success-green via-teal to-transparent'
+                category.color === 'primary-blue' ? 'bg-gradient-to-br from-primary-blue via-teal-blue to-transparent' : 
+                'bg-gradient-to-br from-teal-blue via-primary-blue to-transparent'
               }`}></div>
               <div className="relative">
               <div className="flex items-center gap-3 mb-6">
