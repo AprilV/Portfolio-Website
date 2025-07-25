@@ -115,7 +115,7 @@ const ContactSection = () => {
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-navy/10 rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-navy/10 rounded-xl flex items-center justify-center hover-lift">
                       <info.icon className="w-6 h-6 text-navy" />
                     </div>
                     <div>
@@ -139,7 +139,7 @@ const ContactSection = () => {
             </div>
             
             {/* Professional Status */}
-            <div className="bg-white p-6 rounded-xl shadow-md">
+            <div className="professional-card p-6">
               <h4 className="font-semibold text-gray-900 mb-4">Professional Status</h4>
               <div className="space-y-3">
                 {professionalStatus.map((status, index) => (
@@ -156,7 +156,7 @@ const ContactSection = () => {
           </div>
           
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-xl shadow-lg">
+          <div className="professional-card p-8">
             <h3 className="text-xl font-bold text-gray-900 mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -171,7 +171,7 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
                     placeholder="Your name"
-                    className="w-full"
+                    className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
                   />
                 </div>
                 <div>
@@ -185,7 +185,7 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="your.email@company.com"
-                    className="w-full"
+                    className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
                   />
                 </div>
               </div>
@@ -200,7 +200,7 @@ const ContactSection = () => {
                   value={formData.company}
                   onChange={(e) => handleInputChange("company", e.target.value)}
                   placeholder="Your company name"
-                  className="w-full"
+                  className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
                 />
               </div>
               
@@ -215,14 +215,14 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
                   placeholder="Tell me about the opportunity or project you'd like to discuss..."
-                  className="w-full resize-none"
+                  className="w-full resize-none transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
                 />
               </div>
               
               <Button 
                 type="submit" 
                 disabled={contactMutation.isPending}
-                className="w-full bg-navy text-white hover:bg-navy/90 py-3"
+                className="w-full bg-navy text-white hover:bg-navy/90 py-3 hover-lift hover-glow-primary transition-all duration-300"
               >
                 {contactMutation.isPending ? "Sending..." : "Send Message"}
                 <Send className="ml-2 w-5 h-5" />

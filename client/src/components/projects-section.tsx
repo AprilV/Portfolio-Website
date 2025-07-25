@@ -104,9 +104,9 @@ const ProjectsSection = () => {
         
         <div className="grid lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
+            <Card key={index} className="professional-card border-0 shadow-lg group">
               <CardHeader className="pb-4">
-                <div className={`h-48 bg-gradient-to-br ${getColorClasses(project.color)} flex items-center justify-center rounded-lg mb-4`}>
+                <div className={`h-48 bg-gradient-to-br ${getColorClasses(project.color)} flex items-center justify-center rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300`}>
                   <div className="text-center">
                     <div className={`w-16 h-16 bg-${project.color}/20 rounded-xl flex items-center justify-center mx-auto mb-3`}>
                       <project.icon className="w-8 h-8" />
@@ -140,7 +140,7 @@ const ProjectsSection = () => {
                   <div className="flex flex-col gap-2">
                     <Button 
                       variant="ghost" 
-                      className="text-primary hover:text-primary/80 p-0 h-auto font-medium justify-start"
+                      className="text-primary hover:text-primary/80 p-0 h-auto font-medium justify-start hover-lift"
                       onClick={() => {
                         if (project.link.includes('.pptx')) {
                           // Always use direct download for PowerPoint files
