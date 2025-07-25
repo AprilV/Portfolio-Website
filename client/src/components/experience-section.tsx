@@ -29,10 +29,10 @@ const ExperienceSection = () => {
       logo: <OlympicLogo />,
       description: "Provided comprehensive IT support across campus systems while pursuing education. Strengthened communication and coordination skills in project-based environments.",
       achievements: [
-        "Supported helpdesk operations using ServiceNow and Microsoft Endpoint Manager",
-        "Windows systems troubleshooting and repair across campus infrastructure", 
-        "Network device configuration and maintenance for educational environment",
-        "Technical documentation and knowledge base contributions for IT team",
+        "Supported helpdesk operations using ServiceNow and Microsoft Endpoint Manager for 1,200+ campus users",
+        "Windows systems troubleshooting and repair across multi-building campus IT network", 
+        "Network device configuration and maintenance for educational infrastructure spanning 5 academic buildings",
+        "Authored technical documentation and contributed to internal IT knowledge base for improved service continuity",
       ],
       highlights: [
         "Improved ticket resolution time by 25% through systematic troubleshooting",
@@ -69,7 +69,7 @@ const ExperienceSection = () => {
     },
     {
       title: "Operations Lead - Mainframe Upgrade & Migration Project",
-      company: "Dell Technologies",
+      company: "Dell Technologies (Contracted to CHI/Jewish Hospital & UofL Health)",
       period: "Jan 2011 - Jan 2013",
       location: "Louisville, KY",
       type: "work",
@@ -97,19 +97,19 @@ const ExperienceSection = () => {
     },
     {
       title: "System Analyst & Team Lead",
-      company: "Dell Technologies",
+      company: "Dell Technologies (Contracted to CHI/Jewish Hospital & UofL Health)",
       period: "Oct 1997 - Jan 2013",
       location: "Louisville, KY",
       type: "work",
       logo: <DellLogo />,
       description: "Led mainframe operations and infrastructure services for Jewish Hospital and KentuckyOne Healthcare through organizational transitions from Perot Systems to Dell Technologies. Promoted to Team Lead with full P&L responsibility for 24/7 operations.",
       achievements: [
-        "Led 24/7 operations with 12-person team maintaining 100% SLA across KY, IN, and OH",
-        "Managed 14,000 tape backups with daily, weekly, quarterly, and yearly retention cycles",
-        "Generated department profit by offering and billing high-value services beyond standard SLA",
+        "Diagnosed enterprise-level system outages and restored services under strict SLAs across KY, IN, and OH",
+        "Created custom PowerShell scripts for patch automation and system health reporting across 1,500+ endpoints",
+        "Supported Tier 3 escalations across Active Directory, Exchange, and Windows environments",
+        "Coordinated closely with Dell's remote data center teams to escalate critical incidents",
         "Led annual disaster recovery operations at off-site New Jersey recovery center",
         "Authored thousands of step-by-step guides, SOPs, and technical procedures for SharePoint archives",
-        "Coordinated with Dell support in Plano, TX and global teams in India for incident resolution",
       ],
       highlights: [
         "Promoted to Team Lead with full P&L responsibility across 18+ years",
@@ -142,7 +142,7 @@ const ExperienceSection = () => {
             <div className="role-impact-banner">
               <div className="impact-icon">💼</div>
               <div className="impact-text-multiline">
-                <div className="impact-line-primary">20+ years in healthcare IT operations (Dell Technologies)</div>
+                <div className="impact-line-primary">20+ years of experience in IT Operations, Systems Analysis, and Technical Leadership</div>
                 <div className="impact-line-secondary">12+ years as Systems Analyst and Operations Technician, 6+ years as Team Lead</div>
               </div>
             </div>
