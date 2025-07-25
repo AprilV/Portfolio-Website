@@ -243,10 +243,10 @@ const SkillsSection = () => {
         
         <div className="grid lg:grid-cols-3 gap-8 mb-12 scroll-snap-x lg:grid">
           {skillCategories.map((category, index) => (
-            <div key={index} className={`bg-white rounded-xl border border-border shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl relative overflow-hidden group animate-slide-in-bottom ${
+            <div key={index} className={`modern-card-premium hover-glow group animate-fade-in-up ${
               index === 0 ? 'animation-delay-100' : 
               index === 1 ? 'animation-delay-200' : 'animation-delay-300'
-            } p-8`}>
+            }`}>
               <div className="flex items-center gap-3 mb-6">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center progress-ring ${getColorClass(category.color)}`}>
                   <category.icon className="w-6 h-6" />
@@ -264,7 +264,7 @@ const SkillsSection = () => {
                   <div key={skillIndex} className={`border-l-4 ${getBorderClass(skill.accent)} pl-4 py-2`}>
                     <div className="flex justify-between items-start mb-1">
                       <span className="text-sm font-medium text-gray-900">{skill.name}</span>
-                      <span className={`text-xs font-medium px-2 py-1 rounded hover:font-bold transition-all duration-200 ${
+                      <span className={`badge-modern hover-scale ${
                         skill.experience === 'In Progress' ? 'badge-progress-shimmer' : getExperienceTagClass(skill.accent)
                       }`}>
                         {skill.experience}
@@ -279,7 +279,7 @@ const SkillsSection = () => {
         </div>
         
         {/* Certifications */}
-        <div className="bg-card-background-alt py-12 px-8 rounded-2xl relative overflow-hidden border border-divider-gray shadow-lg">
+        <div className="modern-card-premium relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/3 via-teal-blue/2 to-primary-blue/3"></div>
           <div className="relative">
           <div className="text-center mb-12">
@@ -290,7 +290,7 @@ const SkillsSection = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {certifications.map((cert, index) => (
-              <div key={index} className="professional-card p-4">
+              <div key={index} className={`modern-card hover-scale animate-fade-in-up animation-delay-${(index % 6 + 1) * 100}`}>
                 <div className="flex items-start gap-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                     <cert.icon className="w-6 h-6" />
@@ -336,6 +336,39 @@ const SkillsSection = () => {
               </div>
             ))}
           </div>
+          </div>
+        </div>
+        
+        {/* Professional CTA Section */}
+        <div className="mt-12 text-center">
+          <div className="modern-card-premium bg-gradient-to-r from-primary-blue/5 to-teal-blue/5 hover-glow">
+            <div className="max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-charcoal-black mb-4">Ready to Drive Your Next Project?</h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                20+ years of IT experience with proven team leadership and academic excellence in project management. 
+                Let's discuss how I can contribute to your organization's success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a 
+                  href="#contact" 
+                  className="cta-highlight inline-flex items-center gap-2 hover-lift"
+                >
+                  Let's Connect
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a 
+                  href="#resume" 
+                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white rounded-lg transition-all duration-300 hover-lift"
+                >
+                  Download Resume
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

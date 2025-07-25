@@ -66,6 +66,68 @@
   --glow-purple: 0 0 20px hsl(262, 83%, 58%, 0.3);
   --glow-coral: 0 0 20px hsl(348, 100%, 61%, 0.3);
   --glow-gold: 0 0 20px hsl(45, 93%, 58%, 0.3);
+  
+  /* Modern Professional Shadows - Enhanced Depth */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-strong: 0 12px 32px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 20px rgba(44, 115, 210, 0.15);
+  
+  /* Professional Color Enhancements */
+  --highlight-yellow: hsl(45, 93%, 58%); /* #FFC93C - Mustard Yellow for CTA */
+  --highlight-yellow-hover: hsl(45, 93%, 50%);
+}
+
+/* Modern Professional Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
 }
 
 /* Professional IT PM Utility Classes */
@@ -412,6 +474,79 @@
 .animation-delay-300 { animation-delay: 0.3s; }
 .animation-delay-400 { animation-delay: 0.4s; }
 .animation-delay-500 { animation-delay: 0.5s; }
+
+/* Modern Professional Enhancement Classes */
+.modern-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1.5rem;
+}
+
+.modern-card:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.modern-card-premium {
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-medium);
+  border: 1px solid var(--border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1.5rem;
+}
+
+.modern-card-premium:hover {
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-4px);
+}
+
+.hover-scale {
+  transition: transform 0.2s ease-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease-out;
+}
+
+.hover-glow:hover {
+  box-shadow: var(--shadow-glow);
+}
+
+.badge-modern {
+  padding: 0.375rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s ease-out;
+}
+
+.badge-modern:hover {
+  transform: scale(1.05);
+}
+
+.cta-highlight {
+  background: var(--highlight-yellow);
+  color: var(--charcoal-black);
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+}
+
+.cta-highlight:hover {
+  background: var(--highlight-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
   
   .text-dark-gray {
     color: var(--dark-gray);
