@@ -25,37 +25,40 @@
   --ring: hsl(179, 65%, 53%);
   --radius: 0.5rem;
   
-  /* Enterprise Professional Color System */
-  --background-neutral: hsl(0, 0%, 100%);
-  --charcoal-black: hsl(220, 20%, 15%);
-  --cool-gray: hsl(213, 10%, 45%);
-  --primary-blue: hsl(220, 45%, 35%);
-  --accent-gray: hsl(210, 15%, 55%);
-  --success-green: hsl(142, 71%, 45%);
-  --coral-alert: hsl(354, 89%, 68%);
-  --card-background: hsl(210, 25%, 98%);
-  --divider-gray: hsl(220, 13%, 91%);
+  /* Vibrant Professional Tech Color System */
+  --background-neutral: hsl(210, 30%, 98%);
+  --charcoal-black: hsl(220, 25%, 20%);
+  --cool-gray: hsl(213, 15%, 50%);
+  --primary-blue: hsl(214, 85%, 55%);
+  --light-blue: hsl(200, 85%, 65%);
+  --accent-blue: hsl(190, 75%, 60%);
+  --success-green: hsl(142, 65%, 50%);
+  --coral-alert: hsl(354, 85%, 65%);
+  --card-background: hsl(210, 40%, 97%);
+  --divider-gray: hsl(220, 20%, 88%);
   
   /* Legacy color mappings for compatibility */
-  --navy: hsl(220, 20%, 15%);
-  --teal: hsl(210, 15%, 55%);
-  --purple-accent: hsl(220, 45%, 35%);
-  --coral: hsl(354, 89%, 68%);
-  --tech-blue: hsl(220, 45%, 35%);
-  --teal-blue: hsl(210, 15%, 55%);
+  --navy: hsl(220, 25%, 20%);
+  --teal: hsl(190, 75%, 60%);
+  --purple-accent: hsl(214, 85%, 55%);
+  --coral: hsl(354, 85%, 65%);
+  --tech-blue: hsl(214, 85%, 55%);
+  --teal-blue: hsl(190, 75%, 60%);
   
-  /* Enterprise Professional Gradients */
-  --primary-gradient: linear-gradient(135deg, hsl(220, 45%, 35%) 0%, hsl(210, 15%, 55%) 100%);
+  /* Vibrant Professional Gradients */
+  --primary-gradient: linear-gradient(135deg, hsl(214, 85%, 55%) 0%, hsl(190, 75%, 60%) 100%);
   --hero-gradient: linear-gradient(135deg, 
-    hsl(0, 0%, 100%) 0%,
-    hsl(210, 25%, 98%) 50%, 
+    hsl(210, 50%, 98%) 0%,
+    hsl(200, 30%, 96%) 30%,
+    hsl(210, 50%, 98%) 70%,
     hsl(0, 0%, 100%) 100%);
-  --section-gradient: linear-gradient(135deg, hsl(210, 25%, 98%) 0%, hsl(0, 0%, 100%) 100%);
-  --accent-gradient: linear-gradient(135deg, hsl(220, 20%, 15%) 0%, hsl(220, 45%, 35%) 100%);
-  --card-gradient: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(210, 25%, 98%) 100%);
+  --section-gradient: linear-gradient(135deg, hsl(210, 40%, 97%) 0%, hsl(0, 0%, 100%) 100%);
+  --accent-gradient: linear-gradient(135deg, hsl(220, 25%, 20%) 0%, hsl(214, 85%, 55%) 100%);
+  --card-gradient: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(210, 40%, 97%) 100%);
   --professional-gradient: linear-gradient(135deg, 
-    hsl(220, 20%, 15%) 0%, 
-    hsl(220, 45%, 35%) 100%);
+    hsl(214, 85%, 55%) 0%, 
+    hsl(200, 85%, 65%) 50%,
+    hsl(190, 75%, 60%) 100%);
   
   /* Modern Glow Effects */
   --glow-teal: 0 0 20px hsl(179, 65%, 53%, 0.3);

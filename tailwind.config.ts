@@ -61,12 +61,13 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
-        // Enterprise Professional Color System
+        // Vibrant Professional Tech Color System
         "background-neutral": "var(--background-neutral)",
         "charcoal-black": "var(--charcoal-black)",
         "cool-gray": "var(--cool-gray)",
         "primary-blue": "var(--primary-blue)",
-        "accent-gray": "var(--accent-gray)",
+        "light-blue": "var(--light-blue)",
+        "accent-blue": "var(--accent-blue)",
         "success-green": "var(--success-green)",
         "coral-alert": "var(--coral-alert)",
         "card-background": "var(--card-background)",
