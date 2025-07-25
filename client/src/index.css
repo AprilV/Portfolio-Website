@@ -638,18 +638,23 @@
     color: #2C73D2;
   }
 
-  .active-tooltip {
+  .nav-tooltip {
     position: absolute;
     right: 60px;
     top: 50%;
     transform: translateY(-50%);
-    background: #2C73D2;
-    color: white;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     font-size: 0.875rem;
     font-weight: 500;
     white-space: nowrap;
+    pointer-events: none;
+    z-index: 1001;
+  }
+
+  .active-tooltip {
+    background: #2C73D2;
+    color: white;
     box-shadow: 0 4px 12px rgba(44, 115, 210, 0.3);
   }
 
@@ -661,6 +666,28 @@
     transform: translateY(-50%);
     border: 6px solid transparent;
     border-left-color: #2C73D2;
+  }
+
+  .hover-tooltip {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .hover-tooltip::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-left-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Enhanced hover behavior for navigation dots */
+  .scroll-nav-dot:hover .nav-tooltip.hover-tooltip {
+    opacity: 1 !important;
+    transform: translateY(-50%) translateX(0) !important;
   }
 
   /* Section Spacing for Scroll Snap */

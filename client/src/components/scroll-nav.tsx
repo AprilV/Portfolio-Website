@@ -85,17 +85,19 @@ const ScrollNav = ({ sections }: ScrollNavProps) => {
               <span className="dot-indicator"></span>
               <span className="dot-label">{section.icon || section.label.charAt(0)}</span>
               
-              {/* Active section tooltip */}
-              {activeSection === section.id && (
-                <motion.div 
-                  className="active-tooltip"
-                  initial={{ opacity: 0, x: 10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 10 }}
-                >
-                  {section.label}
-                </motion.div>
-              )}
+              {/* Tooltip - Always visible on hover, highlighted when active */}
+              <motion.div 
+                className={`nav-tooltip ${activeSection === section.id ? 'active-tooltip' : 'hover-tooltip'}`}
+                initial={{ opacity: 0, x: 10 }}
+                whileHover={{ opacity: 1, x: 0 }}
+                animate={{ 
+                  opacity: activeSection === section.id ? 1 : 0, 
+                  x: activeSection === section.id ? 0 : 10 
+                }}
+                transition={{ duration: 0.2 }}
+              >
+                {section.label}
+              </motion.div>
             </motion.button>
           ))}
         </div>

@@ -12,12 +12,12 @@ import ScrollNav from "@/components/scroll-nav";
 const Home = () => {
   const portfolioSections = [
     { id: 'hero', label: 'Home', icon: '🏠' },
-    { id: 'about', label: 'About', icon: '👤' },
-    { id: 'experience', label: 'Experience', icon: '💼' },
-    { id: 'projects', label: 'Projects', icon: '🚀' },
-    { id: 'skills', label: 'Skills', icon: '⚡' },
-    { id: 'ats-resume', label: 'Resume', icon: '📄' },
-    { id: 'contact', label: 'Contact', icon: '📧' },
+    { id: 'about', label: 'About Me', icon: '👤' },
+    { id: 'experience', label: 'Experience & Leadership', icon: '💼' },
+    { id: 'projects', label: 'Academic Projects', icon: '🚀' },
+    { id: 'skills', label: 'Skills & Certifications', icon: '⚡' },
+    { id: 'ats-resume', label: 'ATS Resume Generator', icon: '📄' },
+    { id: 'contact', label: 'Contact Me', icon: '📧' },
   ];
 
   return (
