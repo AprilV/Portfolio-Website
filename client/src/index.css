@@ -208,10 +208,10 @@
     color: #1E1E1E;
   }
   
-  /* Full-width underline with expanding hover effect */
+  /* Subtle underline that expands on hover */
   .section-underline {
     @apply absolute -bottom-1 left-1/2 transform -translate-x-1/2 rounded-full transition-all duration-300;
-    width: 80%;
+    width: 60px;
     height: 2px;
     background-color: #2C73D2;
   }
