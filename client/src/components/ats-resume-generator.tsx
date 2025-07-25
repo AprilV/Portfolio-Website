@@ -138,7 +138,7 @@ const ATSResumeGenerator = () => {
 
   return (
     <section id="resume" className="py-12 bg-background relative overflow-hidden" style={{paddingTop: '80px', paddingBottom: '60px'}}>
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-accent/5 via-accent-blue/5 to-success-green/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-teal-blue/5 to-primary-blue/5"></div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-12">
@@ -310,29 +310,29 @@ const ATSResumeGenerator = () => {
               )}
 
               <div className="grid md:grid-cols-4 gap-4 mt-6">
-                <div className="text-center p-4 bg-accent-blue/10 rounded-lg border border-accent-blue/20">
-                  <FileText className="h-8 w-8 text-accent-blue mx-auto mb-2" />
+                <div className="text-center p-4 bg-primary-blue/10 rounded-lg border border-primary-blue/20">
+                  <FileText className="h-8 w-8 text-primary-blue mx-auto mb-2" />
                   <div className="font-semibold text-gray-900">ATS Compatible</div>
                   <div className="text-sm text-gray-600">95%+ systems</div>
                 </div>
-                <div className="text-center p-4 bg-success-green/10 rounded-lg border border-success-green/20">
-                  <Zap className="h-8 w-8 text-success-green mx-auto mb-2" />
+                <div className="text-center p-4 bg-teal-blue/10 rounded-lg border border-teal-blue/20">
+                  <Zap className="h-8 w-8 text-teal-blue mx-auto mb-2" />
                   <div className="font-semibold text-gray-900">Keyword Optimized</div>
                   <div className="text-sm text-gray-600">PM-focused terms</div>
                 </div>
-                <div className="text-center p-4 bg-purple-accent/10 rounded-lg border border-purple-accent/20">
-                  <Settings className="h-8 w-8 text-purple-accent mx-auto mb-2" />
+                <div className="text-center p-4 bg-primary-blue/10 rounded-lg border border-primary-blue/20">
+                  <Settings className="h-8 w-8 text-primary-blue mx-auto mb-2" />
                   <div className="font-semibold text-gray-900">Customizable</div>
                   <div className="text-sm text-gray-600">Job-specific</div>
                 </div>
-                <div className="text-center p-4 bg-coral/10 rounded-lg border border-coral/20">
-                  <Target className="h-8 w-8 text-coral mx-auto mb-2" />
+                <div className="text-center p-4 bg-teal-blue/10 rounded-lg border border-teal-blue/20">
+                  <Target className="h-8 w-8 text-teal-blue mx-auto mb-2" />
                   <div className="font-semibold text-gray-900">Ready to Submit</div>
                   <div className="text-sm text-gray-600">Professional format</div>
                 </div>
               </div>
               
-              <div className="mt-6 p-4 bg-gradient-to-r from-accent-blue/5 to-purple-accent/5 rounded-lg border border-gray-200">
+              <div className="mt-6 p-4 bg-gradient-to-r from-primary-blue/5 to-teal-blue/5 rounded-lg border border-divider-gray">
                 <h4 className="font-semibold text-gray-900 mb-2">How to Use Your ATS Resume:</h4>
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li>• <strong>For Online Applications:</strong> Copy and paste text directly into application forms</li>

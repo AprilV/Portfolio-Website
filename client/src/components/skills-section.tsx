@@ -290,7 +290,7 @@ const SkillsSection = () => {
         
         {/* Certifications */}
         <div className="bg-card-background-alt py-12 px-8 rounded-2xl relative overflow-hidden border border-divider-gray shadow-lg">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/3 via-teal-blue/2 to-success-green/3"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/3 via-teal-blue/2 to-primary-blue/3"></div>
           <div className="relative">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-charcoal-black mb-4 relative inline-block">
@@ -314,7 +314,7 @@ const SkillsSection = () => {
                         href={cert.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-xs text-accent-blue hover:text-accent-blue/80 transition-colors font-medium"
+                        className="inline-flex items-center text-xs text-primary-blue hover:text-primary-blue/80 transition-colors font-medium"
                       >
                         <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
