@@ -140,7 +140,7 @@ const ExperienceSection = () => {
             <div className="role-impact-banner">
               <div className="impact-icon">💼</div>
               <p className="impact-text">
-                18+ years leading healthcare IT operations at Dell Technologies with 6+ years team leadership experience, plus recent transition to higher education IT support
+                18+ years healthcare IT operations at Dell Technologies - 6 years as Team Lead, 12+ years as Systems Analyst and Operations Technician, plus recent higher education IT experience
               </p>
             </div>
           </motion.div>
