@@ -77,9 +77,9 @@ ${contactData.message}
 Reply directly to this email to respond to ${contactData.name}.
     `;
 
-    // Use Gmail for reliable email delivery
+    // Use Gmail for both sending and receiving for maximum deliverability
     const notificationEmail = 'aprilv120@gmail.com';
-    const fromEmail = 'april_sykes@proton.me'; // Keep verified sender
+    const fromEmail = 'aprilv120@gmail.com'; // Use Gmail as sender for better delivery
     
     const emailPayload = {
       to: notificationEmail,
