@@ -229,7 +229,7 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="py-12 bg-secondary relative overflow-hidden" style={{paddingTop: '80px', paddingBottom: '60px'}}>
-      <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 via-purple-accent/5 to-success-green/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-teal-blue/5 to-primary-blue/5"></div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-block">
@@ -258,9 +258,8 @@ const SkillsSection = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className={`text-xl font-bold bg-gradient-to-r ${
-                    category.color === 'navy' ? 'from-navy to-accent-blue' : 
-                    category.color === 'accent-blue' ? 'from-accent-blue to-purple-accent' : 
-                    'from-success-green to-teal'
+                    category.color === 'primary-blue' ? 'from-primary-blue to-teal-blue' : 
+                    'from-teal-blue to-primary-blue'
                   } bg-clip-text text-transparent group-hover:from-primary-blue group-hover:to-teal-blue transition-all duration-300`}>{category.title}</h3>
                   <div className="w-16 h-1 bg-primary-blue/20 rounded-full mt-1 overflow-hidden">
                     <div className="w-full h-full bg-primary-blue rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
