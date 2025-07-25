@@ -5,6 +5,7 @@ import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
 import { sendContactNotification, sendAutoReply } from "./email";
 import { logContactSubmission, getContactLogPath } from "./contact-log";
+import { createContactAlert } from "./alternative-notification";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
@@ -29,6 +30,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }) // Auto-reply to sender
       ];
       
+      // Create immediate file-based alert system as backup
+      createContactAlert({
+        id: submission.id,
+        name: contactData.name,
+        email: contactData.email,
+        company: contactData.company,
+        message: contactData.message
+      });
+      
       // Don't wait for emails to complete - send response immediately
       Promise.all(emailPromises).then(([notificationSent, autoReplySent]) => {
         // Log submission to file for backup notification
@@ -39,6 +49,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           console.log(`📧 If email not received, check log file: ${getContactLogPath()}`);
         } else {
           console.log("❌ Contact notification email failed or disabled");
+          console.log("📁 Check NEW_CONTACT_ALERT.txt file for contact details!");
         }
         
         if (autoReplySent) {
@@ -50,6 +61,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         console.error("❌ Email sending error:", error);
         // Still log the submission even if email fails
         logContactSubmission(submission.id, contactData, false);
+        console.log("📁 Contact details saved in NEW_CONTACT_ALERT.txt file!");
       });
       
       res.json({ 

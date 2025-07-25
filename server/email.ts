@@ -77,9 +77,9 @@ ${contactData.message}
 Reply directly to this email to respond to ${contactData.name}.
     `;
 
-    // Use Gmail for both sending and receiving for maximum deliverability
+    // Use the original verified sender that we know works
     const notificationEmail = 'aprilv120@gmail.com';
-    const fromEmail = 'aprilv120@gmail.com'; // Use Gmail as sender for better delivery
+    const fromEmail = 'april_sykes@proton.me'; // Use verified Proton sender
     
     const emailPayload = {
       to: notificationEmail,
@@ -98,7 +98,10 @@ Reply directly to this email to respond to ${contactData.name}.
       }
     };
 
-    console.log('Sending notification email with payload:', JSON.stringify(emailPayload, null, 2));
+    console.log('🔧 DETAILED DEBUG - Email payload:', JSON.stringify(emailPayload, null, 2));
+    console.log('🔧 SendGrid API Key present:', !!process.env.SENDGRID_API_KEY);
+    console.log('🔧 From email (must be verified):', fromEmail);
+    console.log('🔧 To email:', notificationEmail);
     
     const result = await mailService.send(emailPayload);
     
@@ -116,9 +119,13 @@ Reply directly to this email to respond to ${contactData.name}.
     
     return true;
   } catch (error: any) {
-    console.error('Failed to send contact notification email:', error);
-    if (error.response && error.response.body) {
-      console.error('SendGrid error details:', JSON.stringify(error.response.body, null, 2));
+    console.error('❌ CRITICAL EMAIL ERROR:', error);
+    console.error('❌ Error type:', typeof error);
+    console.error('❌ Error message:', error.message);
+    if (error.response) {
+      console.error('❌ SendGrid response status:', error.response.status);
+      console.error('❌ SendGrid response headers:', error.response.headers);
+      console.error('❌ SendGrid error body:', JSON.stringify(error.response.body, null, 2));
     }
     return false;
   }
