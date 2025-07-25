@@ -229,7 +229,7 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="py-12 bg-secondary relative overflow-hidden" style={{paddingTop: '80px', paddingBottom: '60px'}}>
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-teal-blue/5 to-primary-blue/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-background-alt/50 to-background/50"></div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-block">
@@ -238,7 +238,7 @@ const SkillsSection = () => {
               <div className="section-underline"></div>
             </h2>
           </div>
-          <p className="text-xl text-gray-600 mt-6">Technical expertise and project management capabilities</p>
+          <p className="text-xl text-muted-foreground mt-6">Technical expertise and project management capabilities</p>
         </div>
         
         <div className="grid lg:grid-cols-3 gap-8 mb-12 scroll-snap-x lg:grid">
@@ -257,10 +257,7 @@ const SkillsSection = () => {
                   <category.icon className="w-6 h-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className={`text-xl font-bold bg-gradient-to-r ${
-                    category.color === 'primary-blue' ? 'from-primary-blue to-teal-blue' : 
-                    'from-teal-blue to-primary-blue'
-                  } bg-clip-text text-transparent group-hover:from-primary-blue group-hover:to-teal-blue transition-all duration-300`}>{category.title}</h3>
+                  <h3 className="text-xl font-bold text-charcoal-black group-hover:text-primary-blue transition-all duration-300">{category.title}</h3>
                   <div className="w-16 h-1 bg-primary-blue/20 rounded-full mt-1 overflow-hidden">
                     <div className="w-full h-full bg-primary-blue rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
                   </div>
