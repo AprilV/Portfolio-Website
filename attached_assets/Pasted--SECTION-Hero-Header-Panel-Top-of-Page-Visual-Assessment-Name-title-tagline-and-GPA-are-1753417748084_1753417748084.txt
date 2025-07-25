@@ -1,0 +1,61 @@
+✅ SECTION: Hero / Header Panel (Top of Page)
+🔍 Visual Assessment:
+Name, title, tagline, and GPA are clearly shown.
+
+Nice use of highlight badges (CAPM, BAS-IS Student, experience).
+
+Strong, professional photo with GPA tag.
+
+Good CTA buttons.
+
+🔧 Replit Task Instructions:
+🔹Target Component: Hero / Header Section
+🔹File Likely Affected: Hero.jsx or Header.jsx
+
+📌 Summary of Fixes to Make Now:
+Add motion/animation to CTA buttons:
+
+Add a subtle hover lift and shadow effect to both buttons (Get in Touch, Download Resume).
+
+Consider a fade-in or slide-in animation on load for these elements.
+
+Improve mobile responsiveness:
+
+Ensure GPA badge on profile photo scales or moves below photo at narrow widths.
+
+Reduce font size slightly on long title lines on mobile.
+
+Refine tag styling:
+
+Space out the badges horizontally and vertically with consistent padding and line-height.
+
+Add hover tooltips:
+
+"CAPM Candidate 2025" → "Preparing for Certified Associate in Project Management exam"
+
+"20+ Years IT Experience" → "Legacy systems, infrastructure, and enterprise support"
+
+Make GPA badge clickable:
+
+Link to Academic Achievements section or a modal popup showing GPA history / President’s List details.
+
+Fix alignment on large screens:
+
+Align image + text block better for ultrawide viewports. Currently too much empty right space on desktop >1400px.
+
+✅ Suggested Enhancements (Optional but Polished):
+Feature	Description
+🎥 Subtle intro animation	Slide or fade the profile photo and text in from opposite directions on page load
+💡 Tooltip rollovers	Add info boxes for badges on hover to explain experience
+🔗 Resume button tracking	Integrate a click event or counter for how many times it’s downloaded
+🧠 Accessibility	Ensure GPA badge is aria-labeled for screen readers
+
+✅ Replit Dev Instructions (TL;DR Version to Paste for Replit):
+plaintext
+Copy
+Edit
+1. Add hover lift and shadow animation to "Get in Touch" and "Download Resume" buttons.
+2. Make profile photo and GPA badge responsive—GPA badge should shift below or resize on mobile.
+3. Improve spacing between experience badges. Add hover tooltips to each badge explaining its meaning.
+4. Make GPA badge clickable and optionally open a modal showing GPA history or awards.
+5. Center content better on wide screens. Too much empty space right of the profil
