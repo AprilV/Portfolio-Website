@@ -183,8 +183,8 @@ const ExperienceSection = () => {
                   </div>
                 </div>
                 
-                {/* Timeline marker */}
-                <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white shadow-lg hidden lg:block ${
+                {/* Timeline marker - aligned with job title */}
+                <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white shadow-lg hidden lg:block top-16 ${
                   exp.status === 'current' ? 'bg-teal-blue' : index === 1 ? 'bg-primary-blue' : 'bg-primary-blue'
                 }`}></div>
                 

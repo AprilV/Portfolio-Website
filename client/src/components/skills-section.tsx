@@ -290,7 +290,7 @@ const SkillsSection = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {certifications.map((cert, index) => (
-              <div key={index} className={`modern-card hover-scale animate-fade-in-up animation-delay-${(index % 6 + 1) * 100}`}>
+              <div key={index} className={`modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100}`}>
                 <div className="flex items-start gap-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                     <cert.icon className="w-6 h-6" />
