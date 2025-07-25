@@ -46,7 +46,7 @@ const ExperienceSection = () => {
       description: "Information Systems (BASIS) program with concentration in Project Management. Completing comprehensive PM coursework with academic distinction.",
       achievements: [
         "Project Management I & II Completed with distinction",
-        "President's Scholar honors achieved every quarter (8 quarters)",
+        "President's Scholar honors achieved 9 quarters during program",
         "CAPM Exam Preparation scheduled for Summer 2025",
       ],
       highlights: [
