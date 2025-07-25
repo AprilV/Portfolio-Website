@@ -115,8 +115,8 @@ const ContactSection = () => {
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-navy/10 rounded-xl flex items-center justify-center hover-lift">
-                      <info.icon className="w-6 h-6 text-navy" />
+                    <div className="w-12 h-12 bg-primary-blue/10 rounded-xl flex items-center justify-center hover-lift">
+                      <info.icon className="w-6 h-6 text-primary-blue" />
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">{info.label}</p>
@@ -125,7 +125,7 @@ const ContactSection = () => {
                           href={info.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-navy hover:text-navy/80 transition-colors"
+                          className="text-primary-blue hover:text-primary-blue/80 transition-colors"
                         >
                           {info.value}
                         </a>
@@ -145,8 +145,8 @@ const ContactSection = () => {
                 {professionalStatus.map((status, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className={`w-3 h-3 rounded-full ${
-                      index === 0 ? 'bg-success-green' : 
-                      index === 1 ? 'bg-accent-blue' : 'bg-navy'
+                      index === 0 ? 'bg-teal-blue' : 
+                      index === 1 ? 'bg-primary-blue' : 'bg-primary-blue'
                     }`}></div>
                     <span className="text-gray-700">{status}</span>
                   </div>
@@ -222,7 +222,7 @@ const ContactSection = () => {
               <Button 
                 type="submit" 
                 disabled={contactMutation.isPending}
-                className="w-full bg-navy text-white hover:bg-navy/90 py-3 hover-lift hover-glow-primary transition-all duration-300"
+                className="w-full bg-primary-blue text-white hover:bg-primary-blue/90 py-3 hover-lift hover-glow-primary transition-all duration-300"
               >
                 {contactMutation.isPending ? "Sending..." : "Send Message"}
                 <Send className="ml-2 w-5 h-5" />

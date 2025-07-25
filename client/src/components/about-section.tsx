@@ -51,20 +51,20 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 gap-4">
               {achievements.map((achievement, index) => (
                 <div key={index} className="professional-card text-center">
-                  <div className="text-3xl font-bold text-navy mb-2">{achievement.value}</div>
+                  <div className="text-3xl font-bold text-primary-blue mb-2">{achievement.value}</div>
                   <div className="text-sm text-gray-600">{achievement.label}</div>
                 </div>
               ))}
             </div>
             
             {/* Core Values */}
-            <div className="bg-white p-6 rounded-xl shadow-md">
+            <div className="professional-card p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Core Values</h3>
               <div className="space-y-3">
                 {coreValues.map((value, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className={`w-2 h-2 rounded-full ${
-                      index === 0 ? 'bg-navy' : index === 1 ? 'bg-accent-blue' : 'bg-success-green'
+                      index === 0 ? 'bg-primary-blue' : index === 1 ? 'bg-teal-blue' : 'bg-primary-blue'
                     }`}></div>
                     <span className="text-gray-700">{value}</span>
                   </div>

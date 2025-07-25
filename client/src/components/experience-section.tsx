@@ -116,7 +116,7 @@ const ExperienceSection = () => {
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-navy/20 h-full hidden lg:block"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-primary-blue/20 h-full hidden lg:block"></div>
           
           {/* Timeline items */}
           <div className="space-y-16">
@@ -126,14 +126,14 @@ const ExperienceSection = () => {
                   <div className="bg-card-gradient p-8 rounded-xl shadow-lg border border-border">
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`w-3 h-3 rounded-full ${
-                        exp.status === 'current' ? 'bg-success-green' : 'bg-accent-blue'
+                        exp.status === 'current' ? 'bg-teal-blue' : 'bg-primary-blue'
                       }`}></div>
                       {exp.status === 'current' && (
-                        <span className="text-sm font-medium text-success-green">Current</span>
+                        <span className="text-sm font-medium text-teal-blue">Current</span>
                       )}
                     </div>
                     <h3 className="text-xl font-bold text-card-foreground mb-2">{exp.title}</h3>
-                    <p className="text-electric-blue font-medium mb-1">{exp.company}</p>
+                    <p className="text-primary-blue font-medium mb-1">{exp.company}</p>
                     <div className="flex items-center gap-4 mb-3 text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">
                         <Clock className="h-4 w-4" />
@@ -160,19 +160,19 @@ const ExperienceSection = () => {
                     <div className="space-y-2">
                       {(exp.achievements || []).slice(0, 4).map((achievement, achIndex) => (
                         <div key={achIndex} className="flex items-start gap-2 text-sm">
-                          <CheckCircle className="h-4 w-4 text-success-green flex-shrink-0 mt-0.5" />
+                          <CheckCircle className="h-4 w-4 text-teal-blue flex-shrink-0 mt-0.5" />
                           <span className="text-gray-700">{achievement}</span>
                         </div>
                       ))}
                       {(exp.achievements || []).length > 4 && (
                         <details className="group">
-                          <summary className="cursor-pointer text-sm text-accent-blue hover:text-accent-blue/80 font-medium">
+                          <summary className="cursor-pointer text-sm text-primary-blue hover:text-primary-blue/80 font-medium">
                             Show {(exp.achievements || []).length - 4} more achievements...
                           </summary>
                           <div className="mt-2 space-y-2">
                             {(exp.achievements || []).slice(4).map((achievement, achIndex) => (
                               <div key={achIndex + 4} className="flex items-start gap-2 text-sm">
-                                <CheckCircle className="h-4 w-4 text-success-green flex-shrink-0 mt-0.5" />
+                                <CheckCircle className="h-4 w-4 text-teal-blue flex-shrink-0 mt-0.5" />
                                 <span className="text-gray-700">{achievement}</span>
                               </div>
                             ))}
@@ -185,13 +185,13 @@ const ExperienceSection = () => {
                 
                 {/* Timeline marker */}
                 <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white shadow-lg hidden lg:block ${
-                  exp.status === 'current' ? 'bg-success-green' : index === 1 ? 'bg-accent-blue' : 'bg-navy'
+                  exp.status === 'current' ? 'bg-teal-blue' : index === 1 ? 'bg-primary-blue' : 'bg-primary-blue'
                 }`}></div>
                 
                 <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pl-8 lg:order-2' : 'lg:pr-8'}`}>
                   <div className={`p-8 rounded-xl ${
                     exp.status === 'current' 
-                      ? 'bg-gradient-to-br from-success-green/10 to-accent-blue/10'
+                      ? 'bg-gradient-to-br from-teal-blue/10 to-primary-blue/10'
                       : 'bg-light-bg'
                   }`}>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">

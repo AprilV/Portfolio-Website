@@ -89,7 +89,7 @@ const HeroSection = () => {
               </div>
               <div className="absolute -bottom-6 -right-6 bg-card-background shadow-lg p-4 border border-divider-gray rounded-lg">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-success-green">3.94</div>
+                  <div className="text-2xl font-bold text-teal-blue">3.94</div>
                   <div className="text-sm text-cool-gray font-medium">GPA</div>
                 </div>
               </div>

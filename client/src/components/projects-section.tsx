@@ -69,17 +69,17 @@ const ProjectsSection = () => {
   const getColorClasses = (color: string) => {
     switch (color) {
       case "success-green":
-        return "from-success-green/25 via-purple-accent/15 to-accent-blue/20 text-success-green";
+        return "from-teal-blue/25 via-primary-blue/15 to-teal-blue/20 text-teal-blue";
       case "navy":
-        return "from-navy/25 via-accent-blue/15 to-purple-accent/20 text-navy";
+        return "from-primary-blue/25 via-teal-blue/15 to-primary-blue/20 text-primary-blue";
       case "accent-blue":
-        return "from-accent-blue/25 via-orange-accent/15 to-success-green/20 text-accent-blue";
+        return "from-primary-blue/25 via-teal-blue/15 to-primary-blue/20 text-primary-blue";
       case "purple-accent":
-        return "from-purple-accent/25 via-navy/15 to-accent-blue/20 text-purple-accent";
+        return "from-primary-blue/25 via-teal-blue/15 to-primary-blue/20 text-primary-blue";
       case "orange-accent":
-        return "from-orange-accent/25 via-success-green/15 to-purple-accent/20 text-orange-accent";
+        return "from-teal-blue/25 via-primary-blue/15 to-teal-blue/20 text-teal-blue";
       default:
-        return "from-gray-100 to-gray-200 text-gray-600";
+        return "from-primary-blue/10 to-teal-blue/10 text-primary-blue";
     }
   };
 
@@ -111,7 +111,7 @@ const ProjectsSection = () => {
               <CardHeader className="pb-4">
                 <div className={`h-48 bg-gradient-to-br ${getColorClasses(project.color)} flex items-center justify-center rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300`}>
                   <div className="text-center">
-                    <div className={`w-16 h-16 bg-${project.color}/20 rounded-xl flex items-center justify-center mx-auto mb-3`}>
+                    <div className={`w-16 h-16 ${project.color === 'success-green' || project.color === 'orange-accent' ? 'bg-teal-blue/20' : 'bg-primary-blue/20'} rounded-xl flex items-center justify-center mx-auto mb-3`}>
                       <project.icon className="w-8 h-8" />
                     </div>
                     <p className="text-sm text-muted-foreground">{project.title.split(' ')[0]} Interface</p>
@@ -133,7 +133,7 @@ const ProjectsSection = () => {
                 <div className="space-y-2">
                   {project.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-2 text-sm">
-                      <div className="w-2 h-2 bg-success-green rounded-full flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-teal-blue rounded-full flex-shrink-0"></div>
                       <span className="text-card-foreground">{feature}</span>
                     </div>
                   ))}
@@ -143,7 +143,7 @@ const ProjectsSection = () => {
                   <div className="flex flex-col gap-2">
                     <Button 
                       variant="ghost" 
-                      className="text-primary hover:text-primary/80 p-0 h-auto font-medium justify-start hover-lift"
+                      className="text-primary-blue hover:text-primary-blue/80 p-0 h-auto font-medium justify-start hover-lift"
                       onClick={() => {
                         if (project.link.includes('.pptx')) {
                           // Always use direct download for PowerPoint files
