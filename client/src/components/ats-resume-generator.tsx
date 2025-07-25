@@ -65,6 +65,15 @@ const ATSResumeGenerator = () => {
       icon: Users,
       bestFor: "Assistant PM, project coordinator, project analyst roles"
     },
+    datacenter: {
+      name: "Datacenter/Infrastructure",
+      description: "Specialized for datacenter operations and infrastructure services roles",
+      features: ["Infrastructure expertise", "Operations focus", "System reliability", "Technical depth"],
+      fileType: ".docx",
+      color: "teal-blue", 
+      icon: Settings,
+      bestFor: "Datacenter operations, infrastructure services, system administration"
+    },
     executive: {
       name: "Senior PM",
       description: "Leadership-focused format for senior project management roles", 
@@ -152,6 +161,7 @@ const ATSResumeGenerator = () => {
       wastate: 'WA_State_Gov',
       internship: 'Internship_Entry', 
       assistant: 'Assistant_PM',
+      datacenter: 'Datacenter_Infrastructure',
       federal: 'Federal_Gov',
       executive: 'Senior_PM'
     };
@@ -265,11 +275,11 @@ const ATSResumeGenerator = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div>
                       <h4 className="font-semibold text-primary-blue mb-2">Project Management</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.projectManagement.slice(0, 5).map((keyword, i) => (
+                        {atsKeywords.projectManagement.slice(0, 4).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-primary-blue/30 text-primary-blue">
                             {keyword}
                           </Badge>
@@ -279,7 +289,7 @@ const ATSResumeGenerator = () => {
                     <div>
                       <h4 className="font-semibold text-teal-blue mb-2">Technical Skills</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.technical.slice(0, 5).map((keyword, i) => (
+                        {atsKeywords.technical.slice(0, 4).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-teal-blue/30 text-teal-blue">
                             {keyword}
                           </Badge>
@@ -287,9 +297,9 @@ const ATSResumeGenerator = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary-blue mb-2">Assistant PM</h4>
+                      <h4 className="font-semibold text-primary-blue mb-2">Datacenter Ops</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.assistant.slice(0, 5).map((keyword, i) => (
+                        {atsKeywords.datacenter.slice(0, 4).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-primary-blue/30 text-primary-blue">
                             {keyword}
                           </Badge>
@@ -297,19 +307,21 @@ const ATSResumeGenerator = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-teal-blue mb-2">Internship/Entry</h4>
+                      <h4 className="font-semibold text-teal-blue mb-2">Assistant PM</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.internship.slice(0, 5).map((keyword, i) => (
+                        {atsKeywords.assistant.slice(0, 4).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-teal-blue/30 text-teal-blue">
                             {keyword}
                           </Badge>
                         ))}
                       </div>
                     </div>
+                  </div>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
                     <div>
-                      <h4 className="font-semibold text-primary-blue mb-2">WA State Gov</h4>
+                      <h4 className="font-semibold text-primary-blue mb-2">Internship/Entry</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.waState.slice(0, 5).map((keyword, i) => (
+                        {atsKeywords.internship.slice(0, 4).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-primary-blue/30 text-primary-blue">
                             {keyword}
                           </Badge>
@@ -317,13 +329,28 @@ const ATSResumeGenerator = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-teal-blue mb-2">Soft Skills</h4>
+                      <h4 className="font-semibold text-teal-blue mb-2">WA State Gov</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.softSkills.slice(0, 5).map((keyword, i) => (
+                        {atsKeywords.waState.slice(0, 4).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-teal-blue/30 text-teal-blue">
                             {keyword}
                           </Badge>
                         ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary-blue mb-2">Soft Skills</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {atsKeywords.softSkills.slice(0, 4).map((keyword, i) => (
+                          <Badge key={i} variant="outline" className="text-xs border-primary-blue/30 text-primary-blue">
+                            {keyword}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-teal-blue mb-2"></h4>
+                      <div className="flex flex-wrap gap-1">
                       </div>
                     </div>
                   </div>

@@ -53,7 +53,9 @@ export const resumeData: ResumeData = {
     
     internship: "Motivated IT professional with 20+ years of hands-on experience transitioning to project management through formal education. Currently pursuing Bachelor of Applied Science in Information Systems (3.94 GPA) with specialized Project Management I & II coursework (4.0 GPA). Strong academic foundation combined with extensive technical background provides unique perspective for project management internships. Eager to apply classroom learning and technical expertise to real-world project challenges while contributing to organizational success.",
     
-    assistant: "Results-oriented IT professional with 20+ years of technical experience seeking Assistant Project Manager role to leverage deep infrastructure knowledge in project coordination. Currently completing Bachelor of Applied Science in Information Systems (3.94 GPA) with formal Project Management education (4.0 GPA in PM courses). Proven ability to support cross-functional teams, document processes, and facilitate stakeholder communication. Ready to transition technical expertise into project support role while pursuing CAPM certification.",
+    assistant: "Results-oriented IT professional with 20+ years of technical experience seeking Assistant Project Manager role to leverage deep infrastructure knowledge in project coordination. Currently completing Bachelor of Applied Science in Information Systems (3.94 GPA) with formal Project Management education (4.0 GPA in PM courses). Proven ability to support cross-functional teams, document processes, and facilitate stakeholder communication. Ready to transition technical expertise into project support role while pursuing CAMP certification.",
+    
+    datacenter: "Senior Infrastructure Professional with 20+ years of comprehensive datacenter operations and enterprise system administration experience. Expert in Windows Server environments, network infrastructure, and critical system maintenance supporting 1000+ users at Dell Technologies. Proven track record of managing complex infrastructure projects, system migrations, and 24/7 operations ensuring 99.9% uptime. CompTIA and CCNA certified with deep expertise in virtualization, network security, and disaster recovery protocols.",
     
     federal: "Highly qualified IT professional with two decades of enterprise infrastructure experience seeking Assistant Project Manager role in federal/government environment. Currently completing Bachelor of Applied Science in Information Systems (3.94 GPA) with specialized Project Management coursework. Security-conscious with extensive compliance and documentation experience. President's Scholar with proven academic excellence and commitment to continuous professional development.",
     
@@ -217,6 +219,8 @@ CORE COMPETENCIES`;
     resumeContent += `\n• Academic Excellence: 3.94 GPA • Project Management Coursework (4.0 GPA) • CAPM Candidate\n• ${data.skills.technical.slice(0, 4).join(' • ')}\n• Strong foundation in ${data.skills.methodologies.slice(0, 3).join(', ')} methodologies`;
   } else if (format === 'assistant') {
     resumeContent += `\n• ${data.skills.projectManagement.slice(0, 4).join(' • ')}\n• Process documentation • Team support • Stakeholder coordination • Technical communication\n• ${data.skills.technical.slice(0, 3).join(' • ')} • ${data.skills.software.slice(0, 2).join(' • ')}`;
+  } else if (format === 'datacenter') {
+    resumeContent += `\n• ${data.skills.technical.join(' • ')}\n• Datacenter operations • 24/7 system monitoring • Infrastructure management • Disaster recovery\n• ${data.skills.software.slice(0, 4).join(' • ')} • ${data.skills.methodologies.slice(0, 3).join(' • ')}`;
   } else if (format === 'federal') {
     resumeContent += `\n• ${data.skills.projectManagement.slice(0, 6).join(' • ')}\n• ${data.skills.methodologies.slice(0, 4).join(' • ')}`;
   } else {
@@ -295,5 +299,11 @@ export const atsKeywords = {
     "project support", "team collaboration", "process documentation",
     "stakeholder coordination", "project administration", "meeting coordination",
     "status reporting", "project tracking", "administrative support"
+  ],
+  datacenter: [
+    "datacenter operations", "infrastructure services", "system administration",
+    "server management", "network operations", "24/7 monitoring", "uptime",
+    "disaster recovery", "backup systems", "virtualization", "enterprise infrastructure",
+    "critical systems", "hardware maintenance", "capacity planning"
   ]
 };
