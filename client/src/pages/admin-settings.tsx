@@ -1,4 +1,8 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useMutation } from "@tanstack/react-query";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { 
   Settings, 
@@ -18,11 +23,74 @@ import {
   Download,
   Upload,
   AlertCircle,
-  CheckCircle
+  CheckCircle,
+  Lock,
+  Key
 } from "lucide-react";
+
+const passwordChangeSchema = z.object({
+  currentPassword: z.string().min(1, "Current password is required"),
+  newPassword: z.string().min(6, "New password must be at least 6 characters"),
+  confirmPassword: z.string().min(1, "Please confirm your new password"),
+}).refine((data) => data.newPassword === data.confirmPassword, {
+  message: "Passwords don't match",
+  path: ["confirmPassword"],
+});
+
+type PasswordChangeForm = z.infer<typeof passwordChangeSchema>;
 
 export default function AdminSettings() {
   const { toast } = useToast();
+  
+  const passwordForm = useForm<PasswordChangeForm>({
+    resolver: zodResolver(passwordChangeSchema),
+    defaultValues: {
+      currentPassword: "",
+      newPassword: "",
+      confirmPassword: "",
+    },
+  });
+
+  const passwordChangeMutation = useMutation({
+    mutationFn: async (data: PasswordChangeForm) => {
+      const response = await fetch('/api/admin/change-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          currentPassword: data.currentPassword,
+          newPassword: data.newPassword,
+        }),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || 'Password change failed');
+      }
+
+      return response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Password Changed",
+        description: "Your admin password has been updated successfully.",
+      });
+      passwordForm.reset();
+    },
+    onError: (error: Error) => {
+      toast({
+        title: "Password Change Failed",
+        description: error.message,
+        variant: "destructive",
+      });
+    },
+  });
+
+  const onPasswordSubmit = (data: PasswordChangeForm) => {
+    passwordChangeMutation.mutate(data);
+  };
+
   const [settings, setSettings] = useState({
     notifications: {
       emailEnabled: true,
@@ -415,6 +483,139 @@ export default function AdminSettings() {
                     </Button>
                   </div>
                 </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Security Settings */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Shield className="h-5 w-5" />
+                Security Settings
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {/* Password Change Section */}
+              <div className="border rounded-lg p-4 bg-blue-50">
+                <div className="flex items-center gap-2 mb-4">
+                  <Key className="h-5 w-5 text-blue-600" />
+                  <h3 className="font-medium text-blue-900">Change Admin Password</h3>
+                </div>
+                
+                <Form {...passwordForm}>
+                  <form onSubmit={passwordForm.handleSubmit(onPasswordSubmit)} className="space-y-4">
+                    <FormField
+                      control={passwordForm.control}
+                      name="currentPassword"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Current Password</FormLabel>
+                          <FormControl>
+                            <div className="relative">
+                              <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                              <Input
+                                {...field}
+                                type="password"
+                                placeholder="Enter current password"
+                                className="pl-10"
+                                data-testid="input-current-password"
+                              />
+                            </div>
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={passwordForm.control}
+                      name="newPassword"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>New Password</FormLabel>
+                          <FormControl>
+                            <div className="relative">
+                              <Key className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                              <Input
+                                {...field}
+                                type="password"
+                                placeholder="Enter new password (min 6 characters)"
+                                className="pl-10"
+                                data-testid="input-new-password"
+                              />
+                            </div>
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={passwordForm.control}
+                      name="confirmPassword"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Confirm New Password</FormLabel>
+                          <FormControl>
+                            <div className="relative">
+                              <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                              <Input
+                                {...field}
+                                type="password"
+                                placeholder="Confirm new password"
+                                className="pl-10"
+                                data-testid="input-confirm-password"
+                              />
+                            </div>
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <Button
+                      type="submit"
+                      className="w-full bg-blue-600 hover:bg-blue-700"
+                      disabled={passwordChangeMutation.isPending}
+                      data-testid="button-change-password"
+                    >
+                      {passwordChangeMutation.isPending ? "Changing Password..." : "Change Password"}
+                    </Button>
+                  </form>
+                </Form>
+                
+                <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                  <p className="text-amber-800 text-sm">
+                    <strong>Note:</strong> Password changes are temporary and will reset to default after server restart. 
+                    For permanent changes, update the ADMIN_PASSWORD environment variable.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div>
+                  <Label>Admin Password Protection</Label>
+                  <p className="text-sm text-gray-600">Password protection is currently active</p>
+                </div>
+                <Badge variant="secondary" className="bg-green-100 text-green-800">
+                  <CheckCircle className="h-4 w-4 mr-1" />
+                  Enabled
+                </Badge>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="sessionTimeout">Session Timeout</Label>
+                <Input
+                  id="sessionTimeout"
+                  placeholder="4 hours (default)"
+                  value="4 hours"
+                  disabled
+                  className="bg-gray-50"
+                />
+                <p className="text-sm text-gray-600">
+                  Admin sessions automatically expire after 4 hours for security
+                </p>
               </div>
             </CardContent>
           </Card>

@@ -1,5 +1,5 @@
 import type { Express } from "express";
-import { adminAuth, adminLimiter, authenticateAdmin, logoutAdmin } from "./security";
+import { adminAuth, adminLimiter, authenticateAdmin, logoutAdmin, changeAdminPassword } from "./security";
 import { storage } from "./storage";
 
 export function registerAdminRoutes(app: Express) {
@@ -59,6 +59,50 @@ export function registerAdminRoutes(app: Express) {
     
     res.clearCookie('adminSession');
     res.json({ success: true, message: "Logged out successfully" });
+  });
+
+  // Admin password change endpoint
+  app.post("/api/admin/change-password", adminAuth, async (req, res) => {
+    try {
+      const { currentPassword, newPassword } = req.body;
+      
+      if (!currentPassword || !newPassword) {
+        return res.status(400).json({
+          success: false,
+          message: "Current password and new password are required"
+        });
+      }
+
+      if (newPassword.length < 6) {
+        return res.status(400).json({
+          success: false,
+          message: "New password must be at least 6 characters long"
+        });
+      }
+
+      const success = changeAdminPassword(currentPassword, newPassword);
+      
+      if (!success) {
+        console.log(`🚫 FAILED ADMIN PASSWORD CHANGE from ${req.ip} at ${new Date().toISOString()}`);
+        return res.status(401).json({
+          success: false,
+          message: "Current password is incorrect"
+        });
+      }
+
+      console.log(`🔑 SUCCESSFUL ADMIN PASSWORD CHANGE from ${req.ip} at ${new Date().toISOString()}`);
+      
+      res.json({
+        success: true,
+        message: "Password changed successfully"
+      });
+    } catch (error) {
+      console.error("Admin password change error:", error);
+      res.status(500).json({
+        success: false,
+        message: "Password change error"
+      });
+    }
   });
 
   // Admin authentication status

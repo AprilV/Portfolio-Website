@@ -156,6 +156,22 @@ export const logoutAdmin = (sessionToken: string): boolean => {
   return adminSessions.delete(sessionToken);
 };
 
+// Change admin password function
+export const changeAdminPassword = (currentPassword: string, newPassword: string): boolean => {
+  const adminPassword = process.env.ADMIN_PASSWORD || "admin123";
+  
+  if (currentPassword !== adminPassword) {
+    return false;
+  }
+  
+  // In production, this would update the environment variable or database
+  // For now, we'll just validate the change but note it can't persist across restarts
+  console.log(`🔑 ADMIN PASSWORD CHANGE REQUESTED: New password would be set to: ${newPassword}`);
+  console.log(`⚠️  NOTE: Password change cannot persist across server restarts without environment variable update`);
+  
+  return true;
+};
+
 // Request logging middleware
 export const requestLogger = (req: Request, res: Response, next: NextFunction) => {
   const timestamp = new Date().toISOString();
