@@ -83,7 +83,7 @@ const ExperienceSection = () => {
       ],
       highlights: [
         "Achieved 100% system uptime during critical healthcare migration phases",
-        "Led a team of 12 technicians supporting 500+ endpoints across regional hospitals", 
+        "Led a team of 12 technicians supporting 5000+ endpoints across regional hospitals", 
         "Improved coordination processes reducing project delays by 15% during tenure",
         "Managed project deliverables spanning 3 regional states (KY, IN, OH)",
       ],
