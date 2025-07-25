@@ -1,0 +1,51 @@
+❗️Areas to Improve:
+1. Density and Length
+Issue: Each experience block runs long with multiple bullets, which risks reader fatigue—especially for hiring managers.
+
+Fix: Limit bullet points to 4–5 per job. Focus on results and quantifiables.
+
+✅ What to keep: high-impact, numbers-based bullets (e.g., "Supported 1,200+ endpoint devices...")
+
+🛑 What to cut: low-differentiating bullets like “assisted with patching” (unless tied to a security outcome).
+
+2. Consistency of Format
+Issue: Some bullets start with verbs (e.g., "Managed..."), others start with nouns (e.g., “Technical support for...”).
+
+Fix: Use consistent verb-based bullet starts for uniform style.
+
+3. Results-Oriented Language
+Issue: Some achievements are written as tasks, not outcomes.
+
+e.g., “Technical documentation and knowledge base contributions” is vague.
+
+Fix: Add results or scope:
+
+“Created technical documentation adopted across 3 departments to reduce support call volume.”
+
+4. Redundant Skills Across Roles
+Issue: Several roles repeat bullets like "technical support" or "documentation."
+
+Fix: Collapse or differentiate these—show how your scope evolved (e.g., from "hands-on repair" to "technical escalation point").
+
+5. Visual Hierarchy for Section Headers
+Issue: The section title “Professional Experience” blends in with the timeline.
+
+Fix: Add top spacing, or accent bar (like the “Experience” bubble) to give it more visual weight. Might also consider icons or a subheading like:
+
+PROFESSIONAL EXPERIENCE
+Selected Roles Demonstrating IT & Leadership Growth
+
+6. Quantify the Large-Scale IT Work (Updated)
+You said: Your work covered multiple facilities and more than 500 endpoints. We can now estimate ~2,000+ endpoints across regions.
+
+Suggested bullet improvement:
+
+Oversaw Tier 2 support and endpoint management for ~2,000+ devices across Jewish Hospital, UofL, and affiliated regional healthcare facilities.
+
+🔧 Suggested Action Items:
+Change Type	Suggestion
+✂ Reduce	Limit each role to 4–5 bullets. Remove generic statements.
+🔁 Standardize	Begin all bullets with verbs. Maintain parallel structure.
+📊 Add Metrics	Add quantified scope/results in each bullet (e.g., “Reduced downtime 32%...”).
+🎯 Differentiate Roles	Show growth: junior tech → team lead → operations oversight.
+🎨 Improve Visuals	Add more whitespace or color header to the section title for clarity.

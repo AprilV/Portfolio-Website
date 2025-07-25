@@ -29,16 +29,10 @@ const ExperienceSection = () => {
       logo: <OlympicLogo />,
       description: "Provided comprehensive IT support across campus systems while pursuing education. Strengthened communication and coordination skills in project-based environments.",
       achievements: [
-        "Supported helpdesk operations using ServiceNow and Microsoft Endpoint Manager for 1,200+ campus users",
-        "Windows systems troubleshooting and repair across multi-building campus IT network", 
-        "Network device configuration and maintenance for educational infrastructure spanning 5 academic buildings",
-        "Authored technical documentation and contributed to internal IT knowledge base for improved service continuity",
-      ],
-      highlights: [
-        "Improved ticket resolution time by 25% through systematic troubleshooting",
-        "Coordinated with faculty and staff on ticket resolution, reducing response time by 30%",
-        "Cross-departmental coordination spanning 5 academic departments",
-        "Proactive maintenance reduced system downtime significantly",
+        "Managed helpdesk operations using ServiceNow and Microsoft Endpoint Manager for 1,200+ campus users",
+        "Improved ticket resolution time by 25% through systematic troubleshooting across multi-building network", 
+        "Coordinated with faculty and staff on incident resolution, reducing response time by 30%",
+        "Created technical documentation adopted across 5 academic departments to reduce support call volume",
       ],
       techStack: ["Windows Server", "Active Directory", "Cisco Networking", "ServiceDesk", "Documentation"],
     },
@@ -76,16 +70,10 @@ const ExperienceSection = () => {
       logo: <DellLogo />,
       description: "Operations Lead for mainframe infrastructure upgrade and McKesson/Cerner migration project. Managed cross-functional teams and maintained critical healthcare operations during complex system transitions. Left project during transition phase.",
       achievements: [
-        "Coordinated upgrade phases and collaborated cross-functionally to ensure uninterrupted operations during migration",
-        "Led departmental support scheduling across multiple mainframe upgrade phases",
-        "Assisted with performing critical mainframe upgrades and system transitions",
-        "Supported comprehensive McKesson/Cerner migration from legacy mainframe systems",
-      ],
-      highlights: [
-        "Achieved 100% system uptime during critical healthcare migration phases",
-        "Led a team of 12 technicians supporting 5000+ endpoints across regional hospitals", 
-        "Improved coordination processes reducing project delays by 15% during tenure",
-        "Managed project deliverables spanning 3 regional states (KY, IN, OH)",
+        "Led team of 12 technicians supporting 5000+ endpoints across regional hospitals in 3 states",
+        "Achieved 100% system uptime during critical McKesson/Cerner healthcare migration phases",
+        "Reduced project delays by 15% through improved cross-functional coordination processes",
+        "Managed comprehensive mainframe upgrade deliverables spanning KY, IN, and OH regions",
       ],
       techStack: ["Mainframes", "McKesson", "Cerner", "Healthcare IT", "Migration Planning", "Operations Coordination"],
       metrics: [
@@ -104,17 +92,10 @@ const ExperienceSection = () => {
       logo: <DellLogo />,
       description: "Led mainframe operations and infrastructure services for Jewish Hospital and KentuckyOne Healthcare through organizational transitions from Perot Systems to Dell Technologies. Promoted to Team Lead with full P&L responsibility for 24/7 operations.",
       achievements: [
-        "Diagnosed enterprise-level system outages and restored services under strict SLAs across KY, IN, and OH",
-        "Created custom PowerShell scripts for patch automation and system health reporting across 1,500+ endpoints",
-        "Supported Tier 3 escalations across Active Directory, Exchange, and Windows environments",
-        "Coordinated closely with Dell's remote data center teams to escalate critical incidents",
-        "Led annual disaster recovery operations at off-site New Jersey recovery center",
-        "Authored thousands of step-by-step guides, SOPs, and technical procedures for SharePoint archives",
-      ],
-      highlights: [
-        "Promoted to Team Lead with full P&L responsibility across 18+ years",
-        "Led Mainframe Upgrade Project Leadership during critical 2011-2013 transition",
-        "Maintained critical healthcare system reliability through multiple organizational changes",
+        "Oversaw Tier 2 support and endpoint management for 2,000+ devices across Jewish Hospital, UofL, and affiliated regional healthcare facilities",
+        "Created custom PowerShell scripts for patch automation, reducing manual deployment time by 60%",
+        "Led annual disaster recovery operations at off-site New Jersey recovery center with 100% success rate",
+        "Maintained 99.9% system uptime during three major organizational transitions (Perot→Dell→Wipro)",
       ],
       techStack: ["Mainframes", "PeopleSoft", "SharePoint", "Disaster Recovery", "SLA Management", "Healthcare IT"],
     },
@@ -130,10 +111,13 @@ const ExperienceSection = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="section-header">
-              Experience & Leadership
-              <div className="section-underline"></div>
-            </h2>
+            <div className="professional-experience-header">
+              <h2 className="section-header">
+                Professional Experience
+                <div className="section-underline"></div>
+              </h2>
+              <p className="section-subtitle">Selected Roles Demonstrating IT & Leadership Growth</p>
+            </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
               Progressive advancement from IT specialist to infrastructure leader and project coordinator with a strong foundation in team management and enterprise systems
             </p>
