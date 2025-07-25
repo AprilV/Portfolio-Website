@@ -153,18 +153,16 @@ const InteractiveTimeline = () => {
   };
 
   return (
-    <section className="py-12 bg-soft-neutral-white relative overflow-hidden" style={{paddingTop: '80px', paddingBottom: '60px'}}>
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-teal-blue/5 to-primary-blue/5"></div>
+    <section className="py-16 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-teal-50 to-blue-50"></div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-12">
-          <div className="inline-block">
-            <h2 className="section-header">
-              Professional Timeline
-              <div className="section-underline"></div>
-            </h2>
-          </div>
-          <p className="text-xl text-gray-600 mt-6">Track my journey through education, certifications, and professional growth</p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Professional Timeline
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-500 mx-auto mt-4 rounded"></div>
+          </h2>
+          <p className="text-xl text-gray-600">Track my journey through education, certifications, and professional growth</p>
         </div>
 
         {/* Filter Buttons */}
@@ -172,7 +170,7 @@ const InteractiveTimeline = () => {
           <Button
             variant={selectedFilter === 'all' ? 'default' : 'outline'}
             onClick={() => setSelectedFilter('all')}
-            className={`${selectedFilter === 'all' ? 'bg-primary-blue text-white' : 'border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white'}`}
+            className={`${selectedFilter === 'all' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'}`}
           >
             <Calendar className="h-4 w-4 mr-2" />
             Show All
@@ -180,7 +178,7 @@ const InteractiveTimeline = () => {
           <Button
             variant={selectedFilter === 'education' ? 'default' : 'outline'}
             onClick={() => setSelectedFilter('education')}
-            className={`${selectedFilter === 'education' ? 'bg-primary-blue text-white' : 'border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white'}`}
+            className={`${selectedFilter === 'education' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'}`}
           >
             <BookOpen className="h-4 w-4 mr-2" />
             Education
@@ -188,7 +186,7 @@ const InteractiveTimeline = () => {
           <Button
             variant={selectedFilter === 'certification' ? 'default' : 'outline'}
             onClick={() => setSelectedFilter('certification')}
-            className={`${selectedFilter === 'certification' ? 'bg-teal-blue text-white' : 'border-teal-blue text-teal-blue hover:bg-teal-blue hover:text-white'}`}
+            className={`${selectedFilter === 'certification' ? 'bg-teal-600 text-white hover:bg-teal-700' : 'border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white'}`}
           >
             <Award className="h-4 w-4 mr-2" />
             Certifications
@@ -196,7 +194,7 @@ const InteractiveTimeline = () => {
           <Button
             variant={selectedFilter === 'experience' ? 'default' : 'outline'}
             onClick={() => setSelectedFilter('experience')}
-            className={`${selectedFilter === 'experience' ? 'bg-primary-blue text-white' : 'border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white'}`}
+            className={`${selectedFilter === 'experience' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'}`}
           >
             <Briefcase className="h-4 w-4 mr-2" />
             Experience
@@ -206,7 +204,7 @@ const InteractiveTimeline = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary-blue to-teal-blue h-full"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-600 to-teal-500 h-full"></div>
           
           <div className="space-y-12">
             {filteredEvents.map((event, index) => (
@@ -214,8 +212,8 @@ const InteractiveTimeline = () => {
                 {/* Content */}
                 <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                   <Card 
-                    className={`professional-card cursor-pointer transition-all duration-300 ${
-                      selectedEvent === event.id ? 'border-primary-blue shadow-lg transform scale-105' : 'hover:border-primary-blue/30'
+                    className={`bg-white border border-gray-200 rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg ${
+                      selectedEvent === event.id ? 'border-blue-500 shadow-lg transform scale-105' : 'hover:border-blue-300'
                     }`}
                     onClick={() => setSelectedEvent(selectedEvent === event.id ? null : event.id)}
                   >
@@ -226,7 +224,7 @@ const InteractiveTimeline = () => {
                         </Badge>
                         <span className="text-sm text-gray-500">{event.date}</span>
                       </div>
-                      <CardTitle className="text-lg font-semibold text-charcoal-black">
+                      <CardTitle className="text-lg font-semibold text-gray-900">
                         {event.title}
                       </CardTitle>
                     </CardHeader>
@@ -236,7 +234,7 @@ const InteractiveTimeline = () => {
                         <div className="mt-4 space-y-2">
                           {event.details.map((detail, i) => (
                             <div key={i} className="flex items-start gap-2">
-                              <div className="h-2 w-2 bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="h-2 w-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                               <span className="text-sm text-gray-700">{detail}</span>
                             </div>
                           ))}
@@ -248,14 +246,14 @@ const InteractiveTimeline = () => {
 
                 {/* Timeline Node */}
                 <div className="relative flex items-center justify-center w-2/12">
-                  <div className={`w-12 h-12 rounded-full bg-white border-4 border-primary-blue flex items-center justify-center shadow-lg ${getTypeColor(event.type)}`}>
+                  <div className={`w-12 h-12 rounded-full bg-white border-4 border-blue-600 flex items-center justify-center shadow-lg ${getTypeColor(event.type)}`}>
                     <event.icon className="h-6 w-6" />
                   </div>
                 </div>
 
                 {/* Year */}
                 <div className={`w-5/12 ${index % 2 === 0 ? 'pl-8 text-left' : 'pr-8 text-right'}`}>
-                  <div className="text-3xl font-bold text-primary-blue opacity-60">
+                  <div className="text-3xl font-bold text-blue-600 opacity-60">
                     {event.year}
                   </div>
                 </div>
