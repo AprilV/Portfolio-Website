@@ -247,25 +247,57 @@
   .role-impact-banner {
     background: linear-gradient(135deg, #2C73D2 0%, #43D8C9 100%);
     color: white;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     border-radius: 12px;
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
-    box-shadow: 0 4px 12px rgba(44, 115, 210, 0.2);
+    box-shadow: 0 4px 15px rgba(44, 115, 210, 0.2);
+    border: none;
   }
 
   .impact-icon {
     font-size: 1.5rem;
-    opacity: 0.9;
+    flex-shrink: 0;
   }
 
   .impact-text {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    line-height: 1.4;
     margin: 0;
+    flex: 1;
+  }
+
+  .impact-text-multiline {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .impact-line-primary {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .impact-line-secondary {
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.9;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 768px) {
+    .impact-line-primary {
+      font-size: 1rem;
+    }
+    
+    .impact-line-secondary {
+      font-size: 0.9rem;
+    }
   }
 
   /* Professional Experience Card Styles */

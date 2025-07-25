@@ -36,7 +36,8 @@ const ExperienceSection = () => {
       ],
       highlights: [
         "Improved ticket resolution time by 25% through systematic troubleshooting",
-        "Cross-departmental coordination with faculty and staff",
+        "Coordinated with faculty and staff on ticket resolution, reducing response time by 30%",
+        "Cross-departmental coordination spanning 5 academic departments",
         "Proactive maintenance reduced system downtime significantly",
       ],
       techStack: ["Windows Server", "Active Directory", "Cisco Networking", "ServiceDesk", "Documentation"],
@@ -82,8 +83,9 @@ const ExperienceSection = () => {
       ],
       highlights: [
         "Achieved 100% system uptime during critical healthcare migration",
-        "Reduced migration timeline by 15% through improved coordination",
-        "Led cross-departmental teams spanning 3 regional states",
+        "Led a team of 12 technicians supporting 500+ endpoints across regional hospitals", 
+        "Reduced migration timeline by 15% through improved cross-functional coordination",
+        "Managed project deliverables spanning 3 regional states (KY, IN, OH)",
       ],
       techStack: ["Mainframes", "McKesson", "Cerner", "Healthcare IT", "Migration Planning", "Operations Coordination"],
       metrics: [
@@ -133,15 +135,16 @@ const ExperienceSection = () => {
               <div className="section-underline"></div>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-              Progressive career advancement from technical specialist to team leadership and project coordination
+              Progressive advancement from IT specialist to infrastructure leader and project coordinator with a strong foundation in team management and enterprise systems
             </p>
             
             {/* Role Impact Summary Banner */}
             <div className="role-impact-banner">
               <div className="impact-icon">💼</div>
-              <p className="impact-text">
-                20+ years IT operations experience: 15 years at Dell Technologies (6 years Team Lead, 9 years Systems Analyst/Operations Tech), 5 years PNC Computer Operator, plus recent higher education IT support
-              </p>
+              <div className="impact-text-multiline">
+                <div className="impact-line-primary">20+ years in healthcare IT operations (Dell Technologies)</div>
+                <div className="impact-line-secondary">12+ years as Systems Analyst and Operations Technician, 6+ years as Team Lead</div>
+              </div>
             </div>
           </motion.div>
         </div>
