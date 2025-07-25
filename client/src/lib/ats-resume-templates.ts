@@ -49,6 +49,8 @@ export const resumeData: ResumeData = {
     
     technical: "Senior IT Infrastructure Professional with 20+ years hands-on experience in enterprise environments, transitioning to technical project management roles. CAPM candidate with formal Project Management I & II coursework (4.0 GPA). Expert in Windows systems, LAN administration, and network security with CompTIA certifications. Proven ability to bridge technical and business stakeholders while managing complex infrastructure projects and cross-functional teams.",
     
+    wastate: "Dedicated IT professional with 20+ years of experience serving Washington State communities, seeking Assistant Project Manager role in state government. Currently completing Bachelor of Applied Science in Information Systems at Olympic College (3.94 GPA) with specialized Project Management coursework. Committed to public service excellence with proven track record of managing critical infrastructure supporting citizens and government operations. Strong background in compliance, documentation, and stakeholder collaboration essential for effective public sector project management.",
+    
     federal: "Highly qualified IT professional with two decades of enterprise infrastructure experience seeking Assistant Project Manager role in federal/government environment. Currently completing Bachelor of Applied Science in Information Systems (3.94 GPA) with specialized Project Management coursework. Security-conscious with extensive compliance and documentation experience. President's Scholar with proven academic excellence and commitment to continuous professional development.",
     
     executive: "Strategic IT leader with 20+ years of progressive experience managing complex technical initiatives and leading high-performance teams. Currently advancing project management expertise through formal CAPM certification track. Demonstrated success in cross-functional collaboration, stakeholder management, and operational excellence at Fortune 500 organizations. Proven ability to deliver results while mentoring technical professionals and driving organizational transformation."
@@ -205,6 +207,8 @@ CORE COMPETENCIES`;
   // Add skills based on format
   if (format === 'technical') {
     resumeContent += `\n• ${data.skills.technical.slice(0, 4).join(' • ')}\n• ${data.skills.projectManagement.slice(0, 4).join(' • ')}\n• ${data.skills.software.slice(0, 4).join(' • ')}`;
+  } else if (format === 'wastate') {
+    resumeContent += `\n• ${data.skills.projectManagement.slice(0, 4).join(' • ')}\n• Public sector experience • Stakeholder collaboration • Process improvement • Community service\n• ${data.skills.technical.slice(0, 3).join(' • ')} • Government compliance`;
   } else if (format === 'federal') {
     resumeContent += `\n• ${data.skills.projectManagement.slice(0, 6).join(' • ')}\n• ${data.skills.methodologies.slice(0, 4).join(' • ')}`;
   } else {
@@ -264,5 +268,12 @@ export const atsKeywords = {
     "team collaboration", "mentoring", "training", "documentation",
     "customer service", "time management", "attention to detail",
     "process improvement", "continuous learning"
+  ],
+  waState: [
+    "public service", "government operations", "state agency", "municipal",
+    "citizen services", "public administration", "regulatory compliance",
+    "Washington State", "local government", "community engagement",
+    "public sector", "government contracting", "transparency",
+    "accountability", "civic responsibility", "public interest"
   ]
 };

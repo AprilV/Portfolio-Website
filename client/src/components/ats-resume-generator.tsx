@@ -29,6 +29,15 @@ const ATSResumeGenerator = () => {
       icon: Settings,
       bestFor: "IT project management, technical coordinator roles"
     },
+    wastate: {
+      name: "Washington State",
+      description: "Optimized for Washington State government positions and agencies",
+      features: ["State-specific keywords", "Public service focus", "Education emphasis", "Local experience"],
+      fileType: ".docx",
+      color: "teal-blue",
+      icon: Users,
+      bestFor: "WA state agencies, municipalities, public sector"
+    },
     federal: {
       name: "Federal/Government",
       description: "Detailed format for government positions with security clearance",
@@ -121,7 +130,8 @@ const ATSResumeGenerator = () => {
     
     const formatNames = {
       standard: 'Standard_ATS',
-      technical: 'Technical_PM', 
+      technical: 'Technical_PM',
+      wastate: 'WA_State_Gov', 
       federal: 'Federal_Gov',
       executive: 'Senior_PM'
     };
@@ -235,11 +245,11 @@ const ATSResumeGenerator = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div>
                       <h4 className="font-semibold text-primary-blue mb-2">Project Management</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.projectManagement.slice(0, 8).map((keyword, i) => (
+                        {atsKeywords.projectManagement.slice(0, 6).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-primary-blue/30 text-primary-blue">
                             {keyword}
                           </Badge>
@@ -249,7 +259,7 @@ const ATSResumeGenerator = () => {
                     <div>
                       <h4 className="font-semibold text-teal-blue mb-2">Technical Skills</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.technical.slice(0, 8).map((keyword, i) => (
+                        {atsKeywords.technical.slice(0, 6).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-teal-blue/30 text-teal-blue">
                             {keyword}
                           </Badge>
@@ -257,10 +267,20 @@ const ATSResumeGenerator = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary-blue mb-2">Soft Skills</h4>
+                      <h4 className="font-semibold text-primary-blue mb-2">WA State Gov</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.softSkills.slice(0, 8).map((keyword, i) => (
+                        {atsKeywords.waState.slice(0, 6).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-primary-blue/30 text-primary-blue">
+                            {keyword}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-teal-blue mb-2">Soft Skills</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {atsKeywords.softSkills.slice(0, 6).map((keyword, i) => (
+                          <Badge key={i} variant="outline" className="text-xs border-teal-blue/30 text-teal-blue">
                             {keyword}
                           </Badge>
                         ))}
