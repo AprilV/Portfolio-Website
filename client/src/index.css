@@ -373,7 +373,7 @@
   }
 
   .experience-content {
-    margin-left: 80px;
+    margin-left: 0;
   }
 
   .experience-description {
@@ -499,17 +499,15 @@
 
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
-    .experience-content {
-      margin-left: 0;
-    }
-    
     .experience-header {
       flex-direction: column;
       text-align: center;
+      gap: 1rem;
     }
     
     .company-logo-container {
-      margin-bottom: 1rem;
+      align-self: center;
+      margin-bottom: 0;
     }
     
     .timeline-line {
@@ -518,6 +516,11 @@
     
     .metrics-grid {
       grid-template-columns: repeat(2, 1fr);
+      justify-self: center;
+    }
+
+    .job-meta {
+      justify-content: center;
     }
   }
   

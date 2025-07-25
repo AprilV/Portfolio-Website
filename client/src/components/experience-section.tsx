@@ -11,9 +11,10 @@ const ExperienceSection = () => {
       logo: "🎓", // Educational institution
       description: "Provided comprehensive IT support across campus systems while pursuing education. Strengthened communication and coordination skills in project-based environments.",
       achievements: [
-        "Windows systems troubleshooting and repair",
-        "Network device configuration and maintenance", 
-        "Technical documentation and knowledge base contributions",
+        "Supported helpdesk operations using ServiceNow and Microsoft Endpoint Manager",
+        "Windows systems troubleshooting and repair across campus infrastructure", 
+        "Network device configuration and maintenance for educational environment",
+        "Technical documentation and knowledge base contributions for IT team",
       ],
       highlights: [
         "Improved ticket resolution time by 25% through systematic troubleshooting",
@@ -29,7 +30,7 @@ const ExperienceSection = () => {
       location: "Bremerton, WA", 
       type: "education",
       logo: "🎓", // Educational institution
-      description: "Information Systems (BASIS) program with concentration in Project Management. Maintaining 3.94 GPA while completing comprehensive PM coursework.",
+      description: "Information Systems (BASIS) program with concentration in Project Management. Completing comprehensive PM coursework with academic distinction.",
       achievements: [
         "Project Management I & II Completed with distinction",
         "President's Scholar honors achieved every quarter",
@@ -56,10 +57,10 @@ const ExperienceSection = () => {
       logo: "💻", // Technology company
       description: "Operations Lead for mainframe infrastructure upgrade and McKesson/Cerner migration project. Managed cross-functional teams and maintained critical healthcare operations during complex system transitions.",
       achievements: [
-        "Coordinated departmental support scheduling for mainframe upgrade phases",
-        "Collaborated with cross-functional teams on migration planning and execution",
-        "Assisted with performing mainframe upgrades and system transitions",
-        "Supported McKesson/Cerner migration from legacy mainframe systems",
+        "Coordinated upgrade phases and collaborated cross-functionally to ensure uninterrupted operations during migration",
+        "Led departmental support scheduling across multiple mainframe upgrade phases",
+        "Assisted with performing critical mainframe upgrades and system transitions",
+        "Supported comprehensive McKesson/Cerner migration from legacy mainframe systems",
       ],
       highlights: [
         "Achieved 100% system uptime during critical healthcare migration",
@@ -79,140 +80,137 @@ const ExperienceSection = () => {
       company: "Dell Technologies",
       period: "Oct 1997 - Jun 2016",
       location: "Louisville, KY",
-      status: "completed",
+      type: "work",
+      logo: "💻", // Technology company
       description: "Led mainframe operations and infrastructure services for Jewish Hospital and KentuckyOne Healthcare through organizational transitions from Perot Systems to Dell Technologies to Wipro. Promoted to Team Lead with full P&L responsibility for 24/7 operations.",
       achievements: [
-        "Managed 14,000 tape backup infrastructure with daily, weekly, quarterly, and yearly retention cycles",
-        "Led annual disaster recovery operations at off-site New Jersey recovery center",
+        "Led 24/7 operations with 12-person team maintaining 100% SLA across KY, IN, and OH",
+        "Managed 14,000 tape backups with daily, weekly, quarterly, and yearly retention cycles",
         "Generated department profit by offering and billing high-value services beyond standard SLA",
-        "Coordinated multi-region hospital data integration across KY, IN, and OH",
+        "Led annual disaster recovery operations at off-site New Jersey recovery center",
         "Authored thousands of step-by-step guides, SOPs, and technical procedures for SharePoint archives",
-        "Executed monthly system updates and time-sensitive IPLs across multiple time zones",
-        "Maintained 100% SLA compliance with PeopleSoft ticket monitoring and escalation follow-through",
         "Coordinated with Dell support in Plano, TX and global teams in India for incident resolution",
       ],
       highlights: [
-        "Mainframe Upgrade Project Leadership (2011-2013)",
-        "Cross-functional team coordination",
-        "Critical healthcare system reliability",
-        "24/7 shift management and escalation chains",
+        "Promoted to Team Lead with full P&L responsibility across 18+ years",
+        "Led Mainframe Upgrade Project Leadership during critical 2011-2013 transition",
+        "Maintained critical healthcare system reliability through multiple organizational changes",
       ],
-      stats: [
-        { label: "Years Experience", value: "18.75" },
-        { label: "Team Members", value: "12" },
-        { label: "Operations", value: "24/7" },
-        { label: "SLA Compliance", value: "100%" },
-        { label: "Tape Infrastructure", value: "14,000" },
-        { label: "Regional Coverage", value: "3 States" },
-      ],
+      techStack: ["Mainframes", "PeopleSoft", "SharePoint", "Disaster Recovery", "SLA Management", "Healthcare IT"],
     },
   ];
 
   return (
-    <section id="experience" className="py-12 bg-background" style={{paddingTop: '80px', paddingBottom: '60px'}}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <div className="inline-block">
-            <h2 className="section-header">
-              Professional Experience
-              <div className="section-underline"></div>
-            </h2>
-          </div>
-          <p className="text-xl text-muted-foreground mt-6">Twenty years of IT infrastructure experience with six years of team leadership</p>
+    <section id="experience" className="py-20 bg-white" style={{paddingTop: '80px', paddingBottom: '60px'}}>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="section-header">
+            Experience & Leadership
+            <div className="section-underline"></div>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Progressive career advancement from technical specialist to team leadership and project coordination
+          </p>
         </div>
-        
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-primary-blue/20 h-full hidden lg:block"></div>
-          
-          {/* Timeline items */}
-          <div className="space-y-16">
-            {experiences.map((exp, index) => (
-              <div key={index} className="relative flex flex-col lg:flex-row items-start lg:items-center">
-                <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8 lg:order-2'} mb-8 lg:mb-0`}>
-                  <div className="bg-card-gradient p-8 rounded-xl shadow-lg border border-border">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className={`w-3 h-3 rounded-full ${
-                        exp.status === 'current' ? 'bg-teal-blue' : 'bg-primary-blue'
-                      }`}></div>
-                      {exp.status === 'current' && (
-                        <span className="text-sm font-medium text-teal-blue">Current</span>
-                      )}
-                    </div>
-                    <h3 className="text-xl font-bold text-card-foreground mb-2">{exp.title}</h3>
-                    <p className="text-primary-blue font-medium mb-1">{exp.company}</p>
-                    <div className="flex items-center gap-4 mb-3 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        <span>{exp.period}</span>
+
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
+            <div key={index} className="experience-card">
+              {/* Experience Header */}
+              <div className="experience-header">
+                <div className="company-logo-container">
+                  <div className="company-logo">
+                    <span className="text-2xl">{exp.logo}</span>
+                  </div>
+                  <div className="timeline-connector">
+                    <div className="timeline-dot"></div>
+                    {index < experiences.length - 1 && <div className="timeline-line"></div>}
+                  </div>
+                </div>
+                
+                <div className="flex-1">
+                  <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
+                    <div>
+                      <h3 className="job-title">{exp.title}</h3>
+                      <p className="company-name">{exp.company}</p>
+                      <div className="job-meta">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="h-4 w-4" />
+                          {exp.period}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <MapPin className="h-4 w-4" />
+                          {exp.location}
+                        </span>
+                        {exp.type === "education" && (
+                          <span className="education-badge">
+                            <Award className="h-3 w-3" />
+                            Academic
+                          </span>
+                        )}
                       </div>
-                      <div className="flex items-center gap-1">
-                        <MapPin className="h-4 w-4" />
-                        <span>{exp.location}</span>
-                      </div>
                     </div>
-                    <p className="text-card-foreground mb-4">{exp.description}</p>
                     
-                    {exp.stats && (
-                      <div className="grid grid-cols-2 gap-4 mb-4">
-                        {exp.stats.map((stat, statIndex) => (
-                          <div key={statIndex} className="text-center">
-                            <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                            <div className="text-xs text-muted-foreground">{stat.label}</div>
+                    {/* Metrics Panel - Only for Operations Lead role */}
+                    {exp.metrics && (
+                      <div className="metrics-grid">
+                        {exp.metrics.map((metric, idx) => (
+                          <div key={idx} className="metric-card">
+                            <div className="metric-value">{metric.value}</div>
+                            <div className="metric-label">{metric.label}</div>
                           </div>
                         ))}
                       </div>
                     )}
-                    
-                    <div className="space-y-2">
-                      {(exp.achievements || []).slice(0, 4).map((achievement, achIndex) => (
-                        <div key={achIndex} className="flex items-start gap-2 text-sm">
-                          <CheckCircle className="h-4 w-4 text-teal-blue flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{achievement}</span>
-                        </div>
-                      ))}
-                      {(exp.achievements || []).length > 4 && (
-                        <details className="group">
-                          <summary className="cursor-pointer text-sm text-primary-blue hover:text-primary-blue/80 font-medium">
-                            Show {(exp.achievements || []).length - 4} more achievements...
-                          </summary>
-                          <div className="mt-2 space-y-2">
-                            {(exp.achievements || []).slice(4).map((achievement, achIndex) => (
-                              <div key={achIndex + 4} className="flex items-start gap-2 text-sm">
-                                <CheckCircle className="h-4 w-4 text-teal-blue flex-shrink-0 mt-0.5" />
-                                <span className="text-gray-700">{achievement}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </details>
-                      )}
-                    </div>
                   </div>
-                </div>
-                
-                {/* Timeline marker - aligned with job title */}
-                <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white shadow-lg hidden lg:block top-16 ${
-                  exp.status === 'current' ? 'bg-teal-blue' : index === 1 ? 'bg-primary-blue' : 'bg-primary-blue'
-                }`}></div>
-                
-                <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pl-8 lg:order-2' : 'lg:pr-8'}`}>
-                  <div className="bg-card-gradient p-8 rounded-xl shadow-lg border border-border">
-                    <h4 className="text-lg font-semibold text-card-foreground mb-4">
-                      {exp.status === 'current' ? 'Key Achievements' : 'Major Accomplishments'}
+
+                  <p className="experience-description">{exp.description}</p>
+
+                  {/* Main Achievements Section */}
+                  <div className="achievements-section">
+                    <h4 className="section-title">
+                      <Target className="h-4 w-4" />
+                      Key Responsibilities & Achievements
                     </h4>
-                    <ul className="space-y-2 text-card-foreground text-sm">
-                      {(exp.highlights || []).map((highlight, highlightIndex) => (
-                        <li key={highlightIndex} className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary-blue rounded-full flex-shrink-0 mt-2"></div>
-                          <span>{highlight}</span>
-                        </li>
+                    <ul className="responsibilities">
+                      {exp.achievements.map((achievement, idx) => (
+                        <li key={idx}>{achievement}</li>
                       ))}
                     </ul>
+
+                    {/* Integrated Major Accomplishments */}
+                    {exp.highlights && exp.highlights.length > 0 && (
+                      <div className="highlights-section">
+                        <h5 className="highlights-title">
+                          <Award className="h-4 w-4" />
+                          Major Accomplishments
+                        </h5>
+                        <ul className="highlights">
+                          {exp.highlights.map((highlight, idx) => (
+                            <li key={idx}>
+                              <span className="highlight">{highlight}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
+
+                  {/* Tech Stack */}
+                  {exp.techStack && (
+                    <div className="tech-stack-section">
+                      <h5 className="tech-stack-title">Technologies & Skills</h5>
+                      <div className="tech-stack">
+                        {exp.techStack.map((tech, idx) => (
+                          <span key={idx} className="tech-chip">{tech}</span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
         
         {/* Professional Summary CTA */}
