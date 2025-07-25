@@ -52,13 +52,13 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-background/95 backdrop-blur-sm shadow-md" : "bg-background/95 backdrop-blur-sm"
-    } border-b border-border`}>
+      isScrolled ? "bg-nav-background/95 backdrop-blur-sm shadow-md" : "bg-nav-background/95 backdrop-blur-sm"
+    } border-b border-divider-gray`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="text-xl font-bold text-foreground">April V. Sykes</span>
-            <span className="ml-2 text-sm text-muted-foreground">Assistant Project Manager</span>
+            <span className="text-xl font-bold text-charcoal-black">April V. Sykes</span>
+            <span className="ml-2 text-sm text-cool-gray">Assistant Project Manager</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -67,8 +67,8 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-foreground hover:text-primary transition-colors duration-200 font-medium ${
-                  activeSection === item.id ? "text-primary font-semibold" : ""
+                className={`text-charcoal-black hover:text-primary-blue transition-colors duration-200 font-medium ${
+                  activeSection === item.id ? "text-primary-blue font-semibold" : ""
                 }`}
               >
                 {item.label}
