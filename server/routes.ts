@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
 import { sendContactNotification, sendAutoReply } from "./email";
+import { logContactSubmission, getContactLogPath } from "./contact-log";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
@@ -30,19 +31,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Don't wait for emails to complete - send response immediately
       Promise.all(emailPromises).then(([notificationSent, autoReplySent]) => {
+        // Log submission to file for backup notification
+        logContactSubmission(submission.id, contactData, notificationSent, 'sendgrid-id-placeholder');
+        
         if (notificationSent) {
-          console.log("Contact notification email sent successfully");
+          console.log("✅ Contact notification email sent successfully");
+          console.log(`📧 If email not received, check log file: ${getContactLogPath()}`);
         } else {
-          console.log("Contact notification email failed or disabled");
+          console.log("❌ Contact notification email failed or disabled");
         }
         
         if (autoReplySent) {
-          console.log("Auto-reply email sent successfully");
+          console.log("✅ Auto-reply email sent successfully");
         } else {
-          console.log("Auto-reply email failed or disabled");
+          console.log("❌ Auto-reply email failed or disabled");
         }
       }).catch(error => {
-        console.error("Email sending error:", error);
+        console.error("❌ Email sending error:", error);
+        // Still log the submission even if email fails
+        logContactSubmission(submission.id, contactData, false);
       });
       
       res.json({ 

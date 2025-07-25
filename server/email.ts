@@ -23,6 +23,8 @@ export async function sendContactNotification(contactData: ContactEmailParams): 
   }
 
   try {
+    // Test log to verify function is called
+    console.log(`🔧 DEBUG: Attempting to send notification email for ${contactData.name}`);
     const emailHtml = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
         <div style="background: linear-gradient(135deg, #2C73D2, #43D8C9); padding: 30px; border-radius: 8px; margin-bottom: 20px;">
@@ -75,13 +77,24 @@ ${contactData.message}
 Reply directly to this email to respond to ${contactData.name}.
     `;
 
+    // Create backup notification to alternative email if needed
+    const primaryEmail = 'april_sykes@proton.me';
+    
     const emailPayload = {
-      to: 'april_sykes@proton.me',
-      from: 'april_sykes@proton.me', // Now verified!
-      replyTo: contactData.email,
-      subject: `New Contact Message from ${contactData.name}`,
+      to: primaryEmail,
+      from: primaryEmail,
+      replyTo: contactData.email, 
+      subject: `🚨 PORTFOLIO CONTACT: ${contactData.name} - ${contactData.company || 'Individual'}`,
       text: emailText,
       html: emailHtml,
+      trackingSettings: {
+        clickTracking: { enable: false },
+        openTracking: { enable: false },
+        subscriptionTracking: { enable: false }
+      },
+      mailSettings: {
+        sandboxMode: { enable: false }
+      }
     };
 
     console.log('Sending notification email with payload:', JSON.stringify(emailPayload, null, 2));
@@ -96,6 +109,10 @@ Reply directly to this email to respond to ${contactData.name}.
       console.log(`✅ SendGrid accepted email for delivery to april_sykes@proton.me`);
       console.log(`📧 Email should arrive within 1-5 minutes`);
       console.log(`🔍 If not received, check: Inbox, Spam, All Mail folders in Proton`);
+      console.log(`🆔 Message ID for tracking: ${result[0]?.headers?.['x-message-id']}`);
+      console.log(`📊 Full headers:`, JSON.stringify(result[0]?.headers, null, 2));
+    } else {
+      console.log(`❌ Unexpected SendGrid response status: ${result[0]?.statusCode}`);
     }
     
     return true;
