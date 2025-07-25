@@ -12,7 +12,7 @@ if (process.env.SENDGRID_API_KEY) {
 interface ContactEmailParams {
   name: string;
   email: string;
-  company?: string;
+  company?: string | null;
   message: string;
 }
 

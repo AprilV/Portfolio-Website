@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
+import { sendContactNotification, sendAutoReply } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
@@ -11,8 +12,38 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const contactData = insertContactSchema.parse(req.body);
       const submission = await storage.createContactSubmission(contactData);
       
-      // In a real application, you would also send an email here
-      // using a service like nodemailer with SMTP or SendGrid
+      // Send email notifications
+      const emailPromises = [
+        sendContactNotification({
+          name: contactData.name,
+          email: contactData.email,
+          company: contactData.company || undefined,
+          message: contactData.message
+        }), // Email to April
+        sendAutoReply({
+          name: contactData.name,
+          email: contactData.email,
+          company: contactData.company || undefined,
+          message: contactData.message
+        }) // Auto-reply to sender
+      ];
+      
+      // Don't wait for emails to complete - send response immediately
+      Promise.all(emailPromises).then(([notificationSent, autoReplySent]) => {
+        if (notificationSent) {
+          console.log("Contact notification email sent successfully");
+        } else {
+          console.log("Contact notification email failed or disabled");
+        }
+        
+        if (autoReplySent) {
+          console.log("Auto-reply email sent successfully");
+        } else {
+          console.log("Auto-reply email failed or disabled");
+        }
+      }).catch(error => {
+        console.error("Email sending error:", error);
+      });
       
       res.json({ 
         success: true, 
