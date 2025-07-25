@@ -20,6 +20,7 @@ import {
 import { registerAdminRoutes } from "./admin-routes";
 import cors from "cors";
 import express from "express";
+import cookieParser from "cookie-parser";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Configure trust proxy for Replit environment
@@ -30,6 +31,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.use(cors(corsOptions));
   app.use(express.json({ limit: '10mb' }));
   app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+  app.use(cookieParser());
   app.use(requestLogger);
   app.use(sanitizeInput);
 

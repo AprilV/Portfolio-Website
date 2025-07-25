@@ -112,26 +112,48 @@ export const sanitizeInput = (req: Request, res: Response, next: NextFunction) =
   next();
 };
 
-// Admin authentication middleware (basic implementation)
+// Admin session management
+const adminSessions = new Set<string>();
+
+// Admin authentication middleware with proper session management
 export const adminAuth = (req: Request, res: Response, next: NextFunction) => {
-  const adminToken = req.headers.authorization?.replace('Bearer ', '');
-  const expectedToken = process.env.ADMIN_TOKEN;
-
-  // In development, skip auth for local access
-  if (process.env.NODE_ENV === 'development' && req.ip === '127.0.0.1') {
-    return next();
+  const sessionToken = req.headers.authorization?.replace('Bearer ', '') || req.cookies?.adminSession;
+  
+  if (!sessionToken || !adminSessions.has(sessionToken)) {
+    console.log(`🚫 UNAUTHORIZED ADMIN ACCESS ATTEMPT: ${req.method} ${req.path} from ${req.ip} at ${new Date().toISOString()}`);
+    return res.status(401).json({ 
+      success: false, 
+      message: "Unauthorized - Admin authentication required" 
+    });
   }
-
-  if (!expectedToken) {
-    // If no admin token is set, allow access (for now)
-    return next();
-  }
-
-  if (!adminToken || adminToken !== expectedToken) {
-    return res.status(401).json({ error: 'Unauthorized access to admin area' });
-  }
-
+  
+  console.log(`✅ AUTHENTICATED ADMIN ACCESS: ${req.method} ${req.path} at ${new Date().toISOString()}`);
   next();
+};
+
+// Admin login function
+export const authenticateAdmin = (password: string): string | null => {
+  const adminPassword = process.env.ADMIN_PASSWORD || "admin123";
+  
+  if (password !== adminPassword) {
+    return null;
+  }
+  
+  // Generate secure session token
+  const sessionToken = require('crypto').randomBytes(32).toString('hex');
+  adminSessions.add(sessionToken);
+  
+  // Auto-expire session after 4 hours
+  setTimeout(() => {
+    adminSessions.delete(sessionToken);
+  }, 4 * 60 * 60 * 1000);
+  
+  return sessionToken;
+};
+
+// Admin logout function
+export const logoutAdmin = (sessionToken: string): boolean => {
+  return adminSessions.delete(sessionToken);
 };
 
 // Request logging middleware

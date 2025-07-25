@@ -1,8 +1,66 @@
 import type { Express } from "express";
-import { adminAuth, adminLimiter } from "./security";
+import { adminAuth, adminLimiter, authenticateAdmin, logoutAdmin } from "./security";
 import { storage } from "./storage";
 
 export function registerAdminRoutes(app: Express) {
+  // Admin login endpoint
+  app.post("/api/admin/login", async (req, res) => {
+    try {
+      const { password } = req.body;
+      
+      if (!password) {
+        return res.status(400).json({
+          success: false,
+          message: "Password is required"
+        });
+      }
+
+      const sessionToken = authenticateAdmin(password);
+      
+      if (!sessionToken) {
+        console.log(`🚫 FAILED ADMIN LOGIN ATTEMPT from ${req.ip} at ${new Date().toISOString()}`);
+        return res.status(401).json({
+          success: false,
+          message: "Invalid password"
+        });
+      }
+
+      console.log(`✅ SUCCESSFUL ADMIN LOGIN from ${req.ip} at ${new Date().toISOString()}`);
+      
+      // Set secure cookie
+      res.cookie('adminSession', sessionToken, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        maxAge: 4 * 60 * 60 * 1000, // 4 hours
+        sameSite: 'strict'
+      });
+
+      res.json({
+        success: true,
+        message: "Authentication successful",
+        token: sessionToken
+      });
+    } catch (error) {
+      console.error("Admin login error:", error);
+      res.status(500).json({
+        success: false,
+        message: "Authentication error"
+      });
+    }
+  });
+
+  // Admin logout endpoint
+  app.post("/api/admin/logout", async (req, res) => {
+    const sessionToken = req.headers.authorization?.replace('Bearer ', '') || req.cookies?.adminSession;
+    
+    if (sessionToken) {
+      logoutAdmin(sessionToken);
+    }
+    
+    res.clearCookie('adminSession');
+    res.json({ success: true, message: "Logged out successfully" });
+  });
+
   // Admin authentication status
   app.get("/api/admin/status", adminAuth, async (req, res) => {
     res.json({
