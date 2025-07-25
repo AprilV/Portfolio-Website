@@ -1,7 +1,21 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Building, Calendar, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
+import { Mail, Building, Calendar, User, Trash2, AlertTriangle } from "lucide-react";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 interface ContactSubmission {
   id: number;
@@ -13,8 +27,37 @@ interface ContactSubmission {
 }
 
 export default function AdminContacts() {
+  const { toast } = useToast();
+  const queryClient = useQueryClient();
+  
   const { data: contacts, isLoading } = useQuery<ContactSubmission[]>({
     queryKey: ['/api/contact'],
+  });
+
+  const deleteMutation = useMutation({
+    mutationFn: async (contactId: number) => {
+      const response = await fetch(`/api/contact/${contactId}`, {
+        method: 'DELETE'
+      });
+      if (!response.ok) {
+        throw new Error('Failed to delete contact');
+      }
+      return response.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['/api/contact'] });
+      toast({
+        title: "Contact Deleted",
+        description: "The contact submission has been permanently removed.",
+      });
+    },
+    onError: (error) => {
+      toast({
+        title: "Delete Failed",
+        description: "Unable to delete the contact. Please try again.",
+        variant: "destructive",
+      });
+    },
   });
 
   if (isLoading) {
@@ -101,6 +144,42 @@ export default function AdminContacts() {
                     <Mail className="h-4 w-4 mr-1" />
                     Reply via Email
                   </a>
+                  
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="text-red-600 border-red-200 hover:bg-red-50 hover:border-red-300"
+                      >
+                        <Trash2 className="h-4 w-4 mr-1" />
+                        Delete
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle className="flex items-center gap-2">
+                          <AlertTriangle className="h-5 w-5 text-red-600" />
+                          Delete Contact Submission
+                        </AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Are you sure you want to permanently delete this contact from <strong>{contact.name}</strong>?
+                          <br /><br />
+                          <span className="text-red-600 font-medium">This action cannot be undone.</span> The contact information and message will be permanently removed from your database.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <AlertDialogAction
+                          onClick={() => deleteMutation.mutate(contact.id)}
+                          className="bg-red-600 hover:bg-red-700"
+                          disabled={deleteMutation.isPending}
+                        >
+                          {deleteMutation.isPending ? "Deleting..." : "Delete Contact"}
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
                 </div>
               </CardContent>
             </Card>

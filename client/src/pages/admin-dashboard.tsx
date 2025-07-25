@@ -10,7 +10,8 @@ import {
   FileText, 
   BarChart3,
   ExternalLink,
-  Download
+  Download,
+  Shield
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -204,6 +205,13 @@ export default function AdminDashboard() {
                   <Download className="mr-2 h-4 w-4" />
                   Export Data
                 </Button>
+                
+                <Link href="/admin/security">
+                  <Button className="w-full justify-start" variant="outline">
+                    <Shield className="mr-2 h-4 w-4" />
+                    Security Tests
+                  </Button>
+                </Link>
                 
                 <Link href="/">
                   <Button className="w-full justify-start" variant="outline">

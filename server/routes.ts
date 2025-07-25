@@ -136,6 +136,42 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Delete contact submission (admin only)
+  app.delete("/api/contact/:id", adminAuth, async (req, res) => {
+    try {
+      const contactId = parseInt(req.params.id);
+      
+      if (isNaN(contactId)) {
+        return res.status(400).json({ 
+          success: false, 
+          message: "Invalid contact ID" 
+        });
+      }
+
+      const deleted = await storage.deleteContactSubmission(contactId);
+      
+      if (!deleted) {
+        return res.status(404).json({ 
+          success: false, 
+          message: "Contact not found" 
+        });
+      }
+
+      console.log(`🗑️ CONTACT DELETED: ID ${contactId} by admin at ${new Date().toISOString()}`);
+      
+      res.json({ 
+        success: true, 
+        message: "Contact deleted successfully" 
+      });
+    } catch (error) {
+      console.error("Error deleting contact:", error);
+      res.status(500).json({ 
+        success: false, 
+        message: "Error deleting contact" 
+      });
+    }
+  });
+
   // Register admin-specific routes
   registerAdminRoutes(app);
 
