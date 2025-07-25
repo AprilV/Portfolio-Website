@@ -208,16 +208,17 @@
     color: #1E1E1E;
   }
   
-  /* Full-width underline matching title length */
+  /* Full-width underline with expanding hover effect */
   .section-underline {
-    @apply absolute -bottom-1 left-0 w-full rounded-full transition-all duration-300;
+    @apply absolute -bottom-1 left-1/2 transform -translate-x-1/2 rounded-full transition-all duration-300;
+    width: 80%;
     height: 2px;
     background-color: #2C73D2;
   }
   
   .section-header:hover .section-underline {
+    width: 100%;
     background: linear-gradient(90deg, #2C73D2 0%, #43D8C9 100%);
-    transform: scaleX(1.05);
   }
 }
 
