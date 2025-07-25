@@ -595,8 +595,8 @@ export default function AdminSettings() {
                 
                 <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
                   <p className="text-amber-800 text-sm">
-                    <strong>Note:</strong> Password changes are temporary and will reset to default after server restart. 
-                    For permanent changes, update the ADMIN_PASSWORD environment variable.
+                    <strong>Secure Storage:</strong> Password changes are permanently stored in the database with enterprise-grade encryption. 
+                    Your new password will persist across server restarts and deployments.
                   </p>
                 </div>
               </div>

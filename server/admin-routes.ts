@@ -15,7 +15,7 @@ export function registerAdminRoutes(app: Express) {
         });
       }
 
-      const sessionToken = authenticateAdmin(password);
+      const sessionToken = await authenticateAdmin(password);
       
       if (!sessionToken) {
         console.log(`🚫 FAILED ADMIN LOGIN ATTEMPT from ${req.ip} at ${new Date().toISOString()}`);
@@ -80,7 +80,7 @@ export function registerAdminRoutes(app: Express) {
         });
       }
 
-      const success = changeAdminPassword(currentPassword, newPassword);
+      const success = await changeAdminPassword(currentPassword, newPassword);
       
       if (!success) {
         console.log(`🚫 FAILED ADMIN PASSWORD CHANGE from ${req.ip} at ${new Date().toISOString()}`);

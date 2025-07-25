@@ -3,6 +3,10 @@ import helmet from 'helmet';
 import cors from 'cors';
 import type { Request, Response, NextFunction } from 'express';
 import crypto from 'crypto';
+import bcrypt from 'bcrypt';
+import { db } from './db';
+import { adminSettings, type AdminSettings } from '@shared/schema';
+import { eq } from 'drizzle-orm';
 
 // Rate limiting for contact form submissions
 export const contactFormLimiter = rateLimit({
@@ -148,24 +152,57 @@ export const adminAuth = (req: Request, res: Response, next: NextFunction) => {
   next();
 };
 
-// Admin login function
-export const authenticateAdmin = (password: string): string | null => {
-  const adminPassword = process.env.ADMIN_PASSWORD || "admin123";
-  
-  if (password !== adminPassword) {
+// Initialize admin password if not exists
+export const initializeAdminPassword = async (): Promise<void> => {
+  try {
+    const [existingAdmin] = await db.select().from(adminSettings).where(eq(adminSettings.id, "admin"));
+    
+    if (!existingAdmin) {
+      const defaultPassword = process.env.ADMIN_PASSWORD || "admin123";
+      const saltRounds = 12;
+      const passwordHash = await bcrypt.hash(defaultPassword, saltRounds);
+      
+      await db.insert(adminSettings).values({
+        id: "admin",
+        passwordHash: passwordHash,
+      });
+      
+      console.log("🔐 Admin password initialized in database");
+    }
+  } catch (error) {
+    console.error("Error initializing admin password:", error);
+  }
+};
+
+// Admin login function with database authentication
+export const authenticateAdmin = async (password: string): Promise<string | null> => {
+  try {
+    const [admin] = await db.select().from(adminSettings).where(eq(adminSettings.id, "admin"));
+    
+    if (!admin || !admin.passwordHash) {
+      return null;
+    }
+    
+    const isValid = await bcrypt.compare(password, admin.passwordHash);
+    
+    if (!isValid) {
+      return null;
+    }
+    
+    // Generate secure session token
+    const sessionToken = crypto.randomBytes(32).toString('hex');
+    adminSessions.add(sessionToken);
+    
+    // Auto-expire session after 4 hours
+    setTimeout(() => {
+      adminSessions.delete(sessionToken);
+    }, 4 * 60 * 60 * 1000);
+    
+    return sessionToken;
+  } catch (error) {
+    console.error("Admin authentication error:", error);
     return null;
   }
-  
-  // Generate secure session token
-  const sessionToken = crypto.randomBytes(32).toString('hex');
-  adminSessions.add(sessionToken);
-  
-  // Auto-expire session after 4 hours
-  setTimeout(() => {
-    adminSessions.delete(sessionToken);
-  }, 4 * 60 * 60 * 1000);
-  
-  return sessionToken;
 };
 
 // Admin logout function
@@ -173,20 +210,42 @@ export const logoutAdmin = (sessionToken: string): boolean => {
   return adminSessions.delete(sessionToken);
 };
 
-// Change admin password function
-export const changeAdminPassword = (currentPassword: string, newPassword: string): boolean => {
-  const adminPassword = process.env.ADMIN_PASSWORD || "admin123";
-  
-  if (currentPassword !== adminPassword) {
+// Change admin password function with database persistence
+export const changeAdminPassword = async (currentPassword: string, newPassword: string): Promise<boolean> => {
+  try {
+    const [admin] = await db.select().from(adminSettings).where(eq(adminSettings.id, "admin"));
+    
+    if (!admin || !admin.passwordHash) {
+      return false;
+    }
+    
+    // Verify current password
+    const isCurrentValid = await bcrypt.compare(currentPassword, admin.passwordHash);
+    
+    if (!isCurrentValid) {
+      return false;
+    }
+    
+    // Hash new password
+    const saltRounds = 12;
+    const newPasswordHash = await bcrypt.hash(newPassword, saltRounds);
+    
+    // Update password in database
+    await db
+      .update(adminSettings)
+      .set({ 
+        passwordHash: newPasswordHash,
+        updatedAt: new Date()
+      })
+      .where(eq(adminSettings.id, "admin"));
+    
+    console.log(`🔑 ADMIN PASSWORD PERMANENTLY CHANGED from database at ${new Date().toISOString()}`);
+    
+    return true;
+  } catch (error) {
+    console.error("Admin password change error:", error);
     return false;
   }
-  
-  // In production, this would update the environment variable or database
-  // For now, we'll just validate the change but note it can't persist across restarts
-  console.log(`🔑 ADMIN PASSWORD CHANGE REQUESTED: New password would be set to: ${newPassword}`);
-  console.log(`⚠️  NOTE: Password change cannot persist across server restarts without environment variable update`);
-  
-  return true;
 };
 
 // Request logging middleware

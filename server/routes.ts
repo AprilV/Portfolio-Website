@@ -15,7 +15,8 @@ import {
   sanitizeInput,
   adminAuth,
   requestLogger,
-  validateContactData
+  validateContactData,
+  initializeAdminPassword
 } from "./security";
 import { registerAdminRoutes } from "./admin-routes";
 import cors from "cors";
@@ -24,6 +25,9 @@ import cookieParser from "cookie-parser";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Security middleware is now applied in index.ts
+  
+  // Initialize admin password on startup
+  await initializeAdminPassword();
   
   // Apply admin-specific rate limiting (but exclude health endpoint)
   app.use('/api/admin/', (req, res, next) => {
