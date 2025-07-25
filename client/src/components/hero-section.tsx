@@ -38,21 +38,21 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-lg border border-success-green/30 shadow-sm hover:shadow-md transition-all duration-300">
-                <CheckCircle className="h-5 w-5 text-success-green" />
-                <span className="text-sm font-semibold text-success-green">CAPM Candidate 2025</span>
+              <div className="professional-badge badge-progress flex items-center gap-2">
+                <CheckCircle className="h-4 w-4" />
+                <span>CAPM Candidate 2025</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-lg border border-primary-blue/30 shadow-sm hover:shadow-md transition-all duration-300">
-                <GraduationCap className="h-5 w-5 text-primary-blue" />
-                <span className="text-sm font-semibold text-primary-blue">Senior BAS-IS Student</span>
+              <div className="professional-badge badge-academic flex items-center gap-2">
+                <GraduationCap className="h-4 w-4" />
+                <span>Senior BAS-IS Student</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-lg border border-teal-blue/30 shadow-sm hover:shadow-md transition-all duration-300">
-                <Briefcase className="h-5 w-5 text-teal-blue" />
-                <span className="text-sm font-semibold text-teal-blue">20+ Years IT Experience</span>
+              <div className="professional-badge badge-experience flex items-center gap-2">
+                <Briefcase className="h-4 w-4" />
+                <span>20+ Years IT Experience</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-lg border border-charcoal-black/20 shadow-sm hover:shadow-md transition-all duration-300">
-                <Users className="h-5 w-5 text-charcoal-black" />
-                <span className="text-sm font-semibold text-charcoal-black">6 Years Team Leadership</span>
+              <div className="professional-badge badge-mixed flex items-center gap-2">
+                <Users className="h-4 w-4" />
+                <span>6 Years Team Leadership</span>
               </div>
             </div>
             

@@ -1,0 +1,124 @@
+✅ Instructions for Replit UI Team to Achieve a Modern, Professional IT Project Management Portfolio Look
+Objective: Apply a modern, accessible, and unified color scheme and layout system to April’s IT Project Management portfolio. This should reflect industry-standard design aesthetics, emphasizing clarity, professionalism, and credibility across all devices.
+
+🎨 COLOR SCHEME
+Use this refined palette consistently across the UI:
+
+Purpose	Color Code	Usage
+Primary Text	#1E1E1E	All body text and headings
+Accent Blue	#2C73D2	Section dividers, icon accents, links
+Teal Highlight	#43D8C9	Interactive elements (e.g. tags/buttons)
+Soft Gray Background	#F4F4F4	Section backgrounds
+Subtle Box Background	#F9FAFC	Info cards, contact form areas
+Light Border	#E0E6ED	Card outlines or horizontal separators
+Highlight Badge Green	#4CAF50	Active badge status (20+ years, Academic)
+Inactive Badge Gray	#B0BEC5	Muted label states
+
+Typography Standard:
+
+Font: "Inter", "Helvetica Neue", sans-serif
+
+Heading Weight: 600–700
+
+Body Text Weight: 400–500
+
+Line height: 1.6em
+
+📦 CARD DEPTH & BOX STYLE
+Use a modern elevation style for all experience/skill/certification boxes:
+
+css
+Copy
+Edit
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+border-radius: 12px;
+background-color: #F9FAFC;
+padding: 1.5rem;
+Maintain equal vertical rhythm (20px min padding between cards).
+
+Use uniform corner radius on all containers (12px).
+
+Add light 1px borders to large cards: border: 1px solid #E0E6ED.
+
+🧭 SECTION HEADINGS AND SPACING
+Section Titles (About Me, Certifications, Projects):
+
+Use #1E1E1E, bold, 28–32px
+
+Add a 2px underline using accent blue #2C73D2 (not full-width—just 40px under the heading)
+
+No color splits (e.g., "April V." should not use two colors)
+
+Spacing Between Sections:
+
+Minimum 80px top margin between sections
+
+Use padding-bottom: 60px to avoid tight transitions
+
+🏷️ BADGES & LABEL TAGS
+Use pill-style badges with soft background tones and clear labels:
+
+css
+Copy
+Edit
+.badge {
+  border-radius: 50px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1E1E1E;
+  background-color: #E0F7FA; /* or use accent background */
+}
+Color badges based on context:
+
+Context	Background	Text
+Academic	#E0F7FA	#2C73D2
+20+ Years	#E8F5E9	#4CAF50
+In Progress	#FFF8E1	#F9A825
+Mixed Experience	#F3E5F5	#9C27B0
+
+🧱 LAYOUT GRID & RESPONSIVENESS
+Use 12-column grid on desktop; stack to 1-column on mobile/tablet
+
+Use max-width of 1140px centered in viewport
+
+All content should have padding: 24px on mobile views
+
+Cards stack with equal spacing and no horizontal scrollbars
+
+📇 NAME + HERO HEADER
+Full name (e.g., April V. Sykes) should use one color only (#1E1E1E)
+
+Hero text (BAS-IS Student, 20+ Years, CAPM Candidate) should use small caps or semibold
+
+Background for header: #FFFFFF or #F9FAFC
+
+💬 INTERACTION DESIGN
+Buttons:
+
+Primary: background #2C73D2, white text, hover darken by 8%
+
+Secondary: white background, border #2C73D2, text #2C73D2
+
+Hover States:
+
+Buttons and cards use subtle box-shadow lift
+
+Badges can glow slightly (box-shadow: 0 0 0 2px rgba(67, 216, 201, 0.2) on hover)
+
+✅ FINAL DELIVERABLE
+Replit should ensure:
+
+Unified color styling across all pages
+
+Hero and section titles follow consistent font and color structure
+
+Cards use depth (shadow + background), not just lines
+
+Every tag/badge uses a color-meaning system
+
+No mixed-tone or gimmicky text styling
+
+Mobile responsiveness remains intact
+
+Let me know if you want this exported as a theme.js or .css file, or if you're using Tailwind on Replit. I can generate the full config file for immediate copy-paste use.

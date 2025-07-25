@@ -137,15 +137,15 @@ const ATSResumeGenerator = () => {
   };
 
   return (
-    <section id="resume" className="py-12 bg-card-background relative overflow-hidden">
+    <section id="resume" className="py-12 bg-background relative overflow-hidden" style={{paddingTop: '80px', paddingBottom: '60px'}}>
       <div className="absolute inset-0 bg-gradient-to-br from-purple-accent/5 via-accent-blue/5 to-success-green/5"></div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-12">
           <div className="inline-block">
-            <h2 className="text-3xl lg:text-4xl font-bold text-charcoal-black mb-4 relative inline-block">
+            <h2 className="section-header">
               ATS-Optimized Resume Generator
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary-blue rounded-full"></div>
+              <div className="section-underline"></div>
             </h2>
           </div>
           <p className="text-xl text-gray-600 mt-6">Generate ATS-friendly resumes tailored for specific job applications</p>

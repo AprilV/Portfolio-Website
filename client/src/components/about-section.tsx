@@ -13,12 +13,12 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background-neutral">
+    <section id="about" className="py-20 bg-secondary" style={{paddingTop: '80px', paddingBottom: '60px'}}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-charcoal-black mb-4 relative inline-block">
+          <h2 className="section-header">
             About Me
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary-blue rounded-full"></div>
+            <div className="section-underline"></div>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transforming two decades of IT infrastructure expertise into project management excellence
@@ -50,7 +50,7 @@ const AboutSection = () => {
             {/* Achievement Cards */}
             <div className="grid grid-cols-2 gap-4">
               {achievements.map((achievement, index) => (
-                <div key={index} className="bg-card-background p-6 rounded-xl shadow-sm text-center border border-divider-gray hover:shadow-md transition-shadow duration-200">
+                <div key={index} className="professional-card text-center">
                   <div className="text-3xl font-bold text-navy mb-2">{achievement.value}</div>
                   <div className="text-sm text-gray-600">{achievement.label}</div>
                 </div>
