@@ -209,7 +209,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-12 bg-section-gradient relative overflow-hidden">
+    <section id="skills" className="py-12 bg-background-neutral relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 via-purple-accent/5 to-success-green/5"></div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
@@ -224,7 +224,7 @@ const SkillsSection = () => {
         
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 card-hover relative overflow-hidden">
+            <div key={index} className="bg-card-background p-8 rounded-xl shadow-lg border border-divider-gray hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
               <div className={`absolute inset-0 opacity-5 ${
                 category.color === 'navy' ? 'bg-gradient-to-br from-navy via-accent-blue to-transparent' : 
                 category.color === 'accent-blue' ? 'bg-gradient-to-br from-accent-blue via-purple-accent to-transparent' : 
@@ -261,8 +261,8 @@ const SkillsSection = () => {
         </div>
         
         {/* Certifications */}
-        <div className="bg-gradient-to-r from-navy/5 via-accent-blue/5 to-purple-accent/5 py-12 px-8 rounded-2xl relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-white/60"></div>
+        <div className="bg-card-background-alt py-12 px-8 rounded-2xl relative overflow-hidden border border-divider-gray shadow-lg">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/3 via-teal-blue/2 to-success-green/3"></div>
           <div className="relative">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-accent via-accent-blue to-success-green bg-clip-text text-transparent mb-4 relative inline-block">
@@ -272,7 +272,7 @@ const SkillsSection = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div key={index} className="bg-card-background-alt p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-divider-gray">
                 <div className="flex items-start gap-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                     <cert.icon className="w-6 h-6" />

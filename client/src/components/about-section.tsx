@@ -13,7 +13,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-light-bg">
+    <section id="about" className="py-20 bg-background-neutral">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
@@ -47,7 +47,7 @@ const AboutSection = () => {
             {/* Achievement Cards */}
             <div className="grid grid-cols-2 gap-4">
               {achievements.map((achievement, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center">
+                <div key={index} className="bg-card-background p-6 rounded-xl shadow-md text-center border border-divider-gray">
                   <div className="text-3xl font-bold text-navy mb-2">{achievement.value}</div>
                   <div className="text-sm text-gray-600">{achievement.label}</div>
                 </div>

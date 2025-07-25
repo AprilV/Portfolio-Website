@@ -27,13 +27,16 @@
   
   /* Clean Tech Professional Color System */
   --background-neutral: hsl(216, 33%, 97%); /* #F2F4F8 - Very Pale Gray */
+  --background-alt: hsl(210, 25%, 98%); /* #F9FAFB - Alternate Section Background */
   --charcoal-black: hsl(0, 0%, 12%); /* #1E1E1E - Charcoal */
   --cool-gray: hsl(220, 13%, 33%); /* #4B5563 - Cool Gray */
   --primary-blue: hsl(214, 76%, 49%); /* #2C73D2 - Deep Tech Blue */
+  --primary-blue-hover: hsl(214, 76%, 35%); /* #1A3C64 - Darker Hover */
   --teal-blue: hsl(174, 66%, 54%); /* #43D8C9 - Teal Blue */
   --success-green: hsl(142, 71%, 45%); /* #10B981 - Success Green */
   --coral-alert: hsl(354, 85%, 65%);
   --card-background: hsl(0, 0%, 100%); /* #FFFFFF - Clean White */
+  --card-background-alt: hsl(216, 20%, 98%); /* #F4F7FA - Subtle Card Background */
   --divider-gray: hsl(218, 14%, 89%); /* #E0E6ED - Light Slate Gray */
   --nav-background: hsl(210, 25%, 98%); /* #F9FAFC - Slight Gray Tint */
   

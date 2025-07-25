@@ -102,7 +102,7 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-12 bg-section-gradient">
+    <section id="experience" className="py-12 bg-card-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-block">

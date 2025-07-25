@@ -137,7 +137,7 @@ const ATSResumeGenerator = () => {
   };
 
   return (
-    <section id="resume" className="py-12 bg-section-gradient relative overflow-hidden">
+    <section id="resume" className="py-12 bg-card-background relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-accent/5 via-accent-blue/5 to-success-green/5"></div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         

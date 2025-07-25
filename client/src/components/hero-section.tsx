@@ -60,7 +60,7 @@ const HeroSection = () => {
               <Button 
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-primary-blue hover:bg-primary-blue/90 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                className="bg-primary-blue hover:bg-primary-blue-hover text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
               >
                 Get In Touch
                 <ArrowRight className="ml-2 h-5 w-5" />
