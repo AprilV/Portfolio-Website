@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 interface ScrollNavProps {
   sections: Array<{
@@ -14,31 +13,35 @@ const ScrollNav = ({ sections }: ScrollNavProps) => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      // Calculate scroll progress
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (window.scrollY / totalHeight) * 100;
-      setScrollProgress(Math.min(Math.max(progress, 0), 100));
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Calculate scroll progress
+          const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = (window.scrollY / totalHeight) * 100;
+          setScrollProgress(Math.min(Math.max(progress, 0), 100));
 
-      // Determine active section
-      const sectionElements = sections.map(section => ({
-        id: section.id,
-        element: document.getElementById(section.id),
-        offset: document.getElementById(section.id)?.offsetTop || 0
-      }));
-
-      const currentSection = sectionElements.find(section => {
-        if (!section.element) return false;
-        const rect = section.element.getBoundingClientRect();
-        return rect.top <= 100 && rect.bottom >= 100;
-      });
-
-      if (currentSection) {
-        setActiveSection(currentSection.id);
+          // Determine active section - simplified logic
+          const scrollY = window.scrollY + 150; // Offset for better detection
+          
+          for (let i = sections.length - 1; i >= 0; i--) {
+            const element = document.getElementById(sections[i].id);
+            if (element && scrollY >= element.offsetTop) {
+              setActiveSection(sections[i].id);
+              break;
+            }
+          }
+          
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Throttled scroll listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial call
     return () => window.removeEventListener('scroll', handleScroll);
   }, [sections]);
@@ -57,51 +60,39 @@ const ScrollNav = ({ sections }: ScrollNavProps) => {
     <>
       {/* Progress Bar */}
       <div className="scroll-progress-bar">
-        <motion.div 
+        <div 
           className="scroll-progress-fill"
-          initial={{ width: 0 }}
-          animate={{ width: `${scrollProgress}%` }}
-          transition={{ duration: 0.1 }}
+          style={{ width: `${scrollProgress}%` }}
         />
       </div>
 
       {/* Floating Navigation */}
-      <motion.div 
-        className="scroll-nav"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-      >
+      <div className="scroll-nav">
         <div className="scroll-nav-container">
           {sections.map((section, index) => (
-            <motion.button
+            <button
               key={section.id}
               className={`scroll-nav-dot ${activeSection === section.id ? 'active' : ''}`}
               onClick={() => scrollToSection(section.id)}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
               title={section.label}
             >
               <span className="dot-indicator"></span>
               <span className="dot-label">{section.icon || section.label.charAt(0)}</span>
               
               {/* Tooltip - Always visible on hover, highlighted when active */}
-              <motion.div 
+              <div 
                 className={`nav-tooltip ${activeSection === section.id ? 'active-tooltip' : 'hover-tooltip'}`}
-                initial={{ opacity: 0, x: 10 }}
-                whileHover={{ opacity: 1, x: 0 }}
-                animate={{ 
-                  opacity: activeSection === section.id ? 1 : 0, 
-                  x: activeSection === section.id ? 0 : 10 
+                style={{ 
+                  opacity: activeSection === section.id ? 1 : 0,
+                  transform: `translateX(${activeSection === section.id ? 0 : 10}px) translateY(-50%)`
                 }}
-                transition={{ duration: 0.2 }}
               >
                 {section.label}
-              </motion.div>
-            </motion.button>
+              </div>
+            </button>
           ))}
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };

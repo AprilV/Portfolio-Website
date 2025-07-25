@@ -537,15 +537,24 @@
     transform: translateY(-1px);
   }
 
-  /* Scroll Snapping & Smooth Navigation */
+  /* Optimized Scrolling - Disabled snap for performance */
   html {
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
   }
 
   section {
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
+    /* scroll-snap-align: start; */
+    /* scroll-snap-stop: normal; */
+  }
+
+  /* Performance optimizations */
+  * {
+    will-change: auto;
+  }
+
+  .scroll-nav, .scroll-progress-bar {
+    will-change: transform, opacity;
   }
 
   /* Scroll Progress Bar */
@@ -687,7 +696,16 @@
   /* Enhanced hover behavior for navigation dots */
   .scroll-nav-dot:hover .nav-tooltip.hover-tooltip {
     opacity: 1 !important;
-    transform: translateY(-50%) translateX(0) !important;
+    transform: translateY(-50%) translateX(0px) !important;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .nav-tooltip {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .scroll-progress-fill {
+    transition: width 0.1s ease-out;
   }
 
   /* Section Spacing for Scroll Snap */

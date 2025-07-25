@@ -151,11 +151,10 @@ const ExperienceSection = () => {
             <motion.div 
               key={index} 
               className="experience-card"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               {/* Experience Header */}
               <div className="experience-header">
@@ -172,13 +171,9 @@ const ExperienceSection = () => {
                 <div className="flex-1">
                   <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
                     <div>
-                      <motion.h3 
-                        className="job-title job-title-hover"
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.2 }}
-                      >
+                      <h3 className="job-title job-title-hover">
                         {exp.title}
-                      </motion.h3>
+                      </h3>
                       <p className="company-name">{exp.company}</p>
                       <div className="job-meta">
                         <span className="flex items-center gap-1">
@@ -252,24 +247,13 @@ const ExperienceSection = () => {
                           Key Technologies & Skills
                         </span>
                       </h5>
-                      <motion.div 
-                        className="tech-stack"
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: 0.2 }}
-                        viewport={{ once: true }}
-                      >
+                      <div className="tech-stack">
                         {exp.techStack.map((tech, idx) => (
-                          <motion.span 
-                            key={idx} 
-                            className="tech-chip"
-                            whileHover={{ scale: 1.05, y: -2 }}
-                            transition={{ duration: 0.2 }}
-                          >
+                          <span key={idx} className="tech-chip">
                             {tech}
-                          </motion.span>
+                          </span>
                         ))}
-                      </motion.div>
+                      </div>
                     </div>
                   )}
                 </div>
