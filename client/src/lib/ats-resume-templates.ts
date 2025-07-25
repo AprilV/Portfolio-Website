@@ -40,9 +40,9 @@ export const resumeData: ResumeData = {
     name: "April V. Sykes",
     title: "Assistant Project Manager | IT Professional | CAPM Candidate",
     location: "Bremerton, WA",
-    email: "april_sykes@proton.me",
+    email: "april.sykes.pm@gmail.com",
     phone: "(360) 555-0123",
-    linkedin: "linkedin.com/in/april-sykes"
+    linkedin: "linkedin.com/in/aprilsykes"
   },
   summary: {
     standard: "Results-driven IT professional with 20+ years of infrastructure experience transitioning to project management. Currently pursuing CAPM certification with formal education in Project Management I & II (4.0 GPA). Proven track record of leading cross-functional teams up to 12 members at Dell Technologies. Combines deep technical expertise with emerging project leadership skills to drive operational excellence and stakeholder satisfaction.",

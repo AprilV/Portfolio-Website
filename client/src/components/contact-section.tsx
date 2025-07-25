@@ -145,9 +145,9 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
-      value: "april_sykes@proton.me",
-      link: "mailto:april_sykes@proton.me",
+      label: "Contact",
+      value: "Use the secure contact form below",
+      link: null,
     },
     {
       icon: MapPin,
