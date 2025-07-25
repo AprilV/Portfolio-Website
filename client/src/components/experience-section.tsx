@@ -72,7 +72,7 @@ const ExperienceSection = () => {
       achievements: [
         "Led team of 12 technicians supporting 5000+ endpoints across regional hospitals in 3 states",
         "Achieved 100% system uptime during critical McKesson/Cerner healthcare migration phases",
-        "Reduced project delays by 15% through improved cross-functional coordination processes",
+        "Coordinated cross-functional teams during complex healthcare system migration phases",
         "Managed comprehensive mainframe upgrade deliverables spanning KY, IN, and OH regions",
       ],
       techStack: ["Mainframes", "McKesson", "Cerner", "Healthcare IT", "Migration Planning", "Operations Coordination"],
