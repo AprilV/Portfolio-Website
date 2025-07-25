@@ -208,17 +208,16 @@
     color: #1E1E1E;
   }
   
-  /* 40px underline as specified */
+  /* Full-width underline matching title length */
   .section-underline {
-    @apply absolute -bottom-1 left-1/2 transform -translate-x-1/2 rounded-full transition-all duration-300;
-    width: 40px;
+    @apply absolute -bottom-1 left-0 w-full rounded-full transition-all duration-300;
     height: 2px;
     background-color: #2C73D2;
   }
   
   .section-header:hover .section-underline {
-    width: 60px;
     background: linear-gradient(90deg, #2C73D2 0%, #43D8C9 100%);
+    transform: scaleX(1.05);
   }
 }
 
