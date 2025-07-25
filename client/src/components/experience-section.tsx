@@ -61,7 +61,7 @@ const ExperienceSection = () => {
         "Critical system reliability during upgrades",
       ],
       stats: [
-        { label: "Project Involvement", value: "5+ Years" },
+        { label: "Project Duration", value: "2 Years" },
         { label: "System Uptime", value: "100%" },
         { label: "Regional Impact", value: "3 States" },
         { label: "Migration Role", value: "Operations Lead" },
