@@ -29,7 +29,7 @@ const ExperienceSection = () => {
       logo: <OlympicLogo />,
       description: "Provided comprehensive IT support across campus systems while pursuing education. Strengthened communication and coordination skills in project-based environments.",
       achievements: [
-        "Managed helpdesk operations using ServiceNow and Microsoft Endpoint Manager for 1,200+ campus users",
+        "Provided comprehensive IT support and troubleshooting for 1,200+ campus users across 5 academic buildings",
         "Improved ticket resolution time by 25% through systematic troubleshooting across multi-building network", 
         "Coordinated with faculty and staff on incident resolution, reducing response time by 30%",
         "Created technical documentation adopted across 5 academic departments to reduce support call volume",
