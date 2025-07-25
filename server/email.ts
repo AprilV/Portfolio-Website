@@ -77,11 +77,16 @@ Reply directly to this email to respond to ${contactData.name}.
 
     await mailService.send({
       to: 'april_sykes@proton.me',
-      from: 'noreply@aprilsykes.dev', // You can customize this
+      from: 'april_sykes@proton.me', // Use your verified email
       replyTo: contactData.email,
       subject: `New Contact Message from ${contactData.name}`,
       text: emailText,
       html: emailHtml,
+      mailSettings: {
+        sandboxMode: {
+          enable: false
+        }
+      }
     });
 
     console.log(`Contact notification email sent for ${contactData.name}`);
