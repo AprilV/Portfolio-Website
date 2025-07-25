@@ -6,11 +6,47 @@ import { z } from "zod";
 import { sendContactNotification, sendAutoReply } from "./email";
 import { logContactSubmission, getContactLogPath } from "./contact-log";
 import { createContactAlert } from "./alternative-notification";
+import { 
+  contactFormLimiter, 
+  adminLimiter, 
+  apiLimiter,
+  securityHeaders,
+  corsOptions,
+  sanitizeInput,
+  adminAuth,
+  requestLogger,
+  validateContactData
+} from "./security";
+import { registerAdminRoutes } from "./admin-routes";
+import cors from "cors";
+import express from "express";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Contact form submission endpoint
-  app.post("/api/contact", async (req, res) => {
+  // Apply security middleware
+  app.use(securityHeaders);
+  app.use(cors(corsOptions));
+  app.use(express.json({ limit: '10mb' }));
+  app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+  app.use(requestLogger);
+  app.use(sanitizeInput);
+
+  // Apply rate limiting
+  app.use('/api/', apiLimiter);
+  app.use('/admin/', adminLimiter);
+
+  // Contact form submission endpoint with enhanced security
+  app.post("/api/contact", contactFormLimiter, async (req, res) => {
     try {
+      // Enhanced validation
+      const validation = validateContactData(req.body);
+      if (!validation.isValid) {
+        return res.status(400).json({
+          success: false,
+          message: "Please correct the following errors:",
+          errors: validation.errors
+        });
+      }
+
       const contactData = insertContactSchema.parse(req.body);
       const submission = await storage.createContactSubmission(contactData);
       
@@ -86,8 +122,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Get contact submissions (for admin purposes)
-  app.get("/api/contact", async (req, res) => {
+  // Get contact submissions (for admin purposes) - protected endpoint
+  app.get("/api/contact", adminAuth, async (req, res) => {
     try {
       const submissions = await storage.getContactSubmissions();
       res.json(submissions);
@@ -96,6 +132,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ message: "Error fetching contact submissions" });
     }
   });
+
+  // Register admin-specific routes
+  registerAdminRoutes(app);
 
   const httpServer = createServer(app);
   return httpServer;
