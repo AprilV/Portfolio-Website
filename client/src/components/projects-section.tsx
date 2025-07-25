@@ -47,7 +47,7 @@ const ProjectsSection = () => {
         "Project scope management using Agile methodology",
         "AWS deployment experience (discontinued for cost optimization)",
       ],
-      link: "https://github.com/aprilv/pmp-quiz-app",
+      link: "https://github.com/AprilV/PMP-Quiz-App",
     },
     {
       title: "The Evolution of Artificial Intelligence",
