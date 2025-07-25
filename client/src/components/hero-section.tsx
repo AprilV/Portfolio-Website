@@ -25,7 +25,7 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold text-charcoal-black leading-tight">
-                April V. <span className="text-primary-blue">Sykes</span>
+                April V. Sykes
               </h1>
               <h2 className="text-xl lg:text-2xl text-teal-blue font-semibold">
                 Aspiring Assistant Project Manager | Senior BAS-IS Student | CAPM Candidate (2025)
