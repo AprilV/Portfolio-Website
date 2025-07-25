@@ -105,7 +105,29 @@ export function registerAdminRoutes(app: Express) {
     }
   });
 
-  // Admin authentication status
+  // Public health check endpoint (for testing)
+  app.get("/api/admin/health", async (req, res) => {
+    try {
+      // Test basic server functionality
+      const healthChecks = {
+        server: true,
+        database: await storage.getContactSubmissions().then(() => true).catch(() => false),
+        timestamp: new Date().toISOString()
+      };
+      
+      res.json({
+        status: "healthy",
+        ...healthChecks
+      });
+    } catch (error) {
+      res.status(500).json({
+        status: "unhealthy",
+        error: error instanceof Error ? error.message : "Unknown error"
+      });
+    }
+  });
+
+  // Admin authentication status (protected)
   app.get("/api/admin/status", adminAuth, async (req, res) => {
     res.json({
       authenticated: true,

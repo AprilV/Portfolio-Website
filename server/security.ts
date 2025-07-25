@@ -67,9 +67,26 @@ export const securityHeaders = helmet({
 
 // CORS configuration
 export const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://aprilsykes.com', 'https://www.aprilsykes.com']
-    : ['http://localhost:3000', 'http://localhost:5000'],
+  origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
+    // Allow requests with no origin (mobile apps, curl, Postman, etc.)
+    if (!origin) return callback(null, true);
+    
+    const allowedOrigins = process.env.NODE_ENV === 'production' 
+      ? ['https://aprilsykes.com', 'https://www.aprilsykes.com']
+      : ['http://localhost:3000', 'http://localhost:5000', /\.replit\.dev$/, /\.repl\.co$/];
+    
+    // Check if origin is allowed
+    const isAllowed = allowedOrigins.some(allowed => {
+      if (typeof allowed === 'string') {
+        return origin === allowed;
+      } else if (allowed instanceof RegExp) {
+        return allowed.test(origin);
+      }
+      return false;
+    });
+    
+    callback(null, isAllowed);
+  },
   credentials: true,
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],

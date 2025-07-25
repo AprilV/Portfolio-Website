@@ -127,11 +127,11 @@ export default function AdminSecurityTest() {
     updateTestStatus("Admin Authentication", "running");
     
     try {
-      // Test accessing admin endpoint without auth
-      const response = await fetch('/api/admin/stats');
+      // Test accessing protected admin endpoint without auth
+      const response = await fetch('/api/admin/status');
       
       if (response.status === 401) {
-        updateTestStatus("Admin Authentication", "passed", "Admin endpoints properly protected");
+        updateTestStatus("Admin Authentication", "passed", "Protected admin endpoints require authentication");
       } else {
         updateTestStatus("Admin Authentication", "failed", "Admin endpoints may not be properly protected");
       }

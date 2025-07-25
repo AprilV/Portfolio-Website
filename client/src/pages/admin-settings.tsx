@@ -492,15 +492,23 @@ export default function AdminSettings() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Shield className="h-5 w-5" />
-                Security Settings
+                Security & Password Management
               </CardTitle>
+              <p className="text-sm text-gray-600 mt-2">
+                Change your admin password and manage security settings
+              </p>
             </CardHeader>
             <CardContent className="space-y-6">
               {/* Password Change Section */}
-              <div className="border rounded-lg p-4 bg-blue-50">
-                <div className="flex items-center gap-2 mb-4">
-                  <Key className="h-5 w-5 text-blue-600" />
-                  <h3 className="font-medium text-blue-900">Change Admin Password</h3>
+              <div className="border-2 border-blue-200 rounded-lg p-6 bg-gradient-to-r from-blue-50 to-indigo-50">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-blue-600 rounded-full">
+                    <Key className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-blue-900 text-lg">Change Admin Password</h3>
+                    <p className="text-blue-700 text-sm">Update your admin authentication password</p>
+                  </div>
                 </div>
                 
                 <Form {...passwordForm}>

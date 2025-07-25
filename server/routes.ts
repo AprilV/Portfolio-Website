@@ -23,21 +23,15 @@ import express from "express";
 import cookieParser from "cookie-parser";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Configure trust proxy for Replit environment
-  app.set('trust proxy', 1);
+  // Security middleware is now applied in index.ts
   
-  // Apply security middleware
-  app.use(securityHeaders);
-  app.use(cors(corsOptions));
-  app.use(express.json({ limit: '10mb' }));
-  app.use(express.urlencoded({ extended: true, limit: '10mb' }));
-  app.use(cookieParser());
-  app.use(requestLogger);
-  app.use(sanitizeInput);
-
-  // Apply rate limiting
-  app.use('/api/', apiLimiter);
-  app.use('/admin/', adminLimiter);
+  // Apply admin-specific rate limiting (but exclude health endpoint)
+  app.use('/api/admin/', (req, res, next) => {
+    if (req.path === '/health') {
+      return next(); // Skip rate limiting for health endpoint
+    }
+    adminLimiter(req, res, next);
+  });
 
   // Contact form submission endpoint with enhanced security
   app.post("/api/contact", contactFormLimiter, async (req, res) => {

@@ -206,6 +206,13 @@ export default function AdminDashboard() {
                   Export Data
                 </Button>
                 
+                <Link href="/admin/settings">
+                  <Button className="w-full justify-start border-blue-200 bg-blue-50 hover:bg-blue-100" variant="outline">
+                    <span className="mr-2 text-blue-600">🔑</span>
+                    <span className="text-blue-700">Change Password</span>
+                  </Button>
+                </Link>
+
                 <Link href="/admin/security">
                   <Button className="w-full justify-start" variant="outline">
                     <Shield className="mr-2 h-4 w-4" />
