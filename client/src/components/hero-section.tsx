@@ -50,9 +50,9 @@ const HeroSection = () => {
                 <Briefcase className="h-5 w-5 text-teal-blue" />
                 <span className="text-sm font-semibold text-teal-blue">20+ Years IT Experience</span>
               </div>
-              <div className="flex items-center gap-2 bg-gradient-to-r from-charcoal-black/15 to-charcoal-black/5 px-4 py-2 rounded-xl border border-charcoal-black/30 hover-glow-teal transition-all duration-300 backdrop-blur-sm">
-                <Users className="h-5 w-5 text-charcoal-black" />
-                <span className="text-sm font-semibold text-charcoal-black">6 Years Team Leadership</span>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-tech-blue/15 to-tech-blue/5 px-4 py-2 rounded-xl border border-tech-blue/30 hover-glow-teal transition-all duration-300 backdrop-blur-sm">
+                <Users className="h-5 w-5 text-tech-blue" />
+                <span className="text-sm font-semibold text-tech-blue">6 Years Team Leadership</span>
               </div>
             </div>
             
