@@ -22,6 +22,9 @@ import cors from "cors";
 import express from "express";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Configure trust proxy for Replit environment
+  app.set('trust proxy', 1);
+  
   // Apply security middleware
   app.use(securityHeaders);
   app.use(cors(corsOptions));

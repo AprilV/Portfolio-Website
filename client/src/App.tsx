@@ -7,6 +7,7 @@ import Home from "@/pages/home.tsx";
 import AdminContacts from "@/pages/admin-contacts";
 import AdminDashboard from "@/pages/admin-dashboard";
 import AdminSettings from "@/pages/admin-settings";
+import AdminSecurityTest from "@/pages/admin-security-test";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -16,6 +17,7 @@ function Router() {
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/admin/contacts" component={AdminContacts} />
       <Route path="/admin/settings" component={AdminSettings} />
+      <Route path="/admin/security" component={AdminSecurityTest} />
       <Route component={NotFound} />
     </Switch>
   );
