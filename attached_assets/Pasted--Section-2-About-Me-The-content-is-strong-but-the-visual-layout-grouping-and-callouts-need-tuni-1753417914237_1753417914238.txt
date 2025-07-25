@@ -1,0 +1,72 @@
+ Section 2: About Me. The content is strong, but the visual layout, grouping, and callouts need tuning to prevent visual fatigue and improve clarity.
+
+✅ SECTION: About Me
+🔍 Visual Assessment:
+Clear intro and academic/professional summary.
+
+Right-side stat boxes are clean but float without strong alignment.
+
+Core Values box is unanchored and underemphasized.
+
+Feels crowded and left-heavy — especially on wider screens.
+
+There’s no clear hierarchy between paragraphs.
+
+🔧 Replit Task Instructions:
+🔹Target Component: AboutMe.jsx or equivalent
+🔹File Likely Affected: About.css, App.css, or utility styles
+
+📌 Fix Instructions for Replit Developer:
+plaintext
+Copy
+Edit
+1. RESTRUCTURE LAYOUT INTO TWO DISTINCT COLUMNS
+   - Left: Content block (bio, education, experience).
+   - Right: Fixed-height stat cards in a vertical stack, centered and evenly spaced.
+
+2. ADD VISUAL HEADINGS OR SUBHEADS
+   - Before the second and third paragraph, insert headings:
+     - "Academic Background"
+     - "Professional Experience"
+   - Use <h3> styling or strong font-weight, not <p>.
+
+3. TIGHTEN VERTICAL SPACING
+   - Reduce line spacing between paragraphs and stat blocks by 20%.
+   - Add consistent margin-bottom between each text block.
+
+4. INTEGRATE 'CORE VALUES' BOX INTO MAIN FLOW
+   - Move Core Values card to the **bottom of left column** instead of floating in the right.
+   - Alternately, place it under the stat cards but style it with a distinct title and light border.
+
+5. STYLE UPDATES FOR STAT CARDS
+   - Add subtle hover scale or highlight on stats (lift effect on hover).
+   - Use consistent padding, min height, and align text baseline inside each card.
+   - Set max width for cards on mobile to avoid cramping.
+
+6. ACCESSIBILITY + CLARITY
+   - Add `aria-label` or tooltip to “100% SLA Compliance” to explain what this means.
+✅ Suggested Enhancements:
+Issue	Fix
+Too text-heavy	Add subtle icons to stat cards (e.g., user group for "12 Team Members Led")
+No visual anchor	Use a horizontal divider between intro and bullet-pointed values
+Weak text hierarchy	Use bold or dark-blue for major entities (e.g., Olympic College, Jewish Hospital)
+
+🔁 Final Instructions to Paste to Replit:
+plaintext
+Copy
+Edit
+About Section Cleanup Tasks:
+
+1. Convert About section to a responsive 2-column layout:
+   - Left: Paragraphs (Bio, Academic, Experience)
+   - Right: Vertical stack of stat cards (Years, GPA, Team Size, SLA)
+
+2. Add subheadings ("Academic Background", "Professional Experience") in bold above relevant paragraphs for scannability.
+
+3. Move Core Values card below main content and restyle it as a standard section box, not floating.
+
+4. Add slight hover effects on stat cards. Ensure all cards are same width/height with consistent padding.
+
+5. Improve visual spacing on large screens. Reduce clutter, avoid floating elements, and align text + cards better.
+
+6. Add screen reader labels or tooltips to clarify what "SLA Compliance" means.

@@ -1,9 +1,32 @@
+import { Users, Award, GraduationCap, CheckCircle } from "lucide-react";
+
 const AboutSection = () => {
   const achievements = [
-    { value: "20+", label: "Years IT Experience" },
-    { value: "3.94", label: "Current GPA" },
-    { value: "12", label: "Team Members Led" },
-    { value: "100%", label: "SLA Compliance" },
+    { 
+      value: "20+", 
+      label: "Years IT Experience", 
+      icon: CheckCircle,
+      description: "Two decades of hands-on infrastructure and data center experience"
+    },
+    { 
+      value: "3.94", 
+      label: "Current GPA", 
+      icon: GraduationCap,
+      description: "Maintaining President's Scholar honors every academic term"
+    },
+    { 
+      value: "12", 
+      label: "Team Members Led", 
+      icon: Users,
+      description: "Successfully managed teams up to 12 people in healthcare IT operations"
+    },
+    { 
+      value: "100%", 
+      label: "SLA Compliance", 
+      icon: Award,
+      description: "Service Level Agreement compliance maintained across all client engagements",
+      ariaLabel: "100% Service Level Agreement Compliance - maintaining uptime and service standards across all client engagements"
+    },
   ];
 
   const coreValues = [
@@ -25,51 +48,92 @@ const AboutSection = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-center scroll-snap-x lg:grid">
-          <div className="space-y-6">
-            <div className="prose prose-lg text-gray-700 space-y-6">
-              <p>
+        <div className="grid lg:grid-cols-3 gap-8 items-start">
+          {/* Left Column - Main Content */}
+          <div className="lg:col-span-2 space-y-8">
+            {/* Introduction */}
+            <div className="prose prose-lg text-card-foreground">
+              <p className="text-lg leading-relaxed mb-6">
                 I am an IT professional with over twenty years of hands-on infrastructure and data center experience, 
-                now transitioning into project management. Currently earning a Bachelor of Applied Science in Information 
-                Systems at Olympic College with graduation expected Spring 2026.
-              </p>
-              <p>
-                My academic background includes comprehensive coursework in Project Management I and II, 
-                LAN Administration, Information Assurance, Technical Writing, and Business Statistics. 
-                I maintain a 3.94 GPA and have earned President's Scholar honors every term.
-              </p>
-              <p>
-                Professionally, I have supervised teams and maintained critical operations at Jewish Hospital, 
-                Perot Systems, and Dell Technologies, working with mainframes, Cisco networking, and Linux environments 
-                while managing client support and system transitions across regional teams.
+                now transitioning into project management. Currently earning a <strong className="text-primary-blue">Bachelor of Applied Science in Information 
+                Systems</strong> at <strong className="text-primary-blue">Olympic College</strong> with graduation expected Spring 2026.
               </p>
             </div>
-          </div>
-          
-          <div className="space-y-6">
-            {/* Achievement Cards */}
-            <div className="grid grid-cols-2 gap-4">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="professional-card text-center">
-                  <div className="text-3xl font-bold text-primary-blue mb-2">{achievement.value}</div>
-                  <div className="text-sm text-gray-600">{achievement.label}</div>
-                </div>
-              ))}
+
+            {/* Academic Background */}
+            <div>
+              <h3 className="text-xl font-semibold text-charcoal-black mb-4 flex items-center gap-2">
+                <GraduationCap className="h-5 w-5 text-primary-blue" />
+                Academic Background
+              </h3>
+              <div className="prose prose-lg text-card-foreground">
+                <p className="leading-relaxed mb-4">
+                  My academic background includes comprehensive coursework in <strong className="text-primary-blue">Project Management I and II</strong>, 
+                  LAN Administration, Information Assurance, Technical Writing, and Business Statistics. 
+                  I maintain a <strong className="text-teal-blue">3.94 GPA</strong> and have earned <strong className="text-primary-blue">President's Scholar honors</strong> every term.
+                </p>
+              </div>
             </div>
-            
+
+            {/* Professional Experience */}
+            <div>
+              <h3 className="text-xl font-semibold text-charcoal-black mb-4 flex items-center gap-2">
+                <Users className="h-5 w-5 text-primary-blue" />
+                Professional Experience
+              </h3>
+              <div className="prose prose-lg text-card-foreground">
+                <p className="leading-relaxed mb-4">
+                  Professionally, I have supervised teams and maintained critical operations at <strong className="text-primary-blue">Jewish Hospital</strong>, 
+                  <strong className="text-primary-blue">Perot Systems</strong>, and <strong className="text-primary-blue">Dell Technologies</strong>, working with mainframes, Cisco networking, and Linux environments 
+                  while managing client support and system transitions across regional teams.
+                </p>
+              </div>
+            </div>
+
+            {/* Horizontal Divider */}
+            <div className="border-t border-divider-gray my-8"></div>
+
             {/* Core Values */}
             <div className="professional-card p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Core Values</h3>
-              <div className="space-y-3">
+              <h3 className="text-xl font-semibold text-charcoal-black mb-6 flex items-center gap-2">
+                <Award className="h-5 w-5 text-primary-blue" />
+                Core Values
+              </h3>
+              <div className="grid sm:grid-cols-1 gap-4">
                 {coreValues.map((value, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div className={`w-2 h-2 rounded-full ${
+                  <div key={index} className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary-blue/5 transition-colors duration-200">
+                    <div className={`w-3 h-3 rounded-full flex-shrink-0 ${
                       index === 0 ? 'bg-primary-blue' : index === 1 ? 'bg-teal-blue' : 'bg-primary-blue'
                     }`}></div>
-                    <span className="text-gray-700">{value}</span>
+                    <span className="text-card-foreground font-medium">{value}</span>
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+          
+          {/* Right Column - Achievement Stats */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-24 space-y-4">
+              {achievements.map((achievement, index) => {
+                const IconComponent = achievement.icon;
+                return (
+                  <div 
+                    key={index} 
+                    className="professional-card text-center p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group min-h-[120px] flex flex-col justify-center"
+                    title={achievement.description}
+                    aria-label={achievement.ariaLabel || `${achievement.value} ${achievement.label} - ${achievement.description}`}
+                  >
+                    <IconComponent className="h-6 w-6 text-primary-blue mx-auto mb-2 group-hover:text-teal-blue transition-colors" />
+                    <div className="text-3xl font-bold text-primary-blue mb-2 group-hover:text-teal-blue transition-colors">
+                      {achievement.value}
+                    </div>
+                    <div className="text-sm text-cool-gray font-medium leading-tight">
+                      {achievement.label}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
