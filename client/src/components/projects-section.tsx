@@ -166,7 +166,7 @@ const ProjectsSection = () => {
                     {project.videoLink && (
                       <Button 
                         variant="ghost" 
-                        className="text-primary hover:text-primary/80 p-0 h-auto font-medium justify-start"
+                        className="text-primary-blue hover:text-primary-blue/80 p-0 h-auto font-medium justify-start hover-lift"
                         onClick={() => {
                           window.open(project.videoLink, '_blank');
                         }}
@@ -178,7 +178,7 @@ const ProjectsSection = () => {
                     {project.paperLink && (
                       <Button 
                         variant="ghost" 
-                        className="text-muted-foreground hover:text-foreground p-0 h-auto font-medium justify-start"
+                        className="text-primary-blue hover:text-primary-blue/80 p-0 h-auto font-medium justify-start hover-lift"
                         onClick={() => {
                           const link = document.createElement('a');
                           link.href = project.paperLink;
@@ -195,7 +195,7 @@ const ProjectsSection = () => {
                     {project.blogLink && (
                       <Button 
                         variant="ghost" 
-                        className="text-electric-blue hover:text-electric-blue/80 p-0 h-auto font-medium justify-start"
+                        className="text-primary-blue hover:text-primary-blue/80 p-0 h-auto font-medium justify-start hover-lift"
                         onClick={() => {
                           window.open(project.blogLink, '_blank');
                         }}
