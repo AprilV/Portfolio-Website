@@ -141,6 +141,24 @@ const SkillsSection = () => {
       link: "https://certification.testout.com/verifycert/6-2c6-v3pmva",
       credentialId: "6-2c6-v3pmva"
     },
+    {
+      name: "CompTIA A+ PC Pro",
+      description: "CompTIA A+ Certification (via TestOut)", 
+      detail: "ID: 6-2c6-v3p73s",
+      icon: Computer,
+      color: "primary-blue",
+      link: "https://certification.testout.com/verifycert/6-2c6-v3p73s",
+      credentialId: "6-2c6-v3p73s"
+    },
+    {
+      name: "CompTIA Network+",
+      description: "CompTIA Network Professional (via TestOut)",
+      detail: "ID: 6-2c6-vv5625",
+      icon: Network,
+      color: "teal-blue",
+      link: "https://certification.testout.com/verifycert/6-2c6-vv5625",
+      credentialId: "6-2c6-vv5625"
+    },
   ];
 
   const getColorClass = (color: string) => {
