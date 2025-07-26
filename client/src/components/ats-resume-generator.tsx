@@ -16,7 +16,7 @@ const ATSResumeGenerator = () => {
       description: "Clean, chronological format compatible with 95% of ATS systems",
       features: ["Simple layout", "Standard sections", "Keyword optimized", "Universal compatibility"],
       fileType: ".docx",
-      color: "accent-blue",
+      color: "primary-blue",
       icon: FileText,
       bestFor: "General assistant PM roles, corporate positions"
     },
@@ -25,7 +25,7 @@ const ATSResumeGenerator = () => {
       description: "Emphasizes technical skills and IT project management experience",
       features: ["Skills-first approach", "Technical keywords", "Project metrics", "IT focus"],
       fileType: ".docx", 
-      color: "purple-accent",
+      color: "primary-blue",
       icon: Settings,
       bestFor: "IT project management, technical coordinator roles"
     },
@@ -34,7 +34,7 @@ const ATSResumeGenerator = () => {
       description: "Optimized for Washington State government positions and agencies",
       features: ["State-specific keywords", "Public service focus", "Education emphasis", "Local experience"],
       fileType: ".docx",
-      color: "teal-blue",
+      color: "primary-blue",
       icon: Users,
       bestFor: "WA state agencies, municipalities, public sector"
     },
@@ -43,7 +43,7 @@ const ATSResumeGenerator = () => {
       description: "Detailed format for government positions with security clearance",
       features: ["Comprehensive details", "Education emphasis", "Compliance focused", "Security clearance"],
       fileType: ".docx",
-      color: "navy",
+      color: "primary-blue",
       icon: Shield,
       bestFor: "Government agencies, federal contractors"
     },
@@ -52,7 +52,7 @@ const ATSResumeGenerator = () => {
       description: "Education-focused format for internships and entry-level PM positions",
       features: ["Education emphasis", "Transferable skills", "Academic projects", "Growth potential"],
       fileType: ".docx",
-      color: "teal-blue",
+      color: "primary-blue",
       icon: GraduationCap,
       bestFor: "PM internships, entry-level assistant PM roles"
     },
@@ -70,7 +70,7 @@ const ATSResumeGenerator = () => {
       description: "Specialized for datacenter operations and infrastructure services roles",
       features: ["Infrastructure expertise", "Operations focus", "System reliability", "Technical depth"],
       fileType: ".docx",
-      color: "teal-blue", 
+      color: "primary-blue", 
       icon: Settings,
       bestFor: "Datacenter operations, infrastructure services, system administration"
     },
@@ -79,7 +79,7 @@ const ATSResumeGenerator = () => {
       description: "Leadership-focused format for senior project management roles", 
       features: ["Leadership emphasis", "Strategic outcomes", "Team management", "Results-driven"],
       fileType: ".docx",
-      color: "success-green",
+      color: "primary-blue",
       icon: TrendingUp,
       bestFor: "Senior PM roles, team lead positions"
     }
