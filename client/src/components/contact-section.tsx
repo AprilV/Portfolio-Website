@@ -179,11 +179,12 @@ const ContactSection = () => {
     <section id="contact" className="py-12 bg-background-alt" style={{paddingTop: '80px', paddingBottom: '60px'}}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <div className="inline-block">
+          <div className="professional-experience-header" style={{marginTop: '0'}}>
             <h2 className="section-header">
               Let's Connect
               <div className="section-underline"></div>
             </h2>
+            <p className="section-subtitle">Professional Networking & Opportunities</p>
           </div>
           <p className="text-xl text-gray-600 mt-6">Ready to bring technical expertise and project management skills to your team</p>
         </div>

@@ -182,11 +182,12 @@ const ATSResumeGenerator = () => {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-12">
-          <div className="inline-block">
+          <div className="professional-experience-header" style={{marginTop: '0'}}>
             <h2 className="section-header">
               ATS-Optimized Resume Generator
               <div className="section-underline"></div>
             </h2>
+            <p className="section-subtitle">Tailored Resumes for Maximum ATS Compatibility</p>
           </div>
           <p className="text-xl text-gray-600 mt-6">Generate ATS-friendly resumes tailored for specific job applications</p>
         </div>

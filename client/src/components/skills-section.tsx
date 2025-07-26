@@ -232,11 +232,12 @@ const SkillsSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-background-alt/50 to-background/50"></div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <div className="inline-block">
+          <div className="professional-experience-header" style={{marginTop: '0'}}>
             <h2 className="section-header">
               Skills & Competencies
               <div className="section-underline"></div>
             </h2>
+            <p className="section-subtitle">Technical Expertise & Project Management Capabilities</p>
           </div>
           <p className="text-xl text-muted-foreground mt-6">Technical expertise and project management capabilities</p>
         </div>

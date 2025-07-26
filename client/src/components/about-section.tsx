@@ -39,10 +39,13 @@ const AboutSection = () => {
     <section id="about" className="py-20 bg-secondary" style={{paddingTop: '80px', paddingBottom: '60px'}}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="section-header">
-            About Me
-            <div className="section-underline"></div>
-          </h2>
+          <div className="professional-experience-header" style={{marginTop: '0'}}>
+            <h2 className="section-header">
+              About Me
+              <div className="section-underline"></div>
+            </h2>
+            <p className="section-subtitle">IT Professional Transitioning to Project Management</p>
+          </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transforming two decades of IT infrastructure expertise into project management excellence
           </p>
