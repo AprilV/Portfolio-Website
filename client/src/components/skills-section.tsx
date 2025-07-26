@@ -1,5 +1,6 @@
 import { ClipboardCheck, Code, BarChart3, Award, Shield, Monitor, Terminal, Network, GraduationCap, Computer } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import { motion } from "framer-motion";
 
 const SkillsSection = () => {
   const skillCategories = [
@@ -158,44 +159,70 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-light-neutral">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="hidden md:flex items-center justify-center mb-4">
-            <i className="fas fa-laptop-code text-4xl text-primary-blue"></i>
+    <section id="skills" className="py-20 bg-light-neutral" style={{paddingTop: '80px', paddingBottom: '60px'}}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="professional-experience-header" style={{marginTop: '0'}}>
+            <h2 className="section-header">
+              Skills & Certifications
+              <div className="section-underline"></div>
+            </h2>
+            <p className="section-subtitle">Technical Expertise & Project Management Capabilities</p>
           </div>
-          <h2 className="text-4xl font-bold text-charcoal-black mb-4">
-            Skills & Certifications
-            <div className="w-24 h-1 bg-primary-blue mx-auto mt-2 rounded-full"></div>
-          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive technical expertise and project management capabilities developed through 20+ years of experience and continuous academic advancement
           </p>
         </div>
 
         {/* Skills Categories */}
-        <div className="skills-container">
+        <motion.div 
+          className="skills-container"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           {skillCategories.map((category, index) => (
-            <div key={index} className="skills-column">
+            <motion.div 
+              key={index} 
+              className="skills-column"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
               <h3 className="skills-heading">{category.title}</h3>
               
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
+                  <motion.div 
+                    key={skillIndex} 
+                    className="skill-item"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: (index * 0.1) + (skillIndex * 0.05) }}
+                  >
                     <h4 className="skill-name">{skill.name}</h4>
                     <p className="skill-description">{skill.description}</p>
                     <p className="skill-experience">
                       <strong>Experience:</strong> {skill.experience}
                     </p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
         
         {/* Certifications */}
-        <div className="modern-card-premium relative overflow-hidden">
+        <motion.div 
+          className="modern-card-premium relative overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
           <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/3 via-teal-blue/2 to-primary-blue/3"></div>
           <div className="relative">
             
@@ -312,7 +339,7 @@ const SkillsSection = () => {
             </div>
             
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
