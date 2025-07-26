@@ -46,7 +46,7 @@ const SkillsSection = () => {
     },
   ];
 
-  const certifications = [
+  const verifiedBadges = [
     {
       name: "CAPM Candidate",
       description: "Project Management Institute - In Progress",
@@ -102,6 +102,18 @@ const SkillsSection = () => {
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
       credentialId: "Credly Verified"
     },
+    {
+      name: "BAS-IS Student",
+      description: "Olympic College - 3.94 GPA",
+      detail: "President's Scholar (8 terms) | Spring 2026",
+      icon: GraduationCap,
+      color: "primary-blue",
+      link: null,
+      credentialId: null
+    },
+  ];
+
+  const technicalCertifications = [
     {
       name: "CompTIA Linux+",
       description: "CompTIA Certification (via TestOut)",
@@ -276,14 +288,53 @@ const SkillsSection = () => {
         <div className="modern-card-premium relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/3 via-teal-blue/2 to-primary-blue/3"></div>
           <div className="relative">
-          <div className="text-center mb-12">
-            <h3 className="section-header text-2xl">
-              Certifications & Education
-              <div className="section-underline"></div>
-            </h3>
-          </div>
-          <div className="cert-grid">
-            {certifications.map((cert, index) => (
+            <div className="cert-section">
+            <h3 className="cert-heading">Verified Badges & Education</h3>
+            <div className="cert-grid">
+              {verifiedBadges.map((cert, index) => (
+                <div key={index} className={`cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
+                  <div className="flex items-start gap-4">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
+                      <cert.icon className="w-6 h-6" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-gray-900 mb-1 text-sm leading-tight">{cert.name}</h4>
+                      <p className="text-xs text-gray-600 mb-1">{cert.description}</p>
+                      <p className="text-xs text-gray-500 mb-2">{cert.detail}</p>
+                      {cert.link && (
+                        <a 
+                          href={cert.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="verify-credential-link inline-flex items-center text-xs text-primary-blue hover:text-primary-blue/80 transition-colors font-medium"
+                        >
+                          <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          Verify Credential
+                          <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      )}
+                      {cert.credentialId && (
+                        <div className="mt-1">
+                          <span className={`inline-flex items-center text-xs px-2 py-1 rounded ${
+                            cert.credentialId === 'In Progress' ? 'badge-progress' : 'bg-gray-100 text-gray-700'
+                          }`}>
+                            {cert.credentialId}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="cert-heading">Technical Certifications</h3>
+            <div className="cert-grid">
+              {technicalCertifications.map((cert, index) => (
               <div key={index} className={`cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
                 <div className="flex items-start gap-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
@@ -328,8 +379,9 @@ const SkillsSection = () => {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+              ))}
+            </div>
+            </div>
           </div>
         </div>
         
