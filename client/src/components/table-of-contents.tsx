@@ -19,16 +19,30 @@ const TableOfContents = ({ sections }: TableOfContentsProps) => {
     const handleScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          const scrollY = window.scrollY + 100; // Offset for better detection
+          const scrollY = window.scrollY + 120; // Enhanced offset for better detection
+          let currentSection = '';
           
+          // Find the section that's most in view
           for (let i = sections.length - 1; i >= 0; i--) {
             const element = document.getElementById(sections[i].id);
-            if (element && scrollY >= element.offsetTop) {
-              setActiveSection(sections[i].id);
-              break;
+            if (element) {
+              const rect = element.getBoundingClientRect();
+              const elementTop = element.offsetTop;
+              
+              // Enhanced detection: section is active if it's in the viewport or if we've scrolled past it
+              if (scrollY >= elementTop - 50) {
+                currentSection = sections[i].id;
+                break;
+              }
             }
           }
           
+          // Default to first section if none detected and at top
+          if (!currentSection && window.scrollY < 100) {
+            currentSection = sections[0]?.id || '';
+          }
+          
+          setActiveSection(currentSection);
           ticking = false;
         });
         ticking = true;
@@ -43,9 +57,13 @@ const TableOfContents = ({ sections }: TableOfContentsProps) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      // Enhanced smooth scrolling with proper offset
+      const elementTop = element.offsetTop;
+      const offset = 80; // Account for fixed header
+      
+      window.scrollTo({
+        top: elementTop - offset,
+        behavior: 'smooth'
       });
     }
   };
