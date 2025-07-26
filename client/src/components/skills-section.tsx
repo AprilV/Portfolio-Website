@@ -49,8 +49,8 @@ const SkillsSection = () => {
   const verifiedBadges = [
     {
       name: "CAPM Candidate",
-      description: "Project Management Institute - In Progress",
-      detail: "Summer 2025 - PM I & II Complete (4.0 GPA)",
+      description: "Project Management Institute – In Progress",
+      detail: "Summer 2025 – PMI I & II Complete (4.0 GPA)",
       icon: Award,
       color: "primary-blue",
       link: null,
@@ -60,7 +60,7 @@ const SkillsSection = () => {
     {
       name: "CCNA: Introduction to Networks",
       description: "Cisco Verified Badge",
-      detail: "Issued Dec 7, 2023",
+      detail: "Issued: Dec 7, 2023",
       icon: Code,
       color: "teal-blue",
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
@@ -69,7 +69,7 @@ const SkillsSection = () => {
     {
       name: "Introduction to Cybersecurity",
       description: "Cisco Verified Badge",
-      detail: "Issued Nov 11, 2024",
+      detail: "Issued: Nov 11, 2024",
       icon: Shield,
       color: "primary-blue",
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
@@ -78,7 +78,7 @@ const SkillsSection = () => {
     {
       name: "Introduction to Data Science",
       description: "Cisco Verified Badge",
-      detail: "Issued Feb 26, 2024",
+      detail: "Issued: Feb 26, 2024",
       icon: BarChart3,
       color: "teal-blue",
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
@@ -87,7 +87,7 @@ const SkillsSection = () => {
     {
       name: "Networking Academy Learn-A-Thon 2024",
       description: "Cisco Verified Badge",
-      detail: "Issued Feb 26, 2024",
+      detail: "Issued: Feb 26, 2024",
       icon: Award,
       color: "primary-blue",
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
@@ -98,8 +98,8 @@ const SkillsSection = () => {
   const technicalCertifications = [
     {
       name: "CompTIA Linux+",
-      description: "CompTIA Certification (via TestOut)",
-      detail: "ID: 6-2C6-VCQ5KS",
+      description: "TestOut ID: 6-2C6-VCQ5KS",
+      detail: "",
       icon: Terminal,
       color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-vcq5ks",
@@ -107,8 +107,8 @@ const SkillsSection = () => {
     },
     {
       name: "CompTIA A+ Client",
-      description: "CompTIA A+ Certification (via TestOut)",
-      detail: "ID: 6-2c6-v3pmva",
+      description: "TestOut ID: 6-2c6-v3pmva",
+      detail: "",
       icon: Monitor,
       color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-v3pmva",
@@ -116,8 +116,8 @@ const SkillsSection = () => {
     },
     {
       name: "CompTIA A+ PC Pro",
-      description: "CompTIA A+ Certification (via TestOut)", 
-      detail: "ID: 6-2c6-v3p73s",
+      description: "TestOut ID: 6-2c6-v3p73s",
+      detail: "",
       icon: Computer,
       color: "primary-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-v3p73s",
@@ -125,8 +125,8 @@ const SkillsSection = () => {
     },
     {
       name: "CompTIA Network+",
-      description: "CompTIA Network Professional (via TestOut)",
-      detail: "ID: 6-2c6-vw5625",
+      description: "TestOut ID: 6-2c6-vw5625",
+      detail: "",
       icon: Network,
       color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-vw5625",
@@ -137,7 +137,7 @@ const SkillsSection = () => {
   const academicRecognition = [
     {
       name: "BAS-IS Student",
-      description: "Olympic College - 3.94 GPA",
+      description: "Olympic College – 3.94 GPA",
       detail: "President's Scholar (8 terms) | Spring 2026",
       icon: GraduationCap,
       color: "primary-blue",
