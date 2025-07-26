@@ -104,6 +104,7 @@ const ExperienceSection = () => {
         "Authored and maintained thousands of technical documents in both physical binders and SharePoint systems",
         "Responsible for PHI (Protected Health Information) security and compliance in healthcare systems",
         "Maintained 99.9% system uptime during three major organizational transitions (Perot→Dell→Wipro)",
+        "Awarded Ambassador Award for Excellence at Jewish Hospital for outstanding performance and dedication",
       ],
       techStack: ["Mainframes", "PeopleSoft", "SharePoint", "Disaster Recovery", "SLA Management", "Healthcare IT"],
       metrics: [
