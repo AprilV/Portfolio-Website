@@ -58,24 +58,6 @@ const SkillsSection = () => {
       status: "in-progress"
     },
     {
-      name: "BAS-IS Student",
-      description: "Olympic College - 3.94 GPA",
-      detail: "President's Scholar (8 terms) | Spring 2026",
-      icon: GraduationCap,
-      color: "primary-blue",
-      link: null,
-      credentialId: null
-    },
-    {
-      name: "CCNA: Switching, Routing, and Wireless Essentials",
-      description: "Cisco Verified Badge",
-      detail: "Issued Mar 20, 2024",
-      icon: Code,
-      color: "primary-blue",
-      link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
-      credentialId: "Credly Verified"
-    },
-    {
       name: "CCNA: Introduction to Networks",
       description: "Cisco Verified Badge",
       detail: "Issued Dec 7, 2023",
@@ -111,15 +93,6 @@ const SkillsSection = () => {
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
       credentialId: "Credly Verified"
     },
-    {
-      name: "BAS-IS Student",
-      description: "Olympic College - 3.94 GPA",
-      detail: "President's Scholar (8 terms) | Spring 2026",
-      icon: GraduationCap,
-      color: "primary-blue",
-      link: null,
-      credentialId: null
-    },
   ];
 
   const technicalCertifications = [
@@ -131,15 +104,6 @@ const SkillsSection = () => {
       color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-vcq5ks",
       credentialId: "6-2C6-VCQ5KS"
-    },
-    {
-      name: "CompTIA Security+",
-      description: "CompTIA Security Certification (via TestOut)",
-      detail: "ID: 6-2C6-V9F5UG",
-      icon: Shield,
-      color: "primary-blue",
-      link: "https://certification.testout.com/verifycert/6-2c6-v9f5ug", 
-      credentialId: "6-2C6-V9F5UG"
     },
     {
       name: "CompTIA A+ Client",
@@ -162,11 +126,23 @@ const SkillsSection = () => {
     {
       name: "CompTIA Network+",
       description: "CompTIA Network Professional (via TestOut)",
-      detail: "ID: 6-2c6-vv5625",
+      detail: "ID: 6-2c6-vw5625",
       icon: Network,
       color: "teal-blue",
-      link: "https://certification.testout.com/verifycert/6-2c6-vv5625",
-      credentialId: "6-2c6-vv5625"
+      link: "https://certification.testout.com/verifycert/6-2c6-vw5625",
+      credentialId: "6-2c6-vw5625"
+    },
+  ];
+
+  const academicRecognition = [
+    {
+      name: "BAS-IS Student",
+      description: "Olympic College - 3.94 GPA",
+      detail: "President's Scholar (8 terms) | Spring 2026",
+      icon: GraduationCap,
+      color: "primary-blue",
+      link: null,
+      credentialId: null
     },
   ];
 
@@ -373,6 +349,50 @@ const SkillsSection = () => {
                             } />
                           </svg>
                           {cert.credentialId === 'In Progress' ? 'In Progress' : `ID: ${cert.credentialId}`}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+              ))}
+            </div>
+
+            <h3 className="cert-heading">Academic Recognition</h3>
+            <div className="cert-grid">
+              {academicRecognition.map((cert, index) => (
+              <div key={index} className={`cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
+                <div className="flex items-start gap-4">
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
+                    <cert.icon className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-gray-900 mb-1 text-sm leading-tight">{cert.name}</h4>
+                    <p className="text-xs text-gray-600 mb-1">{cert.description}</p>
+                    <p className="text-xs text-gray-500 mb-2">{cert.detail}</p>
+                    {cert.link && (
+                      <a 
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="verify-credential-link inline-flex items-center text-xs text-primary-blue hover:text-primary-blue/80 transition-colors font-medium"
+                      >
+                        <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Verify Credential
+                        <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    )}
+                    {cert.credentialId && (
+                      <div className="mt-1">
+                        <span className={`inline-flex items-center text-xs px-2 py-1 rounded bg-gray-100 text-gray-700`}>
+                          <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z" />
+                          </svg>
+                          {cert.credentialId}
                         </span>
                       </div>
                     )}
