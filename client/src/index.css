@@ -1907,3 +1907,22 @@
     outline: 2px solid #2C73D2;
     outline-offset: 2px;
   }
+
+  /* Contact Icon Accessibility */
+  .contact-icon {
+    fill: currentColor;
+    color: #2C73D2;
+    transition: color 0.2s ease;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .contact-icon {
+      color: #60A5FA;
+    }
+  }
+
+  @media (prefers-contrast: high) {
+    .contact-icon {
+      color: #1E40AF;
+    }
+  }

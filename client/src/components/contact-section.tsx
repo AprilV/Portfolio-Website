@@ -69,6 +69,11 @@ const ContactSection = () => {
 
   const [captcha, setCaptcha] = useState<CaptchaChallenge>(generateCaptcha());
 
+  const isValidEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
       // Include CAPTCHA verification in the request
@@ -147,7 +152,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Contact",
-      value: "Use the secure contact form",
+      value: "Reach out securely using the contact form on this page",
       link: null,
     },
     {
@@ -177,11 +182,11 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-12 bg-background-alt" style={{paddingTop: '80px', paddingBottom: '60px'}}>
+    <section id="contact" className="py-12 bg-background-alt" style={{paddingTop: '80px', paddingBottom: '60px'}} aria-labelledby="contact-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="professional-experience-header" style={{marginTop: '0'}}>
-            <h2 className="section-header">
+            <h2 id="contact-heading" className="section-header">
               Let's Connect
               <div className="section-underline"></div>
             </h2>
@@ -199,7 +204,7 @@ const ContactSection = () => {
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-primary-blue/10 rounded-xl flex items-center justify-center hover-lift">
-                      <info.icon className="w-6 h-6 text-primary-blue" />
+                      <info.icon className="w-6 h-6 contact-icon" />
                     </div>
                     <div>
                       <p className="contact-label">{info.label}</p>
@@ -241,7 +246,10 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="professional-card p-8">
             <h3 className="text-xl font-bold text-gray-900 mb-6">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <p id="contact-instructions" className="text-sm text-gray-600 mb-6">
+              All fields marked with * are required. I typically respond within 24 hours.
+            </p>
+            <form onSubmit={handleSubmit} className="space-y-6" aria-describedby="contact-instructions">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -249,13 +257,20 @@ const ContactSection = () => {
                   </label>
                   <Input
                     id="name"
+                    name="name"
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
                     placeholder="Your name"
                     className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
+                    aria-describedby={!formData.name ? "name-error" : undefined}
                   />
+                  {!formData.name && (
+                    <p id="name-error" className="text-sm text-red-600 mt-1" role="alert">
+                      Name is required
+                    </p>
+                  )}
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -263,13 +278,25 @@ const ContactSection = () => {
                   </label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="your.email@company.com"
                     className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
+                    aria-describedby={(!formData.email || !isValidEmail(formData.email)) ? "email-error" : undefined}
                   />
+                  {!formData.email && (
+                    <p id="email-error" className="text-sm text-red-600 mt-1" role="alert">
+                      Email is required
+                    </p>
+                  )}
+                  {formData.email && !isValidEmail(formData.email) && (
+                    <p id="email-error" className="text-sm text-red-600 mt-1" role="alert">
+                      Please enter a valid email address
+                    </p>
+                  )}
                 </div>
               </div>
               
@@ -279,6 +306,7 @@ const ContactSection = () => {
                 </label>
                 <Input
                   id="company"
+                  name="company"
                   type="text"
                   value={formData.company}
                   onChange={(e) => handleInputChange("company", e.target.value)}
@@ -293,13 +321,20 @@ const ContactSection = () => {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   required
                   rows={5}
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
                   placeholder="Tell me about the opportunity or project you'd like to discuss..."
                   className="w-full resize-none transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
+                  aria-describedby={!formData.message ? "message-error" : undefined}
                 />
+                {!formData.message && (
+                  <p id="message-error" className="text-sm text-red-600 mt-1" role="alert">
+                    Message is required
+                  </p>
+                )}
               </div>
               
               {/* CAPTCHA Section */}
@@ -313,12 +348,14 @@ const ContactSection = () => {
                   </div>
                   <Input
                     id="captcha"
+                    name="captcha"
                     type="number"
                     required
                     value={formData.captchaAnswer}
                     onChange={(e) => handleInputChange("captchaAnswer", e.target.value)}
                     placeholder="Answer"
                     className="w-24 text-center"
+                    aria-describedby="captcha-help"
                   />
                   <Button
                     type="button"
