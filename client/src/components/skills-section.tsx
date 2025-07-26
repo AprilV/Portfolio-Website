@@ -162,7 +162,7 @@ const SkillsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="hidden md:flex items-center justify-center mb-4">
-            <Code className="w-8 h-8 text-primary-blue" />
+            <i className="fas fa-laptop-code text-4xl text-primary-blue"></i>
           </div>
           <h2 className="text-4xl font-bold text-charcoal-black mb-4">
             Skills & Certifications
