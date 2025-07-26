@@ -229,7 +229,6 @@ const SkillsSection = () => {
             </h2>
             <p className="section-subtitle">Technical Expertise & Project Management Capabilities</p>
           </div>
-          <p className="text-xl text-muted-foreground mt-6">Technical expertise and project management capabilities</p>
         </div>
         
         <div className="skills-container mb-12">
