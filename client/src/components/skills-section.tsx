@@ -93,9 +93,6 @@ const SkillsSection = () => {
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
       credentialId: "Credly Verified"
     },
-  ];
-
-  const technicalCertifications = [
     {
       name: "Introduction to Data Science",
       description: "Cisco Verified Badge",
@@ -114,6 +111,9 @@ const SkillsSection = () => {
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
       credentialId: "Credly Verified"
     },
+  ];
+
+  const technicalCertifications = [
     {
       name: "CompTIA Linux+",
       description: "CompTIA Certification (via TestOut)",
