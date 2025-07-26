@@ -13,6 +13,7 @@ import {
   securityHeaders,
   corsOptions,
   sanitizeInput,
+  sanitizeString,
   adminAuth,
   requestLogger,
   validateContactData,
@@ -77,7 +78,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       console.log(`✅ CAPTCHA VERIFIED: Correct answer ${captchaAnswer} from ${req.ip} at ${new Date().toISOString()}`);
 
-      const contactData = insertContactSchema.parse(contactFields);
+      // Sanitize all input fields to prevent XSS
+      const sanitizedFields = {
+        name: sanitizeString(contactFields.name),
+        email: sanitizeString(contactFields.email),
+        company: contactFields.company ? sanitizeString(contactFields.company) : contactFields.company,
+        message: sanitizeString(contactFields.message)
+      };
+
+      const contactData = insertContactSchema.parse(sanitizedFields);
       const submission = await storage.createContactSubmission(contactData);
       
       // Send email notifications

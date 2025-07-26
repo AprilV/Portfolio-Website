@@ -290,6 +290,31 @@ export const isValidEmail = (email: string): boolean => {
   return emailRegex.test(email) && email.length <= 254;
 };
 
+// String sanitization helper function
+export const sanitizeString = (input: string): string => {
+  if (typeof input !== 'string') return '';
+  
+  return input
+    // Remove dangerous HTML tags and attributes
+    .replace(/<script[^>]*>.*?<\/script>/gi, '')
+    .replace(/<iframe[^>]*>.*?<\/iframe>/gi, '')
+    .replace(/<object[^>]*>.*?<\/object>/gi, '')
+    .replace(/<embed[^>]*>.*?<\/embed>/gi, '')
+    .replace(/<link[^>]*>/gi, '')
+    .replace(/<meta[^>]*>/gi, '')
+    .replace(/<style[^>]*>.*?<\/style>/gi, '')
+    // Remove javascript: and data: URLs
+    .replace(/javascript:/gi, '')
+    .replace(/data:/gi, '')
+    .replace(/vbscript:/gi, '')
+    // Remove event handlers
+    .replace(/on\w+\s*=/gi, '')
+    // Remove potentially dangerous attributes
+    .replace(/(<[^>]*)\s*(href|src|action)\s*=\s*["']?\s*(javascript|data|vbscript):[^"'>]*["']?/gi, '$1')
+    // Trim whitespace
+    .trim();
+};
+
 // Enhanced spam detection patterns
 const spamPatterns = [
   /https?:\/\/[^\s]+.*https?:\/\/[^\s]+/gi, // Multiple URLs
