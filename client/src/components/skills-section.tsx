@@ -176,10 +176,10 @@ const SkillsSection = () => {
         {/* Skills Categories */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
-            <div key={index} className={`modern-card-premium hover-glow group animate-fade-in-up ${
-              index === 0 ? 'animation-delay-100' : 
-              index === 1 ? 'animation-delay-200' : 'animation-delay-300'
-            }`}>
+            <div 
+              key={index} 
+              className="modern-card-premium hover-glow group animate-fade-in-up"
+            >
               <div className="flex items-start gap-3 mb-6">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center progress-ring ${getColorClass(category.color)}`}>
                   <category.icon className="w-6 h-6" />
