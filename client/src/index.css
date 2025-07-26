@@ -1198,6 +1198,8 @@
     display: inline-block;
     color: #1E1E1E;
     padding-bottom: 0.25rem;
+    text-align: left;
+    width: auto;
   }
 
   .cert-heading:first-of-type {
