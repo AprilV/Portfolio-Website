@@ -30,13 +30,13 @@ const ExperienceSection = () => {
       description: "Provided comprehensive IT support across campus systems while pursuing education. Strengthened communication and coordination skills in project-based environments.",
       achievements: [
         "Installed Windows operating systems and performed system updates across classroom PCs in 15 academic buildings",
-        "Repaired printers, installed software applications, and resolved hardware issues for 1,200+ campus users", 
+        "Repaired printers, installed software applications, and resolved hardware issues for 10,000+ campus users", 
         "Performed cable installation, network setup, and security vulnerability remediation",
         "Conducted virus removal, security patching, and system maintenance on faculty and student computers",
       ],
       techStack: ["Windows Server", "Active Directory", "Cisco Networking", "ServiceDesk", "Documentation"],
       metrics: [
-        { value: "1,200+", label: "Campus Users" },
+        { value: "10,000+", label: "Campus Users" },
         { value: "25%", label: "Faster Resolution" },
         { value: "15", label: "Academic Buildings" },
         { value: "30%", label: "Response Time" },
