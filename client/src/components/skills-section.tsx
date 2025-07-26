@@ -46,6 +46,7 @@ const SkillsSection = () => {
     },
   ];
 
+  // Verified Badges & Education (5 certifications)
   const verifiedBadges = [
     {
       name: "CAPM Candidate",
@@ -54,8 +55,7 @@ const SkillsSection = () => {
       icon: Award,
       color: "primary-blue",
       link: null,
-      credentialId: "In Progress",
-      status: "in-progress"
+      credentialId: "In Progress"
     },
     {
       name: "CCNA: Introduction to Networks",
@@ -69,7 +69,7 @@ const SkillsSection = () => {
     {
       name: "Introduction to Cybersecurity",
       description: "Cisco Verified Badge",
-      detail: "Issued: Nov 11, 2024",
+      detail: "Issued: Nov 11, 2024",  
       icon: Shield,
       color: "primary-blue",
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
@@ -80,7 +80,7 @@ const SkillsSection = () => {
       description: "Cisco Verified Badge",
       detail: "Issued: Feb 26, 2024",
       icon: BarChart3,
-      color: "teal-blue",
+      color: "teal-blue", 
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
       credentialId: "Credly Verified"
     },
@@ -92,9 +92,10 @@ const SkillsSection = () => {
       color: "primary-blue",
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
       credentialId: "Credly Verified"
-    },
+    }
   ];
 
+  // Technical Certifications (4 certifications)
   const technicalCertifications = [
     {
       name: "CompTIA Linux+",
@@ -119,109 +120,74 @@ const SkillsSection = () => {
       description: "",
       detail: "TestOut ID: 6-2c6-v3p73s",
       icon: Computer,
-      color: "primary-blue",
+      color: "primary-blue", 
       link: "https://certification.testout.com/verifycert/6-2c6-v3p73s",
       credentialId: "6-2c6-v3p73s"
     },
     {
       name: "CompTIA Network+",
       description: "",
-      detail: "TestOut ID: 6-2c6-vw5625",
+      detail: "TestOut ID: 6-2c6-v3p5l9",
       icon: Network,
       color: "teal-blue",
-      link: "https://certification.testout.com/verifycert/6-2c6-vw5625",
-      credentialId: "6-2c6-vw5625"
-    },
+      link: "https://certification.testout.com/verifycert/6-2c6-v3p5l9", 
+      credentialId: "6-2c6-v3p5l9"
+    }
   ];
 
+  // Academic Recognition (1 certification)
   const academicRecognition = [
     {
-      name: "BAS-IS Student",
-      description: "Olympic College – 3.94 GPA",
-      detail: "President's Scholar (8 terms) | Spring 2026",
+      name: "BAS-Information Systems",
+      description: "Olympic College",
+      detail: "Expected: June 2025 (Current GPA: 3.95/4.0)",
       icon: GraduationCap,
       color: "primary-blue",
       link: null,
-      credentialId: null
-    },
+      credentialId: "Magna Cum Laude Track"
+    }
   ];
 
   const getColorClass = (color: string) => {
     switch (color) {
-      case "primary-blue":
-        return "text-primary-blue bg-primary-blue/10";
-      case "teal-blue":
-        return "text-teal-blue bg-teal-blue/10";
-      case "navy":
-        return "text-primary-blue bg-primary-blue/10";
-      case "accent-blue":
-        return "text-primary-blue bg-primary-blue/10";
-      case "success-green":
-        return "text-teal-blue bg-teal-blue/10";
-      case "purple-accent":
-        return "text-primary-blue bg-primary-blue/10";
-      case "orange-accent":
-        return "text-teal-blue bg-teal-blue/10";
-      case "coral":
-        return "text-primary-blue bg-primary-blue/10";
-      default:
-        return "text-primary-blue bg-primary-blue/10";
-    }
-  };
-
-  const getExperienceTagClass = (experience: string) => {
-    // Enhanced badge contrast based on audit recommendations
-    if (experience.includes("Academic")) {
-      return "text-blue-700 bg-blue-100 border border-blue-200"; // Blue for Academic
-    } else if (experience.includes("Years")) {
-      return "text-gray-700 bg-gray-100 border border-gray-200"; // Dark Gray for Professional Experience
-    } else if (experience.includes("Progress")) {
-      return "text-teal-700 bg-teal-100 border border-teal-200"; // Teal for In Progress/Candidate
-    } else {
-      return "text-gray-700 bg-gray-100 border border-gray-200"; // Default to professional gray
+      case "primary-blue": return "bg-primary-blue/10 text-primary-blue";
+      case "teal-blue": return "bg-teal-blue/10 text-teal-blue";
+      default: return "bg-gray-100 text-gray-700";
     }
   };
 
   const getBorderClass = (accent: string) => {
     switch (accent) {
-      case "primary-blue":
-        return "border-primary-blue";
-      case "teal-blue":
-        return "border-teal-blue";
-      case "navy":
-        return "border-primary-blue";
-      case "accent-blue":
-        return "border-primary-blue";
-      case "success-green":
-        return "border-teal-blue";
-      case "purple-accent":
-        return "border-primary-blue";
-      case "orange-accent":
-        return "border-teal-blue";
-      case "coral":
-        return "border-primary-blue";
-      default:
-        return "border-primary-blue";
+      case "primary-blue": return "border-primary-blue";
+      case "teal-blue": return "border-teal-blue";
+      default: return "border-gray-300";
     }
   };
 
+  const getExperienceTagClass = (experience: string) => {
+    if (experience.includes('Academic')) return 'bg-blue-100 text-blue-800';
+    if (experience.includes('Years')) return 'bg-gray-100 text-gray-800';
+    return 'bg-teal-100 text-teal-800';
+  };
+
   return (
-    <section id="skills" className="py-12 bg-secondary relative overflow-hidden" style={{paddingTop: '80px', paddingBottom: '60px'}}>
-      <div className="absolute inset-0 bg-gradient-to-br from-background-alt/50 to-background/50"></div>
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <div className="professional-experience-header flex justify-center" style={{marginTop: '0'}}>
-            <div className="inline-block">
-              <h2 className="section-header">
-                Skills & Competencies
-                <div className="section-underline mx-auto"></div>
-              </h2>
-              <p className="section-subtitle">Technical Expertise & Project Management Capabilities</p>
-            </div>
+    <section id="skills" className="py-20 bg-light-neutral">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="hidden md:flex items-center justify-center mb-4">
+            <Code className="w-8 h-8 text-primary-blue" />
           </div>
+          <h2 className="text-4xl font-bold text-charcoal-black mb-4">
+            Skills & Certifications
+            <div className="w-24 h-1 bg-primary-blue mx-auto mt-2 rounded-full"></div>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technical expertise and project management capabilities developed through 20+ years of experience and continuous academic advancement
+          </p>
         </div>
-        
-        <div className="skills-container mb-12">
+
+        {/* Skills Categories */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
             <div key={index} className={`modern-card-premium hover-glow group animate-fade-in-up ${
               index === 0 ? 'animation-delay-100' : 
@@ -264,11 +230,12 @@ const SkillsSection = () => {
         <div className="modern-card-premium relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/3 via-teal-blue/2 to-primary-blue/3"></div>
           <div className="relative">
-            <div className="cert-section">
+            
+            {/* Verified Badges & Education */}
             <h3 className="cert-heading">Verified Badges & Education</h3>
             <div className="cert-grid">
               {verifiedBadges.map((cert, index) => (
-                <div key={cert.name} className={`cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
+                <div key={`verified-${index}`} className="cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up border border-gray-100">
                   <div className="flex items-start gap-4">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                       <cert.icon className="w-6 h-6" />
@@ -308,133 +275,74 @@ const SkillsSection = () => {
               ))}
             </div>
 
+            {/* Technical Certifications */}
             <h3 className="cert-heading">Technical Certifications</h3>
             <div className="cert-grid">
               {technicalCertifications.map((cert, index) => (
-              <div key={index} className={`cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
-                <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
-                    <cert.icon className="w-6 h-6" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-gray-900 mb-1 text-sm leading-tight">{cert.name}</h4>
-                    <p className="text-xs text-gray-600 mb-1">{cert.description}</p>
-                    <p className="text-xs text-gray-500 mb-2">{cert.detail}</p>
-                    {cert.link && (
-                      <a 
-                        href={cert.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="verify-credential-link inline-flex items-center text-xs text-primary-blue hover:text-primary-blue/80 transition-colors font-medium"
-                      >
-                        <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        Verify Credential
-                        <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    )}
-                    {cert.credentialId && (
-                      <div className="mt-1">
-                        <span className={`inline-flex items-center text-xs px-2 py-1 rounded ${
-                          cert.credentialId === 'In Progress' ? 'badge-progress' : 'bg-gray-100 text-gray-700'
-                        }`}>
+                <div key={`technical-${index}`} className="cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up border border-gray-100">
+                  <div className="flex items-start gap-4">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
+                      <cert.icon className="w-6 h-6" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-gray-900 mb-1 text-sm leading-tight">{cert.name}</h4>
+                      <p className="text-xs text-gray-600 mb-1">{cert.description}</p>
+                      <p className="text-xs text-gray-500 mb-2">{cert.detail}</p>
+                      {cert.link && (
+                        <a 
+                          href={cert.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="verify-credential-link inline-flex items-center text-xs text-primary-blue hover:text-primary-blue/80 transition-colors font-medium"
+                        >
                           <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={
-                              cert.credentialId === 'In Progress' 
-                                ? "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                : "M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z"
-                            } />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
-                          {cert.credentialId === 'In Progress' ? 'In Progress' : `ID: ${cert.credentialId}`}
-                        </span>
-                      </div>
-                    )}
+                          Verify Credential
+                          <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      )}
+                      {cert.credentialId && (
+                        <div className="mt-1">
+                          <span className="inline-flex items-center text-xs px-2 py-1 rounded bg-gray-100 text-gray-700">
+                            {cert.credentialId}
+                          </span>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
               ))}
             </div>
 
+            {/* Academic Recognition */}
             <h3 className="cert-heading">Academic Recognition</h3>
             <div className="cert-grid">
               {academicRecognition.map((cert, index) => (
-              <div key={index} className={`cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
-                <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
-                    <cert.icon className="w-6 h-6" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-gray-900 mb-1 text-sm leading-tight">{cert.name}</h4>
-                    <p className="text-xs text-gray-600 mb-1">{cert.description}</p>
-                    <p className="text-xs text-gray-500 mb-2">{cert.detail}</p>
-                    {cert.link && (
-                      <a 
-                        href={cert.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="verify-credential-link inline-flex items-center text-xs text-primary-blue hover:text-primary-blue/80 transition-colors font-medium"
-                      >
-                        <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        Verify Credential
-                        <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    )}
-                    {cert.credentialId && (
-                      <div className="mt-1">
-                        <span className={`inline-flex items-center text-xs px-2 py-1 rounded bg-gray-100 text-gray-700`}>
-                          <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z" />
-                          </svg>
-                          {cert.credentialId}
-                        </span>
-                      </div>
-                    )}
+                <div key={`academic-${index}`} className="cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up border border-gray-100">
+                  <div className="flex items-start gap-4">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
+                      <cert.icon className="w-6 h-6" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-gray-900 mb-1 text-sm leading-tight">{cert.name}</h4>
+                      <p className="text-xs text-gray-600 mb-1">{cert.description}</p>
+                      <p className="text-xs text-gray-500 mb-2">{cert.detail}</p>
+                      {cert.credentialId && (
+                        <div className="mt-1">
+                          <span className="inline-flex items-center text-xs px-2 py-1 rounded bg-green-100 text-green-800">
+                            {cert.credentialId}
+                          </span>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
               ))}
             </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Professional CTA Section */}
-        <div className="mt-12 text-center">
-          <div className="modern-card-premium bg-gradient-to-r from-primary-blue/5 to-teal-blue/5 hover-glow">
-            <div className="max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-charcoal-black mb-4">Ready to Drive Your Next Project?</h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                20+ years of IT experience with proven team leadership and academic excellence in project management. 
-                Let's discuss how I can contribute to your organization's success.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a 
-                  href="#contact" 
-                  className="cta-highlight inline-flex items-center gap-2 hover-lift"
-                >
-                  Let's Connect
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
-                <a 
-                  href="#resume" 
-                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white rounded-lg transition-all duration-300 hover-lift"
-                >
-                  Download Resume
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
