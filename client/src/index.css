@@ -1057,6 +1057,11 @@
     width: 100%;
     background: linear-gradient(90deg, #2C73D2 0%, #43D8C9 100%);
   }
+  
+  /* Fix for skill card title hover underlines */
+  .group:hover .w-16 > div {
+    transform: translateX(0) !important;
+  }
 
   .professional-experience-header {
     margin-bottom: 2rem;

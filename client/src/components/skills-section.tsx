@@ -243,7 +243,7 @@ const SkillsSection = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-charcoal-black group-hover:text-primary-blue transition-all duration-300">{category.title}</h3>
-                  <div className="w-16 h-1 bg-primary-blue/20 rounded-full mt-1 overflow-hidden">
+                  <div className="w-full h-1 bg-primary-blue/20 rounded-full mt-1 overflow-hidden">
                     <div className="w-full h-full bg-primary-blue rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
                   </div>
                 </div>
