@@ -1183,6 +1183,18 @@
     }
   }
 
+  /* Certification grid layout - final polish */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    justify-items: center;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
   /* Certification card uniformity and hover effects */
   .cert-card {
     min-height: 200px;
@@ -1190,6 +1202,7 @@
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
   }
 
   .cert-card:hover {

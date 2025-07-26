@@ -282,7 +282,7 @@ const SkillsSection = () => {
               <div className="section-underline"></div>
             </h3>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <div className="cert-grid">
             {certifications.map((cert, index) => (
               <div key={index} className={`cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
                 <div className="flex items-start gap-4">
