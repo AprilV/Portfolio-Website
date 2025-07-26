@@ -1183,6 +1183,20 @@
     }
   }
 
+  /* Certification card uniformity and hover effects */
+  .cert-card {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cert-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+
   /* Ensure consistent card heights in grid */
   .project-card {
     height: fit-content;

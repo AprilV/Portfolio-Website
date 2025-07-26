@@ -1,4 +1,4 @@
-import { ClipboardCheck, Code, BarChart3, Award, Shield } from "lucide-react";
+import { ClipboardCheck, Code, BarChart3, Award, Shield, Monitor, Terminal, Network, GraduationCap, Computer } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 
 const SkillsSection = () => {
@@ -106,7 +106,7 @@ const SkillsSection = () => {
       name: "CompTIA Linux+",
       description: "CompTIA Certification (via TestOut)",
       detail: "ID: 6-2C6-VCQ5KS",
-      icon: Shield,
+      icon: Terminal,
       color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-vcq5ks",
       credentialId: "6-2C6-VCQ5KS"
@@ -124,7 +124,7 @@ const SkillsSection = () => {
       name: "CompTIA A+ Client",
       description: "CompTIA A+ Certification (via TestOut)",
       detail: "ID: 6-2c6-v3pmva",
-      icon: Shield,
+      icon: Monitor,
       color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-v3pmva",
       credentialId: "6-2c6-v3pmva"
@@ -133,7 +133,7 @@ const SkillsSection = () => {
       name: "CompTIA A+ PC Pro",
       description: "CompTIA A+ Certification (via TestOut)", 
       detail: "ID: 6-2c6-v3p73s",
-      icon: Shield,
+      icon: Computer,
       color: "primary-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-v3p73s",
       credentialId: "6-2c6-v3p73s"
@@ -142,7 +142,7 @@ const SkillsSection = () => {
       name: "CompTIA Network+",
       description: "CompTIA Network Professional (via TestOut)",
       detail: "ID: 6-2c6-vv5625",
-      icon: Shield,
+      icon: Network,
       color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-vv5625",
       credentialId: "6-2c6-vv5625"
@@ -151,7 +151,7 @@ const SkillsSection = () => {
       name: "BAS-IS Student",
       description: "Olympic College - 3.94 GPA",
       detail: "President's Scholar (8 terms) | Spring 2026",
-      icon: BarChart3,
+      icon: GraduationCap,
       color: "primary-blue",
       link: null,
       credentialId: null
@@ -282,9 +282,9 @@ const SkillsSection = () => {
               <div className="section-underline"></div>
             </h3>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {certifications.map((cert, index) => (
-              <div key={index} className={`modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
+              <div key={index} className={`cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
                 <div className="flex items-start gap-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                     <cert.icon className="w-6 h-6" />
