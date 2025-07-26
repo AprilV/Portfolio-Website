@@ -140,7 +140,7 @@ const SkillsSection = () => {
     {
       name: "BAS-IS Student",
       description: "Olympic College – 3.94 GPA",
-      detail: "President's Scholar (8 terms) | Spring 2026",
+      detail: "President's Scholar (9 terms and counting) | Spring 2026",
       icon: GraduationCap,
       color: "primary-blue",
       link: null,
