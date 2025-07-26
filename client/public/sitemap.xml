@@ -42,4 +42,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://aprilsykes.com/april-sykes-resume.txt</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aprilsykes.com/recruiter-guide.md</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
