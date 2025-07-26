@@ -43,13 +43,13 @@ const ExperienceSection = () => {
       ],
     },
     {
-      title: "Bachelor of Applied Science Student", 
+      title: "Bachelor of Applied Science - Information Services Student", 
       company: "Olympic College",
       period: "Jan 2023 - Present",
       location: "Bremerton, WA", 
       type: "education",
       logo: <OlympicLogo />,
-      description: "Information Systems (BASIS) program with concentration in Project Management. Completing comprehensive PM coursework with academic distinction.",
+      description: "Bachelor of Applied Science - Information Services (BASIS) program with concentration in Project Management. Completing comprehensive PM coursework with academic distinction.",
       achievements: [
         "Project Management I & II Completed with distinction",
         "President's Scholar honors achieved 9 terms and counting during program",
