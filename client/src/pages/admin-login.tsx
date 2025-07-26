@@ -122,9 +122,6 @@ export default function AdminLogin() {
               <strong>Security Notice:</strong> This admin area is protected and monitored. 
               All access attempts are logged for security purposes.
             </p>
-            <p className="text-blue-600 text-xs mt-2">
-              Default password: admin123
-            </p>
           </div>
         </CardContent>
       </Card>
