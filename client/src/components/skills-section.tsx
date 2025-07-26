@@ -151,19 +151,10 @@ const SkillsSection = () => {
     }
   };
 
-  const getExperienceTagClass = (experience: string, columnType: string) => {
-    if (experience === 'In Progress') return 'bg-yellow-100 text-yellow-800 border border-yellow-300';
-    if (experience.includes('Academic') && experience.includes('Years')) {
-      // Dual status - gradient tag
-      return 'bg-gradient-to-r from-blue-100 to-gray-100 text-blue-800 border border-blue-300';
-    }
-    if (experience.includes('Academic')) {
-      return 'bg-blue-100 text-blue-800 border border-blue-300 font-medium';
-    }
-    if (experience.includes('Years')) {
-      return 'bg-gray-100 text-gray-800 border border-gray-300';
-    }
-    return 'bg-gray-100 text-gray-700';
+  const getExperienceTagClass = (experience: string) => {
+    if (experience.includes('Academic')) return 'bg-blue-100 text-blue-800';
+    if (experience.includes('Years')) return 'bg-gray-100 text-gray-800';
+    return 'bg-teal-100 text-teal-800';
   };
 
   return (
@@ -173,9 +164,9 @@ const SkillsSection = () => {
           <div className="hidden md:flex items-center justify-center mb-4">
             <Code className="w-8 h-8 text-primary-blue" />
           </div>
-          <h2 className="text-5xl font-bold text-charcoal-black mb-4">
-            Skills & <span className="text-primary-blue">Competencies</span>
-            <div className="w-32 h-1.5 bg-primary-blue mx-auto mt-3 rounded-full"></div>
+          <h2 className="text-4xl font-bold text-charcoal-black mb-4">
+            Skills & Certifications
+            <div className="w-24 h-1 bg-primary-blue mx-auto mt-2 rounded-full"></div>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive technical expertise and project management capabilities developed through 20+ years of experience and continuous academic advancement
@@ -183,9 +174,12 @@ const SkillsSection = () => {
         </div>
 
         {/* Skills Categories */}
-        <div className="skills-section">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
-            <div key={index} className="skills-column">
+            <div key={index} className={`modern-card-premium hover-glow group animate-fade-in-up ${
+              index === 0 ? 'animation-delay-100' : 
+              index === 1 ? 'animation-delay-200' : 'animation-delay-300'
+            }`}>
               <div className="flex items-start gap-3 mb-6">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center progress-ring ${getColorClass(category.color)}`}>
                   <category.icon className="w-6 h-6" />
@@ -206,7 +200,7 @@ const SkillsSection = () => {
                     <div className="flex justify-between items-start mb-1">
                       <span className="text-sm font-medium text-gray-900">{skill.name}</span>
                       <span className={`badge-modern hover-scale ml-auto ${
-                        skill.experience === 'In Progress' ? 'badge-progress-shimmer' : getExperienceTagClass(skill.experience, category.type)
+                        skill.experience === 'In Progress' ? 'badge-progress-shimmer' : getExperienceTagClass(skill.experience)
                       }`}>
                         {skill.experience}
                       </span>
