@@ -52,7 +52,7 @@ const ExperienceSection = () => {
       description: "Information Systems (BASIS) program with concentration in Project Management. Completing comprehensive PM coursework with academic distinction.",
       achievements: [
         "Project Management I & II Completed with distinction",
-        "President's Scholar honors achieved 9 quarters during program",
+        "President's Scholar honors achieved 9 terms and counting during program",
         "CAPM Exam Preparation scheduled for Summer 2025",
       ],
       highlights: [
@@ -63,8 +63,8 @@ const ExperienceSection = () => {
       techStack: ["Project Management", "Systems Analysis", "Technical Writing", "Business Statistics", "Information Assurance"],
       metrics: [
         { label: "Current GPA", value: "3.94" },
-        { label: "President's Scholar", value: "Every Term" },
-        { label: "Graduation", value: "Spring 2026" },
+        { label: "President's Scholar", value: "9 Terms" },
+        { label: "Graduation", value: "End Spring 2026" },
       ],
     },
     {
