@@ -92,10 +92,10 @@ const ExperienceSection = () => {
       logo: <DellLogo />,
       description: "Led mainframe operations and infrastructure services for Jewish Hospital and KentuckyOne Healthcare through organizational transitions from Perot Systems to Dell Technologies. Promoted to Team Lead with full P&L responsibility for 24/7 operations.",
       achievements: [
-        "Oversaw Tier 2 support and endpoint management for 5,000+ devices across Jewish Hospital, UofL, and affiliated regional healthcare facilities",
-        "Managed 14,000 tape backups with daily, weekly, quarterly, and yearly retention cycles in 24x7 operation environment",
+        "Managed 24x7 operations with 3-shift scheduling and on-call responsibilities for 5,000+ devices across Jewish Hospital, UofL, and affiliated regional healthcare facilities",
+        "Supervised remote staff in India while coordinating US-based teams for continuous healthcare system support",
         "Responsible for PHI (Protected Health Information) security and compliance in healthcare systems",
-        "Coordinated mainframe components for annual disaster recovery operations with 100% success rate",
+        "Managed 14,000 tape backups with daily, weekly, quarterly, and yearly retention cycles",
         "Maintained 99.9% system uptime during three major organizational transitions (Perot→Dell→Wipro)",
       ],
       techStack: ["Mainframes", "PeopleSoft", "SharePoint", "Disaster Recovery", "SLA Management", "Healthcare IT"],
