@@ -98,7 +98,7 @@ const ExperienceSection = () => {
       logo: <DellLogo />,
       description: "Led mainframe operations and infrastructure services for Jewish Hospital and KentuckyOne Healthcare through organizational transitions from Perot Systems to Dell Technologies. Promoted to Team Lead with full P&L responsibility for 24/7 operations.",
       achievements: [
-        "Managed 24x7 operations with 3-shift scheduling and on-call responsibilities for 5,000+ devices across Jewish Hospital, UofL, and affiliated regional healthcare facilities",
+        "Managed 24x7 operations with 3-shift scheduling and on-call responsibilities across Jewish Hospital, UofL, and affiliated regional healthcare facilities",
         "Supervised remote staff in India while coordinating with support teams in Plano, TX for cross-departmental incident resolution",
         "Monitored network, servers, link uptime/downtime, HVAC systems, fire suppression, and water moisture levels while managing datacenter access and visitor logs, escalating issues to high-level support as needed",
         "Authored and maintained thousands of technical documents in both physical binders and SharePoint systems",
@@ -108,7 +108,7 @@ const ExperienceSection = () => {
       ],
       techStack: ["Mainframes", "Network Monitoring", "HVAC Systems", "Fire Suppression", "SharePoint", "Healthcare IT"],
       metrics: [
-        { value: "5,000+", label: "Devices Managed" },
+        { value: "15+", label: "Years Experience" },
         { value: "24x7", label: "Operations" },
         { value: "PHI", label: "Compliance" },
         { value: "Multi-State", label: "Coverage" },

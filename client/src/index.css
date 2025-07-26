@@ -464,7 +464,7 @@
   }
 
   .achievements-section {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem; /* Consistent spacing before tech stack */
   }
 
   .section-title {
@@ -542,8 +542,8 @@
   }
 
   .tech-stack-section {
-    margin-top: 1.5rem;
-    padding-top: 1rem;
+    margin-top: 1.25rem;
+    padding-top: 0.75rem;
     border-top: 1px solid #E0E6ED;
   }
 
@@ -566,7 +566,7 @@
   }
 
   .tech-stack-improved {
-    margin-top: 16px; /* Add breathing room between achievements and tech stack */
+    margin-top: 12px; /* Consistent spacing between achievements and tech stack */
   }
 
   .tech-chip {
@@ -582,9 +582,10 @@
   }
 
   .tech-chip-compact {
-    padding: 0.3rem 0.6rem; /* Reduced padding for less visual weight */
-    font-size: 0.75rem; /* Slightly smaller font */
-    margin: 1px; /* Reduced margin for tighter spacing */
+    padding: 0.25rem 0.5rem; /* Further reduced padding for compact design */
+    font-size: 0.7rem; /* Smaller font to reduce visual weight */
+    margin: 1px; /* Minimal margins for tighter grouping */
+    line-height: 1.2; /* Tighter line height */
   }
 
   .tech-chip:hover {
