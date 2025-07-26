@@ -15,16 +15,16 @@
 - **99.9% uptime** track record for critical infrastructure
 
 ## Target Roles
-- IT Assistant Project Manager
-- Assistant IT Project Manager
-- IT Project Coordinator
+- Assistant Project Manager (IT preferred)
+- Project Coordinator (Technical focus)
+- Junior Project Manager
 - Technical Project Coordinator
-- Junior IT Project Manager
-- IT Intern
-- IT Project Management Intern
-- Technology Intern
-- Systems Administration Intern
-- Infrastructure Support Intern
+- Project Analyst
+- Business Analyst
+- Program Coordinator
+- IT Project Management roles
+- Project Management Intern
+- Business Operations Coordinator
 
 ## Salary Expectations
 - Open to entry-level IT Assistant PM salary ranges
