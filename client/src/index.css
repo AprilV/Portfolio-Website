@@ -1155,6 +1155,27 @@
       padding-top: 0.5rem;
       margin-top: 2rem;
     }
+    
+    /* Skills section mobile improvements */
+    .modern-card-premium {
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Increase touch padding for mobile links */
+    .verify-credential-link {
+      padding: 0.75rem 0.5rem;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    /* Badge wrapping improvements */
+    .badge-modern {
+      flex-wrap: wrap;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   /* Ensure consistent card heights in grid */

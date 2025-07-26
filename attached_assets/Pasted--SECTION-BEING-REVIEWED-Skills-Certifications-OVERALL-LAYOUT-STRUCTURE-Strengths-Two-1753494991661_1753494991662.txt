@@ -1,0 +1,83 @@
+🔎 SECTION BEING REVIEWED:
+“Skills & Certifications”
+
+✅ OVERALL LAYOUT & STRUCTURE
+✔️ Strengths:
+Two-Column Grid: Great split between Project Management Core and Technical Foundation. Maintains clarity and avoids overload.
+
+Consistent Badge Usage: Clean pill-shaped badges (blue, gray, black) communicate role/experience type (e.g., Academic, 20+ Years).
+
+Certifications Below: Well-separated visually. Each entry is clearly labeled, with icon, title, credential link, and description.
+
+⚠️ Suggestions:
+Padding Between Cards (Desktop): Slightly tight vertically. Add ~16–24px more padding between certification cards.
+
+Column Collapse (Mobile): Cards may stack too closely on small screens. Ensure enough vertical spacing + center alignment on collapse.
+
+🎨 COLOR SCHEME
+✔️ Strengths:
+Professional Neutrals: White background, navy header, soft shadows = clean and modern.
+
+Blue Call-to-Actions (CTA): Hyperlinks and badges are styled in bright accessible blue – matches theme well.
+
+Contrast: Good contrast between body text, titles, and badges.
+
+⚠️ Suggestions:
+Badge Color Overlap: Some badge colors (black/gray) look too similar. Consider:
+
+Blue for “Academic”
+
+Dark Gray for “Professional Experience”
+
+Teal for “In Progress” or “Candidate”
+
+Cert Card Borders: Add very light border (#f0f0f0) to separate cards slightly more from background. The shadow alone is subtle.
+
+🧭 NAVIGATION / INTERACTION
+✔️ Strengths:
+Back to Top Arrow: Present, styled correctly, fixed position. Useful given scroll length.
+
+Clickable Credential Links: Clear and consistently marked. Easy to locate.
+
+Consistent Headings/Subheadings: Follows visual hierarchy.
+
+⚠️ Suggestions:
+Section Anchor Link: Consider adding an anchor to this section (e.g., #skills) and link to it from nav.
+
+Hide Icons on Mobile: As you scroll down on mobile, icons (especially header ones) can take up space. Hide them or scale them smaller.
+
+🖼️ ICONS & VISUAL ELEMENTS
+✔️ Strengths:
+Icons are now all Font Awesome, consistently placed.
+
+Grayscale/single-tone is used for most — no clash with theme.
+
+⚠️ Suggestions:
+Cert Icons (fa-certificate, fa-code):
+
+Consider left-aligning icons in line with title, or vertically centering within card top.
+
+Make sure all are 32x32px for uniformity.
+
+📱 RESPONSIVENESS (Mobile/Tablet)
+✔️ Strengths:
+Section appears to be responsive.
+
+Cards collapse as expected into vertical stack.
+
+⚠️ Suggestions:
+Touch Padding: Increase touch area for small links (e.g., “Verify Credential” buttons).
+
+Badge Clarity: On mobile, make sure badges wrap correctly and aren’t cut off.
+
+✅ FINAL VERDICT
+Element	Status	Notes
+Layout Grid	✅ Solid	Two-column desktop / stacked mobile works well
+Typography	✅ Excellent	Clean, readable, properly spaced
+Color Scheme	✅ Mostly Great	Improve badge contrast slightly
+Icons	✅ Working	Just keep them uniform in size and tone
+Mobile Usability	⚠️ Needs Tuning	Adjust spacing and badge wrapping
+Navigation	✅ Back-to-top + nav scroll is functional	
+Certification Cards	✅ Clear	Add light border to help spacing
+CTA Links	✅ Functional	Easy to find, consistent color
+

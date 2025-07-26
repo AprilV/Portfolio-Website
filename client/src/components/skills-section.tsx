@@ -181,26 +181,16 @@ const SkillsSection = () => {
     }
   };
 
-  const getExperienceTagClass = (accent: string) => {
-    switch (accent) {
-      case "primary-blue":
-        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
-      case "teal-blue":
-        return "text-teal-blue bg-teal-blue/10 border border-teal-blue/20";
-      case "navy":
-        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
-      case "accent-blue":
-        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
-      case "success-green":
-        return "text-teal-blue bg-teal-blue/10 border border-teal-blue/20";
-      case "purple-accent":
-        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
-      case "orange-accent":
-        return "text-teal-blue bg-teal-blue/10 border border-teal-blue/20";
-      case "coral":
-        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
-      default:
-        return "text-primary-blue bg-primary-blue/10 border border-primary-blue/20";
+  const getExperienceTagClass = (experience: string) => {
+    // Enhanced badge contrast based on audit recommendations
+    if (experience.includes("Academic")) {
+      return "text-blue-700 bg-blue-100 border border-blue-200"; // Blue for Academic
+    } else if (experience.includes("Years")) {
+      return "text-gray-700 bg-gray-100 border border-gray-200"; // Dark Gray for Professional Experience
+    } else if (experience.includes("Progress")) {
+      return "text-teal-700 bg-teal-100 border border-teal-200"; // Teal for In Progress/Candidate
+    } else {
+      return "text-gray-700 bg-gray-100 border border-gray-200"; // Default to professional gray
     }
   };
 
@@ -266,7 +256,7 @@ const SkillsSection = () => {
                     <div className="flex justify-between items-start mb-1">
                       <span className="text-sm font-medium text-gray-900">{skill.name}</span>
                       <span className={`badge-modern hover-scale ${
-                        skill.experience === 'In Progress' ? 'badge-progress-shimmer' : getExperienceTagClass(skill.accent)
+                        skill.experience === 'In Progress' ? 'badge-progress-shimmer' : getExperienceTagClass(skill.experience)
                       }`}>
                         {skill.experience}
                       </span>
@@ -289,9 +279,9 @@ const SkillsSection = () => {
               <div className="section-underline"></div>
             </h3>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {certifications.map((cert, index) => (
-              <div key={index} className={`modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100}`}>
+              <div key={index} className={`modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
                 <div className="flex items-start gap-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                     <cert.icon className="w-6 h-6" />
@@ -305,7 +295,7 @@ const SkillsSection = () => {
                         href={cert.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-xs text-primary-blue hover:text-primary-blue/80 transition-colors font-medium"
+                        className="verify-credential-link inline-flex items-center text-xs text-primary-blue hover:text-primary-blue/80 transition-colors font-medium"
                       >
                         <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
