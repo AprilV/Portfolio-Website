@@ -268,7 +268,7 @@ const SkillsSection = () => {
             <h3 className="cert-heading">Verified Badges & Education</h3>
             <div className="cert-grid">
               {verifiedBadges.map((cert, index) => (
-                <div key={index} className={`cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
+                <div key={cert.name} className={`cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up animation-delay-${(index % 6 + 1) * 100} border border-gray-100`}>
                   <div className="flex items-start gap-4">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                       <cert.icon className="w-6 h-6" />
