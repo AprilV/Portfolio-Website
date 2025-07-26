@@ -93,7 +93,7 @@ const ExperienceSection = () => {
       description: "Led mainframe operations and infrastructure services for Jewish Hospital and KentuckyOne Healthcare through organizational transitions from Perot Systems to Dell Technologies. Promoted to Team Lead with full P&L responsibility for 24/7 operations.",
       achievements: [
         "Oversaw Tier 2 support and endpoint management for 5,000+ devices across Jewish Hospital, UofL, and affiliated regional healthcare facilities",
-        "Created custom PowerShell scripts for patch automation reducing manual deployment time by 60%",
+        "Applied scripting knowledge gained through college coursework to streamline routine system tasks",
         "Managed 14,000 tape backups with daily, weekly, quarterly, and yearly retention cycles",
         "Led annual disaster recovery operations at off-site New Jersey recovery center with 100% success rate",
         "Maintained 99.9% system uptime during three major organizational transitions (Perot→Dell→Wipro)",
