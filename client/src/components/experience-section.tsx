@@ -100,7 +100,7 @@ const ExperienceSection = () => {
       achievements: [
         "Managed 24x7 operations with 3-shift scheduling and on-call responsibilities for 5,000+ devices across Jewish Hospital, UofL, and affiliated regional healthcare facilities",
         "Supervised remote staff in India while coordinating with support teams in Plano, TX for cross-departmental incident resolution",
-        "Monitored datacenter operations incidents, tickets, and resolutions while managing datacenter access and visitor logs during organizational transition to Dell",
+        "Monitored network, servers, and link uptime/downtime while managing datacenter access and visitor logs, escalating issues to high-level support teams as needed",
         "Authored and maintained thousands of technical documents in both physical binders and SharePoint systems",
         "Responsible for PHI (Protected Health Information) security and compliance in healthcare systems",
         "Maintained 99.9% system uptime during three major organizational transitions (Perot→Dell→Wipro)",
