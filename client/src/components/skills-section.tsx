@@ -162,16 +162,23 @@ const SkillsSection = () => {
     <section id="skills" className="py-20 bg-light-neutral" style={{paddingTop: '80px', paddingBottom: '60px'}}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="professional-experience-header" style={{marginTop: '0'}}>
-            <h2 className="section-header">
-              Skills & Certifications
-              <div className="section-underline"></div>
-            </h2>
-            <p className="section-subtitle">Technical Expertise & Project Management Capabilities</p>
-          </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technical expertise and project management capabilities developed through 20+ years of experience and continuous academic advancement
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="professional-experience-header">
+              <h2 className="section-header">
+                Skills & Certifications
+                <div className="section-underline"></div>
+              </h2>
+              <p className="section-subtitle">Technical Expertise & Project Management Capabilities</p>
+            </div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive technical expertise and project management capabilities developed through 20+ years of experience and continuous academic advancement
+            </p>
+          </motion.div>
         </div>
 
         {/* Skills Categories */}
