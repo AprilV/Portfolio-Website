@@ -413,30 +413,44 @@
 
   .metrics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
     margin-top: 1rem;
+    max-width: 400px;
   }
 
   .metric-card {
     text-align: center;
     background: #F8FAFC;
-    padding: 0.75rem 0.5rem;
-    border-radius: 8px;
+    padding: 0.5rem 0.375rem;
+    border-radius: 6px;
     border: 1px solid #E0E6ED;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .metric-card:hover {
+    background: #F1F5F9;
+    border-color: #2C73D2;
+    transform: translateY(-1px);
   }
 
   .metric-value {
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: #2C73D2;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.125rem;
+    line-height: 1.2;
   }
 
   .metric-label {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: #64748B;
     font-weight: 500;
+    line-height: 1.1;
   }
 
   .experience-content {
@@ -789,6 +803,20 @@
     .metrics-grid {
       grid-template-columns: repeat(2, 1fr);
       justify-self: center;
+      max-width: 300px;
+    }
+    
+    .metric-card {
+      padding: 0.375rem 0.25rem;
+      min-height: 50px;
+    }
+    
+    .metric-value {
+      font-size: 1rem;
+    }
+    
+    .metric-label {
+      font-size: 0.6rem;
     }
 
     .job-meta {
