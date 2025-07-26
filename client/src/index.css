@@ -1302,6 +1302,59 @@
   }
 
   /* Skills section flexbox layout with refined spacing */
+  .skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    margin-bottom: 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skills-column {
+    flex: 1 1 500px;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(44, 115, 210, 0.08);
+    padding: 2rem;
+    border: 1px solid rgba(229, 231, 235, 0.6);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skills-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2C73D2, #43D8C9);
+  }
+
+  .skills-column:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(44, 115, 210, 0.15);
+  }
+
+  @media (max-width: 768px) {
+    .skills-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1rem 0;
+    }
+
+    .skills-column {
+      max-width: 90%;
+    }
+  }
+
   .skills-container {
     display: flex;
     justify-content: center;
