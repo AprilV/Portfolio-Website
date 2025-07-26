@@ -15,21 +15,22 @@
 - **99.9% uptime** track record for critical infrastructure
 
 ## Target Roles
-- IT Project Manager
-- Technical Project Manager
-- Infrastructure Project Manager
-- Systems Project Manager
-- IT Program Manager
-- Senior IT Project Manager
-- Technology Implementation Manager
-- Digital Transformation Project Manager
+- IT Assistant Project Manager
 - Assistant IT Project Manager
 - IT Project Coordinator
+- Technical Project Coordinator
+- Junior IT Project Manager
+- IT Intern
+- IT Project Management Intern
+- Technology Intern
+- Systems Administration Intern
+- Infrastructure Support Intern
 
 ## Salary Expectations
-- Open to discussion based on role responsibilities and location
-- Competitive with market rates for entry-level PM positions
-- Consider total compensation package including benefits
+- Open to entry-level IT Assistant PM salary ranges
+- Competitive with market rates for experienced entry-level candidates
+- Consider total compensation including professional development opportunities
+- Open to unpaid internships for valuable learning experiences
 
 ## Work Preferences  
 - **Location:** Remote, Hybrid, or On-site (Pacific Northwest preferred, local for internships)
@@ -51,11 +52,11 @@
 - **Digital Transformation:** Cloud migrations, legacy system modernization, IT governance
 
 ## Unique Value Proposition
-- **Technical Project Leadership:** 20+ years managing complex IT infrastructure projects
-- **Operational Excellence:** 99.9% uptime for critical enterprise systems and 24x7 operations
-- **IT Project Expertise:** Deep technical knowledge in infrastructure, networks, and enterprise systems
-- **Healthcare IT Experience:** HIPAA compliance, clinical systems, and patient care technology
-- **Cross-functional Coordination:** Bridge between technical teams, vendors, and business stakeholders
+- **Entry-Level with Experience:** 20+ years IT experience brings mature perspective to assistant/intern roles
+- **Immediate Contribution:** Can contribute from day one with minimal training and supervision
+- **Technical Credibility:** Deep IT knowledge provides credibility with technical teams and stakeholders
+- **Professional Reliability:** Proven work ethic and professionalism beyond typical entry-level candidates
+- **Learning Investment:** Actively pursuing formal PM education while bringing real-world experience
 
 ## References
 - Professional references available upon request
