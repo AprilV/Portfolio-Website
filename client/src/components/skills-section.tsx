@@ -127,24 +127,24 @@ const SkillsSection = () => {
     {
       name: "CompTIA Network+",
       description: "",
-      detail: "TestOut ID: 6-2c6-v3p5l9",
+      detail: "TestOut ID: 6-2c6-vw5625",
       icon: Network,
       color: "teal-blue",
-      link: "https://certification.testout.com/verifycert/6-2c6-v3p5l9", 
-      credentialId: "6-2c6-v3p5l9"
+      link: "https://certification.testout.com/verifycert/6-2c6-vw5625", 
+      credentialId: "6-2c6-vw5625"
     }
   ];
 
   // Academic Recognition (1 certification)
   const academicRecognition = [
     {
-      name: "BAS-Information Systems",
-      description: "Olympic College",
-      detail: "Expected: June 2025 (Current GPA: 3.95/4.0)",
+      name: "BAS-IS Student",
+      description: "Olympic College – 3.94 GPA",
+      detail: "President's Scholar (8 terms) | Spring 2026",
       icon: GraduationCap,
       color: "primary-blue",
       link: null,
-      credentialId: "Magna Cum Laude Track"
+      credentialId: "President's Scholar"
     }
   ];
 
