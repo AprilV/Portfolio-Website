@@ -14,21 +14,6 @@ const SkillsSection = () => {
         { name: "Team Leadership", experience: "18+ Years", description: "Led 12-person teams at Dell Technologies", accent: "teal-blue" },
         { name: "Stakeholder Communication", experience: "20+ Years + Academic", description: "Professional experience + CMST 242 Organizational Comm (4.0)", accent: "primary-blue" },
         { name: "Project Documentation", experience: "20+ Years + Academic", description: "SOPs/procedures + ENGL& 235 Technical Writing (4.0)", accent: "teal-blue" },
-        { name: "Risk Management", experience: "Academic", description: "Project Management I & II coursework", accent: "primary-blue" },
-        { name: "Agile Methodologies", experience: "Academic + Projects", description: "Coursework & capstone implementation", accent: "teal-blue" },
-      ],
-    },
-    {
-      title: "Business & Operations",
-      icon: BarChart3,
-      color: "teal-blue",
-      skills: [
-        { name: "Information Systems Integration", experience: "Academic + Professional", description: "IS 302 (4.0 GPA) + Top LinkedIn skill", accent: "primary-blue" },
-        { name: "Digital Leadership", experience: "Academic", description: "IS 320 - Leading in the Digital World (4.0 GPA)", accent: "teal-blue" },
-        { name: "Business Analysis", experience: "Academic", description: "BUS 215 Business Statistics (3.7) + BUS& 101 Intro (4.0)", accent: "primary-blue" },
-        { name: "Process Improvement", experience: "20+ Years", description: "Operational efficiency and system optimization", accent: "teal-blue" },
-        { name: "Research & Analysis", experience: "Academic", description: "IS 390 - Reading and Research (4.0 GPA)", accent: "primary-blue" },
-        { name: "Cross-functional Coordination", experience: "20+ Years", description: "Multi-departmental project coordination", accent: "teal-blue" },
       ],
     },
     {
@@ -187,7 +172,7 @@ const SkillsSection = () => {
         </div>
 
         {/* Skills Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
             <div key={index} className={`modern-card-premium hover-glow group animate-fade-in-up ${
               index === 0 ? 'animation-delay-100' : 
