@@ -1193,42 +1193,42 @@
     justify-content: space-between;
   }
 
-  /* Skills section two-column layout with controlled gap */
-  .skills-columns-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  /* Skills section flexbox layout with controlled gap */
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(2rem, 5vw, 64px);
+    flex-wrap: wrap;
+    padding: 2rem 0;
   }
 
-  /* Hide the middle (Business & Operations) column on desktop for two-column layout */
-  .skills-columns-layout > div:nth-child(2) {
+  .skills-container > div {
+    flex: 1 1 420px;
+    max-width: 480px;
+    min-width: 320px;
+  }
+
+  /* Hide the middle (Business & Operations) column for two-column layout */
+  .skills-container > div:nth-child(2) {
     display: none;
   }
 
-  /* Ensure Project Management and Technical Foundation are side by side */
-  .skills-columns-layout > div:first-child {
-    grid-column: 1;
-  }
-
-  .skills-columns-layout > div:last-child {
-    grid-column: 3;
-  }
-
   @media (max-width: 1024px) {
-    .skills-columns-layout {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+    .skills-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
     }
     
     /* Show all columns on mobile/tablet */
-    .skills-columns-layout > div:nth-child(2) {
+    .skills-container > div:nth-child(2) {
       display: block;
     }
     
-    .skills-columns-layout > div {
-      grid-column: 1 !important;
+    .skills-container > div {
+      max-width: 100%;
+      width: 100%;
     }
   }
 
