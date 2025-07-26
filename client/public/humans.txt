@@ -1,0 +1,19 @@
+# humanstxt.org
+
+/* TEAM */
+Developer: April V. Sykes
+Role: Full-Stack Developer & Project Manager
+Contact: april_sykes@proton.me
+Location: Pacific Northwest, USA
+
+/* SITE */
+Site Name: April V. Sykes - Professional Portfolio
+Standards: HTML5, CSS3, JavaScript, TypeScript, React
+Components: Tailwind CSS, shadcn/ui
+Software: VS Code, Git, Node.js, PostgreSQL
+Domain: aprilsykes.com
+
+/* THANKS */
+Built with modern web technologies
+Optimized for accessibility and performance
+Designed for professional networking and career development

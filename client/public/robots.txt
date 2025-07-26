@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/admin/
+
+# Important pages for search engines
+Allow: /#about
+Allow: /#experience
+Allow: /#projects
+Allow: /#skills
+Allow: /#resume
+Allow: /#contact
+
+# Sitemap location
+Sitemap: https://aprilsykes.com/sitemap.xml
+
+# Crawl delay (be respectful)
+Crawl-delay: 1

@@ -21,20 +21,34 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden bg-hero-gradient">
+    <section 
+      id="hero" 
+      className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden bg-hero-gradient"
+      itemScope 
+      itemType="https://schema.org/Person"
+    >
       <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-transparent to-teal-blue/5"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center justify-center">
           <div className="space-y-8 animate-slide-in-left">
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-charcoal-black leading-tight">
+              <h1 
+                className="text-3xl sm:text-4xl lg:text-6xl font-bold text-charcoal-black leading-tight"
+                itemProp="name"
+              >
                 April V. Sykes
               </h1>
-              <h2 className="text-lg sm:text-xl lg:text-2xl text-teal-blue font-semibold">
+              <h2 
+                className="text-lg sm:text-xl lg:text-2xl text-teal-blue font-semibold"
+                itemProp="jobTitle"
+              >
                 Aspiring Assistant Project Manager | Senior BAS-IS Student | CAPM Candidate (2025)
               </h2>
-              <p className="text-base sm:text-lg text-cool-gray max-w-xl leading-relaxed">
+              <p 
+                className="text-base sm:text-lg text-cool-gray max-w-xl leading-relaxed"
+                itemProp="description"
+              >
                 Two decades of progressive leadership experience in IT infrastructure, team management, and project coordination, 
                 now transitioning into formal project management. Combining deep operational knowledge with formal 
                 project leadership training and modern technical tools.

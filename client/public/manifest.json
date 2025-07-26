@@ -1,0 +1,20 @@
+{
+  "name": "April V. Sykes - Professional Portfolio",
+  "short_name": "April Sykes Portfolio",
+  "description": "Professional portfolio of April V. Sykes, Assistant Project Manager and IT Professional with 20+ years experience",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2C73D2",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["business", "productivity", "professional"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
