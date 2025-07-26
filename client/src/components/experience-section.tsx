@@ -214,7 +214,7 @@ const ExperienceSection = () => {
                   <div className="achievements-section">
                     <h4 className="section-title">
                       <Target className="h-4 w-4" />
-                      Key Responsibilities & Achievements
+                      {exp.type === "education" ? "Program Highlights" : "Key Responsibilities & Achievements"}
                     </h4>
                     <ul className="responsibilities">
                       {exp.achievements.map((achievement, idx) => (
@@ -249,9 +249,9 @@ const ExperienceSection = () => {
                           Key Technologies & Skills
                         </span>
                       </h5>
-                      <div className="tech-stack">
+                      <div className="tech-stack tech-stack-improved">
                         {exp.techStack.map((tech, idx) => (
-                          <span key={idx} className="tech-chip">
+                          <span key={idx} className="tech-chip tech-chip-compact">
                             {tech}
                           </span>
                         ))}

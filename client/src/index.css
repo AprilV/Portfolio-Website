@@ -565,6 +565,10 @@
     gap: 0.5rem;
   }
 
+  .tech-stack-improved {
+    margin-top: 16px; /* Add breathing room between achievements and tech stack */
+  }
+
   .tech-chip {
     display: inline-block;
     background: #E6F0FA;
@@ -575,6 +579,12 @@
     font-weight: 500;
     border: 1px solid #B3D4F1;
     transition: all 0.2s ease;
+  }
+
+  .tech-chip-compact {
+    padding: 0.3rem 0.6rem; /* Reduced padding for less visual weight */
+    font-size: 0.75rem; /* Slightly smaller font */
+    margin: 1px; /* Reduced margin for tighter spacing */
   }
 
   .tech-chip:hover {
