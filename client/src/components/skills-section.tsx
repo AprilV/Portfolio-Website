@@ -277,7 +277,7 @@ const SkillsSection = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/3 via-teal-blue/2 to-primary-blue/3"></div>
           <div className="relative">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-charcoal-black mb-4 relative inline-block">
+            <h3 className="section-header text-2xl">
               Certifications & Education
               <div className="section-underline"></div>
             </h3>
