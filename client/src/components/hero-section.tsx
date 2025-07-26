@@ -1,4 +1,4 @@
-import { ArrowRight, Download, CheckCircle, GraduationCap, Briefcase, Users } from "lucide-react";
+import { ArrowRight, Download, CheckCircle, GraduationCap, Briefcase, Users, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePhoto from "@assets/april_sykes_profile.jpg";
 
@@ -108,6 +108,21 @@ const HeroSection = () => {
                 <Download className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-0.5" />
                 Download Resume
               </Button>
+            </div>
+            
+            {/* Professional LinkedIn Link */}
+            <div className="flex items-center gap-4 pt-4">
+              <span className="text-sm text-cool-gray font-medium">Connect with me:</span>
+              <a 
+                href="https://www.linkedin.com/in/aprilsykes" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 text-primary-blue hover:text-primary-blue-hover border border-primary-blue/30 hover:border-primary-blue rounded-lg transition-all duration-300 hover:shadow-md transform hover:scale-105"
+                aria-label="Connect with April V. Sykes on LinkedIn"
+              >
+                <Linkedin className="h-4 w-4" />
+                <span className="font-medium">LinkedIn</span>
+              </a>
             </div>
           </div>
           
