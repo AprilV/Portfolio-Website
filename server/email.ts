@@ -161,7 +161,7 @@ export async function sendAutoReply(contactData: ContactEmailParams): Promise<bo
             <h3 style="color: #2C73D2; margin: 0 0 10px 0;">Quick About Me:</h3>
             <ul style="color: #333; margin: 0; padding-left: 20px;">
               <li>20+ years IT infrastructure experience</li>
-              <li>Currently pursuing CAMP certification</li>
+              <li>Currently pursuing CAPM certification</li>
               <li>Bachelor's in Information Systems (3.94 GPA)</li>
               <li>Team leadership experience at Dell Technologies</li>
             </ul>

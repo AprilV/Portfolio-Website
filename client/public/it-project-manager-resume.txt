@@ -8,7 +8,7 @@ Location: Pacific Northwest, Washington State
 Availability: Immediate
 
 PROFESSIONAL SUMMARY
-Experienced IT Project Manager with 20+ years in infrastructure management, technical team leadership, and enterprise system operations. CAMP candidate 2025, BAS-IS student (3.94 GPA), specializing in technical project delivery, IT operations, and cross-functional team coordination for mission-critical systems.
+Experienced IT Project Manager with 20+ years in infrastructure management, technical team leadership, and enterprise system operations. CAPM candidate 2025, BAS-IS student (3.94 GPA), specializing in technical project delivery, IT operations, and cross-functional team coordination for mission-critical systems.
 
 CORE IT PROJECT MANAGEMENT COMPETENCIES
 • Technical Project Planning & Execution
@@ -36,7 +36,7 @@ EDUCATION & CERTIFICATIONS
 Bachelor of Applied Science in Information Systems
 Olympic College | Current GPA: 3.94 | Expected 2025
 
-• CAMP (Certified Associate in Project Management) - In Progress 2025
+• CAPM (Certified Associate in Project Management) - In Progress 2025
 • Multiple Cisco CCNA Certifications (Verified)
 • TestOut PC Pro, Network Pro, Linux Pro Certifications
 • CompTIA A+ Certified Professional

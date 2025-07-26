@@ -8,7 +8,7 @@
 
 ## Key Qualifications Summary
 - **20+ years** IT infrastructure and team leadership experience
-- **CAMP Candidate 2025** (Project Management Institute certification)
+- **CAPM Candidate 2025** (Project Management Institute certification)
 - **BAS-IS Student** with 3.94 GPA (Expected graduation 2025)
 - **8+ direct reports** team leadership experience
 - **24x7 operations** management for enterprise healthcare systems
