@@ -1194,13 +1194,13 @@
   .cert-heading {
     font-size: 1.4rem;
     font-weight: 600;
-    margin: 1.5rem 0 0.75rem 0;
+    margin: 1.5rem auto 0.75rem auto;
     border-bottom: 2px solid #2C73D2;
-    display: inline-block;
+    display: block;
     color: #1E1E1E;
     padding-bottom: 0.25rem;
-    text-align: left;
-    width: auto;
+    text-align: center;
+    width: fit-content;
   }
 
   .cert-heading:first-of-type {
