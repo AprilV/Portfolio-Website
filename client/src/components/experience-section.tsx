@@ -32,7 +32,7 @@ const ExperienceSection = () => {
         "Provided comprehensive IT support and troubleshooting for 1,200+ campus users across 5 academic buildings",
         "Improved ticket resolution time by 25% through systematic troubleshooting across multi-building network", 
         "Coordinated with faculty and staff on incident resolution, reducing response time by 30%",
-        "Created technical documentation adopted across 5 academic departments to reduce support call volume",
+        "Provided technical support and troubleshooting assistance to faculty and staff across campus",
       ],
       techStack: ["Windows Server", "Active Directory", "Cisco Networking", "ServiceDesk", "Documentation"],
       metrics: [
