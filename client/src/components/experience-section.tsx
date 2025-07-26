@@ -29,10 +29,10 @@ const ExperienceSection = () => {
       logo: <OlympicLogo />,
       description: "Provided comprehensive IT support across campus systems while pursuing education. Strengthened communication and coordination skills in project-based environments.",
       achievements: [
-        "Provided comprehensive IT support and troubleshooting for 1,200+ campus users across 5 academic buildings",
-        "Improved ticket resolution time by 25% through systematic troubleshooting across multi-building network", 
-        "Coordinated with faculty and staff on incident resolution, reducing response time by 30%",
-        "Provided technical support and troubleshooting assistance to faculty and staff across campus",
+        "Repaired and maintained classroom PCs across 5 academic buildings supporting 1,200+ campus users",
+        "Installed new computer systems and hardware in classrooms and faculty offices", 
+        "Performed cable installation and network infrastructure setup in academic facilities",
+        "Provided hands-on technical support and hardware troubleshooting for faculty and staff",
       ],
       techStack: ["Windows Server", "Active Directory", "Cisco Networking", "ServiceDesk", "Documentation"],
       metrics: [
