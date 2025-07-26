@@ -50,7 +50,7 @@ const ExperienceSection = () => {
         "CAPM Exam Preparation scheduled for Summer 2025",
       ],
       highlights: [
-        "Maintained 3.94 GPA while working full-time in IT support",
+        "Maintained 3.94 GPA while working part-time in IT support",
         "Built TimelyRx medication reminder app using modern development practices",
         "Developed PMP exam simulator implementing Agile methodologies",
       ],
