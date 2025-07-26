@@ -1,9 +1,29 @@
-import { Clock, Code, Users, ExternalLink, FileText } from "lucide-react";
+import { Clock, Code, Users, ExternalLink, FileText, ChevronDown, ChevronUp } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState } from "react";
 
 const ProjectsSection = () => {
+  const [expandedCards, setExpandedCards] = useState<number[]>([]);
+
+  const toggleExpanded = (index: number) => {
+    setExpandedCards(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
+  const truncateDescription = (description: string, maxLines: number = 3) => {
+    const words = description.split(' ');
+    const wordsPerLine = 12; // Approximate words per line
+    const maxWords = maxLines * wordsPerLine;
+    
+    if (words.length <= maxWords) return description;
+    
+    return words.slice(0, maxWords).join(' ') + '...';
+  };
   const projects = [
     {
       title: "Personal Portfolio Website",
@@ -108,26 +128,48 @@ const ProjectsSection = () => {
           <p className="text-xl text-muted-foreground mt-6">Four comprehensive capstone projects demonstrating technical skills and project management capabilities across multiple disciplines</p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8 scroll-snap-x lg:grid">
-          {projects.map((project, index) => (
-            <Card key={index} className={`professional-card glassmorphism border-0 shadow-lg group animate-slide-in-bottom ${
+        <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {projects.map((project, index) => {
+            const isExpanded = expandedCards.includes(index);
+            return (
+            <Card key={index} className={`professional-card glassmorphism border-0 shadow-lg group animate-slide-in-bottom h-fit ${
               index === 0 ? 'animation-delay-100' : 
-              index === 1 ? 'animation-delay-200' : 'animation-delay-300'
+              index === 1 ? 'animation-delay-200' : 
+              index === 2 ? 'animation-delay-300' : 'animation-delay-400'
             }`}>
               <CardHeader className="pb-4">
-                <div className={`h-48 bg-gradient-to-br ${getColorClasses(project.color)} flex items-center justify-center rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300`}>
+                <div className={`h-32 bg-gradient-to-br ${getColorClasses(project.color)} flex items-center justify-center rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300`}>
                   <div className="text-center">
-                    <div className={`w-16 h-16 ${project.color === 'success-green' || project.color === 'orange-accent' ? 'bg-teal-blue/20' : 'bg-primary-blue/20'} rounded-xl flex items-center justify-center mx-auto mb-3`}>
-                      <project.icon className="w-8 h-8" />
+                    <div className={`w-12 h-12 ${project.color === 'success-green' || project.color === 'orange-accent' ? 'bg-teal-blue/20' : 'bg-primary-blue/20'} rounded-xl flex items-center justify-center mx-auto mb-2`}>
+                      <project.icon className="w-6 h-6" />
                     </div>
-                    <p className="text-sm text-muted-foreground">{project.title.split(' ')[0]} Interface</p>
                   </div>
                 </div>
-                <CardTitle className="text-xl font-bold text-card-foreground">{project.title}</CardTitle>
-                <CardDescription className="text-muted-foreground">{project.description}</CardDescription>
+                <CardTitle className="text-lg font-bold text-card-foreground mb-3">{project.title}</CardTitle>
+                <CardDescription className="text-muted-foreground text-sm leading-relaxed">
+                  {isExpanded ? project.description : truncateDescription(project.description)}
+                  {project.description.split(' ').length > 36 && (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => toggleExpanded(index)}
+                      className="ml-2 p-0 h-auto text-primary-blue hover:text-primary-blue/80 font-medium"
+                    >
+                      {isExpanded ? (
+                        <>
+                          Show less <ChevronUp className="ml-1 h-3 w-3" />
+                        </>
+                      ) : (
+                        <>
+                          Read more <ChevronDown className="ml-1 h-3 w-3" />
+                        </>
+                      )}
+                    </Button>
+                  )}
+                </CardDescription>
               </CardHeader>
               
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-4">
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <Badge key={techIndex} variant={getBadgeVariant(tech)} className="text-xs">
@@ -136,13 +178,18 @@ const ProjectsSection = () => {
                   ))}
                 </div>
                 
-                <div className="space-y-2">
-                  {project.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-2 text-sm">
-                      <div className="w-2 h-2 bg-teal-blue rounded-full flex-shrink-0"></div>
-                      <span className="text-card-foreground">{feature}</span>
+                <div className="space-y-1.5">
+                  {project.features.slice(0, isExpanded ? project.features.length : 3).map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-start gap-2 text-sm">
+                      <div className="w-1.5 h-1.5 bg-teal-blue rounded-full flex-shrink-0 mt-2"></div>
+                      <span className="text-card-foreground leading-tight">{feature}</span>
                     </div>
                   ))}
+                  {project.features.length > 3 && !isExpanded && (
+                    <div className="text-xs text-muted-foreground ml-4">
+                      +{project.features.length - 3} more features
+                    </div>
+                  )}
                 </div>
                 
                 {project.link !== "#" ? (
@@ -235,7 +282,8 @@ const ProjectsSection = () => {
                 )}
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
