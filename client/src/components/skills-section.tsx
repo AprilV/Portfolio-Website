@@ -242,9 +242,11 @@ const SkillsSection = () => {
                   <category.icon className="w-6 h-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-charcoal-black group-hover:text-primary-blue transition-all duration-300">{category.title}</h3>
-                  <div className="w-full h-1 bg-primary-blue/20 rounded-full mt-1 overflow-hidden">
-                    <div className="w-full h-full bg-primary-blue rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                  <div className="inline-block">
+                    <h3 className="text-xl font-bold text-charcoal-black group-hover:text-primary-blue transition-all duration-300">{category.title}</h3>
+                    <div className="w-full h-1 bg-primary-blue/20 rounded-full mt-1 overflow-hidden">
+                      <div className="w-full h-full bg-primary-blue rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                    </div>
                   </div>
                 </div>
               </div>
