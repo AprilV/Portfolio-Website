@@ -6,6 +6,7 @@ import { z } from "zod";
 import { sendContactNotification, sendAutoReply } from "./email";
 import { logContactSubmission, getContactLogPath } from "./contact-log";
 import { createContactAlert } from "./alternative-notification";
+import { notifications } from "./notifications";
 import { 
   contactFormLimiter, 
   adminLimiter, 
@@ -89,55 +90,38 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const contactData = insertContactSchema.parse(sanitizedFields);
       const submission = await storage.createContactSubmission(contactData);
       
-      // Send email notifications
-      const emailPromises = [
+      // Update analytics for engagement tracking
+      const today = new Date().toISOString().split('T')[0];
+      const companies = [contactData.company].filter(Boolean);
+      
+      // Enhanced notification system
+      Promise.all([
+        // Update daily analytics
+        storage.createOrUpdateAnalytics(today, 1, companies),
+        
+        // Send all new notifications (auto-responder, Slack, SMS)
+        notifications.sendAllAlerts(submission),
+        
+        // Legacy email notifications (backup)
         sendContactNotification({
           name: contactData.name,
           email: contactData.email,
           company: contactData.company || undefined,
           message: contactData.message
-        }), // Email to April
-        sendAutoReply({
+        }),
+        
+        // File-based backup alert system
+        createContactAlert({
+          id: submission.id,
           name: contactData.name,
           email: contactData.email,
-          company: contactData.company || undefined,
+          company: contactData.company,
           message: contactData.message
-        }) // Auto-reply to sender
-      ];
+        })
+      ]).catch(console.error);
       
-      // Create immediate file-based alert system as backup
-      createContactAlert({
-        id: submission.id,
-        name: contactData.name,
-        email: contactData.email,
-        company: contactData.company,
-        message: contactData.message
-      });
-      
-      // Don't wait for emails to complete - send response immediately
-      Promise.all(emailPromises).then(([notificationSent, autoReplySent]) => {
-        // Log submission to file for backup notification
-        logContactSubmission(submission.id, contactData, notificationSent, 'sendgrid-id-placeholder');
-        
-        if (notificationSent) {
-          console.log("✅ Contact notification email sent successfully");
-          console.log(`📧 If email not received, check log file: ${getContactLogPath()}`);
-        } else {
-          console.log("❌ Contact notification email failed or disabled");
-          console.log("📁 Check NEW_CONTACT_ALERT.txt file for contact details!");
-        }
-        
-        if (autoReplySent) {
-          console.log("✅ Auto-reply email sent successfully");
-        } else {
-          console.log("❌ Auto-reply email failed or disabled");
-        }
-      }).catch(error => {
-        console.error("❌ Email sending error:", error);
-        // Still log the submission even if email fails
-        logContactSubmission(submission.id, contactData, false);
-        console.log("📁 Contact details saved in NEW_CONTACT_ALERT.txt file!");
-      });
+      // Log submission for backup
+      logContactSubmission(submission.id, contactData, true, 'enhanced-notification-system');
       
       res.json({ 
         success: true, 
@@ -205,6 +189,92 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: false, 
         message: "Error deleting contact" 
       });
+    }
+  });
+
+  // Analytics API routes
+  app.get("/api/admin/analytics", adminAuth, async (req, res) => {
+    try {
+      const days = parseInt(req.query.days as string) || 30;
+      const analytics = await storage.getAnalytics(days);
+      const dailyCounts = await storage.getDailyContactCounts(days);
+      
+      res.json({
+        success: true,
+        analytics,
+        dailyCounts,
+        summary: {
+          totalContacts: dailyCounts.reduce((sum, day) => sum + day.count, 0),
+          averageDaily: dailyCounts.length > 0 ? 
+            (dailyCounts.reduce((sum, day) => sum + day.count, 0) / dailyCounts.length).toFixed(1) : 0,
+          topCompanies: analytics.length > 0 ? analytics[0].topCompanies : []
+        }
+      });
+    } catch (error) {
+      console.error("Analytics fetch error:", error);
+      res.status(500).json({ success: false, message: "Failed to fetch analytics" });
+    }
+  });
+
+  // Authentication logs API route
+  app.get("/api/admin/auth-logs", adminAuth, async (req, res) => {
+    try {
+      const limit = parseInt(req.query.limit as string) || 100;
+      const hours = parseInt(req.query.hours as string) || 24;
+      
+      const logs = req.query.recent === 'true' 
+        ? await storage.getRecentAuthLogs(hours)
+        : await storage.getAuthLogs(limit);
+      
+      res.json({
+        success: true,
+        logs,
+        summary: {
+          total: logs.length,
+          successful: logs.filter(log => log.success).length,
+          failed: logs.filter(log => !log.success).length,
+          uniqueIPs: [...new Set(logs.map(log => log.ipAddress))].length
+        }
+      });
+    } catch (error) {
+      console.error("Auth logs fetch error:", error);
+      res.status(500).json({ success: false, message: "Failed to fetch auth logs" });
+    }
+  });
+
+  // Alert settings API routes
+  app.get("/api/admin/alert-settings", adminAuth, async (req, res) => {
+    try {
+      const settings = await storage.getAlertSettings();
+      res.json({
+        success: true,
+        settings: settings || {
+          emailAlerts: true,
+          slackWebhook: "",
+          smsAlerts: false,
+          twilioSid: "",
+          twilioToken: "",
+          twilioPhone: "",
+          alertPhone: ""
+        }
+      });
+    } catch (error) {
+      console.error("Alert settings fetch error:", error);
+      res.status(500).json({ success: false, message: "Failed to fetch alert settings" });
+    }
+  });
+
+  app.post("/api/admin/alert-settings", adminAuth, async (req, res) => {
+    try {
+      const settings = await storage.updateAlertSettings(req.body);
+      res.json({
+        success: true,
+        message: "Alert settings updated successfully",
+        settings
+      });
+    } catch (error) {
+      console.error("Alert settings update error:", error);
+      res.status(500).json({ success: false, message: "Failed to update alert settings" });
     }
   });
 
