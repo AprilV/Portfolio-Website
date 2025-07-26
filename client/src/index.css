@@ -1138,6 +1138,17 @@
       grid-template-columns: 1fr;
       gap: 1rem;
     }
+    
+    /* Hide section icons on mobile for cleaner vertical space */
+    .professional-experience-header::before {
+      display: none;
+    }
+    
+    /* Reduce top border padding on mobile without icon */
+    .professional-experience-header {
+      padding-top: 0.5rem;
+      margin-top: 2rem;
+    }
   }
 
   /* Ensure consistent card heights in grid */
