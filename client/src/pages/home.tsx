@@ -7,10 +7,21 @@ import SkillsSection from "@/components/skills-section";
 import ATSResumeGenerator from "@/components/ats-resume-generator";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
+import TableOfContents from "@/components/table-of-contents";
 const Home = () => {
+  const portfolioSections = [
+    { id: 'about', label: 'About Me' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'ats-resume', label: 'Resume' },
+    { id: 'contact', label: 'Contact' },
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
+      <TableOfContents sections={portfolioSections} />
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
