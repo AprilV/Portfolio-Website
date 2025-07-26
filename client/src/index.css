@@ -1183,20 +1183,21 @@
     }
   }
 
-  /* Certification grid layout - final polish */
+  /* Certification flexbox layout - even distribution */
   .cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
-    justify-items: center;
     padding: 1rem 1.5rem;
   }
 
   /* Certification card uniformity and hover effects */
   .cert-card {
     min-height: 200px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
