@@ -1865,3 +1865,45 @@
     transform: translateY(-2px);
     box-shadow: var(--glow-blue);
   }
+
+  /* Enhanced Contact Section Accessibility */
+  .contact-label {
+    color: #1E1E1E;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .enhanced-subheader {
+    color: #2C73D2 !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+  }
+
+  .professional-status-item {
+    color: #1E1E1E;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .professional-status-item strong {
+    color: #2C73D2;
+    font-weight: 600;
+  }
+
+  /* Enhanced Form Focus States */
+  input:focus, 
+  textarea:focus, 
+  .focus\:ring-2:focus {
+    outline: 2px solid #2C73D2;
+    outline-offset: 2px;
+    background-color: #f4faff;
+    border-color: #2C73D2;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #2C73D2;
+    outline-offset: 2px;
+  }

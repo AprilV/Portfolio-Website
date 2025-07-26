@@ -82,8 +82,9 @@ const ContactSection = () => {
     },
     onSuccess: (data) => {
       toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "✅ Message sent successfully!",
+        description: "Thank you for reaching out. I typically respond within 24 hours and look forward to connecting!",
+        className: "bg-green-50 border-green-200 text-green-800"
       });
       setFormData({ name: "", email: "", company: "", message: "", captchaAnswer: "" });
       setCaptcha(generateCaptcha()); // Generate new CAPTCHA
@@ -184,7 +185,7 @@ const ContactSection = () => {
               Let's Connect
               <div className="section-underline"></div>
             </h2>
-            <p className="section-subtitle">Professional Networking & Opportunities</p>
+            <p className="section-subtitle enhanced-subheader">Professional Networking & Opportunities</p>
           </div>
           <p className="text-xl text-gray-600 mt-6">Ready to bring technical expertise and project management skills to your team</p>
         </div>
@@ -201,7 +202,7 @@ const ContactSection = () => {
                       <info.icon className="w-6 h-6 text-primary-blue" />
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">{info.label}</p>
+                      <p className="contact-label">{info.label}</p>
                       {info.link ? (
                         <a 
                           href={info.link}
@@ -224,15 +225,15 @@ const ContactSection = () => {
             <div className="professional-card p-6">
               <h4 className="font-semibold text-gray-900 mb-4">Professional Status</h4>
               <div className="space-y-3">
-                {professionalStatus.map((status, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div className={`w-3 h-3 rounded-full ${
-                      index === 0 ? 'bg-teal-blue' : 
-                      index === 1 ? 'bg-primary-blue' : 'bg-primary-blue'
-                    }`}></div>
-                    <span className="text-gray-700">{status}</span>
-                  </div>
-                ))}
+                <p className="professional-status-item">
+                  <strong>Seeking:</strong> Technical project coordinator positions
+                </p>
+                <p className="professional-status-item">
+                  <strong>Availability:</strong> Open to contract and full-time opportunities
+                </p>
+                <p className="professional-status-item">
+                  <strong>Start Date:</strong> Available for immediate start
+                </p>
               </div>
             </div>
           </div>
