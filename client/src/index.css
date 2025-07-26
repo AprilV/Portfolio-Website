@@ -1094,7 +1094,7 @@
     content: '⚡';
   }
 
-  #ats-resume .professional-experience-header::before {
+  #resume .professional-experience-header::before {
     content: '📄';
   }
 

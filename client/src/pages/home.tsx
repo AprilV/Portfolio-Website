@@ -14,7 +14,7 @@ const Home = () => {
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
-    { id: 'ats-resume', label: 'Resume' },
+    { id: 'resume', label: 'Resume' },
     { id: 'contact', label: 'Contact' },
   ];
 
