@@ -1194,7 +1194,7 @@
   .cert-heading {
     font-size: 1.4rem;
     font-weight: 600;
-    margin: 2rem 0 1rem 0;
+    margin: 1.5rem 0 0.75rem 0;
     border-bottom: 2px solid #2C73D2;
     display: inline-block;
     color: #1E1E1E;
@@ -1208,8 +1208,8 @@
   }
 
   .cert-heading + .cert-grid {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid #E5E7EB;
   }
 
@@ -1221,8 +1221,8 @@
   .cert-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
     width: 100%;
   }
   
@@ -1273,11 +1273,12 @@
 
   /* Certification card uniformity and hover effects */
   .cert-card {
-    min-height: 200px;
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 1rem;
   }
 
   .cert-card:hover {
