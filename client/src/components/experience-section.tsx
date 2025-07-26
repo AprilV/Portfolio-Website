@@ -35,6 +35,12 @@ const ExperienceSection = () => {
         "Created technical documentation adopted across 5 academic departments to reduce support call volume",
       ],
       techStack: ["Windows Server", "Active Directory", "Cisco Networking", "ServiceDesk", "Documentation"],
+      metrics: [
+        { value: "1,200+", label: "Campus Users" },
+        { value: "25%", label: "Faster Resolution" },
+        { value: "5", label: "Academic Buildings" },
+        { value: "30%", label: "Response Time" },
+      ],
     },
     {
       title: "Bachelor of Applied Science Student", 
@@ -100,6 +106,12 @@ const ExperienceSection = () => {
         "Maintained 99.9% system uptime during three major organizational transitions (Perot→Dell→Wipro)",
       ],
       techStack: ["Mainframes", "PeopleSoft", "SharePoint", "Disaster Recovery", "SLA Management", "Healthcare IT"],
+      metrics: [
+        { value: "5,000+", label: "Devices Managed" },
+        { value: "24x7", label: "Operations" },
+        { value: "PHI", label: "Compliance" },
+        { value: "Multi-State", label: "Coverage" },
+      ],
     },
   ];
 
