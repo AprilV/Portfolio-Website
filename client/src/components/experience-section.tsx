@@ -74,11 +74,11 @@ const ExperienceSection = () => {
       location: "Louisville, KY",
       type: "work",
       logo: <DellLogo />,
-      description: "Operations Lead for mainframe infrastructure upgrade and McKesson/Cerner migration project. Managed cross-functional teams and maintained critical healthcare operations during complex system transitions. Left project during transition phase.",
+      description: "Participated in mainframe infrastructure upgrade and McKesson/Cerner migration project as operations support. Assisted with healthcare system transitions and operational coordination. Left project during transition phase.",
       achievements: [
         "Led team of 12 technicians supporting 5000+ endpoints across regional hospitals in 3 states",
         "Achieved 100% system uptime during critical McKesson/Cerner healthcare migration phases",
-        "Coordinated cross-functional teams during complex healthcare system migration phases",
+        "Supported cross-functional teams during healthcare system migration phases",
         "Managed comprehensive mainframe upgrade deliverables spanning KY, IN, and OH regions",
       ],
       techStack: ["Mainframes", "McKesson", "Cerner", "Healthcare IT", "Migration Planning", "Operations Coordination"],
