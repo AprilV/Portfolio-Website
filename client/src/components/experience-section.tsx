@@ -37,9 +37,9 @@ const ExperienceSection = () => {
       techStack: ["Windows Server", "Active Directory", "Cisco Networking", "ServiceDesk", "Documentation"],
       metrics: [
         { value: "10,000+", label: "Campus Users" },
-        { value: "25%", label: "Faster Resolution" },
         { value: "15", label: "Academic Buildings" },
-        { value: "30%", label: "Response Time" },
+        { value: "9", label: "Months Part-Time" },
+        { value: "Daily", label: "Support Requests" },
       ],
     },
     {
