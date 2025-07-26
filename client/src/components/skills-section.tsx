@@ -174,38 +174,19 @@ const SkillsSection = () => {
         </div>
 
         {/* Skills Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
+        <div className="skills-container">
           {skillCategories.map((category, index) => (
-            <div 
-              key={index} 
-              className="modern-card-premium hover-glow group animate-fade-in-up"
-            >
-              <div className="flex items-start gap-3 mb-6">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center progress-ring ${getColorClass(category.color)}`}>
-                  <category.icon className="w-6 h-6" />
-                </div>
-                <div className="flex-1">
-                  <div className="inline-block">
-                    <h3 className="text-xl font-bold text-charcoal-black group-hover:text-primary-blue transition-all duration-300">{category.title}</h3>
-                    <div className="w-full h-1 bg-primary-blue/20 rounded-full mt-1 overflow-hidden">
-                      <div className="w-full h-full bg-primary-blue rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div key={index} className="skills-column">
+              <h3 className="skills-heading">{category.title}</h3>
               
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className={`border-l-4 ${getBorderClass(skill.accent)} pl-4 py-2`}>
-                    <div className="flex justify-between items-start mb-1">
-                      <span className="text-sm font-medium text-gray-900">{skill.name}</span>
-                      <span className={`badge-modern hover-scale ml-auto ${
-                        skill.experience === 'In Progress' ? 'badge-progress-shimmer' : getExperienceTagClass(skill.experience)
-                      }`}>
-                        {skill.experience}
-                      </span>
-                    </div>
-                    <p className="text-xs text-gray-600">{skill.description}</p>
+                  <div key={skillIndex} className="skill-item">
+                    <h4 className="skill-name">{skill.name}</h4>
+                    <p className="skill-description">{skill.description}</p>
+                    <p className="skill-experience">
+                      <strong>Experience:</strong> {skill.experience}
+                    </p>
                   </div>
                 ))}
               </div>

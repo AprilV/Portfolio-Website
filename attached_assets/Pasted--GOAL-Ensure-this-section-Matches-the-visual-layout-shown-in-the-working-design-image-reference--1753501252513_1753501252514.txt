@@ -1,0 +1,121 @@
+✅ GOAL
+Ensure this section:
+
+Matches the visual layout shown in the working design (image reference).
+
+Is ATS-friendly (Applicant Tracking System readable).
+
+Uses consistent grid column layout without empty space gaps.
+
+Maintains clean structure, spacing, and full mobile responsiveness.
+
+🔧 REPLIT IMPLEMENTATION INSTRUCTIONS
+1. Use Two Equal Columns (No Gaps)
+Wrap both skill sections inside a CSS Grid or Flexbox container.
+
+Use this structure:
+
+html
+Copy
+Edit
+<div class="skills-container">
+  <div class="skills-column"> <!-- Project Management Core --> </div>
+  <div class="skills-column"> <!-- Technical Foundation --> </div>
+</div>
+css
+Copy
+Edit
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem; /* ensures space between columns without center gap */
+  flex-wrap: wrap;
+}
+.skills-column {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+}
+2. Make the Section ATS-Compatible
+DO NOT embed skill tags like 20+ Years or Academic as <span class="badge"> or icon-only. Instead:
+
+Use real text inside semantic HTML like this:
+
+html
+Copy
+Edit
+<h4>Stakeholder Communication</h4>
+<p>Professional experience plus CMST 242 Organizational Comm (4.0 GPA)</p>
+<p><strong>Experience:</strong> 20+ years | <strong>Context:</strong> Academic</p>
+Avoid CSS-generated content (::before, ::after) for skill labels. ATS systems will not read them.
+
+3. Fix Badge Colors for Accessibility
+Ensure color contrast ratios pass WCAG AA standards.
+
+Update .badge styling:
+
+css
+Copy
+Edit
+.badge {
+  background-color: #dfefff; /* Soft blue, better contrast */
+  color: #003c70; /* Deep navy */
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.3rem 0.8rem;
+}
+For “In Progress,” avoid pale yellow:
+
+css
+Copy
+Edit
+.badge.in-progress {
+  background-color: #fff4cc;
+  color: #664d03;
+}
+4. Align Headings and Dividers
+Use consistent <h3> or <h4> tags for each skill group heading:
+
+html
+Copy
+Edit
+<h3 class="skills-heading">Project Management Core</h3>
+Apply the same horizontal bar/gradient styling to both headings:
+
+css
+Copy
+Edit
+.skills-heading {
+  border-bottom: 2px solid #2C73D2;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+5. Ensure Full Mobile Responsiveness
+Add media query to stack columns on mobile:
+
+css
+Copy
+Edit
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+  }
+}
+6. Spacing and Padding Cleanup
+Remove excess vertical gaps between entries.
+
+Align badges right or stack them below the skill label text depending on screen size.
+
+✅ VISUAL REFERENCE TO REPLICATE
+✔ Balanced two-column layout
+✔ Headings: “Project Management Core” & “Technical Foundation”
+✔ Badges: “Academic”, “In Progress”, “20+ Years + Academic”
+✔ Clear GPA and experience text
+✔ No awkward center spacing
+✔ High contrast badges
+✔ Responsive on all screen sizes
+
