@@ -43,7 +43,7 @@ const HeroSection = () => {
                 className="text-lg sm:text-xl lg:text-2xl text-teal-blue font-semibold"
                 itemProp="jobTitle"
               >
-                Aspiring Assistant Project Manager | Senior BAS-IS Student | CAMP Candidate (2025) | Open to Internships
+                IT Project Manager | Technical Project Management | CAPM Candidate (2025) | 20+ Years IT Experience
               </h2>
               <p 
                 className="text-base sm:text-lg text-cool-gray max-w-xl leading-relaxed"

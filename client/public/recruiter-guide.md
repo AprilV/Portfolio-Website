@@ -15,19 +15,16 @@
 - **99.9% uptime** track record for critical infrastructure
 
 ## Target Roles
-- Assistant Project Manager
-- Associate Project Manager  
-- Junior Project Manager
 - IT Project Manager
 - Technical Project Manager
-- Project Coordinator
-- Program Coordinator
-- Project Analyst
-- Project Management Intern
-- IT Intern
-- Business Analyst Intern
-- Operations Intern
-- Technology Intern
+- Infrastructure Project Manager
+- Systems Project Manager
+- IT Program Manager
+- Senior IT Project Manager
+- Technology Implementation Manager
+- Digital Transformation Project Manager
+- Assistant IT Project Manager
+- IT Project Coordinator
 
 ## Salary Expectations
 - Open to discussion based on role responsibilities and location
@@ -41,23 +38,24 @@
 - **Start Date:** Immediate availability (flexible scheduling for academic internships)
 
 ## Technical Skills Highlights
-- **Project Management:** Agile, Scrum, Waterfall methodologies
-- **IT Infrastructure:** Windows Server, Linux, networking, databases
-- **Team Leadership:** Cross-functional team coordination, mentoring
-- **Business Analysis:** Process improvement, requirements gathering
-- **Tools:** Microsoft Project, Jira, Confluence, Office Suite
+- **IT Project Management:** Agile, Scrum, ITIL, technical project delivery
+- **Infrastructure:** Windows Server, Linux, networking, databases, cloud platforms
+- **Technical Leadership:** IT teams, cross-functional coordination, vendor management
+- **Specializations:** System implementations, network projects, cloud migrations
+- **Tools:** Microsoft Project, Jira, Confluence, technical documentation
 
 ## Industry Experience
-- **Healthcare IT:** Epic systems, HIPAA compliance, clinical workflows
-- **Enterprise Technology:** Dell Technologies partnership, large-scale operations
-- **Education Technology:** Academic IT infrastructure, student services
+- **Healthcare IT:** Epic systems, HIPAA compliance, clinical workflows, patient care systems
+- **Enterprise Technology:** Dell Technologies partnership, large-scale IT operations, 24x7 infrastructure
+- **Infrastructure Management:** Data centers, network operations, system migrations
+- **Digital Transformation:** Cloud migrations, legacy system modernization, IT governance
 
 ## Unique Value Proposition
-- **Proven Leadership:** Successfully managed teams through complex technical challenges
-- **Operational Excellence:** Maintained 24x7 operations with exceptional uptime
-- **Educational Investment:** Actively pursuing formal PM education and certification
-- **Technical Depth:** Deep IT background provides credibility with technical teams
-- **Communication Skills:** Bridge between technical and business stakeholders
+- **Technical Project Leadership:** 20+ years managing complex IT infrastructure projects
+- **Operational Excellence:** 99.9% uptime for critical enterprise systems and 24x7 operations
+- **IT Project Expertise:** Deep technical knowledge in infrastructure, networks, and enterprise systems
+- **Healthcare IT Experience:** HIPAA compliance, clinical systems, and patient care technology
+- **Cross-functional Coordination:** Bridge between technical teams, vendors, and business stakeholders
 
 ## References
 - Professional references available upon request
