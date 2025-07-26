@@ -222,12 +222,14 @@ const SkillsSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-background-alt/50 to-background/50"></div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <div className="professional-experience-header" style={{marginTop: '0'}}>
-            <h2 className="section-header">
-              Skills & Competencies
-              <div className="section-underline"></div>
-            </h2>
-            <p className="section-subtitle">Technical Expertise & Project Management Capabilities</p>
+          <div className="professional-experience-header flex justify-center" style={{marginTop: '0'}}>
+            <div className="inline-block">
+              <h2 className="section-header">
+                Skills & Competencies
+                <div className="section-underline mx-auto"></div>
+              </h2>
+              <p className="section-subtitle">Technical Expertise & Project Management Capabilities</p>
+            </div>
           </div>
         </div>
         
@@ -237,7 +239,7 @@ const SkillsSection = () => {
               index === 0 ? 'animation-delay-100' : 
               index === 1 ? 'animation-delay-200' : 'animation-delay-300'
             }`}>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-start gap-3 mb-6">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center progress-ring ${getColorClass(category.color)}`}>
                   <category.icon className="w-6 h-6" />
                 </div>
@@ -256,7 +258,7 @@ const SkillsSection = () => {
                   <div key={skillIndex} className={`border-l-4 ${getBorderClass(skill.accent)} pl-4 py-2`}>
                     <div className="flex justify-between items-start mb-1">
                       <span className="text-sm font-medium text-gray-900">{skill.name}</span>
-                      <span className={`badge-modern hover-scale ${
+                      <span className={`badge-modern hover-scale ml-auto ${
                         skill.experience === 'In Progress' ? 'badge-progress-shimmer' : getExperienceTagClass(skill.experience)
                       }`}>
                         {skill.experience}

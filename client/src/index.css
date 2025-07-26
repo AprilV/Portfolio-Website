@@ -1198,12 +1198,12 @@
     justify-content: space-between;
   }
 
-  /* Skills section flexbox layout with controlled gap */
+  /* Skills section flexbox layout with refined spacing */
   .skills-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: clamp(2rem, 5vw, 64px);
+    gap: 3rem;
     flex-wrap: wrap;
     padding: 2rem 0;
   }
@@ -1212,6 +1212,7 @@
     flex: 1 1 420px;
     max-width: 480px;
     min-width: 320px;
+    padding-inline: clamp(1rem, 3vw, 2rem);
   }
 
   /* Hide the middle (Business & Operations) column for two-column layout */
