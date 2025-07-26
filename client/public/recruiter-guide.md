@@ -23,6 +23,11 @@
 - Project Coordinator
 - Program Coordinator
 - Project Analyst
+- Project Management Intern
+- IT Intern
+- Business Analyst Intern
+- Operations Intern
+- Technology Intern
 
 ## Salary Expectations
 - Open to discussion based on role responsibilities and location
@@ -30,10 +35,10 @@
 - Consider total compensation package including benefits
 
 ## Work Preferences  
-- **Location:** Remote, Hybrid, or On-site (Pacific Northwest preferred)
-- **Travel:** Willing to travel up to 25% as needed
-- **Schedule:** Flexible, available for project demands
-- **Start Date:** Immediate availability
+- **Location:** Remote, Hybrid, or On-site (Pacific Northwest preferred, local for internships)
+- **Travel:** Willing to travel up to 25% as needed (limited for internships)
+- **Schedule:** Flexible, available for project demands, part-time for internships during school
+- **Start Date:** Immediate availability (flexible scheduling for academic internships)
 
 ## Technical Skills Highlights
 - **Project Management:** Agile, Scrum, Waterfall methodologies
