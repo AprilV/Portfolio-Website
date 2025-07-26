@@ -34,7 +34,7 @@ const ExperienceSection = () => {
         "Performed cable installation, network setup, and security vulnerability remediation",
         "Conducted virus removal, security patching, and system maintenance on faculty and student computers",
       ],
-      techStack: ["Windows Server", "Active Directory", "Cisco Networking", "ServiceDesk", "Documentation"],
+      techStack: ["Windows", "Networking", "Hardware Support", "Security Patching", "Cable Installation"],
       metrics: [
         { value: "10,000+", label: "Campus Users" },
         { value: "15", label: "Academic Buildings" },
@@ -106,7 +106,7 @@ const ExperienceSection = () => {
         "Maintained 99.9% system uptime during three major organizational transitions (Perot→Dell→Wipro)",
         "Awarded Ambassador Award for Excellence at Jewish Hospital for outstanding performance and dedication",
       ],
-      techStack: ["Mainframes", "PeopleSoft", "SharePoint", "Disaster Recovery", "SLA Management", "Healthcare IT"],
+      techStack: ["Mainframes", "Network Monitoring", "HVAC Systems", "Fire Suppression", "SharePoint", "Healthcare IT"],
       metrics: [
         { value: "5,000+", label: "Devices Managed" },
         { value: "24x7", label: "Operations" },
