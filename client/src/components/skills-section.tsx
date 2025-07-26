@@ -75,9 +75,45 @@ const SkillsSection = () => {
       link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
       credentialId: "Credly Verified"
     },
+    {
+      name: "CCNA: Introduction to Networks",
+      description: "Cisco Verified Badge",
+      detail: "Issued Dec 7, 2023",
+      icon: Code,
+      color: "teal-blue",
+      link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
+      credentialId: "Credly Verified"
+    },
+    {
+      name: "Introduction to Cybersecurity",
+      description: "Cisco Verified Badge",
+      detail: "Issued Nov 11, 2024",
+      icon: Shield,
+      color: "primary-blue",
+      link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
+      credentialId: "Credly Verified"
+    },
   ];
 
   const technicalCertifications = [
+    {
+      name: "Introduction to Data Science",
+      description: "Cisco Verified Badge",
+      detail: "Issued Feb 26, 2024",
+      icon: BarChart3,
+      color: "teal-blue",
+      link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
+      credentialId: "Credly Verified"
+    },
+    {
+      name: "Networking Academy Learn-A-Thon 2024",
+      description: "Cisco Verified Badge",
+      detail: "Issued Feb 26, 2024",
+      icon: Award,
+      color: "primary-blue",
+      link: "https://www.credly.com/users/april-sykes.3f9fe1f6",
+      credentialId: "Credly Verified"
+    },
     {
       name: "CompTIA Linux+",
       description: "CompTIA Certification (via TestOut)",
