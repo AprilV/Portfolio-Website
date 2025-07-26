@@ -232,7 +232,7 @@ const SkillsSection = () => {
           <p className="text-xl text-muted-foreground mt-6">Technical expertise and project management capabilities</p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8 mb-12 scroll-snap-x lg:grid">
+        <div className="skills-grid-container mb-12">
           {skillCategories.map((category, index) => (
             <div key={index} className={`modern-card-premium hover-glow group animate-fade-in-up ${
               index === 0 ? 'animation-delay-100' : 
