@@ -1183,12 +1183,12 @@
     }
   }
 
-  /* Certification layout - 5 cards per row */
+  /* Certification layout - 4 cards per row with better proportions */
   .cert-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.25rem;
-    max-width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 1rem 1.5rem;
   }
@@ -1213,7 +1213,7 @@
 
   /* Certification card uniformity and hover effects */
   .cert-card {
-    min-height: 180px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
