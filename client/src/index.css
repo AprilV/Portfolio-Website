@@ -1333,22 +1333,11 @@
     box-shadow: 0 12px 40px rgba(44, 115, 210, 0.2);
   }
 
-  .skills-column:first-child::before {
-    background: linear-gradient(90deg, #43D8C9, #2DD4BF);
-  }
-
-  .skills-column:last-child::before {
+  .skills-column::before {
     background: linear-gradient(90deg, #2C73D2, #1E40AF);
   }
 
-  .skills-column::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-  }
+
 
   /* Enhanced badge styling */
   .badge-modern {
