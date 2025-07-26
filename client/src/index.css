@@ -1112,7 +1112,7 @@
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: '\f109'; /* fa-laptop-code */
-    background: #F2F4F8; /* Skills section background */
+    background: white; /* White background for icon */
   }
 
   #resume .professional-experience-header::before {
