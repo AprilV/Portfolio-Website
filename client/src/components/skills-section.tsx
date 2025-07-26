@@ -98,8 +98,8 @@ const SkillsSection = () => {
   const technicalCertifications = [
     {
       name: "CompTIA Linux+",
-      description: "TestOut ID: 6-2C6-VCQ5KS",
-      detail: "",
+      description: "",
+      detail: "TestOut ID: 6-2C6-VCQ5KS",
       icon: Terminal,
       color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-vcq5ks",
@@ -107,8 +107,8 @@ const SkillsSection = () => {
     },
     {
       name: "CompTIA A+ Client",
-      description: "TestOut ID: 6-2c6-v3pmva",
-      detail: "",
+      description: "",
+      detail: "TestOut ID: 6-2c6-v3pmva",
       icon: Monitor,
       color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-v3pmva",
@@ -116,8 +116,8 @@ const SkillsSection = () => {
     },
     {
       name: "CompTIA A+ PC Pro",
-      description: "TestOut ID: 6-2c6-v3p73s",
-      detail: "",
+      description: "",
+      detail: "TestOut ID: 6-2c6-v3p73s",
       icon: Computer,
       color: "primary-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-v3p73s",
@@ -125,8 +125,8 @@ const SkillsSection = () => {
     },
     {
       name: "CompTIA Network+",
-      description: "TestOut ID: 6-2c6-vw5625",
-      detail: "",
+      description: "",
+      detail: "TestOut ID: 6-2c6-vw5625",
       icon: Network,
       color: "teal-blue",
       link: "https://certification.testout.com/verifycert/6-2c6-vw5625",
