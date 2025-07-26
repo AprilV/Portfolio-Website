@@ -1183,21 +1183,37 @@
     }
   }
 
-  /* Certification flexbox layout - even distribution */
+  /* Certification layout - 5 cards per row */
   .cert-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 1.5rem;
   }
 
+  @media (max-width: 1024px) {
+    .cert-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cert-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cert-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   /* Certification card uniformity and hover effects */
   .cert-card {
-    min-height: 200px;
-    width: 300px;
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
