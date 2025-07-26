@@ -6,7 +6,8 @@ const SkillsSection = () => {
     {
       title: "Project Management Core",
       icon: ClipboardCheck,
-      color: "primary-blue",
+      color: "teal-blue",
+      type: "pm",
       skills: [
         { name: "CAPM Certification", experience: "In Progress", description: "Summer 2025 - Based on IS 350/450 PM coursework (4.0 GPA)", accent: "primary-blue" },
         { name: "Project Management I", experience: "Academic", description: "IS 350 - Project Management I (4.0 GPA)", accent: "primary-blue" },
@@ -17,9 +18,10 @@ const SkillsSection = () => {
       ],
     },
     {
-      title: "Technical Foundation",
+      title: "Technical Foundation", 
       icon: Code,
       color: "primary-blue",
+      type: "tech",
       skills: [
         { name: "LAN Administration", experience: "20+ Years + Academic", description: "Professional experience + IS 346 LAN Administration IV (4.0)", accent: "teal-blue" },
         { name: "Windows Systems", experience: "20+ Years + Academic", description: "Professional + CIS 212 Windows/Professionals (4.0)", accent: "primary-blue" },
@@ -149,10 +151,23 @@ const SkillsSection = () => {
     }
   };
 
-  const getExperienceTagClass = (experience: string) => {
-    if (experience.includes('Academic')) return 'bg-blue-100 text-blue-800';
-    if (experience.includes('Years')) return 'bg-gray-100 text-gray-800';
-    return 'bg-teal-100 text-teal-800';
+  const getExperienceTagClass = (experience: string, columnType: string) => {
+    if (experience === 'In Progress') return 'bg-yellow-100 text-yellow-800 border border-yellow-300';
+    if (experience.includes('Academic') && experience.includes('Years')) {
+      // Dual status - gradient tag
+      return columnType === 'pm' 
+        ? 'bg-gradient-to-r from-teal-100 to-gray-100 text-teal-800 border border-teal-300' 
+        : 'bg-gradient-to-r from-blue-100 to-gray-100 text-blue-800 border border-blue-300';
+    }
+    if (experience.includes('Academic')) {
+      return columnType === 'pm' 
+        ? 'bg-teal-100 text-teal-800 border border-teal-300 font-medium' 
+        : 'bg-blue-100 text-blue-800 border border-blue-300 font-medium';
+    }
+    if (experience.includes('Years')) {
+      return 'bg-gray-100 text-gray-800 border border-gray-300';
+    }
+    return 'bg-gray-100 text-gray-700';
   };
 
   return (
@@ -162,9 +177,9 @@ const SkillsSection = () => {
           <div className="hidden md:flex items-center justify-center mb-4">
             <Code className="w-8 h-8 text-primary-blue" />
           </div>
-          <h2 className="text-4xl font-bold text-charcoal-black mb-4">
-            Skills & Certifications
-            <div className="w-24 h-1 bg-primary-blue mx-auto mt-2 rounded-full"></div>
+          <h2 className="text-5xl font-bold text-charcoal-black mb-4">
+            Skills & <span className="text-teal-blue">Competencies</span>
+            <div className="w-32 h-1.5 bg-gradient-to-r from-primary-blue to-teal-blue mx-auto mt-3 rounded-full"></div>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive technical expertise and project management capabilities developed through 20+ years of experience and continuous academic advancement
@@ -195,7 +210,7 @@ const SkillsSection = () => {
                     <div className="flex justify-between items-start mb-1">
                       <span className="text-sm font-medium text-gray-900">{skill.name}</span>
                       <span className={`badge-modern hover-scale ml-auto ${
-                        skill.experience === 'In Progress' ? 'badge-progress-shimmer' : getExperienceTagClass(skill.experience)
+                        skill.experience === 'In Progress' ? 'badge-progress-shimmer' : getExperienceTagClass(skill.experience, category.type)
                       }`}>
                         {skill.experience}
                       </span>

@@ -1325,6 +1325,20 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+  }
+
+  .skills-column:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(44, 115, 210, 0.2);
+  }
+
+  .skills-column:first-child::before {
+    background: linear-gradient(90deg, #43D8C9, #2DD4BF);
+  }
+
+  .skills-column:last-child::before {
+    background: linear-gradient(90deg, #2C73D2, #1E40AF);
   }
 
   .skills-column::before {
@@ -1334,12 +1348,21 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #2C73D2, #43D8C9);
   }
 
-  .skills-column:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(44, 115, 210, 0.15);
+  /* Enhanced badge styling */
+  .badge-modern {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+  }
+
+  .badge-modern:hover {
+    transform: scale(1.05);
   }
 
   @media (max-width: 768px) {
