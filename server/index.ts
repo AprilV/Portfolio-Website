@@ -18,8 +18,13 @@ const app = express();
 app.set('trust proxy', 1);
 
 // WWW redirect middleware - redirects www.aprilsykes.com to aprilsykes.com
+// Skip redirect for Replit verification requests
 app.use((req, res, next) => {
   if (req.headers.host?.startsWith('www.')) {
+    // Allow Replit verification to pass through
+    if (req.url.includes('replit-verify') || req.headers['user-agent']?.includes('replit')) {
+      return next();
+    }
     const redirectUrl = `https://${req.headers.host.replace('www.', '')}${req.url}`;
     return res.redirect(301, redirectUrl);
   }
