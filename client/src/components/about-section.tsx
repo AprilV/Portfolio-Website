@@ -36,7 +36,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-secondary" style={{paddingTop: '80px', paddingBottom: '60px'}}>
+    <section id="about" className="py-20 bg-secondary dark:bg-background" style={{paddingTop: '80px', paddingBottom: '60px'}}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="professional-experience-header" style={{marginTop: '0'}}>

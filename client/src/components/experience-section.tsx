@@ -117,7 +117,7 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white" style={{paddingTop: '80px', paddingBottom: '60px'}}>
+    <section id="experience" className="py-20 bg-white dark:bg-background" style={{paddingTop: '80px', paddingBottom: '60px'}}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.div

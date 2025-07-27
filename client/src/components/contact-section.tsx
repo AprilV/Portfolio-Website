@@ -182,7 +182,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-12 bg-background-alt dark:bg-gray-900 transition-colors duration-300" style={{paddingTop: '80px', paddingBottom: '60px'}} aria-labelledby="contact-heading">
+    <section id="contact" className="py-12 bg-background-alt dark:bg-background transition-colors duration-300" style={{paddingTop: '80px', paddingBottom: '60px'}} aria-labelledby="contact-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="professional-experience-header" style={{marginTop: '0'}}>

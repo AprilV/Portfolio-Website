@@ -349,7 +349,8 @@
   }
 
   .dark .modern-card-hover:hover {
-    box-shadow: 0 10px 25px -5px rgba(67, 216, 201, 0.2), 0 10px 10px -5px rgba(67, 216, 201, 0.1);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.4), 0 10px 15px -5px rgba(0, 0, 0, 0.2);
   }
 
   /* Subtle micro-interactions */
@@ -1479,7 +1480,7 @@
   }
 
   .dark #about .professional-experience-header::before {
-    background: #1f2937; /* Dark mode about background */
+    background: hsl(0, 0%, 7%); /* Dark mode about background */
   }
 
   #experience .professional-experience-header::before {
@@ -1490,7 +1491,7 @@
   }
 
   .dark #experience .professional-experience-header::before {
-    background: #111827; /* Dark mode experience background */
+    background: hsl(0, 0%, 7%); /* Dark mode experience background */
   }
 
   #projects .professional-experience-header::before {
@@ -1501,7 +1502,7 @@
   }
 
   .dark #projects .professional-experience-header::before {
-    background: #1f2937; /* Dark mode projects background */
+    background: hsl(0, 0%, 7%); /* Dark mode projects background */
   }
 
   #skills .professional-experience-header::before {
@@ -1512,7 +1513,7 @@
   }
 
   .dark #skills .professional-experience-header::before {
-    background: #1f2937; /* Dark mode skills background */
+    background: hsl(0, 0%, 7%); /* Dark mode skills background */
   }
 
   #resume .professional-experience-header::before {
@@ -1523,7 +1524,7 @@
   }
 
   .dark #resume .professional-experience-header::before {
-    background: #111827; /* Dark mode resume background */
+    background: hsl(0, 0%, 7%); /* Dark mode resume background */
   }
 
   #contact .professional-experience-header::before {
@@ -1534,7 +1535,7 @@
   }
 
   .dark #contact .professional-experience-header::before {
-    background: #1f2937; /* Dark mode contact background */
+    background: hsl(0, 0%, 7%); /* Dark mode contact background */
   }
 
   /* Projects section grid optimizations */
@@ -2006,8 +2007,8 @@
 }
 
 .dark .glassmorphism:hover {
-  background: rgba(31, 41, 55, 0.8);
-  border: 1px solid rgba(67, 216, 201, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.4), 0 10px 15px -5px rgba(0, 0, 0, 0.2);
 }
 
 /* Progress Ring Animation */
