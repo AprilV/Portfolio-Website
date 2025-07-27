@@ -1483,6 +1483,9 @@
     color: #1E1E1E;
     display: inline-block;
     white-space: nowrap;
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
   }
   
   /* Subtle underline that matches text width */
@@ -1507,6 +1510,7 @@
     margin-top: 3rem;
     padding-top: 1.5rem;
     position: relative;
+    text-align: center;
   }
   
   .professional-experience-header::after {
@@ -1516,7 +1520,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(to right, #2C73D2 0%, #2C73D2 45%, transparent 45%, transparent 55%, #2C73D2 55%, #2C73D2 100%);
+    background: linear-gradient(to right, #2C73D2 0%, #2C73D2 40%, transparent 40%, transparent 60%, #2C73D2 60%, #2C73D2 100%);
   }
 
   .professional-experience-header::before {
@@ -1524,12 +1528,12 @@
     font-weight: 900;
     content: '💼'; /* Fallback to emoji if FA fails */
     position: absolute;
-    top: -1.25rem;
+    top: -1rem;
     left: 50%;
     transform: translateX(-50%);
     background: inherit;
-    padding: 0 1rem;
-    font-size: 1.5rem;
+    padding: 0 0.75rem;
+    font-size: 1.2rem;
     color: #2C73D2;
     z-index: 10;
     display: block;
