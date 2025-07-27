@@ -75,9 +75,9 @@ const Navigation = () => {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center whitespace-nowrap mr-8">
+          <div className="flex items-center whitespace-nowrap flex-1 min-w-0 pr-4">
             <span className="text-xl font-bold gradient-text-flow inline-block">April V. Sykes</span>
-            <span className="ml-3 text-sm gradient-text-flow-title">Assistant Project Manager</span>
+            <span className="ml-3 text-sm gradient-text-flow-title hidden sm:inline">Assistant Project Manager</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -114,12 +114,12 @@ const Navigation = () => {
           </div>
           
           {/* Mobile Navigation */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center space-x-1 flex-shrink-0">
             <Button
               variant="ghost"
               size="icon"
               onClick={openSearch}
-              className="h-9 w-9 text-charcoal-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2"
+              className="h-8 w-8 text-charcoal-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
               data-testid="search-button-mobile"
               aria-label="Open search"
             >
@@ -131,11 +131,11 @@ const Navigation = () => {
                 <Button 
                   variant="outline" 
                   size="icon" 
-                  className="h-10 w-10 border-2 border-primary-blue bg-white dark:bg-gray-800 text-primary-blue hover:bg-primary-blue hover:text-white dark:hover:bg-primary-blue"
+                  className="h-8 w-8 border border-primary-blue bg-white dark:bg-gray-800 text-primary-blue hover:bg-primary-blue hover:text-white"
                   aria-label="Open mobile menu"
                   data-testid="mobile-menu-button"
                 >
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-4 w-4" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-80">
