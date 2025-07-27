@@ -1,4 +1,5 @@
 import { Linkedin, Github } from "lucide-react";
+import WorldClock from "@/components/world-clock";
 
 const Footer = () => {
   const quickLinks = [
@@ -25,7 +26,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-dark-gray text-gray-300 py-12">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-gray-300 py-12 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -80,10 +81,13 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-600 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2024 April V. Sykes. Professional portfolio showcasing transition from IT infrastructure to project management.
-          </p>
+        <div className="border-t border-gray-600 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-center md:text-left">
+              © 2024 April V. Sykes. Professional portfolio showcasing transition from IT infrastructure to project management.
+            </p>
+            <WorldClock />
+          </div>
         </div>
       </div>
     </footer>

@@ -6,6 +6,13 @@ This is a professional portfolio website built as a full-stack application showc
 
 ## Recent Changes
 
+**January 27, 2025**: Advanced UI Features - Dark Mode Toggle & Portfolio Search Implementation
+- **Dark Mode Toggle**: Complete theme switching implementation with persistent user preferences, smooth transitions, and professional navigation integration
+- **Portfolio Search**: Comprehensive search functionality with real-time results, keyboard shortcuts (⌘K), and content discovery across experience, skills, projects, and certifications
+- **World Clock Footer**: Subtle business timezone display (PST, EST, UTC) showcasing global awareness for Assistant PM roles
+- **Enhanced UX**: Professional search modal with dark mode support, keyboard navigation, and direct section jumping
+- **Accessibility Features**: Proper ARIA labels, focus management, and semantic HTML structure for enterprise-grade user experience
+
 **January 27, 2025**: Comprehensive Performance Optimization & Code Quality Enhancement
 - **Production Code Clean-up**: Removed all console.log statements from ATS resume generator for cleaner production code
 - **Resource Preloading**: Added preload directives for critical resources (profile image, font connections) improving initial page render
