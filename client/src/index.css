@@ -53,6 +53,11 @@
   /* Modern Professional IT PM Color Palette - Exact Specification */
   --background: hsl(0, 0%, 100%); /* Pure white */
   --foreground: hsl(0, 0%, 12%); /* #1E1E1E - Primary text */
+  
+  /* WCAG Accessibility Focus Ring Standards */
+  --focus-ring-color: hsl(214, 76%, 49%); /* Tech Blue for focus rings */
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
   --muted: hsl(210, 40%, 98%);
   --muted-foreground: hsl(215, 20%, 65%);
   --popover: hsl(216, 20%, 98%); /* #F9FAFC - Subtle box background */

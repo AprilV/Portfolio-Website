@@ -94,18 +94,20 @@ const HeroSection = () => {
               <Button 
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-primary-blue dark:bg-primary-blue text-white dark:text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] hover:border-teal-blue dark:hover:border-teal-blue transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 border-2 border-transparent"
+                className="bg-primary-blue dark:bg-primary-blue text-white dark:text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] hover:border-teal-blue dark:hover:border-teal-blue transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-teal-blue focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900"
+                aria-label="Navigate to contact section to get in touch"
               >
                 Get In Touch
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </Button>
               <Button 
                 variant="outline"
                 onClick={downloadResume}
                 size="lg"
-                className="font-semibold px-8 py-3 rounded-lg border-2 border-teal-blue text-teal-blue dark:text-teal-blue dark:border-teal-blue hover:border-primary-blue dark:hover:border-primary-blue transition-all duration-300 shadow-lg hover:shadow-2xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] transform hover:-translate-y-1 hover:scale-105"
+                className="font-semibold px-8 py-3 rounded-lg border-2 border-teal-blue text-teal-blue dark:text-teal-blue dark:border-teal-blue hover:border-primary-blue dark:hover:border-primary-blue transition-all duration-300 shadow-lg hover:shadow-2xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900"
+                aria-label="Download April Sykes' Assistant Project Manager resume"
               >
-                <Download className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-0.5" />
+                <Download className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-0.5" aria-hidden="true" />
                 Download Resume
               </Button>
             </div>
@@ -140,9 +142,9 @@ const HeroSection = () => {
               </div>
               <button
                 onClick={scrollToSkills}
-                className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-card-background dark:bg-card shadow-lg p-3 sm:p-4 border border-divider-gray dark:border-border rounded-lg hover:shadow-xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+                className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-card-background dark:bg-card shadow-lg p-3 sm:p-4 border border-divider-gray dark:border-border rounded-lg hover:shadow-xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] transition-all duration-300 transform hover:scale-105 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900"
                 title="Click to view academic achievements and GPA details"
-                aria-label="GPA 3.94 - Click to view academic achievements"
+                aria-label="GPA 3.94 - Click to view academic achievements and skills section"
               >
                 <div className="text-center">
                   <div className="text-xl sm:text-2xl font-bold text-teal-blue group-hover:text-primary-blue transition-colors">3.94</div>

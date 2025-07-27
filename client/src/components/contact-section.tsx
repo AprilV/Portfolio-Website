@@ -246,14 +246,14 @@ const ContactSection = () => {
           
           {/* Contact Form */}
           <div className="professional-card p-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">Send a Message</h3>
-            <p id="contact-instructions" className="text-sm text-gray-600 mb-6">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">Send a Message</h3>
+            <p id="contact-instructions" className="text-sm text-gray-600 dark:text-gray-300 mb-6 transition-colors duration-300">
               All fields marked with * are required. I typically respond within 24 hours.
             </p>
-            <form onSubmit={handleSubmit} className="space-y-6" aria-describedby="contact-instructions">
+            <form onSubmit={handleSubmit} className="space-y-6" aria-describedby="contact-instructions" noValidate>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
                     Name *
                   </label>
                   <Input
@@ -264,11 +264,12 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
                     placeholder="Your name"
-                    className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
+                    className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20 focus:border-primary-blue"
                     aria-describedby={!formData.name ? "name-error" : undefined}
+                    aria-invalid={!formData.name ? "true" : "false"}
                   />
                   {!formData.name && (
-                    <p id="name-error" className="text-sm text-red-600 mt-1" role="alert">
+                    <p id="name-error" className="text-sm text-red-600 dark:text-red-400 mt-1 transition-colors duration-300" role="alert">
                       Name is required
                     </p>
                   )}
@@ -302,7 +303,7 @@ const ContactSection = () => {
               </div>
               
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
                   Company
                 </label>
                 <Input
@@ -317,7 +318,7 @@ const ContactSection = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
                   Message *
                 </label>
                 <Textarea
@@ -380,10 +381,11 @@ const ContactSection = () => {
               <Button 
                 type="submit" 
                 disabled={contactMutation.isPending}
-                className="w-full bg-primary-blue dark:bg-primary-blue text-white dark:text-gray-900 py-3 hover:shadow-lg dark:hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.3)] hover:translate-y-[-2px] hover:scale-105 transition-all duration-300 focus-enhanced"
+                className="w-full bg-primary-blue dark:bg-primary-blue text-white dark:text-gray-900 py-3 hover:shadow-lg dark:hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.3)] hover:translate-y-[-2px] hover:scale-105 transition-all duration-300 focus-enhanced focus:outline-none focus:ring-2 focus:ring-teal-blue focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-800"
+                aria-label={contactMutation.isPending ? "Sending message, please wait" : "Send contact message"}
               >
                 {contactMutation.isPending ? "Sending..." : "Send Message"}
-                <Send className="ml-2 w-5 h-5" />
+                <Send className="ml-2 w-5 h-5" aria-hidden="true" />
               </Button>
               
               <p className="text-sm text-gray-600 text-center">

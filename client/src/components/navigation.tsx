@@ -67,9 +67,13 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-md" : "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm"
-    } border-b border-gray-200 dark:border-gray-700`}>
+    <nav 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-md" : "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm"
+      } border-b border-gray-200 dark:border-gray-700`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center whitespace-nowrap mr-8">
@@ -83,9 +87,11 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-charcoal-black dark:text-gray-200 hover:scale-105 hover:translate-y-[-1px] transition-all duration-200 font-medium ${
+                className={`text-charcoal-black dark:text-gray-200 hover:scale-105 hover:translate-y-[-1px] transition-all duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 ${
                   activeSection === item.id ? "text-primary-blue dark:text-primary-blue font-semibold" : ""
                 }`}
+                aria-label={`Navigate to ${item.label} section`}
+                aria-current={activeSection === item.id ? "page" : undefined}
               >
                 {item.label}
               </button>
@@ -96,10 +102,12 @@ const Navigation = () => {
               onClick={openSearch}
               className="flex items-center gap-2 text-charcoal-black dark:text-gray-200 hover:scale-105 hover:translate-y-[-1px] transition-all duration-200 focus-enhanced bg-transparent hover:bg-transparent"
               data-testid="search-button-desktop"
+              aria-label="Open search (Ctrl+K or Cmd+K)"
+              aria-keyshortcuts="Control+k Meta+k"
             >
-              <Search className="h-4 w-4" />
+              <Search className="h-4 w-4" aria-hidden="true" />
               <span className="hidden lg:inline text-sm">Search</span>
-              <kbd className="hidden lg:inline-flex items-center gap-1 px-1.5 py-0.5 text-xs font-mono bg-gray-100 dark:bg-gray-800 rounded border">
+              <kbd className="hidden lg:inline-flex items-center gap-1 px-1.5 py-0.5 text-xs font-mono bg-gray-100 dark:bg-gray-800 rounded border" aria-label="Keyboard shortcut Command K">
                 ⌘K
               </kbd>
             </Button>
@@ -112,16 +120,22 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={openSearch}
-              className="h-9 w-9 bg-transparent hover:bg-transparent"
+              className="h-9 w-9 bg-transparent hover:bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2"
               data-testid="search-button-mobile"
+              aria-label="Open search"
             >
-              <Search className="h-4 w-4" />
+              <Search className="h-4 w-4" aria-hidden="true" />
             </Button>
             <ThemeToggle />
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="bg-transparent hover:bg-transparent">
-                  <Menu className="h-6 w-6" />
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="bg-transparent hover:bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2"
+                  aria-label="Open mobile menu"
+                >
+                  <Menu className="h-6 w-6" aria-hidden="true" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-80">
