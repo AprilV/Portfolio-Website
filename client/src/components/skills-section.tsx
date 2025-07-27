@@ -115,11 +115,11 @@ const SkillsSection = () => {
     {
       name: "CompTIA Network+",
       description: "",
-      detail: "TestOut ID: 6-2c6-vw5625",
+      detail: "TestOut ID: 6-2C6-VV5625",
       icon: Network,
       color: "teal-blue",
-      link: "https://certification.testout.com/verifycert/6-2c6-vw5625", 
-      credentialId: "6-2c6-vw5625"
+      link: "https://certification.testout.com/verifycert/6-2C6-VV5625", 
+      credentialId: "6-2C6-VV5625"
     }
   ];
 

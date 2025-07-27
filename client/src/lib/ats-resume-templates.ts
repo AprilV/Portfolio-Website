@@ -119,7 +119,7 @@ export const resumeData: ResumeData = {
       name: "CompTIA Network+ Professional", 
       issuer: "CompTIA",
       date: "2024",
-      credentialId: "6-2c6-vv5625"
+      credentialId: "6-2C6-VV5625"
     },
     {
       name: "CCNA: Switching, Routing, and Wireless Essentials",

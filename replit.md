@@ -6,6 +6,12 @@ This is a professional portfolio website built as a full-stack application showc
 
 ## Recent Changes
 
+**January 27, 2025**: TestOut Network+ Certification Update - ID Correction
+- **Certification ID Update**: Updated TestOut Network+ certification ID from 6-2c6-vw5625 to correct ID 6-2C6-VV5625
+- **Verification Link Update**: Updated verification link to https://certification.testout.com/verifycert/6-2C6-VV5625
+- **System-Wide Consistency**: Applied changes to both Skills section display and ATS resume generator templates
+- **Professional Accuracy**: Ensures all credential information matches official TestOut certification records
+
 **January 26, 2025**: IT Assistant Project Manager & IT Internship Targeting Complete
 - **Career Focus Refinement**: Updated portfolio to specifically target IT Assistant Project Manager and IT internship opportunities
 - **Entry-Level Positioning**: Repositioned from senior IT Project Manager to entry-level roles emphasizing growth potential and learning opportunity
