@@ -2,8 +2,9 @@ run = "npm run dev"
 modules = ["nodejs-20"]
 
 [deployment]
-run = ["npm", "run", "build", "&&", "npm", "start"]
-deploymentTarget = "static"
+run = ["npm", "run", "start"]
+deploymentTarget = "autoscale"
+build = ["npm", "run", "build"]
 
 [env]
 NODE_ENV = "production"
