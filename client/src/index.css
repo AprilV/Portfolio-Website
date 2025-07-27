@@ -322,6 +322,14 @@
   .dark .professional-status-item {
     color: #D1D5DB;
   }
+
+  /* Search result line clamping */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   
   .professional-card:hover {
     transform: translateY(-4px);

@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/theme-toggle";
+import SearchBar from "@/components/search-bar";
+import { useSearch } from "@/hooks/use-search";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isSearchOpen, openSearch, closeSearch } = useSearch();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,9 +32,21 @@ const Navigation = () => {
       }
     };
 
+    // Keyboard shortcut for search (Ctrl+K or Cmd+K)
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        openSearch();
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [openSearch]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -63,7 +78,7 @@ const Navigation = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -75,11 +90,33 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={openSearch}
+              className="flex items-center gap-2 text-charcoal-black dark:text-gray-200 hover:text-primary-blue dark:hover:text-primary-blue transition-colors duration-200"
+              data-testid="search-button-desktop"
+            >
+              <Search className="h-4 w-4" />
+              <span className="hidden lg:inline text-sm">Search</span>
+              <kbd className="hidden lg:inline-flex items-center gap-1 px-1.5 py-0.5 text-xs font-mono bg-gray-100 dark:bg-gray-800 rounded border">
+                ⌘K
+              </kbd>
+            </Button>
             <ThemeToggle />
           </div>
           
           {/* Mobile Navigation */}
           <div className="md:hidden flex items-center space-x-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={openSearch}
+              className="h-9 w-9"
+              data-testid="search-button-mobile"
+            >
+              <Search className="h-4 w-4" />
+            </Button>
             <ThemeToggle />
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
@@ -108,6 +145,9 @@ const Navigation = () => {
           </div>
         </div>
       </div>
+      
+      {/* Search Modal */}
+      <SearchBar isOpen={isSearchOpen} onClose={closeSearch} />
     </nav>
   );
 };
