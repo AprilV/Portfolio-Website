@@ -1478,9 +1478,11 @@
   
   /* Section Header - Unified Style */
   .section-header {
-    @apply text-3xl lg:text-4xl font-bold text-charcoal-black mb-4 relative inline-block transition-all duration-300;
+    @apply text-3xl lg:text-4xl font-bold text-charcoal-black mb-4 relative transition-all duration-300;
     font-weight: 600;
     color: #1E1E1E;
+    display: inline-block;
+    white-space: nowrap;
   }
   
   /* Subtle underline that matches text width */
