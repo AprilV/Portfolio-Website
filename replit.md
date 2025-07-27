@@ -12,7 +12,7 @@ This is a professional portfolio website built as a full-stack application showc
 - **World Clock Footer**: Subtle business timezone display (PST, EST, UTC) showcasing global awareness for Assistant PM roles
 - **Collaborative Credit**: Added footer acknowledgment of the partnership between April V. Sykes and Claude AI in designing the portfolio
 - **Navigation Styling**: Implemented animated gradient text effect flowing through name and title once on page load, with proper spacing from navigation items
-- **Professional Animation**: Blue-to-teal-to-gold gradient flows through letters then returns to normal text, creating elegant branding effect
+- **Professional Animation**: Tech Blue to Teal Blue gradient flows through letters then returns to normal text, maintaining consistent brand colors
 - **Enhanced UX**: Professional search modal with dark mode support, keyboard navigation, and direct section jumping
 - **Accessibility Features**: Proper ARIA labels, focus management, and semantic HTML structure for enterprise-grade user experience
 

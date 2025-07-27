@@ -338,7 +338,7 @@
 
   /* Animated gradient text flow effect - runs once */
   .gradient-text-flow {
-    background: linear-gradient(90deg, #1E1E1E 0%, #2C73D2 25%, #43D8C9 50%, #FFD700 75%, #1E1E1E 100%);
+    background: linear-gradient(90deg, #1E1E1E 0%, #2C73D2 30%, #43D8C9 70%, #1E1E1E 100%);
     background-size: 300% 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -347,7 +347,7 @@
   }
 
   .dark .gradient-text-flow {
-    background: linear-gradient(90deg, #F5F5F5 0%, #2C73D2 25%, #43D8C9 50%, #FFD700 75%, #F5F5F5 100%);
+    background: linear-gradient(90deg, #F5F5F5 0%, #2C73D2 30%, #43D8C9 70%, #F5F5F5 100%);
     background-size: 300% 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -369,7 +369,7 @@
   }
 
   .gradient-text-flow-title {
-    background: linear-gradient(90deg, #6B7280 0%, #2C73D2 30%, #43D8C9 60%, #FFD700 80%, #6B7280 100%);
+    background: linear-gradient(90deg, #6B7280 0%, #2C73D2 35%, #43D8C9 65%, #6B7280 100%);
     background-size: 300% 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -379,7 +379,7 @@
   }
 
   .dark .gradient-text-flow-title {
-    background: linear-gradient(90deg, #9CA3AF 0%, #2C73D2 30%, #43D8C9 60%, #FFD700 80%, #9CA3AF 100%);
+    background: linear-gradient(90deg, #9CA3AF 0%, #2C73D2 35%, #43D8C9 65%, #9CA3AF 100%);
     background-size: 300% 100%;
     background-clip: text;
     -webkit-background-clip: text;
