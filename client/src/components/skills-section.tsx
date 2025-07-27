@@ -173,11 +173,8 @@ const SkillsSection = () => {
                 Skills & Certifications
                 <div className="section-underline"></div>
               </h2>
-              <p className="section-subtitle">Technical Expertise & Project Management Capabilities</p>
+              <p className="section-subtitle">Comprehensive technical expertise and project management capabilities developed through 20+ years of experience</p>
             </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technical expertise and project management capabilities developed through 20+ years of experience and continuous academic advancement
-            </p>
           </motion.div>
         </div>
 

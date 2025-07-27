@@ -123,9 +123,8 @@ const ProjectsSection = () => {
               Featured Capstone Projects
               <div className="section-underline"></div>
             </h2>
-            <p className="section-subtitle">Academic Excellence in Applied Technology</p>
+            <p className="section-subtitle">Four comprehensive capstone projects demonstrating technical skills and project management capabilities</p>
           </div>
-          <p className="text-xl text-muted-foreground mt-6">Four comprehensive capstone projects demonstrating technical skills and project management capabilities across multiple disciplines</p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">

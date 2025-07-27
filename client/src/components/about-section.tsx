@@ -44,11 +44,8 @@ const AboutSection = () => {
               About Me
               <div className="section-underline"></div>
             </h2>
-            <p className="section-subtitle">IT Professional Transitioning to Project Management</p>
+            <p className="section-subtitle">Transforming two decades of IT infrastructure expertise into project management excellence</p>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transforming two decades of IT infrastructure expertise into project management excellence
-          </p>
         </div>
         
         <div className="grid lg:grid-cols-3 gap-8 items-start">
