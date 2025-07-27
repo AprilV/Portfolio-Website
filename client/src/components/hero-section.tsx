@@ -34,7 +34,7 @@ const HeroSection = () => {
           <div className="space-y-8 animate-slide-in-left">
             <div className="space-y-4">
               <h1 
-                className="text-3xl sm:text-4xl lg:text-6xl font-bold text-charcoal-black dark:text-white leading-tight transition-colors duration-300"
+                className="text-3xl sm:text-4xl lg:text-6xl font-bold text-charcoal-black dark:text-white leading-tight transition-colors duration-300 text-center"
                 itemProp="name"
               >
                 April V. Sykes
@@ -52,7 +52,7 @@ const HeroSection = () => {
                 <span className="block md:inline">20+ Years Experience</span>
               </h2>
               <p 
-                className="text-base sm:text-lg text-cool-gray dark:text-gray-300 max-w-xl leading-relaxed transition-colors duration-300"
+                className="text-base sm:text-lg text-cool-gray dark:text-gray-300 max-w-xl leading-relaxed transition-colors duration-300 text-center mx-auto"
                 itemProp="description"
               >
                 Two decades of progressive leadership experience in IT infrastructure, team management, and project coordination, 
@@ -61,7 +61,7 @@ const HeroSection = () => {
               </p>
             </div>
             
-            <div className="flex flex-wrap gap-3 leading-relaxed">
+            <div className="flex flex-wrap gap-3 leading-relaxed justify-center">
               <div 
                 className="professional-badge badge-progress flex items-center gap-2 hover-scale transition-all duration-200" 
                 title="Preparing for Certified Associate in Project Management exam"
@@ -96,7 +96,7 @@ const HeroSection = () => {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={scrollToContact}
                 size="lg"
@@ -119,7 +119,7 @@ const HeroSection = () => {
             </div>
             
             {/* Professional LinkedIn Link */}
-            <div className="flex items-center gap-4 pt-4">
+            <div className="flex items-center gap-4 pt-4 justify-center">
               <span className="text-sm text-cool-gray font-medium">Connect with me:</span>
               <a 
                 href="https://www.linkedin.com/in/aprilsykes" 
