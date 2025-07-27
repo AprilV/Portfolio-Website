@@ -577,6 +577,12 @@
     overflow: hidden;
   }
 
+  .dark .experience-card {
+    background: #1f2937;
+    border: 1px solid #374151;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+
   .experience-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(44, 115, 210, 0.12);
@@ -606,6 +612,11 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+  }
+
+  .dark .company-logo {
+    background: #374151;
+    border: 2px solid #4b5563;
   }
 
   .timeline-connector {
@@ -1357,11 +1368,19 @@
     background: #F2F4F8; /* About section background */
   }
 
+  .dark #about .professional-experience-header::before {
+    background: #1f2937; /* Dark mode about background */
+  }
+
   #experience .professional-experience-header::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: '\f0b1'; /* fa-briefcase */
     background: white; /* Experience section background */
+  }
+
+  .dark #experience .professional-experience-header::before {
+    background: #111827; /* Dark mode experience background */
   }
 
   #projects .professional-experience-header::before {
@@ -1371,11 +1390,19 @@
     background: #F9FAFB; /* Projects section background */
   }
 
+  .dark #projects .professional-experience-header::before {
+    background: #1f2937; /* Dark mode projects background */
+  }
+
   #skills .professional-experience-header::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: '\f109'; /* fa-laptop-code */
     background: white; /* White background for icon */
+  }
+
+  .dark #skills .professional-experience-header::before {
+    background: #1f2937; /* Dark mode skills background */
   }
 
   #resume .professional-experience-header::before {
@@ -1385,11 +1412,19 @@
     background: white; /* Resume section background */
   }
 
+  .dark #resume .professional-experience-header::before {
+    background: #111827; /* Dark mode resume background */
+  }
+
   #contact .professional-experience-header::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: '\f0e0'; /* fa-envelope */
     background: #F9FAFB; /* Contact section background */
+  }
+
+  .dark #contact .professional-experience-header::before {
+    background: #1f2937; /* Dark mode contact background */
   }
 
   /* Projects section grid optimizations */
@@ -1464,6 +1499,10 @@
     padding-bottom: 0.25rem;
     text-align: center;
     width: fit-content;
+  }
+
+  .dark .cert-heading {
+    color: #f9fafb;
   }
 
   .cert-heading:first-of-type {
@@ -1587,10 +1626,21 @@
     transform: translateZ(0);
   }
 
+  .dark .skills-column {
+    background: #1f2937;
+    border: 1px solid #374151;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
   .skills-column:hover {
     transform: translateY(-4px) scale(1.01);
     box-shadow: 0 12px 28px rgba(44, 115, 210, 0.08), 0 6px 12px rgba(44, 115, 210, 0.05);
     border-color: rgba(44, 115, 210, 0.2);
+  }
+
+  .dark .skills-column:hover {
+    box-shadow: 0 12px 28px rgba(44, 115, 210, 0.15), 0 6px 12px rgba(44, 115, 210, 0.1);
+    border-color: rgba(44, 115, 210, 0.4);
   }
 
   .skills-heading {
@@ -1604,9 +1654,17 @@
     width: fit-content;
   }
 
+  .dark .skills-heading {
+    color: #f9fafb;
+  }
+
   .skill-item {
     padding: 0.75rem 0;
     border-bottom: 1px solid #f3f4f6;
+  }
+
+  .dark .skill-item {
+    border-bottom: 1px solid #374151;
   }
 
   .skill-item:last-child {
@@ -1620,6 +1678,10 @@
     margin-bottom: 0.25rem;
   }
 
+  .dark .skill-name {
+    color: #f9fafb;
+  }
+
   .skill-description {
     font-size: 0.85rem;
     color: #6b7280;
@@ -1627,9 +1689,17 @@
     line-height: 1.4;
   }
 
+  .dark .skill-description {
+    color: #9ca3af;
+  }
+
   .skill-experience {
     font-size: 0.8rem;
     color: #374151;
+  }
+
+  .dark .skill-experience {
+    color: #d1d5db;
   }
 
   .skill-experience strong {
@@ -1684,8 +1754,6 @@
       padding-top: 1rem;
     }
   }
-}
-
 @layer utilities {
   .navy {
     color: var(--navy);
@@ -2246,3 +2314,4 @@
       color: #1E40AF;
     }
   }
+}
