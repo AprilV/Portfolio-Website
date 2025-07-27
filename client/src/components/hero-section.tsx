@@ -40,7 +40,7 @@ const HeroSection = () => {
                 April V. Sykes
               </h1>
               <h2 
-                className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-teal-blue dark:text-teal-blue font-semibold transition-colors duration-300 leading-snug"
+                className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-teal-blue dark:text-teal-blue font-semibold transition-colors duration-300 leading-snug text-center"
                 itemProp="jobTitle"
               >
                 <span className="block sm:inline">Assistant Project Manager</span>
