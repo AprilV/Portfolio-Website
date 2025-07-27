@@ -94,7 +94,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={openSearch}
-              className="flex items-center gap-2 text-charcoal-black dark:text-gray-200 hover:scale-105 hover:translate-y-[-1px] transition-all duration-200 focus-enhanced"
+              className="flex items-center gap-2 text-charcoal-black dark:text-gray-200 hover:scale-105 hover:translate-y-[-1px] transition-all duration-200 focus-enhanced bg-transparent hover:bg-transparent"
               data-testid="search-button-desktop"
             >
               <Search className="h-4 w-4" />
@@ -112,7 +112,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={openSearch}
-              className="h-9 w-9"
+              className="h-9 w-9 bg-transparent hover:bg-transparent"
               data-testid="search-button-mobile"
             >
               <Search className="h-4 w-4" />
@@ -120,7 +120,7 @@ const Navigation = () => {
             <ThemeToggle />
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm">
+                <Button variant="ghost" size="sm" className="bg-transparent hover:bg-transparent">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
