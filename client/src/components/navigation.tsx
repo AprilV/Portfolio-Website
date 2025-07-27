@@ -131,10 +131,11 @@ const Navigation = () => {
                 <Button 
                   variant="ghost" 
                   size="sm" 
-                  className="bg-transparent hover:bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2"
+                  className="h-9 w-9 p-2 text-charcoal-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2"
                   aria-label="Open mobile menu"
+                  data-testid="mobile-menu-button"
                 >
-                  <Menu className="h-6 w-6" aria-hidden="true" />
+                  <Menu className="h-5 w-5" aria-hidden="true" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-80">
