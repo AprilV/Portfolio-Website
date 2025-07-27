@@ -380,7 +380,7 @@ const ContactSection = () => {
               <Button 
                 type="submit" 
                 disabled={contactMutation.isPending}
-                className="w-full bg-primary-blue text-white hover:bg-primary-blue/90 py-3 hover-lift hover-glow-primary transition-all duration-300"
+                className="w-full bg-primary-blue text-white hover:bg-primary-blue/90 py-3 hover-lift hover-glow-primary transition-all duration-300 micro-bounce focus-enhanced"
               >
                 {contactMutation.isPending ? "Sending..." : "Send Message"}
                 <Send className="ml-2 w-5 h-5" />

@@ -11,7 +11,7 @@ export const ThemeToggle: React.FC = () => {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="w-9 h-9 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 hover:bg-accent/50 transition-all duration-300"
+      className="w-9 h-9 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 hover:bg-accent/50 transition-all duration-300 micro-bounce focus-enhanced"
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
       data-testid="theme-toggle-button"
     >

@@ -94,7 +94,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={openSearch}
-              className="flex items-center gap-2 text-charcoal-black dark:text-gray-200 hover:text-primary-blue dark:hover:text-primary-blue transition-colors duration-200"
+              className="flex items-center gap-2 text-charcoal-black dark:text-gray-200 hover:text-primary-blue dark:hover:text-primary-blue transition-colors duration-200 micro-bounce focus-enhanced"
               data-testid="search-button-desktop"
             >
               <Search className="h-4 w-4" />
