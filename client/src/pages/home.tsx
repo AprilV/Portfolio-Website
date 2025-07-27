@@ -4,7 +4,7 @@ import AboutSection from "@/components/about-section";
 import ExperienceSection from "@/components/experience-section";
 import ProjectsSection from "@/components/projects-section";
 import SkillsSection from "@/components/skills-section";
-import ResumeHub from "@/pages/resume-hub";
+// Resume builder moved to admin area
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import TableOfContents from "@/components/table-of-contents";
@@ -14,7 +14,7 @@ const Home = () => {
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
-    { id: 'resume', label: 'Resume Builder' },
+    // Resume builder removed from public navigation
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -28,7 +28,7 @@ const Home = () => {
         <ExperienceSection />
         <ProjectsSection />
         <SkillsSection />
-        <ResumeHub />
+        {/* Resume builder moved to admin area */}
         <ContactSection />
       </main>
       <Footer />

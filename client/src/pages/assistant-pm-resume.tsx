@@ -52,7 +52,7 @@ const AssistantPMResume = () => {
         
         {/* Header */}
         <div className="mb-8">
-          <Link href="/resume" className="inline-flex items-center text-primary-blue hover:text-primary-blue/80 mb-4">
+          <Link href="/admin/resume" className="inline-flex items-center text-primary-blue hover:text-primary-blue/80 mb-4">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Resume Builder
           </Link>

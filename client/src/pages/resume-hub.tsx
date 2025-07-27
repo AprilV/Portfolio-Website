@@ -13,7 +13,7 @@ const ResumeHub = () => {
       features: ["Project coordination", "Team support", "Process improvement", "Stakeholder communication"],
       color: "primary-blue",
       icon: Target,
-      path: "/resume/assistant-pm",
+      path: "/admin/resume/assistant-pm",
       bestFor: "Assistant PM and project coordination positions",
       priority: "Primary Target"
     },
@@ -24,7 +24,7 @@ const ResumeHub = () => {
       features: ["Technical coordination", "IT project support", "Infrastructure knowledge", "Technical communication"],
       color: "teal-blue",
       icon: Settings,
-      path: "/resume/it-assistant-pm",
+      path: "/admin/resume/it-assistant-pm",
       bestFor: "IT-focused assistant PM and technical coordination roles",
       priority: "IT Specialty"
     },
@@ -35,7 +35,7 @@ const ResumeHub = () => {
       features: ["Growth mindset", "Academic foundation", "Hands-on experience", "Professional development"],
       color: "primary-blue",
       icon: GraduationCap,
-      path: "/resume/pm-internship",
+      path: "/admin/resume/pm-internship",
       bestFor: "PM internships and entry-level project management roles",
       priority: "Growth Opportunity"
     }

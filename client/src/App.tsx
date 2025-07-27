@@ -21,10 +21,26 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/resume" component={ResumeHub} />
-      <Route path="/resume/assistant-pm" component={AssistantPMResume} />
-      <Route path="/resume/it-assistant-pm" component={ITAssistantPMResume} />
-      <Route path="/resume/pm-internship" component={PMInternshipResume} />
+      <Route path="/admin/resume">
+        <AdminProtectedRoute>
+          <ResumeHub />
+        </AdminProtectedRoute>
+      </Route>
+      <Route path="/admin/resume/assistant-pm">
+        <AdminProtectedRoute>
+          <AssistantPMResume />
+        </AdminProtectedRoute>
+      </Route>
+      <Route path="/admin/resume/it-assistant-pm">
+        <AdminProtectedRoute>
+          <ITAssistantPMResume />
+        </AdminProtectedRoute>
+      </Route>
+      <Route path="/admin/resume/pm-internship">
+        <AdminProtectedRoute>
+          <PMInternshipResume />
+        </AdminProtectedRoute>
+      </Route>
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin">
         <AdminProtectedRoute>
