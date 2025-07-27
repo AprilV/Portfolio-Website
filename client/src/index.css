@@ -352,7 +352,20 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: flowGradientOnce 4s ease-in-out forwards;
+    animation: flowGradientOnceDark 4s ease-in-out forwards;
+  }
+
+  @keyframes flowGradientOnceDark {
+    0% {
+      background-position: 0% 50%;
+    }
+    70% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+      -webkit-text-fill-color: #F5F5F5;
+    }
   }
 
   .gradient-text-flow-title {
@@ -361,7 +374,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: flowGradientOnce 4s ease-in-out 0.5s forwards;
+    animation: flowGradientTitle 4s ease-in-out 0.5s forwards;
     color: #6B7280;
   }
 
@@ -371,21 +384,46 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: flowGradientOnce 4s ease-in-out 0.5s forwards;
+    animation: flowGradientTitleDark 4s ease-in-out 0.5s forwards;
     color: #9CA3AF;
+  }
+
+  @keyframes flowGradientTitle {
+    0% {
+      background-position: 0% 50%;
+    }
+    70% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+      -webkit-text-fill-color: #6B7280;
+    }
+  }
+
+  @keyframes flowGradientTitleDark {
+    0% {
+      background-position: 0% 50%;
+    }
+    70% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+      -webkit-text-fill-color: #9CA3AF;
+    }
   }
 
   @keyframes flowGradientOnce {
     0% {
       background-position: 0% 50%;
     }
-    50% {
+    70% {
       background-position: 100% 50%;
     }
     100% {
       background-position: 100% 50%;
-      background: none;
-      color: inherit;
+      -webkit-text-fill-color: #1E1E1E;
     }
   }
   
