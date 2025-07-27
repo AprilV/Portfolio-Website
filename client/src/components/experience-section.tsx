@@ -127,7 +127,10 @@ const ExperienceSection = () => {
             viewport={{ once: true }}
           >
             <div className="professional-experience-header">
-              <h2 className="section-header">Professional Experience</h2>
+              <h2 className="section-header">
+                Professional Experience
+                <div className="section-underline"></div>
+              </h2>
               <p className="section-subtitle">Selected Roles Demonstrating IT & Leadership Growth</p>
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">

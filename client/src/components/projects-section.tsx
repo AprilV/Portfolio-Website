@@ -118,8 +118,11 @@ const ProjectsSection = () => {
     <section id="projects" className="py-12 bg-background dark:bg-background" style={{paddingTop: '80px', paddingBottom: '60px'}}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <div className="professional-experience-header">
-            <h2 className="section-header">Featured Capstone Projects</h2>
+          <div className="professional-experience-header" style={{marginTop: '0'}}>
+            <h2 className="section-header">
+              Featured Capstone Projects
+              <div className="section-underline"></div>
+            </h2>
             <p className="section-subtitle">Academic Excellence in Applied Technology</p>
           </div>
           <p className="text-xl text-muted-foreground mt-6">Four comprehensive capstone projects demonstrating technical skills and project management capabilities across multiple disciplines</p>

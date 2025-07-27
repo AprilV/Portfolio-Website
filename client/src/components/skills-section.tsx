@@ -169,7 +169,10 @@ const SkillsSection = () => {
             viewport={{ once: true }}
           >
             <div className="professional-experience-header">
-              <h2 className="section-header">Skills & Certifications</h2>
+              <h2 className="section-header">
+                Skills & Certifications
+                <div className="section-underline"></div>
+              </h2>
               <p className="section-subtitle">Technical Expertise & Project Management Capabilities</p>
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
