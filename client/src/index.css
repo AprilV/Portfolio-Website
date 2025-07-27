@@ -490,9 +490,12 @@
   }
   
   .professional-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.02);
     box-shadow: 0 8px 25px rgba(44, 115, 210, 0.12);
-    border-color: hsl(214, 76%, 49%);
+  }
+
+  .dark .professional-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   }
   
   /* Professional Badge - Pill Style */
