@@ -1,0 +1,27 @@
+run = "npm run dev"
+modules = ["nodejs-20"]
+
+[deployment]
+run = ["npm", "run", "build", "&&", "npm", "start"]
+deploymentTarget = "static"
+
+[env]
+NODE_ENV = "production"
+
+[nix]
+channel = "stable-24_05"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[languages]
+
+[languages.javascript]
+pattern = "**/{*.js,*.jsx,*.ts,*.tsx,*.json}"
+
+[languages.javascript.languageServer]
+start = "typescript-language-server --stdio"
+
+[[languages.javascript.languageServer.initializationOptions]]
+preferences = { includeInlayParameterNameHints = "all", includeInlayVariableTypeHints = true }
