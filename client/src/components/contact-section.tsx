@@ -190,9 +190,9 @@ const ContactSection = () => {
               Let's Connect
               <div className="section-underline"></div>
             </h2>
-            <p className="section-subtitle enhanced-subheader">Professional Networking & Opportunities</p>
+            <p className="section-subtitle">Professional Networking & Opportunities</p>
           </div>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mt-6 transition-colors duration-300">Ready to bring technical expertise and project management skills to your team</p>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mt-8 transition-colors duration-300">Ready to bring technical expertise and project management skills to your team</p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12">
