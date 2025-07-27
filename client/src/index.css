@@ -973,8 +973,7 @@
   }
 
   .tech-chip:hover {
-    background: #2C73D2;
-    color: white;
+    border-color: #2C73D2;
     transform: translateY(-1px);
   }
 
@@ -985,8 +984,7 @@
   }
 
   .dark .tech-chip:hover {
-    background: #43D8C9;
-    color: #1f2937;
+    border-color: #2C73D2;
   }
 
   /* Optimized Scrolling - Disabled snap for performance */
