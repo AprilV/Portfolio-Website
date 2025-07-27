@@ -21,14 +21,25 @@ const WorldClock: React.FC = () => {
       const newTimes: { [key: string]: string } = {};
       
       timezones.forEach(tz => {
-        const now = new Date();
-        const timeString = now.toLocaleTimeString('en-US', {
-          timeZone: tz.timezone,
-          hour12: false,
-          hour: '2-digit',
-          minute: '2-digit'
-        });
-        newTimes[tz.code] = timeString;
+        try {
+          const now = new Date();
+          const timeString = now.toLocaleTimeString('en-US', {
+            timeZone: tz.timezone,
+            hour12: false,
+            hour: '2-digit',
+            minute: '2-digit'
+          });
+          newTimes[tz.code] = timeString;
+        } catch (error) {
+          // Fallback if timezone fails
+          const now = new Date();
+          const fallbackTime = now.toLocaleTimeString('en-US', {
+            hour12: false,
+            hour: '2-digit',
+            minute: '2-digit'
+          });
+          newTimes[tz.code] = fallbackTime;
+        }
       });
       
       setTimes(newTimes);
@@ -52,10 +63,10 @@ const WorldClock: React.FC = () => {
       <div className="flex items-center gap-4">
         {timezones.map((tz) => (
           <div key={tz.code} className="flex items-center gap-1">
-            <span className="font-mono text-gray-900 dark:text-gray-100">
-              {times[tz.code] || '--:--'}
+            <span className="font-mono text-gray-900 dark:text-gray-100 min-w-[50px]">
+              {times[tz.code] || '00:00'}
             </span>
-            <span className="text-xs text-gray-500 dark:text-gray-500">
+            <span className="text-xs text-gray-500 dark:text-gray-400">
               {tz.code}
             </span>
           </div>
