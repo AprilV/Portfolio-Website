@@ -17,9 +17,7 @@ const app = express();
 // Configure trust proxy for Replit environment
 app.set('trust proxy', 1);
 
-// WWW redirect middleware - TEMPORARILY DISABLED for Replit verification
-// TODO: Re-enable after www.aprilsykes.com verification completes
-/*
+// WWW redirect middleware - redirects www.aprilsykes.com to aprilsykes.com
 app.use((req, res, next) => {
   if (req.headers.host?.startsWith('www.')) {
     const redirectUrl = `https://${req.headers.host.replace('www.', '')}${req.url}`;
@@ -27,7 +25,6 @@ app.use((req, res, next) => {
   }
   next();
 });
-*/
 
 // Apply security middleware FIRST
 app.use(securityHeaders);
