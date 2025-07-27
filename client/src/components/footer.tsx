@@ -83,9 +83,10 @@ const Footer = () => {
         
         <div className="border-t border-gray-600 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-center md:text-left">
-              © 2024 April V. Sykes. Professional portfolio showcasing transition from IT infrastructure to project management.
-            </p>
+            <div className="text-gray-400 text-center md:text-left">
+              <p>© 2024 April V. Sykes. Professional portfolio showcasing transition from IT infrastructure to project management.</p>
+              <p className="text-sm mt-1 text-gray-500">Designed collaboratively by April V. Sykes & Claude AI</p>
+            </div>
             <WorldClock />
           </div>
         </div>
