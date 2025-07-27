@@ -237,15 +237,15 @@ const SkillsSection = () => {
             <h3 className="cert-heading">Verified Badges & Education</h3>
             <div className="cert-grid">
               {verifiedBadges.map((cert, index) => (
-                <div key={`verified-${index}`} className="cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up border border-gray-100">
+                <div key={`verified-${index}`} className="cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up border border-gray-100 dark:border-gray-700 dark:bg-card">
                   <div className="flex items-start gap-4">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                       <cert.icon className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-gray-900 mb-1 text-sm leading-tight">{cert.name}</h4>
-                      <p className="text-xs text-gray-600 mb-1">{cert.description}</p>
-                      <p className="text-xs text-gray-500 mb-2">{cert.detail}</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 text-sm leading-tight">{cert.name}</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">{cert.description}</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{cert.detail}</p>
                       {cert.link && (
                         <a 
                           href={cert.link}
@@ -265,7 +265,7 @@ const SkillsSection = () => {
                       {cert.credentialId && (
                         <div className="mt-1">
                           <span className={`inline-flex items-center text-xs px-2 py-1 rounded ${
-                            cert.credentialId === 'In Progress' ? 'badge-progress' : 'bg-gray-100 text-gray-700'
+                            cert.credentialId === 'In Progress' ? 'badge-progress' : 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
                           }`}>
                             {cert.credentialId}
                           </span>
@@ -281,15 +281,15 @@ const SkillsSection = () => {
             <h3 className="cert-heading">Technical Certifications</h3>
             <div className="cert-grid">
               {technicalCertifications.map((cert, index) => (
-                <div key={`technical-${index}`} className="cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up border border-gray-100">
+                <div key={`technical-${index}`} className="cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up border border-gray-100 dark:border-gray-700 dark:bg-card">
                   <div className="flex items-start gap-4">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                       <cert.icon className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-gray-900 mb-1 text-sm leading-tight">{cert.name}</h4>
-                      <p className="text-xs text-gray-600 mb-1">{cert.description}</p>
-                      <p className="text-xs text-gray-500 mb-2">{cert.detail}</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 text-sm leading-tight">{cert.name}</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">{cert.description}</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{cert.detail}</p>
                       {cert.link && (
                         <a 
                           href={cert.link}
@@ -308,7 +308,7 @@ const SkillsSection = () => {
                       )}
                       {cert.credentialId && (
                         <div className="mt-1">
-                          <span className="inline-flex items-center text-xs px-2 py-1 rounded bg-gray-100 text-gray-700">
+                          <span className="inline-flex items-center text-xs px-2 py-1 rounded bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300">
                             {cert.credentialId}
                           </span>
                         </div>
@@ -323,18 +323,18 @@ const SkillsSection = () => {
             <h3 className="cert-heading">Academic Recognition</h3>
             <div className="cert-grid">
               {academicRecognition.map((cert, index) => (
-                <div key={`academic-${index}`} className="cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up border border-gray-100">
+                <div key={`academic-${index}`} className="cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up border border-gray-100 dark:border-gray-700 dark:bg-card">
                   <div className="flex items-start gap-4">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                       <cert.icon className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-gray-900 mb-1 text-sm leading-tight">{cert.name}</h4>
-                      <p className="text-xs text-gray-600 mb-1">{cert.description}</p>
-                      <p className="text-xs text-gray-500 mb-2">{cert.detail}</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 text-sm leading-tight">{cert.name}</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">{cert.description}</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{cert.detail}</p>
                       {cert.credentialId && (
                         <div className="mt-1">
-                          <span className="inline-flex items-center text-xs px-2 py-1 rounded bg-green-100 text-green-800">
+                          <span className="inline-flex items-center text-xs px-2 py-1 rounded bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100">
                             {cert.credentialId}
                           </span>
                         </div>
