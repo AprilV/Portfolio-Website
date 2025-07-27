@@ -94,7 +94,7 @@ const HeroSection = () => {
               <Button 
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-primary-blue hover:bg-primary-blue-hover text-white dark:text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+                className="bg-primary-blue dark:bg-primary-blue text-white dark:text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
               >
                 Get In Touch
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -103,7 +103,7 @@ const HeroSection = () => {
                 variant="outline"
                 onClick={downloadResume}
                 size="lg"
-                className="font-semibold px-8 py-3 rounded-lg border-2 border-teal-blue text-teal-blue hover:bg-teal-blue hover:text-white dark:hover:text-gray-900 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
+                className="font-semibold px-8 py-3 rounded-lg border-2 border-teal-blue text-teal-blue dark:text-teal-blue dark:border-teal-blue transition-all duration-300 shadow-lg hover:shadow-2xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] transform hover:-translate-y-1 hover:scale-105"
               >
                 <Download className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-0.5" />
                 Download Resume
@@ -117,7 +117,7 @@ const HeroSection = () => {
                 href="https://www.linkedin.com/in/aprilsykes" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 text-primary-blue hover:text-primary-blue-hover border border-primary-blue/30 hover:border-primary-blue rounded-lg transition-all duration-300 hover:shadow-md transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-blue/50 focus:ring-offset-2"
+                className="inline-flex items-center gap-2 px-4 py-2 text-primary-blue dark:text-primary-blue border border-primary-blue/30 dark:border-primary-blue/50 rounded-lg transition-all duration-300 hover:shadow-md dark:hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)] transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-blue/50 focus:ring-offset-2"
                 aria-label="Connect with April V. Sykes on LinkedIn - Opens in new tab"
               >
                 <Linkedin className="h-4 w-4" />
@@ -140,7 +140,7 @@ const HeroSection = () => {
               </div>
               <button
                 onClick={scrollToSkills}
-                className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-card-background shadow-lg p-3 sm:p-4 border border-divider-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-primary-blue/5 cursor-pointer group"
+                className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-card-background dark:bg-card shadow-lg p-3 sm:p-4 border border-divider-gray dark:border-border rounded-lg hover:shadow-xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] transition-all duration-300 transform hover:scale-105 cursor-pointer group"
                 title="Click to view academic achievements and GPA details"
                 aria-label="GPA 3.94 - Click to view academic achievements"
               >

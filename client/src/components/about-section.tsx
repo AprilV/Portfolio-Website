@@ -104,7 +104,7 @@ const AboutSection = () => {
               </h3>
               <div className="grid sm:grid-cols-1 gap-4">
                 {coreValues.map((value, index) => (
-                  <div key={index} className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary-blue/5 transition-colors duration-200">
+                  <div key={index} className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary-blue/5 dark:hover:bg-primary-blue/10 hover:translate-y-[-1px] hover:shadow-md transition-all duration-200">
                     <div className={`w-3 h-3 rounded-full flex-shrink-0 ${
                       index === 0 ? 'bg-primary-blue' : index === 1 ? 'bg-teal-blue' : 'bg-primary-blue'
                     }`}></div>
@@ -123,12 +123,12 @@ const AboutSection = () => {
                 return (
                   <div 
                     key={index} 
-                    className="professional-card text-center p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group min-h-[120px] flex flex-col justify-center"
+                    className="professional-card text-center p-6 hover:shadow-xl dark:hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group min-h-[120px] flex flex-col justify-center"
                     title={achievement.description}
                     aria-label={achievement.ariaLabel || `${achievement.value} ${achievement.label} - ${achievement.description}`}
                   >
-                    <IconComponent className="h-6 w-6 text-primary-blue mx-auto mb-2 group-hover:text-teal-blue transition-colors" />
-                    <div className="text-3xl font-bold text-primary-blue mb-2 group-hover:text-teal-blue transition-colors">
+                    <IconComponent className="h-6 w-6 text-primary-blue mx-auto mb-2 transition-all duration-300" />
+                    <div className="text-3xl font-bold text-primary-blue mb-2 transition-all duration-300">
                       {achievement.value}
                     </div>
                     <div className="text-sm text-cool-gray font-medium leading-tight">

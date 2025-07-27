@@ -83,8 +83,8 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-charcoal-black dark:text-gray-200 hover:text-primary-blue dark:hover:text-primary-blue transition-colors duration-200 font-medium ${
-                  activeSection === item.id ? "text-primary-blue font-semibold" : ""
+                className={`text-charcoal-black dark:text-gray-200 hover:scale-105 hover:translate-y-[-1px] transition-all duration-200 font-medium ${
+                  activeSection === item.id ? "text-primary-blue dark:text-primary-blue font-semibold" : ""
                 }`}
               >
                 {item.label}
@@ -94,7 +94,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={openSearch}
-              className="flex items-center gap-2 text-charcoal-black dark:text-gray-200 hover:text-primary-blue dark:hover:text-primary-blue transition-colors duration-200 micro-bounce focus-enhanced"
+              className="flex items-center gap-2 text-charcoal-black dark:text-gray-200 hover:scale-105 hover:translate-y-[-1px] transition-all duration-200 focus-enhanced"
               data-testid="search-button-desktop"
             >
               <Search className="h-4 w-4" />
@@ -133,7 +133,7 @@ const Navigation = () => {
                       className={`text-left text-lg font-medium transition-colors duration-200 ${
                         activeSection === item.id 
                           ? "text-primary font-semibold" 
-                          : "text-foreground hover:text-primary"
+                          : "text-foreground hover:scale-105 hover:translate-y-[-1px] transition-all duration-200"
                       }`}
                     >
                       {item.label}

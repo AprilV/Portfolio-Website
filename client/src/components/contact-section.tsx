@@ -213,7 +213,7 @@ const ContactSection = () => {
                           href={info.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-primary-blue hover:text-primary-blue/80 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-blue/50 focus:ring-offset-2 rounded"
+                          className="text-primary-blue dark:text-primary-blue hover:scale-105 hover:translate-y-[-1px] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-blue/50 focus:ring-offset-2 rounded"
                           aria-label={`Visit April's ${info.label} profile`}
                         >
                           {info.value}
@@ -380,7 +380,7 @@ const ContactSection = () => {
               <Button 
                 type="submit" 
                 disabled={contactMutation.isPending}
-                className="w-full bg-primary-blue text-white hover:bg-primary-blue/90 py-3 hover-lift hover-glow-primary transition-all duration-300 micro-bounce focus-enhanced"
+                className="w-full bg-primary-blue dark:bg-primary-blue text-white dark:text-gray-900 py-3 hover:shadow-lg dark:hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.3)] hover:translate-y-[-2px] hover:scale-105 transition-all duration-300 focus-enhanced"
               >
                 {contactMutation.isPending ? "Sending..." : "Send Message"}
                 <Send className="ml-2 w-5 h-5" />

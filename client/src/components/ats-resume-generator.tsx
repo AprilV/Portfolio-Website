@@ -374,7 +374,7 @@ const ATSResumeGenerator = () => {
                   <Button
                     variant={previewMode ? "default" : "outline"}
                     onClick={() => setPreviewMode(!previewMode)}
-                    className="border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white dark:hover:text-gray-900"
+                    className="border-primary-blue text-primary-blue dark:text-primary-blue hover:scale-105 hover:translate-y-[-1px] hover:shadow-md transition-all duration-200"
                   >
                     <Eye className="h-4 w-4 mr-2" />
                     {previewMode ? "Hide Preview" : "Show Preview"}
