@@ -1532,7 +1532,7 @@
   }
 
   .dark #about .professional-experience-header::before {
-    background: rgb(15, 15, 15); /* Dark mode background color */
+    background: transparent;
     color: white;
   }
 
@@ -1544,7 +1544,7 @@
   }
 
   .dark #experience .professional-experience-header::before {
-    background: rgb(15, 15, 15); /* Dark mode background color */
+    background: transparent;
     color: white;
   }
 
@@ -1556,7 +1556,7 @@
   }
 
   .dark #projects .professional-experience-header::before {
-    background: rgb(15, 15, 15); /* Dark mode background color */
+    background: transparent;
     color: white;
   }
 
@@ -1568,7 +1568,7 @@
   }
 
   .dark #skills .professional-experience-header::before {
-    background: rgb(15, 15, 15); /* Dark mode background color */
+    background: transparent;
     color: white;
   }
 
@@ -1580,7 +1580,7 @@
   }
 
   .dark #resume .professional-experience-header::before {
-    background: rgb(15, 15, 15); /* Dark mode background color */
+    background: transparent;
     color: white;
   }
 
@@ -1592,7 +1592,7 @@
   }
 
   .dark #contact .professional-experience-header::before {
-    background: rgb(15, 15, 15); /* Dark mode background color */
+    background: transparent;
     color: white;
   }
 
