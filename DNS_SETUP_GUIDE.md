@@ -1,36 +1,41 @@
-# DNS Setup Guide - www.aprilsykes.com Configuration
+# Replit Domain Setup Guide - www.aprilsykes.com Configuration
 
 ## Issue Identified
-The www subdomain (www.aprilsykes.com) is not resolving because it's not configured in your domain's DNS settings. The main domain aprilsykes.com works perfectly, but visitors typing www.aprilsykes.com get an error.
+The www subdomain (www.aprilsykes.com) is not resolving because it needs to be configured in Replit's deployment system. Since your domain is hosted on Replit, you need to add the www subdomain through Replit's custom domain settings.
 
 ## Current Status
-✅ **aprilsykes.com** - Working perfectly  
-❌ **www.aprilsykes.com** - DNS not configured (returns "Could not resolve host")
+✅ **aprilsykes.com** - Working perfectly on Replit  
+❌ **www.aprilsykes.com** - Not configured in Replit deployment (returns "Could not resolve host")
 
-## Solution: Configure WWW Subdomain
+## Solution: Add WWW Subdomain to Replit Deployment
 
-### Step 1: Access Your DNS Settings
-1. Log into your domain registrar (where you purchased aprilsykes.com)
-2. Navigate to DNS Management or DNS Settings
-3. Look for the DNS Records section
+### Step 1: Access Replit Deployment Settings
+1. Go to your Replit project
+2. Click on the **"Deployments"** tab at the top
+3. Find your current deployment for aprilsykes.com
+4. Click **"Settings"** or the gear icon
 
-### Step 2: Add WWW Record (Choose One Option)
+### Step 2: Add WWW Domain to Replit
+1. In the deployment settings, look for **"Custom Domains"** section
+2. Click **"Add Domain"** or **"Link a domain"**
+3. Enter: `www.aprilsykes.com`
+4. Replit will provide you with DNS record requirements
 
-#### Option A: CNAME Record (Recommended)
+### Step 3: Configure DNS Records (If Required)
+Replit may provide you with specific records to add:
+
+#### Typical Replit DNS Requirements:
 ```
 Type: CNAME
 Name: www
-Value: aprilsykes.com
+Value: [Replit provides this - usually like cname.replit.app]
 TTL: 3600 (1 hour)
 ```
 
-#### Option B: A Record (Alternative)
-```
-Type: A
-Name: www
-Value: [Same IP address as aprilsykes.com]
-TTL: 3600 (1 hour)
-```
+### Step 4: Verify Domain in Replit
+1. After adding DNS records, return to Replit
+2. Click **"Verify"** next to your www domain
+3. Wait for verification (usually 5-30 minutes)
 
 ### Step 3: Verify Configuration
 After adding the DNS record:
@@ -58,25 +63,28 @@ This means once DNS is configured:
 - Maintains SEO value with 301 permanent redirect
 - Provides seamless user experience
 
-## Common Domain Registrars
+## Alternative: Direct Replit Configuration
 
-### Namecheap
-1. Login → Domain List → Manage
-2. Advanced DNS → Add New Record
-3. Type: CNAME, Host: www, Value: aprilsykes.com
+### Option A: Multiple Domain Setup
+If Replit allows multiple domains in the same deployment:
+1. Add both `aprilsykes.com` AND `www.aprilsykes.com` as separate custom domains
+2. Both will point to the same deployment
+3. Your server redirect middleware will handle www → non-www redirects
 
-### GoDaddy
-1. Login → My Products → Domains → Manage DNS
-2. Add Record → CNAME → Name: www, Value: aprilsykes.com
+### Option B: DNS-Only Setup (If Replit Doesn't Support Both)
+1. Get the IP address of your Replit deployment
+2. Add DNS records in your domain registrar:
+   ```
+   Type: A
+   Name: www
+   Value: [Your Replit deployment IP]
+   TTL: 3600
+   ```
 
-### Cloudflare
-1. Login → Select Domain → DNS → Records
-2. Add record → CNAME → Name: www, Target: aprilsykes.com
-
-### Google Domains
-1. Login → My domains → Manage → DNS
-2. Custom records → Create new record
-3. Type: CNAME, Name: www, Data: aprilsykes.com
+### How to Find Your Replit Deployment Details
+1. In Replit, go to Deployments → Your deployment
+2. Look for "Domain" or "URL" information
+3. Note the IP address or CNAME target provided by Replit
 
 ## Testing Commands
 

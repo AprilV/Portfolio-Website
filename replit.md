@@ -22,13 +22,13 @@ This is a professional portfolio website built as a full-stack application showc
 - **Proper Tool Separation**: Resume generation is now private career management tool rather than confusing public feature
 - **Professional Language**: Eliminated technical "ATS" terminology from public-facing content, replaced with career-focused messaging
 
-**January 27, 2025**: DNS Configuration Issue Identified - WWW Subdomain Setup Required
-- **WWW Subdomain Issue**: Identified that www.aprilsykes.com is not resolving due to missing DNS configuration at domain registrar level
+**January 27, 2025**: Replit Domain Configuration Issue Identified - WWW Subdomain Setup Required
+- **WWW Subdomain Issue**: Identified that www.aprilsykes.com is not resolving because it's not configured in Replit's deployment system
 - **Server Redirect Ready**: WWW redirect middleware already properly configured in server (301 redirect from www to non-www)
-- **DNS Setup Guide Created**: Comprehensive guide (DNS_SETUP_GUIDE.md) with step-by-step instructions for major registrars
-- **Root Cause Analysis**: aprilsykes.com works perfectly, but www subdomain needs CNAME or A record pointing to main domain
-- **Professional SEO Impact**: Once DNS is configured, both URLs will work with proper 301 redirects preserving search rankings
-- **User Experience**: Missing DNS record causes "Could not resolve host" error for visitors typing www.aprilsykes.com
+- **Replit DNS Setup Guide Created**: Updated DNS_SETUP_GUIDE.md with Replit-specific instructions for adding www subdomain to deployment
+- **Root Cause Analysis**: aprilsykes.com works perfectly on Replit, but www subdomain needs to be added as custom domain in deployment settings
+- **Professional SEO Impact**: Once Replit configuration is complete, both URLs will work with proper 301 redirects preserving search rankings
+- **User Experience**: Missing Replit domain configuration causes "Could not resolve host" error for visitors typing www.aprilsykes.com
 
 **January 27, 2025**: Separate Resume Pages Architecture - Professional Focus Implementation
 - **Multi-Page Resume System**: Created separate dedicated pages for each resume type following professional UX best practices
