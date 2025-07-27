@@ -1664,7 +1664,10 @@
     .professional-card.text-center,
     h1, h2.section-header,
     .text-center.mb-16,
-    .text-center.mb-10 {
+    .text-center.mb-10,
+    .text-center p.text-xl,
+    .text-center .max-w-3xl,
+    .text-center .text-xl.text-gray-600 {
       text-align: center !important;
     }
     
