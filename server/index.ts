@@ -17,6 +17,15 @@ const app = express();
 // Configure trust proxy for Replit environment
 app.set('trust proxy', 1);
 
+// WWW redirect middleware - redirects www.aprilsykes.com to aprilsykes.com
+app.use((req, res, next) => {
+  if (req.headers.host?.startsWith('www.')) {
+    const redirectUrl = `https://${req.headers.host.replace('www.', '')}${req.url}`;
+    return res.redirect(301, redirectUrl);
+  }
+  next();
+});
+
 // Apply security middleware FIRST
 app.use(securityHeaders);
 app.use(cors(corsOptions));
