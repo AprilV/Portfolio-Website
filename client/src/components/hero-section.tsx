@@ -29,9 +29,9 @@ const HeroSection = () => {
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-transparent to-teal-blue/5 dark:from-teal-blue/10 dark:via-transparent dark:to-primary-blue/10"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid lg:grid-cols-2 gap-12 items-center justify-center">
-          <div className="space-y-8 animate-slide-in-left">
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-col lg:flex-row gap-12 items-center justify-center">
+          <div className="space-y-8 animate-slide-in-left lg:order-1 w-full lg:w-auto text-center lg:text-left">
             <div className="space-y-4">
               <h1 
                 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-charcoal-black dark:text-white leading-tight transition-colors duration-300 text-center"
@@ -134,9 +134,9 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="lg:text-right animate-slide-in-right animation-delay-200">
+          <div className="animate-slide-in-right animation-delay-200 lg:order-0">
             <div className="relative inline-block">
-              <div className="w-72 sm:w-80 h-72 sm:h-80 rounded-2xl shadow-2xl overflow-hidden relative mx-auto lg:mx-0">
+              <div className="w-72 sm:w-80 h-72 sm:h-80 rounded-2xl shadow-2xl overflow-hidden relative mx-auto">
                 <img 
                   src={profilePhoto} 
                   alt="April V. Sykes - Professional headshot photo showing a confident IT professional and Assistant Project Manager candidate" 
