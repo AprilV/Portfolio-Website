@@ -66,8 +66,8 @@ const HeroSection = () => {
               </div>
               <div 
                 className="professional-badge badge-academic flex items-center gap-2 hover-scale transition-all duration-200"
-                title="Bachelor of Applied Science in Information Systems student with 3.94 GPA"
-                aria-label="Senior BAS-IS Student with 3.94 GPA"
+                title="Bachelor of Applied Science in Information Systems student"
+                aria-label="Senior BAS-IS Student"
               >
                 <GraduationCap className="h-4 w-4" />
                 <span>Senior BAS-IS Student</span>
