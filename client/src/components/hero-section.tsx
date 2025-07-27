@@ -140,17 +140,7 @@ const HeroSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/8 via-transparent to-teal-blue/8"></div>
               </div>
-              <button
-                onClick={scrollToSkills}
-                className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-card-background dark:bg-card shadow-lg p-3 sm:p-4 border border-divider-gray dark:border-border rounded-lg hover:shadow-xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] transition-all duration-300 transform hover:scale-105 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900"
-                title="Click to view academic achievements and GPA details"
-                aria-label="GPA 3.94 - Click to view academic achievements and skills section"
-              >
-                <div className="text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-teal-blue group-hover:text-primary-blue transition-colors">3.94</div>
-                  <div className="text-xs sm:text-sm text-cool-gray font-medium">GPA</div>
-                </div>
-              </button>
+
             </div>
           </div>
         </div>
