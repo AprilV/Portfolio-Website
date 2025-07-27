@@ -72,9 +72,11 @@ const Navigation = () => {
     } border-b border-gray-200 dark:border-gray-700`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex flex-row items-center space-x-2 flex-nowrap">
-            <h1 className="text-xl font-bold text-charcoal-black dark:text-white">April V. Sykes</h1>
-            <span className="text-sm text-gray-500 dark:text-gray-400">Assistant Project Manager</span>
+          <div className="flex items-center">
+            <div className="bg-gradient-to-r from-primary-blue to-teal-blue px-4 py-2 rounded-lg shadow-sm">
+              <span className="text-lg font-bold text-white">April V. Sykes</span>
+              <span className="ml-3 text-sm text-blue-100 font-medium">Assistant Project Manager</span>
+            </div>
           </div>
           
           {/* Desktop Navigation */}

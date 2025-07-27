@@ -335,6 +335,11 @@
   .flex-nowrap {
     flex-wrap: nowrap !important;
   }
+
+  /* Navigation gradient styling */
+  .bg-gradient-to-r {
+    background: linear-gradient(135deg, #2C73D2 0%, #43D8C9 100%);
+  }
   
   .professional-card:hover {
     transform: translateY(-4px);
