@@ -1514,13 +1514,14 @@
     font-weight: 900;
     content: '\f0b1'; /* fa-briefcase default */
     position: absolute;
-    top: -0.75rem;
+    top: -1.25rem;
     left: 50%;
     transform: translateX(-50%);
     background: inherit;
     padding: 0 1rem;
     font-size: 1.5rem;
     color: #2C73D2;
+    z-index: 10;
   }
 
   /* Section-specific Font Awesome icons with matching backgrounds */
