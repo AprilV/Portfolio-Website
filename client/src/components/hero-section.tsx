@@ -133,6 +133,8 @@ const HeroSection = () => {
                   src={profilePhoto} 
                   alt="April V. Sykes - Professional headshot photo showing a confident IT professional and Assistant Project Manager candidate" 
                   className="w-full h-full object-cover"
+                  loading="eager"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/8 via-transparent to-teal-blue/8"></div>
               </div>
