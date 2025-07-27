@@ -94,7 +94,7 @@ const HeroSection = () => {
               <Button 
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-primary-blue dark:bg-primary-blue text-white dark:text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+                className="bg-primary-blue dark:bg-primary-blue text-white dark:text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] hover:border-teal-blue dark:hover:border-teal-blue transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 border-2 border-transparent"
               >
                 Get In Touch
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -103,7 +103,7 @@ const HeroSection = () => {
                 variant="outline"
                 onClick={downloadResume}
                 size="lg"
-                className="font-semibold px-8 py-3 rounded-lg border-2 border-teal-blue text-teal-blue dark:text-teal-blue dark:border-teal-blue transition-all duration-300 shadow-lg hover:shadow-2xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] transform hover:-translate-y-1 hover:scale-105"
+                className="font-semibold px-8 py-3 rounded-lg border-2 border-teal-blue text-teal-blue dark:text-teal-blue dark:border-teal-blue hover:border-primary-blue dark:hover:border-primary-blue transition-all duration-300 shadow-lg hover:shadow-2xl dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.4)] transform hover:-translate-y-1 hover:scale-105"
               >
                 <Download className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-0.5" />
                 Download Resume

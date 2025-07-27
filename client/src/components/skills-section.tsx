@@ -237,7 +237,7 @@ const SkillsSection = () => {
             <h3 className="cert-heading">Verified Badges & Education</h3>
             <div className="cert-grid">
               {verifiedBadges.map((cert, index) => (
-                <div key={`verified-${index}`} className="cert-card modern-card hover:scale-105 hover:translate-y-[-2px] hover:shadow-lg dark:hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.3)] transition-all duration-300 animate-fade-in-up border border-gray-100 dark:border-gray-700 dark:bg-card">
+                <div key={`verified-${index}`} className="cert-card modern-card hover:scale-105 hover:translate-y-[-2px] hover:shadow-lg dark:hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.3)] hover:border-primary-blue dark:hover:border-primary-blue transition-all duration-300 animate-fade-in-up border border-gray-100 dark:border-gray-700 dark:bg-card">
                   <div className="flex items-start gap-4">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                       <cert.icon className="w-6 h-6" />
@@ -281,7 +281,7 @@ const SkillsSection = () => {
             <h3 className="cert-heading">Technical Certifications</h3>
             <div className="cert-grid">
               {technicalCertifications.map((cert, index) => (
-                <div key={`technical-${index}`} className="cert-card modern-card hover:scale-105 hover:translate-y-[-2px] hover:shadow-lg dark:hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.3)] transition-all duration-300 animate-fade-in-up border border-gray-100 dark:border-gray-700 dark:bg-card">
+                <div key={`technical-${index}`} className="cert-card modern-card hover:scale-105 hover:translate-y-[-2px] hover:shadow-lg dark:hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.3)] hover:border-primary-blue dark:hover:border-primary-blue transition-all duration-300 animate-fade-in-up border border-gray-100 dark:border-gray-700 dark:bg-card">
                   <div className="flex items-start gap-4">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                       <cert.icon className="w-6 h-6" />
@@ -323,7 +323,7 @@ const SkillsSection = () => {
             <h3 className="cert-heading">Academic Recognition</h3>
             <div className="cert-grid">
               {academicRecognition.map((cert, index) => (
-                <div key={`academic-${index}`} className="cert-card modern-card hover:scale-105 hover:translate-y-[-2px] hover:shadow-lg dark:hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.3)] transition-all duration-300 animate-fade-in-up border border-gray-100 dark:border-gray-700 dark:bg-card">
+                <div key={`academic-${index}`} className="cert-card modern-card hover:scale-105 hover:translate-y-[-2px] hover:shadow-lg dark:hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.3)] hover:border-primary-blue dark:hover:border-primary-blue transition-all duration-300 animate-fade-in-up border border-gray-100 dark:border-gray-700 dark:bg-card">
                   <div className="flex items-start gap-4">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                       <cert.icon className="w-6 h-6" />

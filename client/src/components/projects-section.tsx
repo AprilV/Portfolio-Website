@@ -132,7 +132,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => {
             const isExpanded = expandedCards.includes(index);
             return (
-            <Card key={index} className={`professional-card glassmorphism border-0 shadow-lg group animate-slide-in-bottom h-fit modern-card-hover ${
+            <Card key={index} className={`professional-card glassmorphism border-0 shadow-lg group animate-slide-in-bottom h-fit modern-card-hover hover:border-primary-blue dark:hover:border-primary-blue ${
               index === 0 ? 'animation-delay-100' : 
               index === 1 ? 'animation-delay-200' : 
               index === 2 ? 'animation-delay-300' : 'animation-delay-400'

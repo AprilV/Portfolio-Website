@@ -97,7 +97,7 @@ const AboutSection = () => {
             <div className="border-t border-divider-gray my-8"></div>
 
             {/* Core Values */}
-            <div className="professional-card p-6">
+            <div className="professional-card p-6 hover:border-primary-blue dark:hover:border-primary-blue">
               <h3 className="text-xl font-semibold text-charcoal-black mb-6 flex items-center gap-2">
                 <Award className="h-5 w-5 text-primary-blue" />
                 Core Values
@@ -123,7 +123,7 @@ const AboutSection = () => {
                 return (
                   <div 
                     key={index} 
-                    className="professional-card text-center p-6 hover:shadow-xl dark:hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group min-h-[120px] flex flex-col justify-center"
+                    className="professional-card text-center p-6 hover:shadow-xl dark:hover:shadow-2xl hover:-translate-y-2 hover:border-primary-blue dark:hover:border-primary-blue transition-all duration-300 group min-h-[120px] flex flex-col justify-center"
                     title={achievement.description}
                     aria-label={achievement.ariaLabel || `${achievement.value} ${achievement.label} - ${achievement.description}`}
                   >
