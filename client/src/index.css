@@ -351,6 +351,7 @@
   .dark .modern-card-hover:hover {
     transform: translateY(-4px) scale(1.02);
     box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.4), 0 10px 15px -5px rgba(0, 0, 0, 0.2);
+    background-color: transparent !important;
   }
 
   /* Consistent dark mode elevation effects for all interactive elements */
