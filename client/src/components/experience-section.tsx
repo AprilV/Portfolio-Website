@@ -108,7 +108,7 @@ const ExperienceSection = () => {
       ],
       techStack: ["Mainframes", "Network Monitoring", "HVAC Systems", "Fire Suppression", "SharePoint", "Healthcare IT"],
       metrics: [
-        { value: "15+", label: "Years Experience" },
+        { value: "Expert", label: "Level Experience" },
         { value: "24x7", label: "Operations" },
         { value: "PHI", label: "Compliance" },
         { value: "Multi-State", label: "Coverage" },
@@ -138,8 +138,8 @@ const ExperienceSection = () => {
             <div className="role-impact-banner">
               <div className="impact-icon">💼</div>
               <div className="impact-text-multiline">
-                <div className="impact-line-primary">20+ years of experience in IT Operations, Systems Analysis, and Technical Leadership</div>
-                <div className="impact-line-secondary">12+ years as Systems Analyst and Operations Technician, 6+ years as Team Lead</div>
+                <div className="impact-line-primary">Extensive experience in IT Operations, Systems Analysis, and Technical Leadership</div>
+                <div className="impact-line-secondary">Progressive advancement from Systems Analyst to Operations Technician to Team Lead</div>
               </div>
             </div>
           </motion.div>
@@ -266,7 +266,7 @@ const ExperienceSection = () => {
           <div className="bg-card-gradient p-8 rounded-xl shadow-lg border border-border max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-card-foreground mb-4">Ready to Lead Your Next IT Project?</h3>
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Two decades of IT infrastructure expertise combined with formal project management education. 
+              Extensive IT infrastructure expertise combined with formal project management education. 
               Proven track record of leading teams, managing complex systems, and delivering results in high-stakes environments.
             </p>
             <div className="flex justify-center">

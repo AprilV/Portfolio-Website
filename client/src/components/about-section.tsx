@@ -3,10 +3,10 @@ import { Users, Award, GraduationCap, CheckCircle } from "lucide-react";
 const AboutSection = () => {
   const achievements = [
     { 
-      value: "20+", 
-      label: "Years IT Experience", 
+      value: "Expert", 
+      label: "IT Experience", 
       icon: CheckCircle,
-      description: "Two decades of hands-on infrastructure and data center experience"
+      description: "Extensive hands-on infrastructure and data center expertise"
     },
     { 
       value: "Dean's List", 
@@ -44,7 +44,7 @@ const AboutSection = () => {
               About Me
               <div className="section-underline"></div>
             </h2>
-            <p className="section-subtitle">Transforming two decades of IT infrastructure expertise into project management excellence</p>
+            <p className="section-subtitle">Transforming extensive IT infrastructure expertise into project management excellence</p>
           </div>
         </div>
         
@@ -54,7 +54,7 @@ const AboutSection = () => {
             {/* Introduction */}
             <div className="prose prose-lg text-card-foreground">
               <p className="text-lg leading-relaxed mb-6 text-left">
-                I am an IT professional with over twenty years of hands-on infrastructure and data center experience, 
+                I am an IT professional with extensive hands-on infrastructure and data center experience, 
                 now transitioning into project management. Currently earning a <strong className="text-primary-blue">Bachelor of Applied Science in Information 
                 Systems</strong> at <strong className="text-primary-blue">Olympic College</strong> with graduation expected end of Spring term 2026.
               </p>

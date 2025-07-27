@@ -13,9 +13,9 @@ const SkillsSection = () => {
         { name: "CAMP Certification", experience: "In Progress", description: "Summer 2025 - Based on IS 350/450 PM coursework", accent: "primary-blue" },
         { name: "Project Management I", experience: "Academic", description: "IS 350 - Project Management I", accent: "primary-blue" },
         { name: "Project Management II", experience: "Academic", description: "IS 450 - Project Management II", accent: "primary-blue" },
-        { name: "Team Leadership", experience: "18+ Years", description: "Led 12-person teams at Dell Technologies", accent: "teal-blue" },
-        { name: "Stakeholder Communication", experience: "20+ Years + Academic", description: "Professional experience + CMST 242 Organizational Comm (4.0)", accent: "primary-blue" },
-        { name: "Project Documentation", experience: "20+ Years + Academic", description: "SOPs/procedures + ENGL& 235 Technical Writing (4.0)", accent: "teal-blue" },
+        { name: "Team Leadership", experience: "Extensive", description: "Led 12-person teams at Dell Technologies", accent: "teal-blue" },
+        { name: "Stakeholder Communication", experience: "Professional + Academic", description: "Professional experience + CMST 242 Organizational Comm (4.0)", accent: "primary-blue" },
+        { name: "Project Documentation", experience: "Professional + Academic", description: "SOPs/procedures + ENGL& 235 Technical Writing (4.0)", accent: "teal-blue" },
       ],
     },
     {
@@ -24,11 +24,11 @@ const SkillsSection = () => {
       color: "primary-blue",
       type: "tech",
       skills: [
-        { name: "LAN Administration", experience: "20+ Years + Academic", description: "Professional experience + IS 346 LAN Administration IV (4.0)", accent: "teal-blue" },
-        { name: "Windows Systems", experience: "20+ Years + Academic", description: "Professional + CIS 212 Windows/Professionals (4.0)", accent: "primary-blue" },
+        { name: "LAN Administration", experience: "Professional + Academic", description: "Professional experience + IS 346 LAN Administration IV (4.0)", accent: "teal-blue" },
+        { name: "Windows Systems", experience: "Professional + Academic", description: "Professional + CIS 212 Windows/Professionals (4.0)", accent: "primary-blue" },
         { name: "Network Security", experience: "Academic", description: "CIS 236 - Info System Security I", accent: "teal-blue" },
         { name: "Cisco Networking", experience: "Academic", description: "CIS 270 Cisco I (4.0) + CIS 271 Cisco II (4.0)", accent: "primary-blue" },
-        { name: "Technical Support", experience: "20+ Years + Academic", description: "CIS 172 Technical Support Skills (4.0) + professional experience", accent: "teal-blue" },
+        { name: "Technical Support", experience: "Professional + Academic", description: "CIS 172 Technical Support Skills (4.0) + professional experience", accent: "teal-blue" },
         { name: "Server Support", experience: "Academic", description: "CIS 241 - Applications Server Support", accent: "primary-blue" },
       ],
     },
@@ -173,7 +173,7 @@ const SkillsSection = () => {
                 Skills & Certifications
                 <div className="section-underline"></div>
               </h2>
-              <p className="section-subtitle">Comprehensive technical expertise and project management capabilities developed through 20+ years of experience and formal education in BAS-IS degree</p>
+              <p className="section-subtitle">Comprehensive technical expertise and project management capabilities developed through extensive professional experience and formal education in BAS-IS degree</p>
             </div>
           </motion.div>
         </div>

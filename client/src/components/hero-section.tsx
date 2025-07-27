@@ -49,14 +49,14 @@ const HeroSection = () => {
                 <span className="hidden sm:inline"> | </span>
                 <span className="block sm:inline">CAPM Candidate (2025)</span>
                 <span className="hidden md:inline"> | </span>
-                <span className="block md:inline">20+ Years Experience</span>
+                <span className="block md:inline">Extensive IT Background</span>
               </h2>
               <p 
                 className="text-base sm:text-lg text-cool-gray dark:text-gray-300 max-w-xl leading-relaxed transition-colors duration-300 mx-auto"
                 itemProp="description"
               >
-                Two decades of progressive leadership experience in IT infrastructure, team management, and project coordination, 
-                now transitioning into formal project management. Combining deep operational knowledge with formal 
+                Proven IT leadership experience in infrastructure, team management, and project coordination, 
+                now transitioning into formal project management. Combining deep operational expertise with formal 
                 project leadership training and modern technical tools.
               </p>
             </div>
@@ -80,11 +80,11 @@ const HeroSection = () => {
               </div>
               <div 
                 className="professional-badge badge-experience flex items-center gap-2 hover-scale transition-all duration-200"
-                title="Legacy systems, infrastructure, and enterprise support experience"
-                aria-label="20+ Years IT Experience in legacy systems and infrastructure"
+                title="Enterprise systems, infrastructure, and technical support expertise"
+                aria-label="Extensive IT Experience in enterprise systems and infrastructure"
               >
                 <Briefcase className="h-4 w-4" />
-                <span>20+ Years IT Experience</span>
+                <span>Enterprise IT Expertise</span>
               </div>
               <div 
                 className="professional-badge badge-mixed flex items-center gap-2 hover-scale transition-all duration-200"
