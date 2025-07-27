@@ -59,7 +59,7 @@ const AboutSection = () => {
               <p className="text-lg leading-relaxed mb-6 text-left">
                 I am an IT professional with over twenty years of hands-on infrastructure and data center experience, 
                 now transitioning into project management. Currently earning a <strong className="text-primary-blue">Bachelor of Applied Science in Information 
-                Systems</strong> at <strong className="text-primary-blue">Olympic College</strong> with graduation expected Spring 2026.
+                Systems</strong> at <strong className="text-primary-blue">Olympic College</strong> with graduation expected end of Spring term 2026.
               </p>
             </div>
 
