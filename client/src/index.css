@@ -330,6 +330,11 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /* Force navigation inline layout */
+  .flex-nowrap {
+    flex-wrap: nowrap !important;
+  }
   
   .professional-card:hover {
     transform: translateY(-4px);
