@@ -1432,53 +1432,50 @@
   .badge-academic {
     background-color: #E0F7FA;
     color: #2C73D2;
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease-in-out;
   }
   
   .badge-academic:hover {
-    background-color: #B2EBF2;
-    animation: pulse 2s infinite;
+    border-color: #2C73D2;
   }
   
   /* Experience Badge */
   .badge-experience {
     background-color: #E8F5E9;
     color: #4CAF50;
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease-in-out;
   }
   
   .badge-experience:hover {
-    background-color: #C8E6C9;
-    animation: pulse 2s infinite;
+    border-color: #2C73D2;
   }
   
   /* In Progress Badge */
   .badge-progress {
     background-color: #FFF8E1;
     color: #F9A825;
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
   }
   
   .badge-progress:hover {
-    background: linear-gradient(
-      90deg,
-      #FFF8E1 0px,
-      #FFF3C4 40px,
-      #FFECB3 80px,
-      #FFF8E1 120px
-    );
-    background-size: 200px 100%;
-    animation: shimmer 2s infinite linear;
+    border-color: #2C73D2;
   }
   
   /* Mixed Experience Badge */
   .badge-mixed {
     background-color: #F3E5F5;
     color: #9C27B0;
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease-in-out;
   }
   
   .badge-mixed:hover {
-    background-color: #E1BEE7;
-    animation: pulse 2s infinite;
+    border-color: #2C73D2;
   }
   
   /* Section Header - Unified Style */
