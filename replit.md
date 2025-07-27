@@ -6,6 +6,14 @@ This is a professional portfolio website built as a full-stack application showc
 
 ## Recent Changes
 
+**January 27, 2025**: Resume Builder Moved to Admin Area - Professional Portfolio Clean-up
+- **Resume Builder Privacy**: Moved entire resume builder system from public portfolio to password-protected admin area (/admin/resume)
+- **Public Portfolio Streamlined**: Removed all resume generation tools from public view - visitors now see clean professional portfolio only
+- **Admin-Only Resume Tools**: Resume builder with 3 specialized types (Assistant PM, IT Assistant PM, PM Internship) now requires admin authentication
+- **Navigation Cleanup**: Removed "ATS Resume" from public navigation, cleaned up dead links to maintain professional public appearance
+- **Proper Tool Separation**: Resume generation is now private career management tool rather than confusing public feature
+- **Professional Language**: Eliminated technical "ATS" terminology from public-facing content, replaced with career-focused messaging
+
 **January 27, 2025**: Separate Resume Pages Architecture - Professional Focus Implementation
 - **Multi-Page Resume System**: Created separate dedicated pages for each resume type following professional UX best practices
 - **Enhanced User Experience**: Replaced single overwhelming page with focused Resume Hub + 3 specialized resume pages
