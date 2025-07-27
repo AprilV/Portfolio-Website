@@ -52,7 +52,7 @@ const HeroSection = () => {
                 <span className="block md:inline">20+ Years Experience</span>
               </h2>
               <p 
-                className="text-base sm:text-lg text-cool-gray dark:text-gray-300 max-w-xl leading-relaxed transition-colors duration-300 text-center mx-auto"
+                className="text-base sm:text-lg text-cool-gray dark:text-gray-300 max-w-xl leading-relaxed transition-colors duration-300 mx-auto"
                 itemProp="description"
               >
                 Two decades of progressive leadership experience in IT infrastructure, team management, and project coordination, 
