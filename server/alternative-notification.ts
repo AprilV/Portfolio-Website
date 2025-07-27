@@ -31,17 +31,18 @@ ${contactData.message}
 
   try {
     writeFileSync(ALERT_FILE, alertContent);
-    console.log(`🚨 URGENT: New contact alert created at ${ALERT_FILE}`);
-    console.log(`📁 Check this file immediately for contact details!`);
+    // Secure logging without exposing sensitive data
+    console.log(`🚨 New contact submission processed at ${new Date().toISOString()}`);
+    console.log(`📁 Contact details securely stored in database and notification files`);
     
-    // Also log to console with high visibility
+    // Security-compliant logging without PII exposure
     console.log('\n' + '='.repeat(50));
-    console.log('🚨 NEW CONTACT SUBMISSION ALERT 🚨');
+    console.log('🚨 NEW CONTACT SUBMISSION PROCESSED 🚨');
     console.log('='.repeat(50));
-    console.log(`👤 Name: ${contactData.name}`);
-    console.log(`📧 Email: ${contactData.email}`);
-    console.log(`🏢 Company: ${contactData.company || 'Not provided'}`);
-    console.log(`💬 Message: ${contactData.message}`);
+    console.log(`📊 Submission ID: ${contactData.id}`);
+    console.log(`📧 Email domain: ${contactData.email.split('@')[1] || 'unknown'}`);
+    console.log(`🏢 Company provided: ${contactData.company ? 'Yes' : 'No'}`);
+    console.log(`💬 Message length: ${contactData.message.length} characters`);
     console.log('='.repeat(50) + '\n');
     
   } catch (error) {

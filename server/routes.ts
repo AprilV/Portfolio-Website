@@ -92,7 +92,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Update analytics for engagement tracking
       const today = new Date().toISOString().split('T')[0];
-      const companies = [contactData.company].filter(Boolean);
+      const companies = [contactData.company].filter((c): c is string => Boolean(c));
       
       // Enhanced notification system
       Promise.all([
@@ -233,7 +233,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           total: logs.length,
           successful: logs.filter(log => log.success).length,
           failed: logs.filter(log => !log.success).length,
-          uniqueIPs: [...new Set(logs.map(log => log.ipAddress))].length
+          uniqueIPs: Array.from(new Set(logs.map(log => log.ipAddress))).length
         }
       });
     } catch (error) {

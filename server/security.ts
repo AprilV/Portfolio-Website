@@ -50,7 +50,9 @@ export const securityHeaders = helmet({
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "https:"],
-      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"], // Note: unsafe-eval needed for Vite in dev
+      scriptSrc: process.env.NODE_ENV === 'production' 
+        ? ["'self'"] 
+        : ["'self'", "'unsafe-inline'", "'unsafe-eval'"], // unsafe-eval only for development
       connectSrc: ["'self'", "wss:", "ws:"],
       frameSrc: ["'none'"],
       objectSrc: ["'none'"],
