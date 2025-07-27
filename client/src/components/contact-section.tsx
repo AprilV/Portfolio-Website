@@ -213,7 +213,8 @@ const ContactSection = () => {
                           href={info.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-primary-blue hover:text-primary-blue/80 transition-colors"
+                          className="text-primary-blue hover:text-primary-blue/80 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-blue/50 focus:ring-offset-2 rounded"
+                          aria-label={`Visit April's ${info.label} profile`}
                         >
                           {info.value}
                         </a>
@@ -366,11 +367,12 @@ const ContactSection = () => {
                       setFormData(prev => ({ ...prev, captchaAnswer: "" }));
                     }}
                     className="text-xs"
+                    aria-label="Generate new math problem for CAPTCHA verification"
                   >
                     New Problem
                   </Button>
                 </div>
-                <p className="text-xs text-gray-600 mt-2">
+                <p id="captcha-help" className="text-xs text-gray-600 mt-2">
                   Please solve this simple math problem to verify you're human and prevent spam.
                 </p>
               </div>

@@ -73,6 +73,12 @@
   --shadow-strong: 0 12px 32px rgba(0, 0, 0, 0.12);
   --shadow-glow: 0 0 20px rgba(44, 115, 210, 0.15);
   
+  /* Enhanced Accessibility Colors - WCAG AA Compliant */
+  --text-high-contrast: hsl(0, 0%, 8%); /* #141414 - High contrast text */
+  --focus-ring: hsl(214, 76%, 45%); /* Enhanced focus visibility */
+  --error-text: hsl(0, 65%, 35%); /* #8B1538 - WCAG AA compliant error red */
+  --success-text: hsl(122, 45%, 30%); /* #2A7A2E - WCAG AA compliant success green */
+  
   /* Professional Color Enhancements */
   --highlight-yellow: hsl(45, 93%, 58%); /* #FFC93C - Mustard Yellow for CTA */
   --highlight-yellow-hover: hsl(45, 93%, 50%);
@@ -1447,6 +1453,52 @@
   
   .hover-glow-primary:hover {
     box-shadow: 0 0 0 2px rgba(44, 115, 210, 0.15);
+  }
+
+  /* Enhanced Accessibility Features */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* High Contrast Focus Indicators */
+  button:focus,
+  a:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: 2px solid var(--focus-ring) !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 

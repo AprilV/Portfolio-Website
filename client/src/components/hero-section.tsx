@@ -117,8 +117,8 @@ const HeroSection = () => {
                 href="https://www.linkedin.com/in/aprilsykes" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 text-primary-blue hover:text-primary-blue-hover border border-primary-blue/30 hover:border-primary-blue rounded-lg transition-all duration-300 hover:shadow-md transform hover:scale-105"
-                aria-label="Connect with April V. Sykes on LinkedIn"
+                className="inline-flex items-center gap-2 px-4 py-2 text-primary-blue hover:text-primary-blue-hover border border-primary-blue/30 hover:border-primary-blue rounded-lg transition-all duration-300 hover:shadow-md transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-blue/50 focus:ring-offset-2"
+                aria-label="Connect with April V. Sykes on LinkedIn - Opens in new tab"
               >
                 <Linkedin className="h-4 w-4" />
                 <span className="font-medium">LinkedIn</span>
@@ -131,7 +131,7 @@ const HeroSection = () => {
               <div className="w-72 sm:w-80 h-72 sm:h-80 rounded-2xl shadow-2xl overflow-hidden relative mx-auto lg:mx-0">
                 <img 
                   src={profilePhoto} 
-                  alt="April V. Sykes - Professional Photo" 
+                  alt="April V. Sykes - Professional headshot photo showing a confident IT professional and Assistant Project Manager candidate" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/8 via-transparent to-teal-blue/8"></div>

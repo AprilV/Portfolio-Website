@@ -22,13 +22,15 @@ const Home = () => {
     <div className="min-h-screen">
       <Navigation />
       <TableOfContents sections={portfolioSections} />
-      <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ATSResumeGenerator />
-      <ContactSection />
+      <main id="main-content">
+        <HeroSection />
+        <AboutSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <ATSResumeGenerator />
+        <ContactSection />
+      </main>
       <Footer />
     </div>
   );
