@@ -1476,27 +1476,29 @@
     border-color: #2C73D2;
   }
   
-  /* Section Header - Clean Professional Style */
+  /* Modern Professional Section Headers */
   .section-header {
-    @apply text-3xl lg:text-4xl font-bold text-charcoal-black mb-2 relative transition-all duration-300;
+    @apply text-2xl lg:text-3xl font-semibold text-gray-900 dark:text-white mb-3;
+    letter-spacing: -0.025em;
     font-weight: 600;
-    color: #1E1E1E;
-    display: inline-block;
-    white-space: nowrap;
     text-align: center;
-    margin: 0 auto;
+    position: relative;
   }
   
-  /* Clean underline that matches text width */
-  .section-underline {
-    @apply absolute -bottom-1 left-0 rounded-full transition-all duration-300;
-    width: 100%;
+  .section-header::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -12px;
+    transform: translateX(-50%);
+    width: 40px;
     height: 3px;
-    background-color: #2C73D2;
+    background: linear-gradient(90deg, #2C73D2 0%, #43D8C9 100%);
+    border-radius: 2px;
   }
   
-  .section-header:hover .section-underline {
-    background: linear-gradient(90deg, #2C73D2 0%, #43D8C9 100%);
+  .section-underline {
+    display: none;
   }
   
   /* Fix for skill card title hover underlines */
@@ -1505,50 +1507,18 @@
   }
 
   .professional-experience-header {
-    margin-bottom: 2rem;
-    margin-top: 0;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
     text-align: center;
+    position: relative;
   }
-  }
-
-  #skills .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
-    font-weight: 900;
-    content: '💻'; /* Fallback to emoji if FA fails */
-    background: white; /* White background for icon */
-    display: block !important;
+  
+  .section-subtitle {
+    @apply text-sm font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wider;
+    margin-top: 0.75rem;
+    letter-spacing: 1px;
   }
 
-  .dark #skills .professional-experience-header::before {
-    background: transparent;
-    color: white;
-  }
-
-  #resume .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
-    font-weight: 900;
-    content: '📄'; /* Fallback to emoji if FA fails */
-    background: white; /* Resume section background */
-    display: block !important;
-  }
-
-  .dark #resume .professional-experience-header::before {
-    background: transparent;
-    color: white;
-  }
-
-  #contact .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
-    font-weight: 900;
-    content: '✉️'; /* Fallback to emoji if FA fails */
-    background: #F9FAFB; /* Contact section background */
-    display: block !important;
-  }
-
-  .dark #contact .professional-experience-header::before {
-    background: transparent;
-    color: white;
-  }
 
   /* Projects section grid optimizations */
   .projects-grid {
@@ -2539,3 +2509,4 @@
       color: #1E40AF;
     }
   }
+}

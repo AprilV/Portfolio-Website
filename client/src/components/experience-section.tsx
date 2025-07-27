@@ -127,11 +127,8 @@ const ExperienceSection = () => {
             viewport={{ once: true }}
           >
             <div className="professional-experience-header">
-              <h2 className="section-header">
-                Professional Experience
-                <div className="section-underline"></div>
-              </h2>
-              <p className="section-subtitle mt-4">Selected Roles Demonstrating IT & Leadership Growth</p>
+              <h2 className="section-header">Professional Experience</h2>
+              <p className="section-subtitle">Selected Roles Demonstrating IT & Leadership Growth</p>
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
               Progressive advancement from IT specialist to infrastructure leader and project coordinator with a strong foundation in team management and enterprise systems

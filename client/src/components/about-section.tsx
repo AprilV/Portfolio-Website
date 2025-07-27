@@ -40,11 +40,8 @@ const AboutSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="professional-experience-header">
-            <h2 className="section-header">
-              About Me
-              <div className="section-underline"></div>
-            </h2>
-            <p className="section-subtitle mt-4">IT Professional Transitioning to Project Management</p>
+            <h2 className="section-header">About Me</h2>
+            <p className="section-subtitle">IT Professional Transitioning to Project Management</p>
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transforming two decades of IT infrastructure expertise into project management excellence
