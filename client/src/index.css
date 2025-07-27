@@ -1085,10 +1085,20 @@
     max-width: 140px;
   }
 
+  .dark .toc-nav {
+    background: rgba(31, 41, 55, 0.95);
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
   .toc-header {
     padding: 0 0.75rem 0.5rem 0.75rem;
     border-bottom: 1px solid rgba(224, 230, 237, 0.3);
     margin-bottom: 0.5rem;
+  }
+
+  .dark .toc-header {
+    border-bottom: 1px solid rgba(75, 85, 99, 0.3);
   }
 
   .toc-title {
@@ -1098,6 +1108,10 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin: 0;
+  }
+
+  .dark .toc-title {
+    color: #9CA3AF;
   }
 
   .toc-list {
@@ -1127,9 +1141,18 @@
     position: relative;
   }
 
+  .dark .toc-link {
+    color: #9CA3AF;
+  }
+
   .toc-link:hover {
     color: #2C73D2;
     background: rgba(44, 115, 210, 0.05);
+  }
+
+  .dark .toc-link:hover {
+    color: #60A5FA;
+    background: rgba(96, 165, 250, 0.1);
   }
 
   .toc-link.active {
@@ -1137,6 +1160,12 @@
     background: rgba(44, 115, 210, 0.1);
     border-right: 3px solid #2C73D2;
     font-weight: 600;
+  }
+
+  .dark .toc-link.active {
+    color: #60A5FA;
+    background: rgba(96, 165, 250, 0.15);
+    border-right: 3px solid #60A5FA;
   }
 
   .toc-indicator {
@@ -1148,11 +1177,20 @@
     flex-shrink: 0;
   }
 
+  .dark .toc-indicator {
+    background: #6B7280;
+  }
+
   .toc-link.active .toc-indicator {
     background: #2C73D2;
     width: 8px;
     height: 8px;
     box-shadow: 0 0 6px rgba(44, 115, 210, 0.4);
+  }
+
+  .dark .toc-link.active .toc-indicator {
+    background: #60A5FA;
+    box-shadow: 0 0 6px rgba(96, 165, 250, 0.4);
   }
 
   /* Back to Top Button */
