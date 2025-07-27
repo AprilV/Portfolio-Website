@@ -499,7 +499,7 @@
   .dark .professional-card:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     border-color: hsl(214, 76%, 60%);
-    background-color: transparent !important;
+    background-color: rgb(31 41 55) !important;
   }
   
   /* Professional Badge - Pill Style */

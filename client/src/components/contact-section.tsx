@@ -228,7 +228,7 @@ const ContactSection = () => {
             </div>
             
             {/* Professional Status */}
-            <div className="professional-card p-6 dark:bg-gray-800 dark:border-gray-700 transition-colors duration-300 hover:border-primary-blue dark:hover:border-primary-blue dark:hover:bg-gray-800">
+            <div className="professional-card p-6 dark:bg-gray-800 dark:border-gray-700 transition-colors duration-300 hover:border-primary-blue dark:hover:border-primary-blue dark:hover:bg-gray-800 dark:hover:[background-color:rgb(31_41_55)!important]">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-4 transition-colors duration-300">Professional Status</h4>
               <div className="space-y-3">
                 <p className="professional-status-item">
