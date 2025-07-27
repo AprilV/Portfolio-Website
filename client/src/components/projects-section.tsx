@@ -145,7 +145,7 @@ const ProjectsSection = () => {
                     </div>
                   </div>
                 </div>
-                <CardTitle className="text-lg font-bold text-card-foreground mb-3">{project.title}</CardTitle>
+                <CardTitle className="text-lg font-bold text-card-foreground mb-3 hover:text-primary-blue dark:hover:text-teal-blue transition-colors duration-200 cursor-default">{project.title}</CardTitle>
                 <CardDescription className="text-muted-foreground text-sm leading-relaxed">
                   {isExpanded ? project.description : truncateDescription(project.description)}
                   {project.description.split(' ').length > 36 && (

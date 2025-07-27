@@ -179,16 +179,16 @@ const ExperienceSection = () => {
                       <p className="company-name">{exp.company}</p>
                       <div className="job-meta">
                         <span className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4" />
+                          <Calendar className="h-4 w-4" aria-hidden="true" />
                           {exp.period}
                         </span>
                         <span className="flex items-center gap-1">
-                          <MapPin className="h-4 w-4" />
+                          <MapPin className="h-4 w-4" aria-hidden="true" />
                           {exp.location}
                         </span>
                         {exp.type === "education" && (
                           <span className="education-badge">
-                            <Award className="h-3 w-3" />
+                            <Award className="h-3 w-3" aria-hidden="true" />
                             Academic
                           </span>
                         )}
@@ -213,7 +213,7 @@ const ExperienceSection = () => {
                   {/* Main Achievements Section */}
                   <div className="achievements-section">
                     <h4 className="section-title">
-                      <Target className="h-4 w-4" />
+                      <Target className="h-4 w-4" aria-hidden="true" />
                       {exp.type === "education" ? "Program Highlights" : "Key Responsibilities & Achievements"}
                     </h4>
                     <ul className="responsibilities">
@@ -226,7 +226,7 @@ const ExperienceSection = () => {
                     {exp.highlights && exp.highlights.length > 0 && (
                       <div className="highlights-section">
                         <h5 className="highlights-title">
-                          <Award className="h-4 w-4" />
+                          <Award className="h-4 w-4" aria-hidden="true" />
                           Major Accomplishments
                         </h5>
                         <ul className="highlights">
@@ -251,7 +251,7 @@ const ExperienceSection = () => {
                       </h5>
                       <div className="tech-stack tech-stack-improved">
                         {exp.techStack.map((tech, idx) => (
-                          <span key={idx} className="tech-chip tech-chip-compact">
+                          <span key={idx} className="tech-chip tech-chip-compact hover:text-primary-blue dark:hover:text-teal-blue hover:border-primary-blue dark:hover:border-teal-blue transition-colors duration-200 cursor-default">
                             {tech}
                           </span>
                         ))}

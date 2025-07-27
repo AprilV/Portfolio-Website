@@ -210,7 +210,7 @@ const SkillsSection = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: (index * 0.1) + (skillIndex * 0.05) }}
                   >
-                    <h4 className="skill-name">{skill.name}</h4>
+                    <h4 className="skill-name hover:text-primary-blue dark:hover:text-teal-blue transition-colors duration-200 cursor-default">{skill.name}</h4>
                     <p className="skill-description">{skill.description}</p>
                     <p className="skill-experience">
                       <strong>Experience:</strong> {skill.experience}
@@ -243,7 +243,7 @@ const SkillsSection = () => {
                       <cert.icon className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 text-sm leading-tight">{cert.name}</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 text-sm leading-tight hover:text-primary-blue dark:hover:text-teal-blue transition-colors duration-200 cursor-default">{cert.name}</h4>
                       <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">{cert.description}</p>
                       <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{cert.detail}</p>
                       {cert.link && (
@@ -287,7 +287,7 @@ const SkillsSection = () => {
                       <cert.icon className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 text-sm leading-tight">{cert.name}</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 text-sm leading-tight hover:text-primary-blue dark:hover:text-teal-blue transition-colors duration-200 cursor-default">{cert.name}</h4>
                       <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">{cert.description}</p>
                       <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{cert.detail}</p>
                       {cert.link && (
@@ -329,7 +329,7 @@ const SkillsSection = () => {
                       <cert.icon className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 text-sm leading-tight">{cert.name}</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 text-sm leading-tight hover:text-primary-blue dark:hover:text-teal-blue transition-colors duration-200 cursor-default">{cert.name}</h4>
                       <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">{cert.description}</p>
                       <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{cert.detail}</p>
                       {cert.credentialId && (

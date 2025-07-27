@@ -122,7 +122,7 @@ const HeroSection = () => {
                 className="inline-flex items-center gap-2 px-4 py-2 text-primary-blue dark:text-primary-blue border border-primary-blue/30 dark:border-primary-blue/50 rounded-lg transition-all duration-300 hover:shadow-md dark:hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)] transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-blue/50 focus:ring-offset-2"
                 aria-label="Connect with April V. Sykes on LinkedIn - Opens in new tab"
               >
-                <Linkedin className="h-4 w-4" />
+                <Linkedin className="h-4 w-4" aria-hidden="true" />
                 <span className="font-medium">LinkedIn</span>
               </a>
             </div>
