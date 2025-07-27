@@ -153,7 +153,7 @@ const ProjectsSection = () => {
                       variant="ghost"
                       size="sm"
                       onClick={() => toggleExpanded(index)}
-                      className="ml-2 p-0 h-auto text-primary-blue dark:text-primary-blue hover:scale-105 hover:translate-y-[-1px] font-medium transition-all duration-200"
+                      className="ml-2 p-0 h-auto text-primary-blue dark:text-primary-blue hover:scale-105 hover:translate-y-[-1px] hover:shadow-md dark:hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)] font-medium transition-all duration-200 hover:bg-transparent dark:hover:bg-transparent"
                     >
                       {isExpanded ? (
                         <>
@@ -196,7 +196,7 @@ const ProjectsSection = () => {
                   <div className="flex flex-col gap-2">
                     <Button 
                       variant="ghost" 
-                      className="text-primary-blue dark:text-primary-blue p-0 h-auto font-medium justify-start hover:scale-105 hover:translate-y-[-1px] transition-all duration-200"
+                      className="text-primary-blue dark:text-primary-blue p-0 h-auto font-medium justify-start hover:scale-105 hover:translate-y-[-1px] hover:shadow-md dark:hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)] transition-all duration-200 hover:bg-transparent dark:hover:bg-transparent"
                       onClick={() => {
                         if (project.link.includes('.pptx')) {
                           // Always use direct download for PowerPoint files
@@ -219,7 +219,7 @@ const ProjectsSection = () => {
                     {project.videoLink && (
                       <Button 
                         variant="ghost" 
-                        className="text-primary-blue dark:text-primary-blue p-0 h-auto font-medium justify-start hover:scale-105 hover:translate-y-[-1px] transition-all duration-200"
+                        className="text-primary-blue dark:text-primary-blue p-0 h-auto font-medium justify-start hover:scale-105 hover:translate-y-[-1px] hover:shadow-md dark:hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)] transition-all duration-200 hover:bg-transparent dark:hover:bg-transparent"
                         onClick={() => {
                           window.open(project.videoLink, '_blank');
                         }}
@@ -231,7 +231,7 @@ const ProjectsSection = () => {
                     {project.paperLink && (
                       <Button 
                         variant="ghost" 
-                        className="text-primary-blue dark:text-primary-blue p-0 h-auto font-medium justify-start hover:scale-105 hover:translate-y-[-1px] transition-all duration-200"
+                        className="text-primary-blue dark:text-primary-blue p-0 h-auto font-medium justify-start hover:scale-105 hover:translate-y-[-1px] hover:shadow-md dark:hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)] transition-all duration-200 hover:bg-transparent dark:hover:bg-transparent"
                         onClick={() => {
                           const link = document.createElement('a');
                           link.href = project.paperLink;
@@ -248,7 +248,7 @@ const ProjectsSection = () => {
                     {project.githubLink && (
                       <Button 
                         variant="ghost" 
-                        className="text-primary-blue dark:text-primary-blue p-0 h-auto font-medium justify-start hover:scale-105 hover:translate-y-[-1px] transition-all duration-200"
+                        className="text-primary-blue dark:text-primary-blue p-0 h-auto font-medium justify-start hover:scale-105 hover:translate-y-[-1px] hover:shadow-md dark:hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)] transition-all duration-200 hover:bg-transparent dark:hover:bg-transparent"
                         onClick={() => {
                           window.open(project.githubLink, '_blank');
                         }}
@@ -260,7 +260,7 @@ const ProjectsSection = () => {
                     {project.blogLink && (
                       <Button 
                         variant="ghost" 
-                        className="text-primary-blue dark:text-primary-blue p-0 h-auto font-medium justify-start hover:scale-105 hover:translate-y-[-1px] transition-all duration-200"
+                        className="text-primary-blue dark:text-primary-blue p-0 h-auto font-medium justify-start hover:scale-105 hover:translate-y-[-1px] hover:shadow-md dark:hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)] transition-all duration-200 hover:bg-transparent dark:hover:bg-transparent"
                         onClick={() => {
                           window.open(project.blogLink, '_blank');
                         }}
