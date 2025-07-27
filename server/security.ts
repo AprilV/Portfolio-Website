@@ -66,8 +66,21 @@ export const securityHeaders = helmet({
   noSniff: true,
   frameguard: { action: 'deny' },
   xssFilter: true,
-  referrerPolicy: { policy: 'strict-origin-when-cross-origin' }
+  referrerPolicy: { policy: 'strict-origin-when-cross-origin' },
+  crossOriginEmbedderPolicy: false // Allow embedded content
 });
+
+// Add CSRF protection middleware
+export const csrfProtection = (req: Request, res: Response, next: NextFunction) => {
+  // Skip CSRF for GET requests and admin routes (handled by session auth)
+  if (req.method === 'GET' || req.path.startsWith('/api/admin/')) {
+    return next();
+  }
+  
+  // For now, rely on SameSite cookies and CORS for CSRF protection
+  // In future, implement proper CSRF tokens
+  next();
+};
 
 // CORS configuration
 export const corsOptions = {

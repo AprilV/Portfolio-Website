@@ -6,7 +6,8 @@ import {
   corsOptions, 
   apiLimiter, 
   requestLogger,
-  sanitizeInput 
+  sanitizeInput,
+  csrfProtection 
 } from "./security";
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cookieParser());
 app.use(requestLogger);
 app.use(sanitizeInput);
+app.use(csrfProtection);
 
 // Apply rate limiting to all API routes
 app.use('/api/', apiLimiter);
