@@ -39,6 +39,14 @@ const HeroSection = () => {
               >
                 April V. Sykes
               </h1>
+              <p 
+                className="text-base sm:text-lg text-cool-gray dark:text-gray-300 max-w-xl leading-relaxed transition-colors duration-300"
+                itemProp="description"
+              >
+                Two decades of progressive leadership experience in IT infrastructure, team management, and project coordination, 
+                now transitioning into formal project management. Combining deep operational knowledge with formal 
+                project leadership training and modern technical tools.
+              </p>
               <h2 
                 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-teal-blue dark:text-teal-blue font-semibold transition-colors duration-300 leading-snug"
                 itemProp="jobTitle"
@@ -51,14 +59,6 @@ const HeroSection = () => {
                 <span className="hidden md:inline"> | </span>
                 <span className="block md:inline">20+ Years Experience</span>
               </h2>
-              <p 
-                className="text-base sm:text-lg text-cool-gray dark:text-gray-300 max-w-xl leading-relaxed transition-colors duration-300"
-                itemProp="description"
-              >
-                Two decades of progressive leadership experience in IT infrastructure, team management, and project coordination, 
-                now transitioning into formal project management. Combining deep operational knowledge with formal 
-                project leadership training and modern technical tools.
-              </p>
             </div>
             
             <div className="flex flex-wrap gap-3 leading-relaxed">
