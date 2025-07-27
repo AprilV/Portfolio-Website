@@ -1667,7 +1667,17 @@
     .text-center.mb-10,
     .text-center p.text-xl,
     .text-center .max-w-3xl,
-    .text-center .text-xl.text-gray-600 {
+    .text-center .text-xl.text-gray-600,
+    .card-title,
+    .CardTitle,
+    h3.text-xl,
+    h4.section-title,
+    .job-title,
+    .company-name,
+    .project-card h3,
+    .cert-card h3,
+    .skills-column h3,
+    .text-lg.font-bold {
       text-align: center !important;
     }
     
@@ -1683,8 +1693,9 @@
     
     /* Show section icons on mobile - they're part of the brand identity */
     .professional-experience-header::before {
-      display: block;
+      display: block !important;
       font-size: 1.2rem;
+      top: -1rem;
     }
     
     /* Reduce top border padding on mobile without icon */
