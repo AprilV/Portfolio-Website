@@ -1476,23 +1476,22 @@
     border-color: #2C73D2;
   }
   
-  /* Section Header - Unified Style */
+  /* Section Header - Clean Professional Style */
   .section-header {
-    @apply text-3xl lg:text-4xl font-bold text-charcoal-black mb-4 relative transition-all duration-300;
+    @apply text-3xl lg:text-4xl font-bold text-charcoal-black mb-2 relative transition-all duration-300;
     font-weight: 600;
     color: #1E1E1E;
     display: inline-block;
     white-space: nowrap;
     text-align: center;
-    width: auto;
     margin: 0 auto;
   }
   
-  /* Subtle underline that matches text width */
+  /* Clean underline that matches text width */
   .section-underline {
     @apply absolute -bottom-1 left-0 rounded-full transition-all duration-300;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: #2C73D2;
   }
   
@@ -1507,76 +1506,9 @@
 
   .professional-experience-header {
     margin-bottom: 2rem;
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    position: relative;
+    margin-top: 0;
     text-align: center;
   }
-  
-  .professional-experience-header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(to right, #2C73D2 0%, #2C73D2 40%, transparent 40%, transparent 60%, #2C73D2 60%, #2C73D2 100%);
-  }
-
-  .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
-    font-weight: 900;
-    content: '💼'; /* Fallback to emoji if FA fails */
-    position: absolute;
-    top: -1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: inherit;
-    padding: 0 0.75rem;
-    font-size: 1.2rem;
-    color: #2C73D2;
-    z-index: 10;
-    display: block;
-  }
-
-  /* Section-specific Font Awesome icons with matching backgrounds */
-  #about .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
-    font-weight: 900;
-    content: '👤'; /* Fallback to emoji if FA fails */
-    background: #F2F4F8; /* About section background */
-    display: block !important;
-  }
-
-  .dark #about .professional-experience-header::before {
-    background: transparent;
-    color: white;
-  }
-
-  #experience .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
-    font-weight: 900;
-    content: '💼'; /* Fallback to emoji if FA fails */
-    background: white; /* Experience section background */
-    display: block !important;
-  }
-
-  .dark #experience .professional-experience-header::before {
-    background: transparent;
-    color: white;
-  }
-
-  #projects .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
-    font-weight: 900;
-    content: '🚀'; /* Fallback to emoji if FA fails */
-    background: #F9FAFB; /* Projects section background */
-    display: block !important;
-  }
-
-  .dark #projects .professional-experience-header::before {
-    background: transparent;
-    color: white;
   }
 
   #skills .professional-experience-header::before {
@@ -2607,4 +2539,3 @@
       color: #1E40AF;
     }
   }
-}

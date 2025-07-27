@@ -185,12 +185,12 @@ const ContactSection = () => {
     <section id="contact" className="py-12 bg-background-alt dark:bg-background transition-colors duration-300" style={{paddingTop: '80px', paddingBottom: '60px'}} aria-labelledby="contact-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <div className="professional-experience-header" style={{marginTop: '0'}}>
+          <div className="professional-experience-header">
             <h2 id="contact-heading" className="section-header">
               Let's Connect
               <div className="section-underline"></div>
             </h2>
-            <p className="section-subtitle enhanced-subheader">Professional Networking & Opportunities</p>
+            <p className="section-subtitle enhanced-subheader mt-4">Professional Networking & Opportunities</p>
           </div>
           <p className="text-xl text-gray-600 dark:text-gray-300 mt-6 transition-colors duration-300">Ready to bring technical expertise and project management skills to your team</p>
         </div>
