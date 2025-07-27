@@ -77,9 +77,9 @@ ${contactData.message}
 Reply directly to this email to respond to ${contactData.name}.
     `;
 
-    // Use the original verified sender that we know works
+    // Use verified SendGrid sender
     const notificationEmail = 'aprilv120@gmail.com';
-    const fromEmail = 'april_sykes@proton.me'; // Use verified Proton sender
+    const fromEmail = 'aprilv120@gmail.com'; // Must use verified SendGrid sender
     
     const emailPayload = {
       to: notificationEmail,
@@ -210,7 +210,7 @@ Assistant Project Manager | IT Professional | CAPM Candidate
 
     await mailService.send({
       to: contactData.email,
-      from: 'april_sykes@proton.me',
+      from: 'aprilv120@gmail.com', // Must use verified SendGrid sender
       subject: 'Thank you for your message - April V. Sykes',
       text: autoReplyText,
       html: autoReplyHtml,
