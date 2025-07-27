@@ -19,28 +19,34 @@ const WorldClock: React.FC = () => {
   useEffect(() => {
     const updateTimes = () => {
       const newTimes: { [key: string]: string } = {};
+      const now = new Date();
       
-      timezones.forEach(tz => {
-        try {
-          const now = new Date();
-          const timeString = now.toLocaleTimeString('en-US', {
-            timeZone: tz.timezone,
-            hour12: false,
-            hour: '2-digit',
-            minute: '2-digit'
-          });
-          newTimes[tz.code] = timeString;
-        } catch (error) {
-          // Fallback if timezone fails
-          const now = new Date();
-          const fallbackTime = now.toLocaleTimeString('en-US', {
-            hour12: false,
-            hour: '2-digit',
-            minute: '2-digit'
-          });
-          newTimes[tz.code] = fallbackTime;
-        }
-      });
+      // PST (Pacific Standard Time)
+      const pstTime = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Los_Angeles',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      }).format(now);
+      newTimes['PST'] = pstTime;
+      
+      // EST (Eastern Standard Time)
+      const estTime = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      }).format(now);
+      newTimes['EST'] = estTime;
+      
+      // UTC
+      const utcTime = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'UTC',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      }).format(now);
+      newTimes['UTC'] = utcTime;
       
       setTimes(newTimes);
     };
@@ -63,10 +69,10 @@ const WorldClock: React.FC = () => {
       <div className="flex items-center gap-4">
         {timezones.map((tz) => (
           <div key={tz.code} className="flex items-center gap-1">
-            <span className="font-mono text-gray-900 dark:text-gray-100 min-w-[50px]">
-              {times[tz.code] || '00:00'}
+            <span className="font-mono text-white dark:text-gray-100 min-w-[50px] font-medium">
+              {times[tz.code] || new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false })}
             </span>
-            <span className="text-xs text-gray-500 dark:text-gray-400">
+            <span className="text-xs text-gray-400 dark:text-gray-400 font-medium">
               {tz.code}
             </span>
           </div>
