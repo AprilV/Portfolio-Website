@@ -133,7 +133,6 @@ const ATSResumeGenerator = () => {
 
   const generateATSResume = (format: string) => {
     // This would generate different formatted resumes based on the selected format
-    console.log(`Generating ${format} ATS resume format`);
     
     // For demo purposes, we'll trigger a download
     const resumeContent = createResumeContent(format);
@@ -172,8 +171,7 @@ const ATSResumeGenerator = () => {
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
     
-    // Show success message
-    console.log(`Downloaded ${format} resume format successfully`);
+    // Resume download completed successfully
   };
 
   return (
