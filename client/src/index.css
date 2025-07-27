@@ -1684,7 +1684,13 @@
     .project-card h3,
     .cert-card h3,
     .skills-column h3,
-    .text-lg.font-bold {
+    .text-lg.font-bold,
+    .skills-container h3,
+    .modern-card-premium h3,
+    .text-2xl.font-bold,
+    .text-xl.font-semibold,
+    .skills-heading,
+    .cert-heading {
       text-align: center !important;
     }
     
