@@ -336,9 +336,35 @@
     flex-wrap: nowrap !important;
   }
 
-  /* Navigation gradient styling */
-  .bg-gradient-to-r {
-    background: linear-gradient(135deg, #2C73D2 0%, #43D8C9 100%);
+  /* Animated gradient text flow effect */
+  .gradient-text-flow {
+    background: linear-gradient(90deg, #1E1E1E 0%, #2C73D2 25%, #43D8C9 50%, #FFD700 75%, transparent 100%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flowGradient 3s ease-in-out infinite;
+  }
+
+  .dark .gradient-text-flow {
+    background: linear-gradient(90deg, #F5F5F5 0%, #2C73D2 25%, #43D8C9 50%, #FFD700 75%, transparent 100%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flowGradient 3s ease-in-out infinite;
+  }
+
+  @keyframes flowGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
   
   .professional-card:hover {
