@@ -1692,6 +1692,8 @@
     .skills-heading,
     .cert-heading {
       text-align: center !important;
+      display: block !important;
+      width: 100% !important;
     }
     
     /* Ensure hero description is left-aligned on mobile */
@@ -1920,8 +1922,9 @@
     font-size: 1.25rem;
     font-weight: 700;
     color: #1f2937;
-    display: inline-block;
-    width: fit-content;
+    display: block;
+    width: 100%;
+    text-align: center !important;
   }
 
   .dark .skills-heading {
