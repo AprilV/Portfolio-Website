@@ -179,26 +179,21 @@ const ATSResumeGenerator = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-teal-blue/5 to-primary-blue/5"></div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <div className="professional-experience-header" style={{marginTop: '0'}}>
             <h2 className="section-header">
-              ATS-Optimized Resume Generator
+              ATS Resume Generator
               <div className="section-underline"></div>
             </h2>
-            <p className="section-subtitle">Tailored Resumes for Maximum ATS Compatibility</p>
+            <p className="section-subtitle">Professional resumes optimized for applicant tracking systems</p>
           </div>
-          <p className="text-xl text-gray-600 mt-6">Generate ATS-friendly resumes tailored for specific job applications</p>
         </div>
 
-        <Tabs defaultValue="formats" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8 bg-card-background border border-divider-gray">
-            <TabsTrigger value="formats" className="data-[state=active]:bg-primary-blue data-[state=active]:text-white">Resume Formats</TabsTrigger>
-            <TabsTrigger value="optimization" className="data-[state=active]:bg-primary-blue data-[state=active]:text-white">ATS Optimization</TabsTrigger>
-            <TabsTrigger value="preview" className="data-[state=active]:bg-primary-blue data-[state=active]:text-white">Preview & Download</TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="formats" className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Format Selection */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-charcoal-black dark:text-white mb-4">Choose Resume Format</h3>
+            <div className="grid gap-4">
               {Object.entries(resumeFormats).map(([key, format]) => (
                 <Card 
                   key={key} 
@@ -240,24 +235,38 @@ const ATSResumeGenerator = () => {
                 </Card>
               ))}
             </div>
-          </TabsContent>
+            
+            {/* Download Button */}
+            <div className="pt-4">
+              <Button
+                onClick={() => generateATSResume(selectedFormat)}
+                size="lg"
+                className="w-full bg-primary-blue text-white hover:bg-primary-blue/90 transform hover:scale-105 transition-all duration-200"
+              >
+                <Download className="h-5 w-5 mr-2" />
+                Download {resumeFormats[selectedFormat as keyof typeof resumeFormats]?.name} Resume
+              </Button>
+            </div>
+          </div>
 
-          <TabsContent value="optimization" className="space-y-6">
-            <div className="grid gap-6">
+          {/* ATS Optimization Info */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-charcoal-black dark:text-white mb-4">ATS Optimization Features</h3>
+            <div className="space-y-4">
               {atsOptimizations.map((section, index) => (
                 <Card key={index} className="professional-card">
-                  <CardHeader>
-                    <CardTitle className="text-lg text-charcoal-black flex items-center gap-2">
-                      <Zap className="h-5 w-5" />
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-base text-charcoal-black dark:text-white flex items-center gap-2">
+                      <Zap className="h-4 w-4" />
                       {section.category}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
+                  <CardContent className="pt-0">
+                    <ul className="space-y-1">
                       {section.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-2">
-                          <div className="h-2 w-2 bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700">{item}</span>
+                        <li key={itemIndex} className="flex items-start gap-2 text-sm">
+                          <div className="h-1.5 w-1.5 bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-700 dark:text-gray-300">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -267,18 +276,18 @@ const ATSResumeGenerator = () => {
               
               {/* Keyword Analysis Section */}
               <Card className="professional-card bg-gradient-to-r from-primary-blue/5 via-teal-blue/5 to-primary-blue/5">
-                <CardHeader>
-                  <CardTitle className="text-lg text-charcoal-black flex items-center gap-2">
-                    <Target className="h-5 w-5" />
-                    ATS Keyword Analysis
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-base text-charcoal-black dark:text-white flex items-center gap-2">
+                    <Target className="h-4 w-4" />
+                    Key Terms by Role
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <CardContent className="pt-0">
+                  <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <h4 className="font-semibold text-primary-blue mb-2">Project Management</h4>
+                      <h4 className="font-medium text-primary-blue mb-1 text-sm">Project Management</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.projectManagement.slice(0, 4).map((keyword, i) => (
+                        {atsKeywords.projectManagement.slice(0, 3).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-primary-blue/30 text-primary-blue">
                             {keyword}
                           </Badge>
@@ -286,9 +295,9 @@ const ATSResumeGenerator = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-teal-blue mb-2">Technical Skills</h4>
+                      <h4 className="font-medium text-teal-blue mb-1 text-sm">Technical</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.technical.slice(0, 4).map((keyword, i) => (
+                        {atsKeywords.technical.slice(0, 3).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-teal-blue/30 text-teal-blue">
                             {keyword}
                           </Badge>
@@ -296,9 +305,9 @@ const ATSResumeGenerator = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary-blue mb-2">Datacenter Ops</h4>
+                      <h4 className="font-medium text-primary-blue mb-1 text-sm">Assistant PM</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.datacenter.slice(0, 4).map((keyword, i) => (
+                        {atsKeywords.assistant.slice(0, 3).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-primary-blue/30 text-primary-blue">
                             {keyword}
                           </Badge>
@@ -306,130 +315,28 @@ const ATSResumeGenerator = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-teal-blue mb-2">Assistant PM</h4>
+                      <h4 className="font-medium text-teal-blue mb-1 text-sm">Internship</h4>
                       <div className="flex flex-wrap gap-1">
-                        {atsKeywords.assistant.slice(0, 4).map((keyword, i) => (
+                        {atsKeywords.internship.slice(0, 3).map((keyword, i) => (
                           <Badge key={i} variant="outline" className="text-xs border-teal-blue/30 text-teal-blue">
                             {keyword}
                           </Badge>
                         ))}
                       </div>
                     </div>
+
                   </div>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-                    <div>
-                      <h4 className="font-semibold text-primary-blue mb-2">Internship/Entry</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {atsKeywords.internship.slice(0, 4).map((keyword, i) => (
-                          <Badge key={i} variant="outline" className="text-xs border-primary-blue/30 text-primary-blue">
-                            {keyword}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-teal-blue mb-2">WA State Gov</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {atsKeywords.waState.slice(0, 4).map((keyword, i) => (
-                          <Badge key={i} variant="outline" className="text-xs border-teal-blue/30 text-teal-blue">
-                            {keyword}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary-blue mb-2">Soft Skills</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {atsKeywords.softSkills.slice(0, 4).map((keyword, i) => (
-                          <Badge key={i} variant="outline" className="text-xs border-primary-blue/30 text-primary-blue">
-                            {keyword}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-teal-blue mb-2"></h4>
-                      <div className="flex flex-wrap gap-1">
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-4 p-4 bg-primary-blue/10 rounded-lg">
-                    <p className="text-sm text-gray-700">
-                      <strong>Pro Tip:</strong> These keywords are automatically integrated into your resume based on the format you choose. 
-                      The system ensures natural placement to pass ATS scanning while maintaining readability for human reviewers.
+                  <div className="mt-3 p-3 bg-primary-blue/10 rounded-lg">
+                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                      <strong>Pro Tip:</strong> Keywords are automatically integrated based on your chosen format for optimal ATS compatibility.
                     </p>
                   </div>
                 </CardContent>
               </Card>
             </div>
-          </TabsContent>
+          </div>
+        </div>
 
-          <TabsContent value="preview" className="space-y-6">
-            <div className="professional-card p-8">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-bold text-gray-900">
-                  {resumeFormats[selectedFormat as keyof typeof resumeFormats].name} Resume
-                </h3>
-                <div className="flex gap-3">
-                  <Button
-                    variant={previewMode ? "default" : "outline"}
-                    onClick={() => setPreviewMode(!previewMode)}
-                    className="border-primary-blue text-primary-blue dark:text-primary-blue hover:scale-105 hover:translate-y-[-1px] hover:shadow-md transition-all duration-200"
-                  >
-                    <Eye className="h-4 w-4 mr-2" />
-                    {previewMode ? "Hide Preview" : "Show Preview"}
-                  </Button>
-                  <Button
-                    onClick={() => generateATSResume(selectedFormat)}
-                    className="bg-primary-gradient text-white hover:opacity-90"
-                  >
-                    <Download className="h-4 w-4 mr-2" />
-                    Download {resumeFormats[selectedFormat as keyof typeof resumeFormats].fileType}
-                  </Button>
-                </div>
-              </div>
-
-              {previewMode && (
-                <div className="bg-gray-50 p-6 rounded-lg font-mono text-sm whitespace-pre-line border">
-                  {createResumeContent(selectedFormat)}
-                </div>
-              )}
-
-              <div className="grid md:grid-cols-4 gap-4 mt-6">
-                <div className="text-center p-4 bg-primary-blue/10 rounded-lg border border-primary-blue/20">
-                  <FileText className="h-8 w-8 text-primary-blue mx-auto mb-2" />
-                  <div className="font-semibold text-gray-900">ATS Compatible</div>
-                  <div className="text-sm text-gray-600">95%+ systems</div>
-                </div>
-                <div className="text-center p-4 bg-teal-blue/10 rounded-lg border border-teal-blue/20">
-                  <Zap className="h-8 w-8 text-teal-blue mx-auto mb-2" />
-                  <div className="font-semibold text-gray-900">Keyword Optimized</div>
-                  <div className="text-sm text-gray-600">PM-focused terms</div>
-                </div>
-                <div className="text-center p-4 bg-primary-blue/10 rounded-lg border border-primary-blue/20">
-                  <Settings className="h-8 w-8 text-primary-blue mx-auto mb-2" />
-                  <div className="font-semibold text-gray-900">Customizable</div>
-                  <div className="text-sm text-gray-600">Job-specific</div>
-                </div>
-                <div className="text-center p-4 bg-teal-blue/10 rounded-lg border border-teal-blue/20">
-                  <Target className="h-8 w-8 text-teal-blue mx-auto mb-2" />
-                  <div className="font-semibold text-gray-900">Ready to Submit</div>
-                  <div className="text-sm text-gray-600">Professional format</div>
-                </div>
-              </div>
-              
-              <div className="mt-6 p-4 bg-gradient-to-r from-primary-blue/5 to-teal-blue/5 rounded-lg border border-divider-gray">
-                <h4 className="font-semibold text-gray-900 mb-2">How to Use Your ATS Resume:</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• <strong>For Online Applications:</strong> Copy and paste text directly into application forms</li>
-                  <li>• <strong>For Email Submissions:</strong> Save as .docx and attach to your application email</li>
-                  <li>• <strong>For Different Jobs:</strong> Select the format that best matches the job description</li>
-                  <li>• <strong>Before Submitting:</strong> Review and customize based on specific job requirements</li>
-                </ul>
-              </div>
-            </div>
-          </TabsContent>
-        </Tabs>
       </div>
     </section>
   );
