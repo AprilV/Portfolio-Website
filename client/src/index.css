@@ -1532,7 +1532,7 @@
   }
 
   .dark #about .professional-experience-header::before {
-    background: hsl(0, 0%, 7%); /* Dark mode about background */
+    background: rgb(17, 24, 39); /* Dark mode about background - gray-900 */
     color: white;
   }
 
@@ -1544,7 +1544,7 @@
   }
 
   .dark #experience .professional-experience-header::before {
-    background: hsl(0, 0%, 7%); /* Dark mode experience background */
+    background: rgb(17, 24, 39); /* Dark mode experience background - gray-900 */
     color: white;
   }
 
@@ -1556,7 +1556,7 @@
   }
 
   .dark #projects .professional-experience-header::before {
-    background: hsl(0, 0%, 7%); /* Dark mode projects background */
+    background: rgb(17, 24, 39); /* Dark mode projects background - gray-900 */
     color: white;
   }
 
@@ -1568,7 +1568,7 @@
   }
 
   .dark #skills .professional-experience-header::before {
-    background: hsl(0, 0%, 7%); /* Dark mode skills background */
+    background: rgb(17, 24, 39); /* Dark mode skills background - gray-900 */
     color: white;
   }
 
@@ -1580,7 +1580,7 @@
   }
 
   .dark #resume .professional-experience-header::before {
-    background: hsl(0, 0%, 7%); /* Dark mode resume background */
+    background: rgb(17, 24, 39); /* Dark mode resume background - gray-900 */
     color: white;
   }
 
@@ -1592,7 +1592,7 @@
   }
 
   .dark #contact .professional-experience-header::before {
-    background: hsl(0, 0%, 7%); /* Dark mode contact background */
+    background: rgb(17, 24, 39); /* Dark mode contact background - gray-900 */
     color: white;
   }
 
