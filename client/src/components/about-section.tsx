@@ -56,7 +56,7 @@ const AboutSection = () => {
           <div className="lg:col-span-2 space-y-8">
             {/* Introduction */}
             <div className="prose prose-lg text-card-foreground">
-              <p className="text-lg leading-relaxed mb-6">
+              <p className="text-lg leading-relaxed mb-6 text-left">
                 I am an IT professional with over twenty years of hands-on infrastructure and data center experience, 
                 now transitioning into project management. Currently earning a <strong className="text-primary-blue">Bachelor of Applied Science in Information 
                 Systems</strong> at <strong className="text-primary-blue">Olympic College</strong> with graduation expected Spring 2026.
@@ -70,7 +70,7 @@ const AboutSection = () => {
                 Academic Background
               </h3>
               <div className="prose prose-lg text-card-foreground">
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed mb-4 text-left">
                   My academic background includes comprehensive coursework in <strong className="text-primary-blue">Project Management I and II</strong>, 
                   LAN Administration, Information Assurance, Technical Writing, and Business Statistics. 
                   I have earned <strong className="text-primary-blue">President's Scholar honors</strong> every term with consistent Dean's List recognition.
@@ -85,7 +85,7 @@ const AboutSection = () => {
                 Professional Experience
               </h3>
               <div className="prose prose-lg text-card-foreground">
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed mb-4 text-left">
                   Professionally, I have supervised teams and maintained critical operations at <strong className="text-primary-blue">Jewish Hospital</strong>, 
                   <strong className="text-primary-blue">Perot Systems</strong>, and <strong className="text-primary-blue">Dell Technologies</strong>, working with mainframes, Cisco networking, and Linux environments 
                   while managing client support and system transitions across regional teams.

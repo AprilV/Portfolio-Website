@@ -1628,6 +1628,22 @@
   }
 
   @media (max-width: 768px) {
+    /* Global mobile text alignment fix */
+    .experience-description,
+    .responsibilities,
+    .highlights,
+    .tech-stack-section,
+    .achievements-section,
+    .project-description,
+    .card-content p,
+    .card-content ul,
+    .card-content li,
+    .prose p,
+    .prose li,
+    .prose ul {
+      text-align: left !important;
+    }
+    
     .projects-grid {
       grid-template-columns: 1fr;
       gap: 1rem;
@@ -1683,6 +1699,13 @@
     padding-bottom: 0.25rem;
     text-align: center;
     width: fit-content;
+  }
+  
+  @media (max-width: 768px) {
+    .cert-heading {
+      text-align: left;
+      margin: 1.5rem 0 0.75rem 0;
+    }
   }
 
   .dark .cert-heading {
