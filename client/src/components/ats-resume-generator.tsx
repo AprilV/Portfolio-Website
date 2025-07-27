@@ -7,81 +7,36 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { generateATSResumeContent, atsKeywords } from "@/lib/ats-resume-templates";
 
 const ATSResumeGenerator = () => {
-  const [selectedFormat, setSelectedFormat] = useState('standard');
+  const [selectedFormat, setSelectedFormat] = useState('assistant');
   const [previewMode, setPreviewMode] = useState(false);
 
   const resumeFormats = {
-    standard: {
-      name: "Standard ATS",
-      description: "Clean, chronological format compatible with 95% of ATS systems",
-      features: ["Simple layout", "Standard sections", "Keyword optimized", "Universal compatibility"],
-      fileType: ".docx",
+    assistant: {
+      name: "Assistant Project Manager",
+      description: "Your primary target - specialized for assistant PM roles",
+      features: ["Project coordination", "Team support", "Process improvement", "Stakeholder communication"],
+      fileType: ".txt",
       color: "primary-blue",
-      icon: FileText,
-      bestFor: "General assistant PM roles, corporate positions"
+      icon: Target,
+      bestFor: "Assistant PM and project coordination positions"
     },
     technical: {
-      name: "Technical PM",
-      description: "Emphasizes technical skills and IT project management experience",
-      features: ["Skills-first approach", "Technical keywords", "Project metrics", "IT focus"],
-      fileType: ".docx", 
-      color: "primary-blue",
+      name: "IT Assistant PM",
+      description: "Combines IT expertise with assistant project manager positioning",
+      features: ["Technical coordination", "IT project support", "Infrastructure knowledge", "Technical communication"],
+      fileType: ".txt",
+      color: "teal-blue", 
       icon: Settings,
-      bestFor: "IT project management, technical coordinator roles"
-    },
-    wastate: {
-      name: "Washington State",
-      description: "Optimized for Washington State government positions and agencies",
-      features: ["State-specific keywords", "Public service focus", "Education emphasis", "Local experience"],
-      fileType: ".docx",
-      color: "primary-blue",
-      icon: Users,
-      bestFor: "WA state agencies, municipalities, public sector"
-    },
-    federal: {
-      name: "Federal/Government",
-      description: "Detailed format for government positions with security clearance",
-      features: ["Comprehensive details", "Education emphasis", "Compliance focused", "Security clearance"],
-      fileType: ".docx",
-      color: "primary-blue",
-      icon: Shield,
-      bestFor: "Government agencies, federal contractors"
+      bestFor: "IT-focused assistant PM and technical coordination roles"
     },
     internship: {
-      name: "Internship/Entry",
-      description: "Education-focused format for internships and entry-level PM positions",
-      features: ["Education emphasis", "Transferable skills", "Academic projects", "Growth potential"],
-      fileType: ".docx",
+      name: "PM Internship",
+      description: "Designed for project management internships and learning opportunities",
+      features: ["Growth mindset", "Academic foundation", "Hands-on experience", "Professional development"],
+      fileType: ".txt",
       color: "primary-blue",
       icon: GraduationCap,
-      bestFor: "PM internships, entry-level assistant PM roles"
-    },
-    assistant: {
-      name: "Assistant PM",
-      description: "Optimized for assistant project manager and coordinator positions",
-      features: ["Support role focus", "Team collaboration", "Process improvement", "Learning orientation"],
-      fileType: ".docx", 
-      color: "primary-blue",
-      icon: Users,
-      bestFor: "Assistant PM, project coordinator, project analyst roles"
-    },
-    datacenter: {
-      name: "Datacenter/Infrastructure",
-      description: "Specialized for datacenter operations and infrastructure services roles",
-      features: ["Infrastructure expertise", "Operations focus", "System reliability", "Technical depth"],
-      fileType: ".docx",
-      color: "primary-blue", 
-      icon: Settings,
-      bestFor: "Datacenter operations, infrastructure services, system administration"
-    },
-    executive: {
-      name: "Senior PM",
-      description: "Leadership-focused format for senior project management roles", 
-      features: ["Leadership emphasis", "Strategic outcomes", "Team management", "Results-driven"],
-      fileType: ".docx",
-      color: "primary-blue",
-      icon: TrendingUp,
-      bestFor: "Senior PM roles, team lead positions"
+      bestFor: "PM internships and entry-level project management roles"
     }
   };
 
@@ -155,14 +110,9 @@ const ATSResumeGenerator = () => {
     link.href = url;
     
     const formatNames = {
-      standard: 'Standard_ATS',
-      technical: 'Technical_PM',
-      wastate: 'WA_State_Gov',
-      internship: 'Internship_Entry', 
-      assistant: 'Assistant_PM',
-      datacenter: 'Datacenter_Infrastructure',
-      federal: 'Federal_Gov',
-      executive: 'Senior_PM'
+      assistant: 'Assistant_Project_Manager',
+      technical: 'IT_Assistant_PM',
+      internship: 'PM_Internship'
     };
     
     link.download = `April_Sykes_${formatNames[format as keyof typeof formatNames]}_Resume.txt`;
@@ -182,17 +132,17 @@ const ATSResumeGenerator = () => {
         <div className="text-center mb-8">
           <div className="professional-experience-header" style={{marginTop: '0'}}>
             <h2 className="section-header">
-              ATS Resume Generator
+              Resume Builder
               <div className="section-underline"></div>
             </h2>
-            <p className="section-subtitle">Professional resumes optimized for applicant tracking systems</p>
+            <p className="section-subtitle">Custom resumes tailored for your target position</p>
           </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Format Selection */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-charcoal-black dark:text-white mb-4">Choose Resume Format</h3>
+            <h3 className="text-xl font-bold text-charcoal-black dark:text-white mb-4">Select Your Target Role</h3>
             <div className="grid gap-4">
               {Object.entries(resumeFormats).map(([key, format]) => (
                 <Card 

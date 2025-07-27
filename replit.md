@@ -6,6 +6,17 @@ This is a professional portfolio website built as a full-stack application showc
 
 ## Recent Changes
 
+**January 27, 2025**: Professional Friend Feedback Implementation - Focus & Simplification
+- **Professional Terminology Update**: Changed "ATS Resume Generator" to "Resume Builder" and "templates" to avoid copying implications
+- **Specialized Focus Strategy**: Reduced from 8 resume options to 3 focused formats following "one specialization" hiring principle
+- **Assistant PM Primary Positioning**: Made "Assistant Project Manager" the default selection emphasizing primary career target
+- **Strategic Resume Options**: Simplified to Assistant PM (primary), IT Assistant PM (specialty), and PM Internship (opportunity)
+- **WWW Domain Fix**: Added server-side redirect for www.aprilsykes.com to aprilsykes.com with 301 permanent redirect
+- **Professional Navigation**: Updated sidebar navigation from "Resume" to "Resume Builder" for consistency
+- **Hiring Psychology Application**: Implemented feedback that "more people get hired who present as doing only one thing"
+- **Focused Career Messaging**: Eliminated scattered options in favor of clear Assistant Project Manager specialization
+- **Enhanced User Experience**: Streamlined resume builder interface with targeted role selection instead of overwhelming choices
+
 **January 27, 2025**: GPA Reference Reduction - Professional Balance Enhancement
 - **Reduced Excessive GPA Mentions**: Eliminated 33 of 34 GPA references across the site for more professional balance
 - **Replaced with Academic Honors**: Converted GPA displays to "President's Scholar" and "Dean's List" recognition
