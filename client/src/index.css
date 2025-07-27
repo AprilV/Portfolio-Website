@@ -1524,9 +1524,9 @@
   }
 
   .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
     font-weight: 900;
-    content: '\f0b1'; /* fa-briefcase default */
+    content: '💼'; /* Fallback to emoji if FA fails */
     position: absolute;
     top: -1.25rem;
     left: 50%;
@@ -1541,9 +1541,9 @@
 
   /* Section-specific Font Awesome icons with matching backgrounds */
   #about .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
     font-weight: 900;
-    content: '\f007'; /* fa-user */
+    content: '👤'; /* Fallback to emoji if FA fails */
     background: #F2F4F8; /* About section background */
     display: block !important;
   }
@@ -1554,9 +1554,9 @@
   }
 
   #experience .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
     font-weight: 900;
-    content: '\f0b1'; /* fa-briefcase */
+    content: '💼'; /* Fallback to emoji if FA fails */
     background: white; /* Experience section background */
     display: block !important;
   }
@@ -1567,9 +1567,9 @@
   }
 
   #projects .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
     font-weight: 900;
-    content: '\f135'; /* fa-rocket */
+    content: '🚀'; /* Fallback to emoji if FA fails */
     background: #F9FAFB; /* Projects section background */
     display: block !important;
   }
@@ -1580,9 +1580,9 @@
   }
 
   #skills .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
     font-weight: 900;
-    content: '\f109'; /* fa-laptop-code */
+    content: '💻'; /* Fallback to emoji if FA fails */
     background: white; /* White background for icon */
     display: block !important;
   }
@@ -1593,9 +1593,9 @@
   }
 
   #resume .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
     font-weight: 900;
-    content: '\f15c'; /* fa-file-alt */
+    content: '📄'; /* Fallback to emoji if FA fails */
     background: white; /* Resume section background */
     display: block !important;
   }
@@ -1606,9 +1606,9 @@
   }
 
   #contact .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "fa-solid-900", sans-serif;
     font-weight: 900;
-    content: '\f0e0'; /* fa-envelope */
+    content: '✉️'; /* Fallback to emoji if FA fails */
     background: #F9FAFB; /* Contact section background */
     display: block !important;
   }
