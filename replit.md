@@ -11,6 +11,7 @@ This is a professional portfolio website built as a full-stack application showc
 - **Portfolio Search**: Comprehensive search functionality with real-time results, keyboard shortcuts (⌘K), and content discovery across experience, skills, projects, and certifications
 - **World Clock Footer**: Subtle business timezone display (PST, EST, UTC) showcasing global awareness for Assistant PM roles
 - **Collaborative Credit**: Added footer acknowledgment of the partnership between April V. Sykes and Claude AI in designing the portfolio
+- **Navigation Styling**: Updated header to display name and title on single line as "April V. Sykes - Assistant Project Manager" for cleaner appearance
 - **Enhanced UX**: Professional search modal with dark mode support, keyboard navigation, and direct section jumping
 - **Accessibility Features**: Proper ARIA labels, focus management, and semantic HTML structure for enterprise-grade user experience
 
