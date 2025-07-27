@@ -6,16 +6,17 @@ This is a professional portfolio website built as a full-stack application showc
 
 ## Recent Changes
 
-**January 27, 2025**: Professional Friend Feedback Implementation - Focus & Simplification
-- **Professional Terminology Update**: Changed "ATS Resume Generator" to "Resume Builder" and "templates" to avoid copying implications
-- **Specialized Focus Strategy**: Reduced from 8 resume options to 3 focused formats following "one specialization" hiring principle
-- **Assistant PM Primary Positioning**: Made "Assistant Project Manager" the default selection emphasizing primary career target
-- **Strategic Resume Options**: Simplified to Assistant PM (primary), IT Assistant PM (specialty), and PM Internship (opportunity)
+**January 27, 2025**: Separate Resume Pages Architecture - Professional Focus Implementation
+- **Multi-Page Resume System**: Created separate dedicated pages for each resume type following professional UX best practices
+- **Enhanced User Experience**: Replaced single overwhelming page with focused Resume Hub + 3 specialized resume pages
+- **Dedicated Resume Pages**: /resume/assistant-pm, /resume/it-assistant-pm, /resume/pm-internship with targeted content and keywords
+- **Professional Resume Hub**: Central landing page at /resume with clear role selection and strategic guidance
+- **Focused Career Messaging**: Each page tells complete, targeted story for specific role type with specialized features and keywords
+- **SEO Optimization**: Dedicated URLs for each resume type improve search engine discoverability and professional presentation
+- **Hiring Psychology Application**: Implements "one specialization" principle with focused pages instead of scattered options
+- **Enhanced Navigation**: Clean routing structure allows users to bookmark and share specific resume types
+- **Professional Terminology**: Eliminated "templates" language in favor of "Resume Builder" and role-specific positioning
 - **WWW Domain Fix**: Added server-side redirect for www.aprilsykes.com to aprilsykes.com with 301 permanent redirect
-- **Professional Navigation**: Updated sidebar navigation from "Resume" to "Resume Builder" for consistency
-- **Hiring Psychology Application**: Implemented feedback that "more people get hired who present as doing only one thing"
-- **Focused Career Messaging**: Eliminated scattered options in favor of clear Assistant Project Manager specialization
-- **Enhanced User Experience**: Streamlined resume builder interface with targeted role selection instead of overwhelming choices
 
 **January 27, 2025**: GPA Reference Reduction - Professional Balance Enhancement
 - **Reduced Excessive GPA Mentions**: Eliminated 33 of 34 GPA references across the site for more professional balance

@@ -5,6 +5,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/contexts/theme-context";
 import Home from "@/pages/home.tsx";
+import ResumeHub from "@/pages/resume-hub";
+import AssistantPMResume from "@/pages/assistant-pm-resume";
+import ITAssistantPMResume from "@/pages/it-assistant-pm-resume";
+import PMInternshipResume from "@/pages/pm-internship-resume";
 import AdminLogin from "@/pages/admin-login";
 import AdminContacts from "@/pages/admin-contacts";
 import AdminDashboard from "@/pages/admin-dashboard";
@@ -17,6 +21,10 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/resume" component={ResumeHub} />
+      <Route path="/resume/assistant-pm" component={AssistantPMResume} />
+      <Route path="/resume/it-assistant-pm" component={ITAssistantPMResume} />
+      <Route path="/resume/pm-internship" component={PMInternshipResume} />
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin">
         <AdminProtectedRoute>
