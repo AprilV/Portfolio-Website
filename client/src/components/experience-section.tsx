@@ -172,11 +172,11 @@ const ExperienceSection = () => {
                 
                 <div className="flex-1">
                   <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
-                    <div>
-                      <h3 className="job-title job-title-hover">
+                    <div className="text-left">
+                      <h3 className="job-title job-title-hover text-left">
                         {exp.title}
                       </h3>
-                      <p className="company-name">{exp.company}</p>
+                      <p className="company-name text-left">{exp.company}</p>
                       <div className="job-meta">
                         <span className="flex items-center gap-1">
                           <Calendar className="h-4 w-4" aria-hidden="true" />
@@ -208,7 +208,7 @@ const ExperienceSection = () => {
                     )}
                   </div>
 
-                  <p className="experience-description">{exp.description}</p>
+                  <p className="experience-description text-left">{exp.description}</p>
 
                   {/* Main Achievements Section */}
                   <div className="achievements-section">

@@ -1367,12 +1367,12 @@
   @media (max-width: 768px) {
     .experience-header {
       flex-direction: column;
-      text-align: center;
+      text-align: left;
       gap: 1rem;
     }
     
     .company-logo-container {
-      align-self: center;
+      align-self: flex-start;
       margin-bottom: 0;
     }
     
@@ -1382,7 +1382,7 @@
     
     .metrics-grid {
       grid-template-columns: repeat(2, 1fr);
-      justify-self: center;
+      justify-self: start;
       max-width: 300px;
     }
     
@@ -1400,7 +1400,7 @@
     }
 
     .job-meta {
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     .scroll-nav {
