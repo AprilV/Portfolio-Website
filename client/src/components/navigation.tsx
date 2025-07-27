@@ -77,7 +77,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center whitespace-nowrap flex-1 min-w-0 pr-4">
             <div className="flex items-center">
-              <span className="text-lg font-semibold gradient-text-flow-title">Assistant Project Manager</span>
+              <span className="text-lg font-semibold text-charcoal-black dark:text-gray-200">Assistant Project Manager</span>
             </div>
           </div>
           
