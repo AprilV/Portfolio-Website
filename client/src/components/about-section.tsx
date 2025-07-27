@@ -66,7 +66,7 @@ const AboutSection = () => {
             {/* Academic Background */}
             <div>
               <h3 className="text-xl font-semibold text-charcoal-black mb-4 flex items-center gap-2">
-                <GraduationCap className="h-5 w-5 text-primary-blue" />
+                <GraduationCap className="h-5 w-5 text-primary-blue dark:text-white" />
                 Academic Background
               </h3>
               <div className="prose prose-lg text-card-foreground">
@@ -81,7 +81,7 @@ const AboutSection = () => {
             {/* Professional Experience */}
             <div>
               <h3 className="text-xl font-semibold text-charcoal-black mb-4 flex items-center gap-2">
-                <Users className="h-5 w-5 text-primary-blue" />
+                <Users className="h-5 w-5 text-primary-blue dark:text-white" />
                 Professional Experience
               </h3>
               <div className="prose prose-lg text-card-foreground">
@@ -99,7 +99,7 @@ const AboutSection = () => {
             {/* Core Values */}
             <div className="professional-card p-6 hover:border-primary-blue dark:hover:border-primary-blue">
               <h3 className="text-xl font-semibold text-charcoal-black mb-6 flex items-center gap-2">
-                <Award className="h-5 w-5 text-primary-blue" />
+                <Award className="h-5 w-5 text-primary-blue dark:text-white" />
                 Core Values
               </h3>
               <div className="grid sm:grid-cols-1 gap-4">
