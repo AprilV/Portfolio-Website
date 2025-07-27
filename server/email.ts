@@ -162,7 +162,7 @@ export async function sendAutoReply(contactData: ContactEmailParams): Promise<bo
             <ul style="color: #333; margin: 0; padding-left: 20px;">
               <li>20+ years IT infrastructure experience</li>
               <li>Currently pursuing CAPM certification</li>
-              <li>Bachelor's in Information Systems (3.94 GPA)</li>
+              <li>Bachelor's in Information Systems (President's Scholar)</li>
               <li>Team leadership experience at Dell Technologies</li>
             </ul>
           </div>
@@ -196,7 +196,7 @@ I'll review your message and get back to you within 24-48 hours. If you have any
 Quick About Me:
 • 20+ years IT infrastructure experience
 • Currently pursuing CAPM certification  
-• Bachelor's in Information Systems (3.94 GPA)
+• Bachelor's in Information Systems (President's Scholar)
 • Team leadership experience at Dell Technologies
 
 Looking forward to discussing how I can contribute to your team's success!

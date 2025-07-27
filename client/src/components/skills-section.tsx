@@ -10,9 +10,9 @@ const SkillsSection = () => {
       color: "primary-blue",
       type: "pm",
       skills: [
-        { name: "CAPM Certification", experience: "In Progress", description: "Summer 2025 - Based on IS 350/450 PM coursework (4.0 GPA)", accent: "primary-blue" },
-        { name: "Project Management I", experience: "Academic", description: "IS 350 - Project Management I (4.0 GPA)", accent: "primary-blue" },
-        { name: "Project Management II", experience: "Academic", description: "IS 450 - Project Management II (4.0 GPA)", accent: "primary-blue" },
+        { name: "CAMP Certification", experience: "In Progress", description: "Summer 2025 - Based on IS 350/450 PM coursework", accent: "primary-blue" },
+        { name: "Project Management I", experience: "Academic", description: "IS 350 - Project Management I", accent: "primary-blue" },
+        { name: "Project Management II", experience: "Academic", description: "IS 450 - Project Management II", accent: "primary-blue" },
         { name: "Team Leadership", experience: "18+ Years", description: "Led 12-person teams at Dell Technologies", accent: "teal-blue" },
         { name: "Stakeholder Communication", experience: "20+ Years + Academic", description: "Professional experience + CMST 242 Organizational Comm (4.0)", accent: "primary-blue" },
         { name: "Project Documentation", experience: "20+ Years + Academic", description: "SOPs/procedures + ENGL& 235 Technical Writing (4.0)", accent: "teal-blue" },
@@ -26,10 +26,10 @@ const SkillsSection = () => {
       skills: [
         { name: "LAN Administration", experience: "20+ Years + Academic", description: "Professional experience + IS 346 LAN Administration IV (4.0)", accent: "teal-blue" },
         { name: "Windows Systems", experience: "20+ Years + Academic", description: "Professional + CIS 212 Windows/Professionals (4.0)", accent: "primary-blue" },
-        { name: "Network Security", experience: "Academic", description: "CIS 236 - Info System Security I (4.0 GPA)", accent: "teal-blue" },
+        { name: "Network Security", experience: "Academic", description: "CIS 236 - Info System Security I", accent: "teal-blue" },
         { name: "Cisco Networking", experience: "Academic", description: "CIS 270 Cisco I (4.0) + CIS 271 Cisco II (4.0)", accent: "primary-blue" },
         { name: "Technical Support", experience: "20+ Years + Academic", description: "CIS 172 Technical Support Skills (4.0) + professional experience", accent: "teal-blue" },
-        { name: "Server Support", experience: "Academic", description: "CIS 241 - Applications Server Support (4.0 GPA)", accent: "primary-blue" },
+        { name: "Server Support", experience: "Academic", description: "CIS 241 - Applications Server Support", accent: "primary-blue" },
       ],
     },
   ];
@@ -39,7 +39,7 @@ const SkillsSection = () => {
     {
       name: "CAPM Candidate",
       description: "Project Management Institute – In Progress",
-      detail: "Summer 2025 – PMI I & II Complete (4.0 GPA)",
+      detail: "Summer 2025 – PMI I & II Complete",
       icon: Award,
       color: "primary-blue",
       link: null,
@@ -127,7 +127,7 @@ const SkillsSection = () => {
   const academicRecognition = [
     {
       name: "BAS-IS Student",
-      description: "Olympic College – 3.94 GPA",
+      description: "Olympic College – President's Scholar",
       detail: "President's Scholar (9 terms and counting) | Spring 2026",
       icon: GraduationCap,
       color: "primary-blue",

@@ -9,8 +9,8 @@ const AboutSection = () => {
       description: "Two decades of hands-on infrastructure and data center experience"
     },
     { 
-      value: "3.94", 
-      label: "Current GPA", 
+      value: "Dean's List", 
+      label: "Academic Status", 
       icon: GraduationCap,
       description: "Maintaining President's Scholar honors every academic term"
     },
@@ -73,7 +73,7 @@ const AboutSection = () => {
                 <p className="leading-relaxed mb-4">
                   My academic background includes comprehensive coursework in <strong className="text-primary-blue">Project Management I and II</strong>, 
                   LAN Administration, Information Assurance, Technical Writing, and Business Statistics. 
-                  I maintain a <strong className="text-teal-blue">3.94 GPA</strong> and have earned <strong className="text-primary-blue">President's Scholar honors</strong> every term.
+                  I have earned <strong className="text-primary-blue">President's Scholar honors</strong> every term with consistent Dean's List recognition.
                 </p>
               </div>
             </div>

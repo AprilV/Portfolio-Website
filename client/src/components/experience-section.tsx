@@ -56,13 +56,13 @@ const ExperienceSection = () => {
         "CAPM Exam Preparation scheduled for Summer 2025",
       ],
       highlights: [
-        "Maintained 3.94 GPA while working part-time in IT support",
+        "Earned President's Scholar honors while working part-time in IT support",
         "Built TimelyRx medication reminder app using modern development practices",
         "Developed PMP exam simulator implementing Agile methodologies",
       ],
       techStack: ["Project Management", "Systems Analysis", "Technical Writing", "Business Statistics", "Information Assurance"],
       metrics: [
-        { label: "Current GPA", value: "3.94" },
+        { label: "Academic Status", value: "President's Scholar" },
         { label: "President's Scholar", value: "9 Terms" },
         { label: "Graduation", value: "End Spring 2026" },
       ],

@@ -45,19 +45,19 @@ export const resumeData: ResumeData = {
     linkedin: "linkedin.com/in/aprilsykes"
   },
   summary: {
-    standard: "Results-driven IT professional with 20+ years of infrastructure experience transitioning to project management. Currently pursuing CAPM certification with formal education in Project Management I & II (4.0 GPA). Proven track record of leading cross-functional teams up to 12 members at Dell Technologies. Combines deep technical expertise with emerging project leadership skills to drive operational excellence and stakeholder satisfaction.",
+    standard: "Results-driven IT professional with 20+ years of infrastructure experience transitioning to project management. Currently pursuing CAPM certification with formal education in Project Management I & II. Proven track record of leading cross-functional teams up to 12 members at Dell Technologies. Combines deep technical expertise with emerging project leadership skills to drive operational excellence and stakeholder satisfaction.",
     
-    technical: "Senior IT Infrastructure Professional with 20+ years hands-on experience in enterprise environments, transitioning to technical project management roles. CAPM candidate with formal Project Management I & II coursework (4.0 GPA). Expert in Windows systems, LAN administration, and network security with CompTIA certifications. Proven ability to bridge technical and business stakeholders while managing complex infrastructure projects and cross-functional teams.",
+    technical: "Senior IT Infrastructure Professional with 20+ years hands-on experience in enterprise environments, transitioning to technical project management roles. CAPM candidate with formal Project Management I & II coursework. Expert in Windows systems, LAN administration, and network security with CompTIA certifications. Proven ability to bridge technical and business stakeholders while managing complex infrastructure projects and cross-functional teams.",
     
-    wastate: "Dedicated IT professional with 20+ years of experience serving Washington State communities, seeking Assistant Project Manager role in state government. Currently completing Bachelor of Applied Science in Information Systems at Olympic College (3.94 GPA) with specialized Project Management coursework. Committed to public service excellence with proven track record of managing critical infrastructure supporting citizens and government operations. Strong background in compliance, documentation, and stakeholder collaboration essential for effective public sector project management.",
+    wastate: "Dedicated IT professional with 20+ years of experience serving Washington State communities, seeking Assistant Project Manager role in state government. Currently completing Bachelor of Applied Science in Information Systems at Olympic College with specialized Project Management coursework. President's Scholar with proven academic excellence. Committed to public service excellence with proven track record of managing critical infrastructure supporting citizens and government operations. Strong background in compliance, documentation, and stakeholder collaboration essential for effective public sector project management.",
     
-    internship: "Motivated IT professional with 20+ years of hands-on experience transitioning to project management through formal education. Currently pursuing Bachelor of Applied Science in Information Systems (3.94 GPA) with specialized Project Management I & II coursework (4.0 GPA). Strong academic foundation combined with extensive technical background provides unique perspective for project management internships. Eager to apply classroom learning and technical expertise to real-world project challenges while contributing to organizational success.",
+    internship: "Motivated IT professional with 20+ years of hands-on experience transitioning to project management through formal education. Currently pursuing Bachelor of Applied Science in Information Systems with specialized Project Management I & II coursework. President's Scholar with strong academic foundation combined with extensive technical background provides unique perspective for project management internships. Eager to apply classroom learning and technical expertise to real-world project challenges while contributing to organizational success.",
     
-    assistant: "Results-oriented IT professional with 20+ years of technical experience seeking Assistant Project Manager role to leverage deep infrastructure knowledge in project coordination. Currently completing Bachelor of Applied Science in Information Systems (3.94 GPA) with formal Project Management education (4.0 GPA in PM courses). Proven ability to support cross-functional teams, document processes, and facilitate stakeholder communication. Ready to transition technical expertise into project support role while pursuing CAMP certification.",
+    assistant: "Results-oriented IT professional with 20+ years of technical experience seeking Assistant Project Manager role to leverage deep infrastructure knowledge in project coordination. Currently completing Bachelor of Applied Science in Information Systems with formal Project Management education. President's Scholar with proven ability to support cross-functional teams, document processes, and facilitate stakeholder communication. Ready to transition technical expertise into project support role while pursuing CAPM certification.",
     
     datacenter: "Senior Infrastructure Professional with 20+ years of comprehensive datacenter operations and enterprise system administration experience. Expert in Windows Server environments, network infrastructure, and critical system maintenance supporting 1000+ users at Dell Technologies. Proven track record of managing complex infrastructure projects, system migrations, and 24/7 operations ensuring 99.9% uptime. CompTIA and CCNA certified with deep expertise in virtualization, network security, and disaster recovery protocols.",
     
-    federal: "Highly qualified IT professional with two decades of enterprise infrastructure experience seeking Assistant Project Manager role in federal/government environment. Currently completing Bachelor of Applied Science in Information Systems (3.94 GPA) with specialized Project Management coursework. Security-conscious with extensive compliance and documentation experience. President's Scholar with proven academic excellence and commitment to continuous professional development.",
+    federal: "Highly qualified IT professional with two decades of enterprise infrastructure experience seeking Assistant Project Manager role in federal/government environment. Currently completing Bachelor of Applied Science in Information Systems with specialized Project Management coursework. Security-conscious with extensive compliance and documentation experience. President's Scholar with proven academic excellence and commitment to continuous professional development.",
     
     executive: "Strategic IT leader with 20+ years of progressive experience managing complex technical initiatives and leading high-performance teams. Currently advancing project management expertise through formal CAPM certification track. Demonstrated success in cross-functional collaboration, stakeholder management, and operational excellence at Fortune 500 organizations. Proven ability to deliver results while mentoring technical professionals and driving organizational transformation."
   },
@@ -92,15 +92,15 @@ export const resumeData: ResumeData = {
   education: {
     degree: "Bachelor of Applied Science - Information Systems",
     school: "Olympic College",
-    gpa: "3.94",
+    gpa: "President's Scholar",
     honors: ["President's Scholar (8 consecutive terms)", "Dean's List"],
     relevantCourses: [
-      "Project Management I (IS 350) - 4.0 GPA",
-      "Project Management II (IS 450) - 4.0 GPA", 
-      "Information Systems Integration (IS 302) - 4.0 GPA",
-      "Leading in the Digital World (IS 320) - 4.0 GPA",
-      "LAN Administration IV (IS 346) - 4.0 GPA",
-      "Information System Security I (CIS 236) - 4.0 GPA"
+      "Project Management I (IS 350)",
+      "Project Management II (IS 450)", 
+      "Information Systems Integration (IS 302)",
+      "Leading in the Digital World (IS 320)",
+      "LAN Administration IV (IS 346)",
+      "Information System Security I (CIS 236)"
     ]
   },
   certifications: [
@@ -216,7 +216,7 @@ CORE COMPETENCIES`;
   } else if (format === 'wastate') {
     resumeContent += `\n• ${data.skills.projectManagement.slice(0, 4).join(' • ')}\n• Public sector experience • Stakeholder collaboration • Process improvement • Community service\n• ${data.skills.technical.slice(0, 3).join(' • ')} • Government compliance`;
   } else if (format === 'internship') {
-    resumeContent += `\n• Academic Excellence: 3.94 GPA • Project Management Coursework (4.0 GPA) • CAPM Candidate\n• ${data.skills.technical.slice(0, 4).join(' • ')}\n• Strong foundation in ${data.skills.methodologies.slice(0, 3).join(', ')} methodologies`;
+    resumeContent += `\n• Academic Excellence: President's Scholar • Project Management Coursework • CAPM Candidate\n• ${data.skills.technical.slice(0, 4).join(' • ')}\n• Strong foundation in ${data.skills.methodologies.slice(0, 3).join(', ')} methodologies`;
   } else if (format === 'assistant') {
     resumeContent += `\n• ${data.skills.projectManagement.slice(0, 4).join(' • ')}\n• Process documentation • Team support • Stakeholder coordination • Technical communication\n• ${data.skills.technical.slice(0, 3).join(' • ')} • ${data.skills.software.slice(0, 2).join(' • ')}`;
   } else if (format === 'datacenter') {
@@ -239,7 +239,7 @@ CORE COMPETENCIES`;
 
   // Add education
   resumeContent += `\nEDUCATION\n\n${data.education.degree} | ${data.education.school} | Expected 2026\n`;
-  resumeContent += `• GPA: ${data.education.gpa} | ${data.education.honors.join(' | ')}\n`;
+  resumeContent += `• ${data.education.honors.join(' | ')}\n`;
   resumeContent += `• Relevant Coursework: ${data.education.relevantCourses.join(', ')}\n`;
 
   // Add certifications
@@ -290,7 +290,7 @@ export const atsKeywords = {
   ],
   internship: [
     "internship", "entry level", "recent graduate", "academic excellence",
-    "coursework", "GPA", "learning oriented", "growth potential",
+    "coursework", "academic excellence", "learning oriented", "growth potential",
     "educational background", "project management student", "CAPM candidate",
     "fresh perspective", "eager to learn", "strong foundation"
   ],

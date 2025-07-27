@@ -103,7 +103,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ isOpen, onClose }) => {
     {
       id: 'education',
       title: 'BAS-IS Education',
-      content: 'Bachelor Applied Science Information Systems, Olympic College, 3.94 GPA, Presidents Scholar, information systems degree',
+      content: 'Bachelor Applied Science Information Systems, Olympic College, Presidents Scholar, information systems degree',
       section: 'about',
       category: 'Education'
     }
