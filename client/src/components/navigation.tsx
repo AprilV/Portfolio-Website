@@ -119,7 +119,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={openSearch}
-              className="h-9 w-9 bg-transparent hover:bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2"
+              className="h-9 w-9 text-charcoal-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2"
               data-testid="search-button-mobile"
               aria-label="Open search"
             >
@@ -129,13 +129,13 @@ const Navigation = () => {
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="h-9 w-9 p-2 text-charcoal-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2"
+                  variant="outline" 
+                  size="icon" 
+                  className="h-10 w-10 border-2 border-primary-blue bg-white dark:bg-gray-800 text-primary-blue hover:bg-primary-blue hover:text-white dark:hover:bg-primary-blue"
                   aria-label="Open mobile menu"
                   data-testid="mobile-menu-button"
                 >
-                  <Menu className="h-5 w-5" aria-hidden="true" />
+                  <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-80">
