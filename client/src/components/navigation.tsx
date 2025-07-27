@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,32 +53,34 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-nav-background/95 backdrop-blur-sm shadow-md" : "bg-nav-background/95 backdrop-blur-sm"
-    } border-b border-divider-gray`}>
+      isScrolled ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-md" : "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm"
+    } border-b border-gray-200 dark:border-gray-700`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="text-xl font-bold text-charcoal-black">April V. Sykes</span>
-            <span className="ml-2 text-sm text-cool-gray">Assistant Project Manager</span>
+            <span className="text-xl font-bold text-charcoal-black dark:text-white">April V. Sykes</span>
+            <span className="ml-2 text-sm text-cool-gray dark:text-gray-300">Assistant Project Manager</span>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-charcoal-black hover:text-primary-blue transition-colors duration-200 font-medium ${
+                className={`text-charcoal-black dark:text-gray-200 hover:text-primary-blue dark:hover:text-primary-blue transition-colors duration-200 font-medium ${
                   activeSection === item.id ? "text-primary-blue font-semibold" : ""
                 }`}
               >
                 {item.label}
               </button>
             ))}
+            <ThemeToggle />
           </div>
           
           {/* Mobile Navigation */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="sm">

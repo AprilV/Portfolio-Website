@@ -182,7 +182,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-12 bg-background-alt" style={{paddingTop: '80px', paddingBottom: '60px'}} aria-labelledby="contact-heading">
+    <section id="contact" className="py-12 bg-background-alt dark:bg-gray-900 transition-colors duration-300" style={{paddingTop: '80px', paddingBottom: '60px'}} aria-labelledby="contact-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="professional-experience-header" style={{marginTop: '0'}}>
@@ -192,14 +192,14 @@ const ContactSection = () => {
             </h2>
             <p className="section-subtitle enhanced-subheader">Professional Networking & Opportunities</p>
           </div>
-          <p className="text-xl text-gray-600 mt-6">Ready to bring technical expertise and project management skills to your team</p>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mt-6 transition-colors duration-300">Ready to bring technical expertise and project management skills to your team</p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">Get In Touch</h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center gap-4">
@@ -219,7 +219,7 @@ const ContactSection = () => {
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-gray-600">{info.value}</p>
+                        <p className="text-gray-600 dark:text-gray-300 transition-colors duration-300">{info.value}</p>
                       )}
                     </div>
                   </div>
@@ -228,8 +228,8 @@ const ContactSection = () => {
             </div>
             
             {/* Professional Status */}
-            <div className="professional-card p-6">
-              <h4 className="font-semibold text-gray-900 mb-4">Professional Status</h4>
+            <div className="professional-card p-6 dark:bg-gray-800 dark:border-gray-700 transition-colors duration-300">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-4 transition-colors duration-300">Professional Status</h4>
               <div className="space-y-3">
                 <p className="professional-status-item">
                   <strong>Seeking:</strong> Technical project coordinator positions

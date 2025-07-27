@@ -23,30 +23,30 @@ const HeroSection = () => {
   return (
     <section 
       id="hero" 
-      className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden bg-hero-gradient"
+      className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300"
       itemScope 
       itemType="https://schema.org/Person"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-transparent to-teal-blue/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/5 via-transparent to-teal-blue/5 dark:from-teal-blue/10 dark:via-transparent dark:to-primary-blue/10"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center justify-center">
           <div className="space-y-8 animate-slide-in-left">
             <div className="space-y-4">
               <h1 
-                className="text-3xl sm:text-4xl lg:text-6xl font-bold text-charcoal-black leading-tight"
+                className="text-3xl sm:text-4xl lg:text-6xl font-bold text-charcoal-black dark:text-white leading-tight transition-colors duration-300"
                 itemProp="name"
               >
                 April V. Sykes
               </h1>
               <h2 
-                className="text-lg sm:text-xl lg:text-2xl text-teal-blue font-semibold"
+                className="text-lg sm:text-xl lg:text-2xl text-teal-blue dark:text-teal-blue font-semibold transition-colors duration-300"
                 itemProp="jobTitle"
               >
                 Assistant Project Manager | IT Project Management | CAPM Candidate (2025) | 20+ Years Experience
               </h2>
               <p 
-                className="text-base sm:text-lg text-cool-gray max-w-xl leading-relaxed"
+                className="text-base sm:text-lg text-cool-gray dark:text-gray-300 max-w-xl leading-relaxed transition-colors duration-300"
                 itemProp="description"
               >
                 Two decades of progressive leadership experience in IT infrastructure, team management, and project coordination, 

@@ -159,7 +159,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-light-neutral" style={{paddingTop: '80px', paddingBottom: '60px'}}>
+    <section id="skills" className="py-20 bg-light-neutral dark:bg-gray-800 transition-colors duration-300" style={{paddingTop: '80px', paddingBottom: '60px'}}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.div
