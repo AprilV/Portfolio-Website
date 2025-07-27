@@ -190,7 +190,7 @@ const ContactSection = () => {
               Let's Connect
               <div className="section-underline"></div>
             </h2>
-            <p className="section-subtitle">Ready to bring technical expertise and project management skills to your team</p>
+            <p className="section-subtitle">Ready to contribute technical expertise and fresh project management perspective</p>
           </div>
         </div>
         

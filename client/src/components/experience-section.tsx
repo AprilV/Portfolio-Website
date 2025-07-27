@@ -131,7 +131,7 @@ const ExperienceSection = () => {
                 Professional Experience
                 <div className="section-underline"></div>
               </h2>
-              <p className="section-subtitle">Progressive advancement from IT specialist to infrastructure leader and project coordinator</p>
+              <p className="section-subtitle">Leadership progression from systems analyst to team lead and project coordinator</p>
             </div>
             
             {/* Role Impact Summary Banner */}

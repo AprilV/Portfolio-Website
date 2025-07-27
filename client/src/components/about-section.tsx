@@ -44,7 +44,7 @@ const AboutSection = () => {
               About Me
               <div className="section-underline"></div>
             </h2>
-            <p className="section-subtitle">Transforming extensive IT infrastructure expertise into project management excellence</p>
+            <p className="section-subtitle">IT professional transitioning to project management with academic foundation</p>
           </div>
         </div>
         
