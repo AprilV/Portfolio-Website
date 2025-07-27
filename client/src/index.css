@@ -1644,6 +1644,35 @@
       text-align: left !important;
     }
     
+    /* Mobile-specific left alignment overrides */
+    section p,
+    section li,
+    section ul,
+    .space-y-8 p,
+    .leading-relaxed,
+    .max-w-xl,
+    .max-w-3xl,
+    .text-base,
+    .text-lg,
+    .text-xl {
+      text-align: left !important;
+    }
+    
+    /* Keep headers and achievement cards centered appropriately */
+    .section-header,
+    .section-subtitle,
+    .professional-card.text-center,
+    h1, h2.section-header,
+    .text-center.mb-16,
+    .text-center.mb-10 {
+      text-align: center !important;
+    }
+    
+    /* Ensure hero description is left-aligned on mobile */
+    #hero p[itemProp="description"] {
+      text-align: left !important;
+    }
+    
     .projects-grid {
       grid-template-columns: 1fr;
       gap: 1rem;
