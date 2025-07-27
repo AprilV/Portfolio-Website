@@ -1524,7 +1524,7 @@
   }
 
   .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
     font-weight: 900;
     content: '\f0b1'; /* fa-briefcase default */
     position: absolute;
@@ -1536,14 +1536,16 @@
     font-size: 1.5rem;
     color: #2C73D2;
     z-index: 10;
+    display: block;
   }
 
   /* Section-specific Font Awesome icons with matching backgrounds */
   #about .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
     font-weight: 900;
     content: '\f007'; /* fa-user */
     background: #F2F4F8; /* About section background */
+    display: block !important;
   }
 
   .dark #about .professional-experience-header::before {
@@ -1552,10 +1554,11 @@
   }
 
   #experience .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
     font-weight: 900;
     content: '\f0b1'; /* fa-briefcase */
     background: white; /* Experience section background */
+    display: block !important;
   }
 
   .dark #experience .professional-experience-header::before {
@@ -1564,10 +1567,11 @@
   }
 
   #projects .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
     font-weight: 900;
     content: '\f135'; /* fa-rocket */
     background: #F9FAFB; /* Projects section background */
+    display: block !important;
   }
 
   .dark #projects .professional-experience-header::before {
@@ -1576,10 +1580,11 @@
   }
 
   #skills .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
     font-weight: 900;
     content: '\f109'; /* fa-laptop-code */
     background: white; /* White background for icon */
+    display: block !important;
   }
 
   .dark #skills .professional-experience-header::before {
@@ -1588,10 +1593,11 @@
   }
 
   #resume .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
     font-weight: 900;
     content: '\f15c'; /* fa-file-alt */
     background: white; /* Resume section background */
+    display: block !important;
   }
 
   .dark #resume .professional-experience-header::before {
@@ -1600,10 +1606,11 @@
   }
 
   #contact .professional-experience-header::before {
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free";
     font-weight: 900;
     content: '\f0e0'; /* fa-envelope */
     background: #F9FAFB; /* Contact section background */
+    display: block !important;
   }
 
   .dark #contact .professional-experience-header::before {
@@ -1694,8 +1701,10 @@
     /* Show section icons on mobile - they're part of the brand identity */
     .professional-experience-header::before {
       display: block !important;
-      font-size: 1.2rem;
-      top: -1rem;
+      font-size: 1.2rem !important;
+      top: -1rem !important;
+      visibility: visible !important;
+      opacity: 1 !important;
     }
     
     /* Reduce top border padding on mobile without icon */
