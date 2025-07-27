@@ -1483,16 +1483,15 @@
     color: #1E1E1E;
   }
   
-  /* Subtle underline that expands on hover */
+  /* Subtle underline that matches text width */
   .section-underline {
-    @apply absolute -bottom-1 left-1/2 transform -translate-x-1/2 rounded-full transition-all duration-300;
-    width: 60px;
+    @apply absolute -bottom-1 left-0 rounded-full transition-all duration-300;
+    width: 100%;
     height: 2px;
     background-color: #2C73D2;
   }
   
   .section-header:hover .section-underline {
-    width: 100%;
     background: linear-gradient(90deg, #2C73D2 0%, #43D8C9 100%);
   }
   
