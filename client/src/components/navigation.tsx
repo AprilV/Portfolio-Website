@@ -76,9 +76,8 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center whitespace-nowrap flex-1 min-w-0 pr-4">
-            <div className="flex flex-col sm:flex-row sm:items-center">
-              <span className="text-xl font-bold gradient-text-flow inline-block">April V. Sykes</span>
-              <span className="hidden xs:block text-xs sm:text-sm gradient-text-flow-title sm:ml-3 mt-0.5 sm:mt-0 leading-tight">Assistant Project Manager</span>
+            <div className="flex items-center">
+              <span className="text-lg font-semibold gradient-text-flow-title">Assistant Project Manager</span>
             </div>
           </div>
           
