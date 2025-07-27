@@ -272,19 +272,10 @@ const ExperienceSection = () => {
               Two decades of IT infrastructure expertise combined with formal project management education. 
               Proven track record of leading teams, managing complex systems, and delivering results in high-stakes environments.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="#resume" 
-                className="inline-flex items-center gap-2 bg-primary-blue text-white px-6 py-3 rounded-lg hover:bg-primary-blue/90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                View Resume Templates
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </a>
+            <div className="flex justify-center">
               <a 
                 href="#contact" 
-                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white dark:hover:text-gray-900 rounded-lg transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="inline-flex items-center gap-2 bg-primary-blue text-white px-6 py-3 rounded-lg hover:bg-primary-blue/90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Let's Connect
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
