@@ -323,7 +323,7 @@ const SkillsSection = () => {
             <h3 className="cert-heading">Academic Recognition</h3>
             <div className="cert-grid">
               {academicRecognition.map((cert, index) => (
-                <div key={`academic-${index}`} className="cert-card modern-card hover-scale hover:border-primary-blue hover:border-2 transition-all duration-300 animate-fade-in-up border border-gray-100 dark:border-gray-700 dark:bg-card">
+                <div key={`academic-${index}`} className="cert-card modern-card hover:scale-105 hover:translate-y-[-2px] hover:shadow-lg dark:hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.3)] transition-all duration-300 animate-fade-in-up border border-gray-100 dark:border-gray-700 dark:bg-card">
                   <div className="flex items-start gap-4">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${getColorClass(cert.color)}`}>
                       <cert.icon className="w-6 h-6" />
