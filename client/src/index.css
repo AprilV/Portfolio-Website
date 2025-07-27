@@ -2174,9 +2174,18 @@
   padding: 1.5rem;
 }
 
+.dark .modern-card-premium {
+  background: hsl(0, 0%, 12%);
+  border: 1px solid hsl(0, 0%, 20%);
+}
+
 .modern-card-premium:hover {
   box-shadow: var(--shadow-strong);
   transform: translateY(-4px);
+}
+
+.dark .modern-card-premium:hover {
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.4), 0 10px 15px -5px rgba(0, 0, 0, 0.2);
 }
 
 .hover-scale {

@@ -224,7 +224,7 @@ const SkillsSection = () => {
         
         {/* Certifications */}
         <motion.div 
-          className="modern-card-premium relative overflow-hidden"
+          className="modern-card-premium relative overflow-hidden dark:bg-card"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
