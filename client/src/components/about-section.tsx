@@ -12,7 +12,7 @@ const AboutSection = () => {
       value: "Dean's List", 
       label: "Academic Status", 
       icon: GraduationCap,
-      description: "Maintaining President's Scholar honors every academic term"
+      description: "President's Scholar honors for 9 terms with Dean's List recognition"
     },
     { 
       value: "12", 
@@ -70,7 +70,7 @@ const AboutSection = () => {
                 <p className="leading-relaxed mb-4 text-left">
                   My academic background includes comprehensive coursework in <strong className="text-primary-blue">Project Management I and II</strong>, 
                   LAN Administration, Information Assurance, Technical Writing, and Business Statistics. 
-                  I have earned <strong className="text-primary-blue">President's Scholar honors</strong> every term with consistent Dean's List recognition.
+                  I have earned <strong className="text-primary-blue">President's Scholar honors</strong> for 9 terms with Dean's List recognition.
                 </p>
               </div>
             </div>

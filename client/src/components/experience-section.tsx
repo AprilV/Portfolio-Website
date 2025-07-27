@@ -52,7 +52,7 @@ const ExperienceSection = () => {
       description: "Bachelor of Applied Science - Information Systems (BASIS) program with concentration in Project Management. Completing comprehensive PM coursework with academic distinction.",
       achievements: [
         "Project Management I & II Completed with distinction",
-        "President's Scholar honors achieved 9 terms and counting during program",
+        "President's Scholar honors achieved for 9 terms during program",
         "CAPM Exam Preparation scheduled for Summer 2025",
       ],
       highlights: [
