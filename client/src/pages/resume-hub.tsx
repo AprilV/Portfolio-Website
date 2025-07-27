@@ -112,11 +112,11 @@ const ResumeHub = () => {
         <div className="text-center mt-12">
           <div className="max-w-2xl mx-auto p-6 bg-primary-blue/5 rounded-lg border border-primary-blue/20">
             <h3 className="text-lg font-semibold text-charcoal-black dark:text-white mb-3">
-              Focused Career Strategy
+              Tailored for Your Career Goals
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Each resume is specifically tailored to highlight the most relevant skills and experience for that role type. 
-              This targeted approach increases your chances of getting past ATS systems and impressing hiring managers.
+              Each resume highlights the most relevant experience and skills for your target position. 
+              Choose the path that best matches your career objectives.
             </p>
           </div>
         </div>

@@ -120,16 +120,16 @@ const AssistantPMResume = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Zap className="h-5 w-5 text-primary-blue" />
-                  ATS Optimization
+                  Key Qualifications
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
-                    This resume includes targeted keywords for assistant project manager positions:
+                    This resume emphasizes your strongest qualifications for assistant project manager roles:
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {targetKeywords.map((keyword, index) => (
+                    {targetKeywords.slice(0, 6).map((keyword, index) => (
                       <Badge key={index} variant="secondary" className="text-xs">
                         {keyword}
                       </Badge>
@@ -137,7 +137,7 @@ const AssistantPMResume = () => {
                   </div>
                   <div className="p-3 bg-primary-blue/5 rounded-lg border border-primary-blue/20">
                     <p className="text-xs text-gray-600 dark:text-gray-300">
-                      <strong>Pro Tip:</strong> This format emphasizes coordination and support skills while highlighting your technical background as a valuable asset for IT project management roles.
+                      <strong>Strategic Focus:</strong> Emphasizes coordination and support skills while highlighting your technical background as a valuable differentiator.
                     </p>
                   </div>
                 </div>

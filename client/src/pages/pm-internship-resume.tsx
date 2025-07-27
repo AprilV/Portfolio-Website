@@ -116,16 +116,16 @@ const PMInternshipResume = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Zap className="h-5 w-5 text-primary-blue" />
-                  Internship Keywords
+                  Learning Focus
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
-                    Optimized for internship and entry-level PM positions:
+                    Emphasizes your readiness for internship and learning opportunities:
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {targetKeywords.map((keyword, index) => (
+                    {targetKeywords.slice(0, 6).map((keyword, index) => (
                       <Badge key={index} variant="secondary" className="text-xs">
                         {keyword}
                       </Badge>
@@ -133,7 +133,7 @@ const PMInternshipResume = () => {
                   </div>
                   <div className="p-3 bg-primary-blue/5 rounded-lg border border-primary-blue/20">
                     <p className="text-xs text-gray-600 dark:text-gray-300">
-                      <strong>Internship Advantage:</strong> Your combination of extensive experience and formal PM education makes you an ideal intern who can contribute immediately while learning PM best practices.
+                      <strong>Unique Value:</strong> Your combination of extensive experience and formal PM education makes you an ideal candidate who can contribute immediately while learning best practices.
                     </p>
                   </div>
                 </div>

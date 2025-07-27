@@ -116,16 +116,16 @@ const ITAssistantPMResume = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Zap className="h-5 w-5 text-teal-blue" />
-                  IT Project Keywords
+                  Technical Strengths
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
-                    Optimized for IT project management and technical coordination roles:
+                    Highlights your technical expertise for IT project coordination roles:
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {targetKeywords.map((keyword, index) => (
+                    {targetKeywords.slice(0, 6).map((keyword, index) => (
                       <Badge key={index} variant="secondary" className="text-xs">
                         {keyword}
                       </Badge>
@@ -133,7 +133,7 @@ const ITAssistantPMResume = () => {
                   </div>
                   <div className="p-3 bg-teal-blue/5 rounded-lg border border-teal-blue/20">
                     <p className="text-xs text-gray-600 dark:text-gray-300">
-                      <strong>Technical Advantage:</strong> Your deep IT background positions you uniquely for technology project management roles where technical credibility is essential.
+                      <strong>Technical Advantage:</strong> Your deep IT background positions you uniquely for technology project roles where technical credibility is essential.
                     </p>
                   </div>
                 </div>
