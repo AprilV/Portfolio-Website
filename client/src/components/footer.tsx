@@ -40,7 +40,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/aprilsykes" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
@@ -48,7 +48,7 @@ const Footer = () => {
                 href="https://github.com/AprilV"
                 target="_blank"
                 rel="noopener noreferrer" 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors"
               >
                 <Github className="w-6 h-6" />
               </a>
@@ -62,7 +62,7 @@ const Footer = () => {
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-gray-400 hover:text-white transition-colors text-left"
+                    className="text-gray-400 hover:text-white dark:hover:text-gray-200 transition-colors text-left"
                   >
                     {link.label}
                   </button>

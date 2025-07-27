@@ -284,7 +284,7 @@ const ExperienceSection = () => {
               </a>
               <a 
                 href="#contact" 
-                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white rounded-lg transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white dark:hover:text-gray-900 rounded-lg transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Let's Connect
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

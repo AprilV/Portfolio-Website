@@ -94,7 +94,7 @@ const HeroSection = () => {
               <Button 
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-primary-blue hover:bg-primary-blue-hover text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+                className="bg-primary-blue hover:bg-primary-blue-hover text-white dark:text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
               >
                 Get In Touch
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -103,7 +103,7 @@ const HeroSection = () => {
                 variant="outline"
                 onClick={downloadResume}
                 size="lg"
-                className="font-semibold px-8 py-3 rounded-lg border-2 border-teal-blue text-teal-blue hover:bg-teal-blue hover:text-white transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
+                className="font-semibold px-8 py-3 rounded-lg border-2 border-teal-blue text-teal-blue hover:bg-teal-blue hover:text-white dark:hover:text-gray-900 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
               >
                 <Download className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-0.5" />
                 Download Resume
