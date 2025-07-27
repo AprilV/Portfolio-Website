@@ -47,7 +47,7 @@ const HeroSection = () => {
                 <span className="hidden xs:inline sm:inline"> | </span>
                 <span className="block xs:inline sm:inline">IT Project Management</span>
                 <span className="hidden sm:inline"> | </span>
-                <span className="block sm:inline">CAMP Candidate (2025)</span>
+                <span className="block sm:inline">CAPM Candidate (2025)</span>
                 <span className="hidden md:inline"> | </span>
                 <span className="block md:inline">20+ Years Experience</span>
               </h2>
