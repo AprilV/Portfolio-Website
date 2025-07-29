@@ -9,12 +9,6 @@ const AboutSection = () => {
       description: "Extensive hands-on infrastructure and data center expertise"
     },
     { 
-      value: "President's Scholar", 
-      label: "Academic Status", 
-      icon: GraduationCap,
-      description: "President's Scholar honors achieved for 9 terms"
-    },
-    { 
       value: "12", 
       label: "Team Members Led", 
       icon: Users,
@@ -26,6 +20,12 @@ const AboutSection = () => {
       icon: Award,
       description: "Service Level Agreement compliance maintained across all client engagements",
       ariaLabel: "100% Service Level Agreement Compliance - maintaining uptime and service standards across all client engagements"
+    },
+    { 
+      value: "President's Scholar", 
+      label: "Academic Status", 
+      icon: GraduationCap,
+      description: "President's Scholar honors achieved for 9 terms"
     },
   ];
 
@@ -60,21 +60,6 @@ const AboutSection = () => {
               </p>
             </div>
 
-            {/* Academic Background */}
-            <div>
-              <h3 className="text-xl font-semibold text-charcoal-black mb-4 flex items-center gap-2">
-                <GraduationCap className="h-5 w-5 text-primary-blue dark:text-white" aria-hidden="true" />
-                Academic Background
-              </h3>
-              <div className="prose prose-lg text-card-foreground">
-                <p className="leading-relaxed mb-4 text-left">
-                  My academic background includes comprehensive coursework in <strong className="text-primary-blue">Project Management I and II</strong>, 
-                  LAN Administration, Information Assurance, Technical Writing, and Business Statistics. 
-                  I have earned <strong className="text-primary-blue">President's Scholar honors</strong> for 9 terms.
-                </p>
-              </div>
-            </div>
-
             {/* Professional Experience */}
             <div>
               <h3 className="text-xl font-semibold text-charcoal-black mb-4 flex items-center gap-2">
@@ -86,6 +71,21 @@ const AboutSection = () => {
                   Professionally, I have supervised teams and maintained critical operations at <strong className="text-primary-blue">Jewish Hospital</strong>, 
                   <strong className="text-primary-blue">Perot Systems</strong>, and <strong className="text-primary-blue">Dell Technologies</strong>, working with mainframes, Cisco networking, and Linux environments 
                   while managing client support and system transitions across regional teams.
+                </p>
+              </div>
+            </div>
+
+            {/* Academic Background */}
+            <div>
+              <h3 className="text-xl font-semibold text-charcoal-black mb-4 flex items-center gap-2">
+                <GraduationCap className="h-5 w-5 text-primary-blue dark:text-white" aria-hidden="true" />
+                Academic Background
+              </h3>
+              <div className="prose prose-lg text-card-foreground">
+                <p className="leading-relaxed mb-4 text-left">
+                  My academic background includes comprehensive coursework in <strong className="text-primary-blue">Project Management I and II</strong>, 
+                  LAN Administration, Information Assurance, Technical Writing, and Business Statistics. 
+                  I have earned <strong className="text-primary-blue">President's Scholar honors</strong> for 9 terms.
                 </p>
               </div>
             </div>

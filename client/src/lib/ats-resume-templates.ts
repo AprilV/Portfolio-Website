@@ -14,6 +14,12 @@ export interface ResumeData {
     dates: string;
     achievements: string[];
   }>;
+  capstoneProjects: Array<{
+    title: string;
+    course: string;
+    technologies: string[];
+    achievements: string[];
+  }>;
   education: {
     degree: string;
     school: string;
@@ -86,6 +92,41 @@ export const resumeData: ResumeData = {
         "Collaborated with vendors and third-party service providers to deliver integrated technology solutions",
         "Developed disaster recovery procedures and conducted regular testing to ensure business continuity",
         "Created training materials and conducted knowledge transfer sessions for technical staff"
+      ]
+    }
+  ],
+  capstoneProjects: [
+    {
+      title: "PMP Quiz App - Full-Stack Exam Simulator",
+      course: "PM450 Project Management Capstone",
+      technologies: ["Full-Stack Development", "Agile Methodology", "AWS Deployment"],
+      achievements: [
+        "Developed complete full-stack architecture with timer functionality and randomized question delivery",
+        "Implemented dynamic scoring with real-time feedback mechanisms for enhanced user experience",
+        "Applied Agile sprint planning with iterative development cycles and project scope management",
+        "Gained hands-on experience with AWS deployment and cloud infrastructure management"
+      ]
+    },
+    {
+      title: "TimelyRx Medication Reminder App",
+      course: "IS320 App Development Capstone", 
+      technologies: ["React", "WCAG Accessibility", "Healthcare Technology"],
+      achievements: [
+        "Built React-based application with comprehensive design architecture and caregiver tracking features",
+        "Implemented WCAG accessibility compliance and comprehensive testing protocols",
+        "Designed professional interface with scheduling logic and local data tracking management",
+        "Completed iterative development process from initial concept through alpha release"
+      ]
+    },
+    {
+      title: "Professional Portfolio Website",
+      course: "CIS151 Web Development Capstone",
+      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      achievements: [
+        "Built professional portfolio from scratch with custom navigation and Font Awesome integration",
+        "Implemented mobile-responsive design with cross-browser compatibility testing",
+        "Integrated professional photography and optimized user experience for multiple devices",  
+        "Deployed live website demonstrating comprehensive web development skills"
       ]
     }
   ],
@@ -233,6 +274,16 @@ CORE COMPETENCIES`;
   data.experience.forEach(job => {
     resumeContent += `\n${job.title} | ${job.company} | ${job.dates}\n`;
     job.achievements.forEach(achievement => {
+      resumeContent += `• ${achievement}\n`;
+    });
+  });
+
+  // Add capstone projects
+  resumeContent += `\nCAPSTONE PROJECTS\n`;
+  data.capstoneProjects.forEach(project => {
+    resumeContent += `\n${project.title} | ${project.course}\n`;
+    resumeContent += `Technologies: ${project.technologies.join(', ')}\n`;
+    project.achievements.forEach(achievement => {
       resumeContent += `• ${achievement}\n`;
     });
   });

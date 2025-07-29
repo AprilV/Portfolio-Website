@@ -43,31 +43,6 @@ const ExperienceSection = () => {
       ],
     },
     {
-      title: "Bachelor of Applied Science - Information Systems Student", 
-      company: "Olympic College",
-      period: "Jan 2023 - Present",
-      location: "Bremerton, WA", 
-      type: "education",
-      logo: <OlympicLogo />,
-      description: "Bachelor of Applied Science - Information Systems (BASIS) program with concentration in Project Management. Completing comprehensive PM coursework with academic distinction.",
-      achievements: [
-        "Project Management I & II Completed with distinction",
-        "President's Scholar honors achieved for 9 terms during program",
-        "CAPM Exam Preparation scheduled for Summer 2025",
-      ],
-      highlights: [
-        "Earned President's Scholar honors while working part-time in IT support",
-        "Built TimelyRx medication reminder app using modern development practices",
-        "Developed PMP exam simulator implementing Agile methodologies",
-      ],
-      techStack: ["Project Management", "Systems Analysis", "Technical Writing", "Business Statistics", "Information Assurance"],
-      metrics: [
-        { label: "Academic Status", value: "President's Scholar" },
-        { label: "President's Scholar", value: "9 Terms" },
-        { label: "Graduation", value: "End Spring 2026" },
-      ],
-    },
-    {
       title: "Operations Lead - Mainframe Upgrade & Migration Project",
       company: "Dell Technologies (Contracted to CHI/Jewish Hospital & UofL Health)",
       period: "Jan 2011 - Jan 2013",
@@ -112,6 +87,31 @@ const ExperienceSection = () => {
         { value: "24x7", label: "Operations" },
         { value: "PHI", label: "Compliance" },
         { value: "Multi-State", label: "Coverage" },
+      ],
+    },
+    {
+      title: "Bachelor of Applied Science - Information Systems Student", 
+      company: "Olympic College",
+      period: "Jan 2023 - Present",
+      location: "Bremerton, WA", 
+      type: "education",
+      logo: <OlympicLogo />,
+      description: "Bachelor of Applied Science - Information Systems (BASIS) program with concentration in Project Management. Completing comprehensive PM coursework with academic distinction.",
+      achievements: [
+        "Project Management I & II Completed with distinction",
+        "President's Scholar honors achieved for 9 terms during program",
+        "CAPM Exam Preparation scheduled for Summer 2025",
+      ],
+      highlights: [
+        "Earned President's Scholar honors while working part-time in IT support",
+        "Built TimelyRx medication reminder app using modern development practices",
+        "Developed PMP exam simulator implementing Agile methodologies",
+      ],
+      techStack: ["Project Management", "Systems Analysis", "Technical Writing", "Business Statistics", "Information Assurance"],
+      metrics: [
+        { label: "Academic Status", value: "President's Scholar" },
+        { label: "President's Scholar", value: "9 Terms" },
+        { label: "Graduation", value: "End Spring 2026" },
       ],
     },
   ];
