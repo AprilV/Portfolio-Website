@@ -6,7 +6,9 @@ This is a professional portfolio website built as a full-stack application showc
 
 ## Recent Changes
 
-**January 29, 2025**: Internship Focus Update - IT Assistant Project Manager & Student Status Enhancement  
+**January 29, 2025**: Dark Mode Contact Section Fix & Internship Focus Update - IT Assistant Project Manager Enhancement  
+- **Dark Mode Contact Labels Fixed**: Added proper dark mode styling for contact section labels (Contact, Location, LinkedIn, GitHub) with light gray text (#E5E7EB) for optimal visibility
+- **CAPTCHA Dark Mode Enhancement**: Fixed math verification display with proper dark mode contrast (gray background, white text) ensuring security functionality works in all themes
 - **Professional Status Updated**: Added internship need for Winter/Spring 2026 terms while completing bachelor's degree
 - **Contact Section Enhancement**: Updated professional status to emphasize Assistant IT Project Manager positions or internships with specific term requirements
 - **Hero Section Student Positioning**: Added current student status and internship timeline to professional description for authentic positioning

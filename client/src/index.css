@@ -2548,6 +2548,11 @@
     font-weight: 600;
     font-size: 0.875rem;
     margin-bottom: 0.25rem;
+    transition: color 0.3s ease;
+  }
+
+  .dark .contact-label {
+    color: #E5E7EB;
   }
 
   .enhanced-subheader {
@@ -2561,11 +2566,20 @@
     color: #1E1E1E;
     font-size: 0.875rem;
     line-height: 1.5;
+    transition: color 0.3s ease;
+  }
+
+  .dark .professional-status-item {
+    color: #E5E7EB;
   }
 
   .professional-status-item strong {
     color: #2C73D2;
     font-weight: 600;
+  }
+
+  .dark .professional-status-item strong {
+    color: #60A5FA;
   }
 
   /* Enhanced Form Focus States */
