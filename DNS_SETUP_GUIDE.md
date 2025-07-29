@@ -1,128 +1,82 @@
-# Replit Domain Setup Guide - www.aprilsykes.com Configuration
+# DNS Setup Guide for www.aprilsykes.com
 
-## Issue Identified
-The www subdomain (www.aprilsykes.com) is not resolving because it needs to be configured in Replit's deployment system. Since your domain is hosted on Replit, you need to add the www subdomain through Replit's custom domain settings.
+## Current Issue
+The www subdomain verification failed because the required DNS records are not configured at your domain registrar.
 
-## Current Status
-✅ **aprilsykes.com** - Working perfectly on Replit  
-❌ **www.aprilsykes.com** - Not configured in Replit deployment (returns "Could not resolve host")
+## Required DNS Records
 
-## Solution: Add WWW Subdomain to Replit Deployment
-
-### Step 1: Access Replit Deployment Settings
-1. Go to your Replit project
-2. Click on the **"Deployments"** tab at the top
-3. Find your current deployment for aprilsykes.com
-4. Click **"Settings"** or the gear icon
-
-### Step 2: Add WWW Domain to Replit
-1. In the deployment settings, look for **"Custom Domains"** section
-2. Click **"Add Domain"** or **"Link a domain"**
-3. Enter: `www.aprilsykes.com`
-4. Replit will provide you with DNS record requirements
-
-### Step 3: Configure DNS Records (If Required)
-Replit may provide you with specific records to add:
-
-#### Typical Replit DNS Requirements:
+### 1. A Record for www subdomain
 ```
-Type: CNAME
-Name: www
-Value: [Replit provides this - usually like cname.replit.app]
-TTL: 3600 (1 hour)
+Name/Host: www
+Type: A
+Value: 34.111.179.208
+TTL: 3600 (or Auto)
 ```
 
-### Step 4: Verify Domain in Replit
-1. After adding DNS records, return to Replit
-2. Click **"Verify"** next to your www domain
-3. Wait for verification (usually 5-30 minutes)
-
-### Step 3: Verify Configuration
-After adding the DNS record:
-1. Wait 5-60 minutes for DNS propagation
-2. Test: `curl -I https://www.aprilsykes.com`
-3. Should redirect to `https://aprilsykes.com` with 301 status
-
-## How Our Redirect Works
-
-Your server already has proper WWW redirect middleware configured:
-
-```javascript
-// WWW redirect middleware - redirects www.aprilsykes.com to aprilsykes.com
-app.use((req, res, next) => {
-  if (req.headers.host?.startsWith('www.')) {
-    const redirectUrl = `https://${req.headers.host.replace('www.', '')}${req.url}`;
-    return res.redirect(301, redirectUrl);
-  }
-  next();
-});
+### 2. TXT Record for www subdomain
+```
+Name/Host: www
+Type: TXT
+Value: replit-verify=e1da66e2-bd09-43f
+TTL: 3600 (or Auto)
 ```
 
-This means once DNS is configured:
-- **www.aprilsykes.com** → Automatically redirects to **aprilsykes.com**
-- Maintains SEO value with 301 permanent redirect
-- Provides seamless user experience
+## Step-by-Step Instructions
 
-## Alternative: Direct Replit Configuration
+### Step 1: Access Your Domain Registrar
+1. Log into the website where you purchased aprilsykes.com
+2. Navigate to DNS Management or Domain Settings
+3. Look for "DNS Records", "DNS Zone", or "Nameserver Management"
 
-### Option A: Multiple Domain Setup
-If Replit allows multiple domains in the same deployment:
-1. Add both `aprilsykes.com` AND `www.aprilsykes.com` as separate custom domains
-2. Both will point to the same deployment
-3. Your server redirect middleware will handle www → non-www redirects
+### Step 2: Add A Record
+1. Click "Add Record" or "New Record"
+2. Select Type: A
+3. Name/Host: www
+4. Value/Points to: 34.111.179.208
+5. TTL: 3600 (or leave default)
+6. Save the record
 
-### Option B: DNS-Only Setup (If Replit Doesn't Support Both)
-1. Get the IP address of your Replit deployment
-2. Add DNS records in your domain registrar:
-   ```
-   Type: A
-   Name: www
-   Value: [Your Replit deployment IP]
-   TTL: 3600
-   ```
+### Step 3: Add TXT Record
+1. Click "Add Record" or "New Record" again
+2. Select Type: TXT
+3. Name/Host: www
+4. Value: replit-verify=e1da66e2-bd09-43f
+5. TTL: 3600 (or leave default)
+6. Save the record
 
-### How to Find Your Replit Deployment Details
-1. In Replit, go to Deployments → Your deployment
-2. Look for "Domain" or "URL" information
-3. Note the IP address or CNAME target provided by Replit
+### Step 4: Wait for Propagation
+- DNS changes can take 5 minutes to 48 hours to propagate
+- Most changes are live within 1-2 hours
+- Replit will automatically verify once records are detected
 
-## Testing Commands
+## Common Registrar Interfaces
 
-Once configured, these should work:
-```bash
-# Should resolve to an IP address
-nslookup www.aprilsykes.com
+### If using Name.com:
+- Go to Account → My Domains → Manage → DNS Records
+- Add both A and TXT records as described above
 
-# Should return 301 redirect to aprilsykes.com
-curl -I https://www.aprilsykes.com
+### If using GoDaddy:
+- Go to My Products → DNS → Manage Zones
+- Add both records in the DNS management interface
 
-# Should load the portfolio successfully
-curl https://www.aprilsykes.com
-```
+### If using Cloudflare:
+- Go to DNS → Records
+- Add both A and TXT records
+- Ensure proxy status is "DNS only" (grey cloud) for both
 
-## Security & SEO Benefits
-
-✅ **SEO Protection**: 301 redirects preserve search engine rankings  
-✅ **User Experience**: Both www and non-www URLs work seamlessly  
-✅ **Brand Consistency**: Professional domain setup  
-✅ **Security**: HTTPS works for both domains  
+## Verification Status
+Once DNS records are added and propagated:
+- Replit will automatically detect the records
+- The domain status will change from "Failed" to "Verified"
+- No further action needed on Replit side
 
 ## Troubleshooting
+If verification continues to fail after 24 hours:
+1. Double-check the exact spelling of TXT record value
+2. Ensure no extra spaces in DNS record values
+3. Contact your domain registrar for DNS support
 
-### DNS Not Propagating
-- Wait up to 24 hours for global DNS propagation
-- Use different DNS servers to test: `nslookup www.aprilsykes.com 8.8.8.8`
-
-### Still Not Working
-1. Verify DNS record syntax exactly matches examples above
-2. Ensure there are no conflicting DNS records
-3. Check registrar documentation for specific setup steps
-4. Contact your domain registrar support if needed
-
-### Test Using Online Tools
-- https://dnschecker.org (check global DNS propagation)
-- https://www.whatsmydns.net (verify DNS records worldwide)
-
-## Summary
-
-Your portfolio application is perfectly configured for WWW redirects. The only missing piece is the DNS CNAME record at your domain registrar to make www.aprilsykes.com point to your server. Once that's added, visitors can use either URL and will be seamlessly redirected to the canonical aprilsykes.com domain.
+## Current Status
+- ✅ Root domain (aprilsykes.com) - Verified and working
+- ❌ WWW subdomain (www.aprilsykes.com) - DNS records needed
+- ✅ Server configuration - Ready for both domains
