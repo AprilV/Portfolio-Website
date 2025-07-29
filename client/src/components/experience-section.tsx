@@ -131,15 +131,15 @@ const ExperienceSection = () => {
                 Professional Experience
                 <div className="section-underline"></div>
               </h2>
-              <p className="section-subtitle">Leadership progression from systems analyst to team lead and project coordinator</p>
+              <p className="section-subtitle">IT leadership progression: Systems Analyst → Team Lead → IT Project Coordinator</p>
             </div>
             
             {/* Role Impact Summary Banner */}
             <div className="role-impact-banner">
               <div className="impact-icon">💼</div>
               <div className="impact-text-multiline">
-                <div className="impact-line-primary">Extensive experience in IT Operations, Systems Analysis, and Technical Leadership</div>
-                <div className="impact-line-secondary">Progressive advancement from Systems Analyst to Operations Technician to Team Lead</div>
+                <div className="impact-line-primary">20+ years IT Operations, Systems Analysis, and Technical Project Leadership</div>
+                <div className="impact-line-secondary">Proven track record in IT project coordination and technical team management</div>
               </div>
             </div>
           </motion.div>
@@ -264,10 +264,10 @@ const ExperienceSection = () => {
         {/* Professional Summary CTA */}
         <div className="mt-16 text-center">
           <div className="bg-card-gradient p-8 rounded-xl shadow-lg border border-border max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-card-foreground mb-4">Ready to Lead Your Next IT Project?</h3>
+            <h3 className="text-2xl font-bold text-card-foreground mb-4">Ready to Support Your Next IT Project?</h3>
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               Extensive IT infrastructure expertise combined with formal project management education. 
-              Proven track record of leading teams, managing complex systems, and delivering results in high-stakes environments.
+              Perfect candidate for IT Assistant Project Manager roles requiring technical depth and project coordination skills.
             </p>
             <div className="flex justify-center">
               <a 

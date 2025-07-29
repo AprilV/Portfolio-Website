@@ -26,8 +26,8 @@ const ProjectsSection = () => {
   };
   const projects = [
     {
-      title: "PMP Quiz App - Project Management Capstone",
-      description: "Full-stack exam simulator with timer, randomized questions, and dynamic scoring developed using Agile methodology for PM450 Project Management capstone. Demonstrates direct project management skills and Agile implementation experience.",
+      title: "PMP Quiz App - IT Project Management Capstone",
+      description: "Full-stack exam simulator with timer, randomized questions, and dynamic scoring developed using Agile methodology for PM450 Project Management capstone. Demonstrates direct IT project management skills combining technical development with project methodology implementation.",
       icon: Code,
       color: "purple-accent",
       technologies: ["Project Management", "Agile", "PM450 Capstone", "Full-Stack"],

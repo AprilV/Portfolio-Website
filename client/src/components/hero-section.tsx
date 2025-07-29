@@ -55,9 +55,9 @@ const HeroSection = () => {
                 className="text-base sm:text-lg text-cool-gray dark:text-gray-300 max-w-xl leading-relaxed transition-colors duration-300 mx-auto"
                 itemProp="description"
               >
-                Proven IT leadership experience in infrastructure, team management, and project coordination, 
-                now transitioning into formal project management. Combining deep operational expertise with formal 
-                project leadership training and modern technical tools.
+                IT professional with 20+ years infrastructure experience transitioning to IT Assistant Project Manager roles. 
+                Combining deep technical expertise in systems analysis, team leadership, and enterprise IT operations with formal 
+                project management education and CAPM certification pursuit.
               </p>
             </div>
             
