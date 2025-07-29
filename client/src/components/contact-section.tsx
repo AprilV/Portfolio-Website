@@ -190,7 +190,7 @@ const ContactSection = () => {
               Let's Connect
               <div className="section-underline"></div>
             </h2>
-            <p className="section-subtitle">Ready to contribute technical expertise and fresh project management perspective</p>
+            <p className="section-subtitle">Ready to contribute technical expertise and formal project management education through internships and Assistant IT PM roles</p>
           </div>
         </div>
         
@@ -231,13 +231,13 @@ const ContactSection = () => {
               <h4 className="font-semibold text-gray-900 dark:text-white mb-4 transition-colors duration-300">Professional Status</h4>
               <div className="space-y-3">
                 <p className="professional-status-item">
-                  <strong>Seeking:</strong> Technical project coordinator positions
+                  <strong>Seeking:</strong> Assistant IT Project Manager positions or internships
                 </p>
                 <p className="professional-status-item">
-                  <strong>Availability:</strong> Open to contract and full-time opportunities
+                  <strong>Availability:</strong> Open to internships, contract, and full-time opportunities
                 </p>
                 <p className="professional-status-item">
-                  <strong>Start Date:</strong> Available for immediate start
+                  <strong>Internship Need:</strong> Winter term and Spring term 2026 (completing bachelor's degree)
                 </p>
               </div>
             </div>

@@ -56,7 +56,8 @@ const AboutSection = () => {
               <p className="text-lg leading-relaxed mb-6 text-left">
                 I am an IT professional with extensive hands-on infrastructure and data center experience, 
                 now transitioning into project management. Currently earning a <strong className="text-primary-blue">Bachelor of Applied Science in Information 
-                Systems</strong> at <strong className="text-primary-blue">Olympic College</strong> with graduation expected end of Spring term 2026.
+                Systems</strong> at <strong className="text-primary-blue">Olympic College</strong> with graduation expected end of Spring term 2026. 
+                <strong className="text-primary-blue">Seeking internships for Winter and Spring 2026 terms</strong> to complete degree requirements while gaining formal project management experience.
               </p>
             </div>
 

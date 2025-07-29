@@ -56,8 +56,8 @@ const HeroSection = () => {
                 itemProp="description"
               >
                 IT professional with 20+ years infrastructure experience transitioning to IT Assistant Project Manager roles. 
-                Combining deep technical expertise in systems analysis, team leadership, and enterprise IT operations with formal 
-                project management education and CAPM certification pursuit.
+                Currently completing bachelor's degree and seeking internships for Winter/Spring 2026. Combining deep technical expertise 
+                with formal project management education and CAPM certification pursuit.
               </p>
             </div>
             
