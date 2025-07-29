@@ -1,65 +1,63 @@
-# Adding MX Records in Replit for ProtonMail
+# Replit DNS Troubleshooting Guide
 
-## Step-by-Step Instructions
+## Current Issue
+DNS records are correctly configured in Replit but verification is failing due to propagation delays.
 
-Since your domain aprilsykes.com is hosted by Replit, you can add the MX records directly in the Replit Domains panel.
+## DNS Records Status
+✅ A Record: www → 34.111.179.208 (Configured in Replit)
+✅ TXT Record: www → replit-verify=e1da66e2-bd09-43f (Configured in Replit)
+❌ Global DNS Propagation: Still showing SOA records instead of configured A/TXT
 
-### 1. Access DNS Settings
-- In your Replit Domains panel (where you see aprilsykes.com as "Verified")
-- Click the **edit/pencil icon** next to aprilsykes.com
-- Look for "DNS Records" or "Custom DNS" section
+## Troubleshooting Steps Taken
 
-### 2. Add First MX Record
-```
-Record Type: MX
-Name: @ (or leave blank for root domain)
-Value: mail.protonmail.ch
-Priority: 10
-TTL: Auto or 3600
-```
+### 1. WWW Redirect Interference
+**Issue**: Server redirects can interfere with Replit's verification process
+**Solution**: Temporarily disabled WWW redirect middleware
 
-### 3. Add Second MX Record
-```
-Record Type: MX
-Name: @ (or leave blank for root domain) 
-Value: mailsec.protonmail.ch
-Priority: 20
-TTL: Auto or 3600
-```
+### 2. DNS Propagation Delay
+**Issue**: Replit's DNS changes can take extra time to propagate globally
+**Expected**: 5 minutes to 48 hours for full propagation
 
-### 4. Add SPF Record (Recommended)
-```
-Record Type: TXT
-Name: @ (or leave blank for root domain)
-Value: v=spf1 include:_spf.protonmail.ch mx ~all
-TTL: Auto or 3600
-```
+### 3. Verification Retry
+**Next Step**: Click "Retry linking" button in Replit domain settings after 15-30 minutes
 
-## What These Records Do
+## Common Replit DNS Issues & Solutions
 
-- **MX Records**: Tell email servers where to deliver mail for @aprilsykes.com
-- **Priority 10 vs 20**: ProtonMail's primary (10) and backup (20) mail servers
-- **SPF Record**: Helps prevent spam and improves email deliverability
+### Multiple A Records Conflict
+- Ensure no conflicting A records exist
+- Only one A record should point to Replit's IP
 
-## After Adding Records
+### Cloudflare Proxy Issues
+- If using Cloudflare, ensure proxy is disabled (grey cloud)
+- Replit verification requires direct DNS access
 
-1. **Propagation**: DNS changes take 1-24 hours to fully propagate
-2. **ProtonMail Setup**: Go to ProtonMail Settings → Custom Domains → Add aprilsykes.com
-3. **Verification**: ProtonMail will provide additional verification steps
-4. **Email Creation**: Create april@aprilsykes.com in your ProtonMail account
+### TTL Settings
+- Lower TTL values speed up propagation
+- Replit automatically manages TTL for configured records
 
-## Expected Result
+## Recommended Actions
 
-Once complete, you'll have:
-- april@aprilsykes.com forwarding to your ProtonMail
-- Professional email for job applications and business correspondence
-- Secure, encrypted email through ProtonMail infrastructure
+### Immediate (Next 15 minutes):
+1. Wait for initial DNS propagation
+2. Disable any server redirects that might interfere
+3. Click "Retry linking" in Replit
 
-## Troubleshooting
+### If Still Failing (After 30 minutes):
+1. Check for any external DNS management overrides
+2. Ensure no CDN or proxy services are interfering
+3. Contact Replit support if DNS records appear correct
 
-If you don't see DNS record options in Replit:
-- Look for "Advanced DNS" or "Custom Records"
-- Check if there's a separate DNS management section
-- Some hosting providers put DNS settings under domain management
+### If Still Failing (After 2 hours):
+1. Remove and re-add the domain in Replit
+2. Try using a different verification approach
+3. Check domain registrar for any DNS conflicts
 
-The key is finding where Replit allows you to add custom DNS records for your verified domain.
+## Current Status
+- ✅ Root domain (aprilsykes.com) - Verified and working
+- ⏳ WWW subdomain (www.aprilsykes.com) - DNS configured, awaiting propagation
+- ✅ Server configuration - Redirect temporarily disabled for verification
+
+## Next Steps
+1. Wait 15-30 minutes for DNS propagation
+2. Click "Retry linking" in Replit domain settings
+3. Re-enable WWW redirect after successful verification
