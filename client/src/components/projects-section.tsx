@@ -26,6 +26,22 @@ const ProjectsSection = () => {
   };
   const projects = [
     {
+      title: "PMP Quiz App - Project Management Capstone",
+      description: "Full-stack exam simulator with timer, randomized questions, and dynamic scoring developed using Agile methodology for PM450 Project Management capstone. Demonstrates direct project management skills and Agile implementation experience.",
+      icon: Code,
+      color: "purple-accent",
+      technologies: ["Project Management", "Agile", "PM450 Capstone", "Full-Stack"],
+      features: [
+        "Applied Agile sprint planning with iterative development cycles",
+        "Project scope management using Agile methodology frameworks",
+        "Complete full-stack architecture design and implementation",
+        "Timer functionality and randomized question delivery system",
+        "Dynamic scoring with real-time feedback mechanisms",
+        "AWS deployment experience and cost optimization decisions",
+      ],
+      link: "https://github.com/AprilV/PMP-Quiz-App",
+    },
+    {
       title: "Personal Portfolio Website",
       description: "Professional portfolio website built from scratch using HTML, CSS, and JavaScript with responsive design and accessibility features for CIS151 Web Development capstone.",
       icon: Code,
@@ -38,22 +54,6 @@ const ProjectsSection = () => {
         "Cross-browser compatibility",
       ],
       link: "https://aprilv.github.io/my-website/",
-    },
-    {
-      title: "PMP Quiz App",
-      description: "Full-stack exam simulator with timer, randomized questions, and dynamic scoring developed using Agile methodology for PM450 Project Management capstone. Repository available on GitHub - AWS hosting discontinued due to cost optimization.",
-      icon: Code,
-      color: "purple-accent",
-      technologies: ["Full-Stack", "Agile", "PM450 Capstone", "Education"],
-      features: [
-        "Complete full-stack architecture design and implementation",
-        "Timer functionality and randomized question delivery system",
-        "Dynamic scoring with real-time feedback mechanisms",
-        "Agile sprint planning with iterative development cycles",
-        "Project scope management using Agile methodology",
-        "AWS deployment experience (discontinued for cost optimization)",
-      ],
-      link: "https://github.com/AprilV/PMP-Quiz-App",
     },
     {
       title: "TimelyRx Medication App",
