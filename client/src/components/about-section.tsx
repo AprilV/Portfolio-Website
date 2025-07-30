@@ -22,10 +22,10 @@ const AboutSection = () => {
       ariaLabel: "100% Service Level Agreement Compliance - maintaining uptime and service standards across all client engagements"
     },
     { 
-      value: "40%", 
-      label: "Efficiency Improved", 
-      icon: Award,
-      description: "Team efficiency improvements achieved through process optimization and documentation standardization"
+      value: "5,000+", 
+      label: "Endpoints Managed", 
+      icon: CheckCircle,
+      description: "Successfully managed 5,000+ endpoints across regional hospitals in 3 states"
     },
   ];
 
