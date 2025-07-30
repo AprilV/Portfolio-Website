@@ -22,10 +22,10 @@ const AboutSection = () => {
       ariaLabel: "100% Service Level Agreement Compliance - maintaining uptime and service standards across all client engagements"
     },
     { 
-      value: "CAPM", 
-      label: "PM Certification", 
-      icon: GraduationCap,
-      description: "Certified Associate in Project Management - in progress, based on formal PM coursework and professional experience"
+      value: "40%", 
+      label: "Efficiency Improved", 
+      icon: Award,
+      description: "Team efficiency improvements achieved through process optimization and documentation standardization"
     },
   ];
 
