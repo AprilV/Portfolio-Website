@@ -31,9 +31,9 @@ IT Systems Administrator | Previous Organizations | 2004 - 2018
 CAPSTONE PROJECTS
 
 PMP Quiz App - Full-Stack Exam Simulator | PM450 Project Management Capstone
-Technologies: Full-Stack Development, Agile Methodology, AWS Deployment
-• Developed complete full-stack architecture with timer functionality and randomized question delivery
-• Implemented dynamic scoring with real-time feedback mechanisms for enhanced user experience
+Technologies: React, Node.js, Full-Stack Development, Agile Methodology, AWS Deployment
+• Developed React-based frontend with timer functionality and randomized question delivery system
+• Built Node.js backend API with dynamic scoring and real-time feedback mechanisms for enhanced user experience
 • Applied Agile sprint planning with iterative development cycles and project scope management
 • Gained hands-on experience with AWS deployment and cloud infrastructure management
 

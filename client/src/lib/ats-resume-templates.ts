@@ -99,10 +99,10 @@ export const resumeData: ResumeData = {
     {
       title: "PMP Quiz App - Full-Stack Exam Simulator",
       course: "PM450 Project Management Capstone",
-      technologies: ["Full-Stack Development", "Agile Methodology", "AWS Deployment"],
+      technologies: ["React", "Node.js", "Full-Stack Development", "Agile Methodology", "AWS Deployment"],
       achievements: [
-        "Developed complete full-stack architecture with timer functionality and randomized question delivery",
-        "Implemented dynamic scoring with real-time feedback mechanisms for enhanced user experience",
+        "Developed React-based frontend with timer functionality and randomized question delivery system",
+        "Built Node.js backend API with dynamic scoring and real-time feedback mechanisms for enhanced user experience",
         "Applied Agile sprint planning with iterative development cycles and project scope management",
         "Gained hands-on experience with AWS deployment and cloud infrastructure management"
       ]
