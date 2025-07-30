@@ -21,12 +21,6 @@ const AboutSection = () => {
       description: "Service Level Agreement compliance maintained across all client engagements",
       ariaLabel: "100% Service Level Agreement Compliance - maintaining uptime and service standards across all client engagements"
     },
-    { 
-      value: "President's Scholar", 
-      label: "Academic Status", 
-      icon: GraduationCap,
-      description: "President's Scholar honors achieved for 9 terms"
-    },
   ];
 
   const coreValues = [
