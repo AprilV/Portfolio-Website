@@ -1,0 +1,92 @@
+Description & Requirements
+who we are
+
+lululemon is an innovative performance apparel company for yoga, running, training, and other athletic pursuits. Setting the bar in technical fabrics and functional design, we create transformational products and experiences that support people in moving, growing, connecting, and being well. We owe our success to our innovative product, emphasis on stores, commitment to our people, and the incredible connections we make in every community we're in. As a company, we focus on creating positive change to build a healthier, thriving future. In particular, that includes creating an equitable, inclusive and growth-focused environment for our people.
+
+
+about this role
+
+The Technology Manager, Digital Experiences will lead the development and continuous improvement of our high-performance, engaging web applications. You will be responsible for driving the implementation of front-end components, modern tooling, and developing standards to ensure fast, consistent, and exceptional guest experiences.
+
+
+a day in the life
+
+As a key member of our Digital Experiences leadership team, you'll work with your engineering teams and collaborate with product managers, design leads and architects to build engaging front-end experiences. Your primary focus will be on implementing new features and driving technical improvements that support scalability, responsiveness, and performance.
+
+
+Team Leadership & Strategy
+
+Lead, mentor, and develop multiple teams of front-end developers, fostering an environment of collaboration, accountability, and continuous delivery.
+Foster a collaborative culture that values innovation, accountability, and continuous learning.
+Provide visibility on web application and usage metrics to directors and senior leaders to support informed decision-making
+Drive strategic decisions on tooling, frameworks, and libraries that will enable rapid development and scalability.
+
+Technical Guidance
+
+Drive engineering best practices around scalability, observability, and performance optimization.
+Enable cross-functional alignment with product and UX teams to ensure platform capabilities support evolving digital experiences.
+Introduce tools and frameworks to improve engineering velocity, code quality, and developer productivity.
+Work to reduce and prevent technical debt, ensuring the long-term health of the product.
+
+Hiring and Development
+
+Provide regular feedback, performance reviews, and career growth opportunities.
+Participate in the hiring process, conduct interviews, and manage performance evaluations.
+Create development plans for your teams and provide regular support to ensure on time and in budget feature delivery.
+
+Communication and Collaboration
+
+Collaborate with Product, Design, and Engineering teams to deliver scalable and performant web applications.
+Identify inefficiencies in workflows or processes and propose actionable improvements.
+Partner with Product Managers and Designers to define requirements, provide technical feasibility insights, and scope the work.
+
+Qualifications
+
+Bachelor's degree in Computer Science or equivalent experience.
+5+ years in front-end development, with at least 3 years in a management or leadership role.
+Strong knowledge of JavaScript frameworks (e.g., React, Vue) and modern build tools (e.g., Webpack, Rollup).
+Experienced managing 3rd party vendors, front-end architecture, and building component-driven UI development.
+Ability to balance technical depth with a strategic perspective, leading teams to deliver both near-term improvements and the long-term vision.
+Proven track record of building front-end platforms and supporting large-scale web applications.
+Experience partnering with managed services teams across regions and time zones to drive delivery.
+
+must haves
+
+Acknowledge the presence of choice in every moment and take personal responsibility for your life.
+Possess an entrepreneurial spirit and continuously innovate to achieve great results. 
+Communicate with honesty and kindness and create the space for others to do the same. 
+Lead with courage, knowing the possibility of greatness is bigger than the fear of failure. 
+Foster connection by putting people first and building trusting relationships. 
+Integrate fun and joy as a way of being and working, aka doesn't take yourself too seriously.
+
+
+compensation and benefits package
+
+lululemon's compensation offerings are rooted in a pay-for-performance philosophy that recognizes exceptional individual and team performance. The typical hiring range for this position is from $145,700-$191,200 annually; the base pay offered is based on market location and may vary depending on job-related knowledge, skills, experience, and internal equity. As part of our competitive Total Rewards offering, permanent employees in this position may be eligible for our competitive annual bonus offering, subject to program eligibility requirements. 
+
+
+
+At lululemon, investing in our people is a top priority. We believe that when life works, work works. In addition to our competitive Total Rewards offering, we also have personal and professional development offerings. Our offerings recognize our teams for their performance and support whole person development, including support for employees on how to grow their career:  
+
+
+
+Extended health and dental benefits, and mental health plans
+Paid time off
+Savings and retirement plan matching
+Generous employee discount
+Fitness & yoga classes
+Parenthood top-up
+Extensive catalog of development course offerings
+People networks, mentorship programs, and leadership series (to name a few)
+
+
+Note: Availability of the incentive programs, benefits, and perks may be subject to your location & employment type and may have certain eligibility requirements. The Company reserves the right to alter these incentive programs, benefits, and p
+
+erks in whole or in part at any time without advance notice.
+
+
+
+workplace arrangement
+
+workplace arrangement: In-person collaboration and connection is important to our culture. Work is performed onsite, minimum 4 days per week.
+
