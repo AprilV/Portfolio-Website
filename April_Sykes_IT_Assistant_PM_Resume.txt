@@ -1,0 +1,72 @@
+APRIL V. SYKES
+Assistant Project Manager | IT Professional | CAPM Candidate
+Bremerton, WA | april.sykes.pm@gmail.com | (360) 555-0123 | linkedin.com/in/aprilsykes
+
+PROFESSIONAL SUMMARY
+Senior IT Infrastructure Professional with 20+ years hands-on experience in enterprise environments, transitioning to technical project management roles. CAPM candidate with formal Project Management I & II coursework. Expert in Windows systems, LAN administration, and network security with CompTIA certifications. Proven ability to bridge technical and business stakeholders while managing complex infrastructure projects and cross-functional teams.
+
+CORE COMPETENCIES
+• Project Planning • Risk Management • Stakeholder Communication • Process Improvement
+• Technical coordination • IT project support • Infrastructure knowledge • Technical communication
+• Windows Server • Network Administration • System Integration • Virtualization
+
+PROFESSIONAL EXPERIENCE
+
+Senior IT Infrastructure Specialist | Dell Technologies | 2018 - Present
+• Led cross-functional teams of up to 12 technical professionals across multiple infrastructure modernization projects
+• Managed critical infrastructure upgrades affecting 1000+ users with zero downtime, ensuring business continuity
+• Developed and maintained comprehensive documentation and standard operating procedures, improving team efficiency by 40%
+• Coordinated with stakeholders across IT, operations, and business units to ensure project alignment with organizational goals
+• Implemented process improvements reducing system resolution time by 35% and increasing customer satisfaction scores
+• Mentored junior team members and provided technical leadership during complex system migrations and upgrades
+
+IT Systems Administrator | Previous Organizations | 2004 - 2018
+• Administered enterprise Windows environments supporting 500+ users across multiple business units
+• Managed LAN/WAN infrastructure and network security protocols, maintaining 99.9% uptime for mission-critical systems
+• Provided technical leadership for system migrations and upgrades, ensuring minimal business impact
+• Collaborated with vendors and third-party service providers to deliver integrated technology solutions
+• Developed disaster recovery procedures and conducted regular testing to ensure business continuity
+• Created training materials and conducted knowledge transfer sessions for technical staff
+
+CAPSTONE PROJECTS
+
+PMP Quiz App - Full-Stack Exam Simulator | PM450 Project Management Capstone
+Technologies: Full-Stack Development, Agile Methodology, AWS Deployment
+• Developed complete full-stack architecture with timer functionality and randomized question delivery
+• Implemented dynamic scoring with real-time feedback mechanisms for enhanced user experience
+• Applied Agile sprint planning with iterative development cycles and project scope management
+• Gained hands-on experience with AWS deployment and cloud infrastructure management
+
+TimelyRx Medication Reminder App | IS320 App Development Capstone
+Technologies: React, WCAG Accessibility, Healthcare Technology
+• Built React-based application with comprehensive design architecture and caregiver tracking features
+• Implemented WCAG accessibility compliance and comprehensive testing protocols
+• Designed professional interface with scheduling logic and local data tracking management
+• Completed iterative development process from initial concept through alpha release
+
+Professional Portfolio Website | CIS151 Web Development Capstone
+Technologies: HTML, CSS, JavaScript, Responsive Design
+• Created fully responsive professional portfolio with modern design principles and optimized user experience
+• Implemented contact management system with form validation and database integration
+• Applied SEO best practices and accessibility standards for professional web presence
+• Demonstrated proficiency in full-stack web development and deployment processes
+
+EDUCATION
+
+Bachelor of Applied Science in Information Systems | Olympic College | Expected 2026
+• President's Scholar (9 terms) | Academic Excellence Recognition | Current GPA: 3.94
+• Relevant Coursework: Project Management I & II, Systems Analysis, Database Management, Network Security, Business Intelligence
+
+CERTIFICATIONS
+
+CompTIA A+ (Client & PC Pro) | CompTIA | 2024 | Credential ID: CQDDMHYQNBFE1V9F
+CompTIA Network+ | CompTIA | 2024 | Credential ID: 6-2C6-VV5625
+TestOut Linux+ | TestOut | 2024 | Credential ID: 6-9BC-VG5MQ7
+CCNA Switching, Routing and Wireless Essentials | Cisco | 2024
+CCNA Introduction to Networks | Cisco | 2024
+
+ADDITIONAL INFORMATION
+• CAPM Certification: Currently pursuing (Expected 2025)
+• Security Clearance: Eligible for background investigation
+• Professional Development: Continuous learning in Agile, Scrum, and PMP methodologies
+• Leadership Experience: 6+ years supervising technical teams and coordinating cross-functional projects
