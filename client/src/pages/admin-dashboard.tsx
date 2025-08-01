@@ -269,7 +269,7 @@ export default function AdminDashboard() {
                   <CardHeader>
                     <CardTitle>Quick Actions</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-3">
+                  <CardContent className="space-y-4">
                     <Link href="/admin/contacts">
                       <Button className="w-full justify-start" variant="outline">
                         <Mail className="mr-2 h-4 w-4" />
