@@ -27,6 +27,7 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   createContactSubmission(contact: InsertContact): Promise<ContactSubmission>;
   getContactSubmissions(): Promise<ContactSubmission[]>;
+  updateContactBlocked(id: number, blocked: boolean): Promise<boolean>;
   deleteContactSubmission(id: number): Promise<boolean>;
   
   // Authentication logs
@@ -73,6 +74,14 @@ export class DatabaseStorage implements IStorage {
 
   async getContactSubmissions(): Promise<ContactSubmission[]> {
     return await db.select().from(contactSubmissions);
+  }
+
+  async updateContactBlocked(id: number, blocked: boolean): Promise<boolean> {
+    const result = await db
+      .update(contactSubmissions)
+      .set({ blocked })
+      .where(eq(contactSubmissions.id, id));
+    return (result.rowCount || 0) > 0;
   }
 
   async deleteContactSubmission(id: number): Promise<boolean> {

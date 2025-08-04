@@ -156,6 +156,50 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Block/unblock contact submission (admin only)
+  app.patch("/api/contact/:id/block", adminAuth, async (req, res) => {
+    try {
+      const contactId = parseInt(req.params.id);
+      const { blocked } = req.body;
+      
+      if (isNaN(contactId)) {
+        return res.status(400).json({ 
+          success: false, 
+          message: "Invalid contact ID" 
+        });
+      }
+
+      if (typeof blocked !== 'boolean') {
+        return res.status(400).json({ 
+          success: false, 
+          message: "Invalid blocked status" 
+        });
+      }
+
+      const updated = await storage.updateContactBlocked(contactId, blocked);
+      
+      if (!updated) {
+        return res.status(404).json({ 
+          success: false, 
+          message: "Contact not found" 
+        });
+      }
+
+      console.log(`🚫 CONTACT ${blocked ? 'BLOCKED' : 'UNBLOCKED'}: ID ${contactId} by admin at ${new Date().toISOString()}`);
+      
+      res.json({ 
+        success: true, 
+        message: `Contact ${blocked ? 'blocked' : 'unblocked'} successfully` 
+      });
+    } catch (error) {
+      console.error("Error updating contact block status:", error);
+      res.status(500).json({ 
+        success: false, 
+        message: "Error updating contact status" 
+      });
+    }
+  });
+
   // Delete contact submission (admin only)
   app.delete("/api/contact/:id", adminAuth, async (req, res) => {
     try {

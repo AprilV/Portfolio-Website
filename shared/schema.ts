@@ -14,6 +14,7 @@ export const contactSubmissions = pgTable("contact_submissions", {
   email: text("email").notNull(),
   company: text("company"),
   message: text("message").notNull(),
+  blocked: boolean("blocked").default(false).notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 

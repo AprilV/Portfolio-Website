@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { Mail, Building, Calendar, User, Trash2, AlertTriangle } from "lucide-react";
+import { Mail, Building, Calendar, User, Trash2, AlertTriangle, Shield, ShieldOff } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -23,6 +23,7 @@ interface ContactSubmission {
   email: string;
   company?: string;
   message: string;
+  blocked?: boolean;
   createdAt: string;
 }
 
@@ -32,6 +33,38 @@ export default function AdminContacts() {
   
   const { data: contacts, isLoading } = useQuery<ContactSubmission[]>({
     queryKey: ['/api/contact'],
+  });
+
+  const blockMutation = useMutation({
+    mutationFn: async ({ contactId, blocked }: { contactId: number; blocked: boolean }) => {
+      const response = await fetch(`/api/contact/${contactId}/block`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ blocked }),
+      });
+      if (!response.ok) {
+        throw new Error('Failed to update contact status');
+      }
+      return response.json();
+    },
+    onSuccess: (_, { blocked }) => {
+      queryClient.invalidateQueries({ queryKey: ['/api/contact'] });
+      toast({
+        title: blocked ? "Contact Blocked" : "Contact Unblocked",
+        description: blocked 
+          ? "This contact has been blocked and marked as spam." 
+          : "This contact has been unblocked.",
+      });
+    },
+    onError: (error) => {
+      toast({
+        title: "Error",
+        description: "Failed to update contact status. Please try again.",
+        variant: "destructive",
+      });
+    },
   });
 
   const deleteMutation = useMutation({
@@ -126,9 +159,17 @@ export default function AdminContacts() {
                       </div>
                     </div>
                   </div>
-                  <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
-                    #{contact.id}
-                  </Badge>
+                  <div className="flex gap-2">
+                    <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
+                      #{contact.id}
+                    </Badge>
+                    {contact.blocked && (
+                      <Badge variant="destructive" className="bg-red-100 text-red-800 border-red-200">
+                        <Shield className="h-3 w-3 mr-1" />
+                        Blocked
+                      </Badge>
+                    )}
+                  </div>
                 </div>
               </CardHeader>
               <CardContent>
@@ -136,7 +177,7 @@ export default function AdminContacts() {
                   <h4 className="font-medium text-gray-900 mb-2">Message:</h4>
                   <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{contact.message}</p>
                 </div>
-                <div className="mt-4 flex gap-2">
+                <div className="mt-4 flex gap-2 flex-wrap">
                   <a
                     href={`mailto:${contact.email}?subject=Re: Your inquiry about assistant project management roles`}
                     className="inline-flex items-center px-3 py-2 text-sm font-medium text-blue-600 bg-blue-50 border border-blue-200 rounded-md hover:bg-blue-100 transition-colors"
@@ -144,6 +185,29 @@ export default function AdminContacts() {
                     <Mail className="h-4 w-4 mr-1" />
                     Reply via Email
                   </a>
+                  
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => blockMutation.mutate({ contactId: contact.id, blocked: !contact.blocked })}
+                    disabled={blockMutation.isPending}
+                    className={contact.blocked 
+                      ? "text-green-600 border-green-200 hover:bg-green-50 hover:border-green-300" 
+                      : "text-orange-600 border-orange-200 hover:bg-orange-50 hover:border-orange-300"
+                    }
+                  >
+                    {contact.blocked ? (
+                      <>
+                        <ShieldOff className="h-4 w-4 mr-1" />
+                        Unblock
+                      </>
+                    ) : (
+                      <>
+                        <Shield className="h-4 w-4 mr-1" />
+                        Block Spam
+                      </>
+                    )}
+                  </Button>
                   
                   <AlertDialog>
                     <AlertDialogTrigger asChild>

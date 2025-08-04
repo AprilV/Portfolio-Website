@@ -246,6 +246,21 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="professional-card p-8">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">Send a Message</h3>
+            
+            {/* Professional Contact Notice */}
+            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
+              <div className="flex items-start gap-3">
+                <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                <div>
+                  <h4 className="font-semibold text-blue-900 dark:text-blue-100 text-sm mb-1">Professional Inquiries Only</h4>
+                  <p className="text-blue-800 dark:text-blue-200 text-xs leading-relaxed">
+                    This contact form is exclusively for <strong>employers, recruiters, and professional opportunities</strong>. 
+                    Advertisements, sales pitches, or website development offers are not welcome and will be blocked.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
             <p id="contact-instructions" className="text-sm text-gray-600 dark:text-gray-300 mb-6 transition-colors duration-300">
               All fields marked with * are required. I typically respond within 24 hours.
             </p>
