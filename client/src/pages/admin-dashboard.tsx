@@ -20,6 +20,7 @@ import { Link } from "wouter";
 import AuthLogsDashboard from "@/components/admin/auth-logs-dashboard";
 import AnalyticsDashboard from "@/components/admin/analytics-dashboard";
 import AlertSettingsDashboard from "@/components/admin/alert-settings-dashboard";
+import { AdminMfaPanel } from "@/components/admin-mfa";
 
 interface ContactSubmission {
   id: number;
@@ -119,7 +120,7 @@ export default function AdminDashboard() {
 
         {/* Enhanced Admin Dashboard with Tabs */}
         <Tabs defaultValue="overview" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-5">
+          <TabsList className="grid w-full grid-cols-6">
             <TabsTrigger value="overview" className="flex items-center gap-2">
               <BarChart3 className="w-4 h-4" />
               Overview
@@ -135,6 +136,10 @@ export default function AdminDashboard() {
             <TabsTrigger value="alerts" className="flex items-center gap-2">
               <Bell className="w-4 h-4" />
               Notifications
+            </TabsTrigger>
+            <TabsTrigger value="security" className="flex items-center gap-2">
+              <Shield className="w-4 h-4" />
+              Security
             </TabsTrigger>
             <TabsTrigger value="contacts" className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
@@ -385,6 +390,11 @@ export default function AdminDashboard() {
           {/* Alert Settings Tab */}
           <TabsContent value="alerts">
             <AlertSettingsDashboard />
+          </TabsContent>
+
+          {/* Security Tab */}
+          <TabsContent value="security">
+            <AdminMfaPanel />
           </TabsContent>
 
           {/* Contacts Tab */}

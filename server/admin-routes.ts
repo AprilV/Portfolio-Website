@@ -1,6 +1,7 @@
 import type { Express } from "express";
 import { adminAuth, adminLimiter, authenticateAdmin, logoutAdmin, changeAdminPassword } from "./security";
 import { storage } from "./storage";
+import { mfaService } from "./mfa-service";
 
 export function registerAdminRoutes(app: Express) {
   // Admin login endpoint
@@ -222,6 +223,201 @@ export function registerAdminRoutes(app: Express) {
     } catch (error) {
       console.error("Error updating admin settings:", error);
       res.status(500).json({ error: "Failed to update settings" });
+    }
+  });
+
+  // =================================================================
+  // MFA ENDPOINTS
+  // =================================================================
+
+  // Get MFA status and settings
+  app.get("/api/admin/mfa/status", adminAuth, async (req, res) => {
+    try {
+      const mfaSettings = await mfaService.getAdminSettings();
+      const isMfaEnabled = await mfaService.isMfaEnabled();
+      
+      res.json({
+        enabled: isMfaEnabled,
+        email: mfaSettings?.email || null,
+        hasBackupCodes: mfaSettings?.hasBackupCodes || false,
+        backupCodesCount: mfaSettings?.backupCodesCount || 0,
+      });
+    } catch (error) {
+      console.error("Error fetching MFA status:", error);
+      res.status(500).json({ error: "Failed to fetch MFA status" });
+    }
+  });
+
+  // Setup MFA with email
+  app.post("/api/admin/mfa/setup", adminAuth, async (req, res) => {
+    try {
+      const { email } = req.body;
+      
+      if (!email || !email.includes('@')) {
+        return res.status(400).json({
+          success: false,
+          message: "Valid email address is required"
+        });
+      }
+
+      const result = await mfaService.setupMfa(email);
+      
+      if (result.success) {
+        res.json({
+          success: true,
+          message: "MFA setup successful",
+          backupCodes: result.backupCodes,
+        });
+      } else {
+        res.status(500).json({
+          success: false,
+          message: "Failed to setup MFA"
+        });
+      }
+    } catch (error) {
+      console.error("MFA setup error:", error);
+      res.status(500).json({
+        success: false,
+        message: "MFA setup error"
+      });
+    }
+  });
+
+  // Send verification code for password reset
+  app.post("/api/admin/password-reset/request", async (req, res) => {
+    try {
+      const ipAddress = req.ip;
+      const userAgent = req.get('User-Agent');
+      
+      const result = await mfaService.sendVerificationCode('password_reset', ipAddress, userAgent);
+      
+      if (result) {
+        res.json({
+          success: true,
+          message: "Password reset code sent to your email"
+        });
+      } else {
+        res.status(500).json({
+          success: false,
+          message: "Failed to send reset code"
+        });
+      }
+    } catch (error) {
+      console.error("Password reset request error:", error);
+      res.status(500).json({
+        success: false,
+        message: "Password reset request failed"
+      });
+    }
+  });
+
+  // Reset password with verification code
+  app.post("/api/admin/password-reset/confirm", async (req, res) => {
+    try {
+      const { code, newPassword } = req.body;
+      
+      if (!code || !newPassword) {
+        return res.status(400).json({
+          success: false,
+          message: "Verification code and new password are required"
+        });
+      }
+
+      if (newPassword.length < 8) {
+        return res.status(400).json({
+          success: false,
+          message: "Password must be at least 8 characters long"
+        });
+      }
+
+      const result = await mfaService.resetPasswordWithCode(code, newPassword);
+      
+      if (result) {
+        res.json({
+          success: true,
+          message: "Password reset successfully"
+        });
+      } else {
+        res.status(400).json({
+          success: false,
+          message: "Invalid or expired verification code"
+        });
+      }
+    } catch (error) {
+      console.error("Password reset confirm error:", error);
+      res.status(500).json({
+        success: false,
+        message: "Password reset failed"
+      });
+    }
+  });
+
+  // Verify backup code
+  app.post("/api/admin/mfa/verify-backup", async (req, res) => {
+    try {
+      const { code } = req.body;
+      
+      if (!code) {
+        return res.status(400).json({
+          success: false,
+          message: "Backup code is required"
+        });
+      }
+
+      const result = await mfaService.verifyBackupCode(code);
+      
+      if (result) {
+        res.json({
+          success: true,
+          message: "Backup code verified successfully"
+        });
+      } else {
+        res.status(400).json({
+          success: false,
+          message: "Invalid backup code"
+        });
+      }
+    } catch (error) {
+      console.error("Backup code verification error:", error);
+      res.status(500).json({
+        success: false,
+        message: "Backup code verification failed"
+      });
+    }
+  });
+
+  // Generate new backup codes
+  app.post("/api/admin/mfa/regenerate-backup-codes", adminAuth, async (req, res) => {
+    try {
+      const adminSettings = await mfaService.getAdminSettings();
+      
+      if (!adminSettings?.email) {
+        return res.status(400).json({
+          success: false,
+          message: "MFA email not configured"
+        });
+      }
+
+      const result = await mfaService.setupMfa(adminSettings.email);
+      
+      if (result.success) {
+        res.json({
+          success: true,
+          message: "New backup codes generated",
+          backupCodes: result.backupCodes,
+        });
+      } else {
+        res.status(500).json({
+          success: false,
+          message: "Failed to generate new backup codes"
+        });
+      }
+    } catch (error) {
+      console.error("Regenerate backup codes error:", error);
+      res.status(500).json({
+        success: false,
+        message: "Failed to regenerate backup codes"
+      });
     }
   });
 

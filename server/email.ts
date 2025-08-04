@@ -16,6 +16,96 @@ interface ContactEmailParams {
   message: string;
 }
 
+export async function sendMfaEmail(toEmail: string, code: string, type: 'login' | 'password_reset' | 'setup'): Promise<boolean> {
+  if (!process.env.SENDGRID_API_KEY) {
+    console.log("SendGrid not configured, skipping MFA email");
+    return false;
+  }
+
+  try {
+    const typeMessages = {
+      login: {
+        subject: 'Admin Login Verification Code - April Sykes Portfolio',
+        title: 'Admin Login Verification',
+        description: 'Use this code to complete your admin login',
+      },
+      password_reset: {
+        subject: 'Password Reset Verification Code - April Sykes Portfolio',
+        title: 'Password Reset Verification',
+        description: 'Use this code to reset your admin password',
+      },
+      setup: {
+        subject: 'MFA Setup Verification Code - April Sykes Portfolio',
+        title: 'MFA Setup Verification',
+        description: 'Use this code to complete MFA setup',
+      },
+    };
+
+    const message = typeMessages[type];
+
+    const emailHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <div style="background: linear-gradient(135deg, #2C73D2, #43D8C9); padding: 30px; border-radius: 8px; margin-bottom: 20px;">
+          <h1 style="color: white; margin: 0; font-size: 24px;">${message.title}</h1>
+          <p style="color: white; margin: 10px 0 0 0; opacity: 0.9;">April Sykes Portfolio Admin</p>
+        </div>
+        
+        <div style="background: #f9f9f9; padding: 25px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+          <h2 style="color: #1E1E1E; margin: 0 0 15px 0; font-size: 18px;">${message.description}</h2>
+          
+          <div style="background: white; padding: 20px; border-radius: 8px; border: 2px solid #2C73D2; margin: 20px 0;">
+            <h3 style="color: #2C73D2; margin: 0 0 10px 0; font-size: 16px;">Verification Code</h3>
+            <div style="font-size: 32px; font-weight: bold; color: #1E1E1E; letter-spacing: 4px; font-family: monospace;">
+              ${code}
+            </div>
+          </div>
+          
+          <p style="color: #666; font-size: 14px; margin: 15px 0 0 0;">
+            This code expires in 10 minutes
+          </p>
+        </div>
+        
+        <div style="background: #fff3cd; padding: 15px; border-radius: 8px; border-left: 4px solid #ffc107;">
+          <p style="margin: 0; color: #856404; font-size: 14px;">
+            <strong>Security Notice:</strong> If you didn't request this code, please secure your admin account immediately.
+          </p>
+        </div>
+      </div>
+    `;
+
+    const emailText = `
+${message.title}
+
+Verification Code: ${code}
+
+${message.description}
+
+This code expires in 10 minutes.
+
+If you didn't request this code, please secure your admin account immediately.
+    `;
+
+    const emailData = {
+      to: toEmail,
+      from: {
+        email: 'aprilv120@gmail.com',
+        name: 'April Sykes Portfolio'
+      },
+      replyTo: 'aprilv120@gmail.com',
+      subject: message.subject,
+      text: emailText,
+      html: emailHtml,
+    };
+
+    await mailService.send(emailData);
+    console.log(`📧 MFA EMAIL SENT: ${type} code sent to ${toEmail}`);
+    return true;
+  } catch (error) {
+    console.error(`❌ MFA EMAIL FAILED: Error sending ${type} code:`, error);
+    return false;
+  }
+}
+
 export async function sendContactNotification(contactData: ContactEmailParams): Promise<boolean> {
   if (!process.env.SENDGRID_API_KEY) {
     console.log("SendGrid not configured, skipping email notification");

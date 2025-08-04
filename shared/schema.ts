@@ -42,12 +42,29 @@ export type ContactSubmission = typeof contactSubmissions.$inferSelect;
 export const adminSettings = pgTable("admin_settings", {
   id: text("id").primaryKey().default("admin"),
   passwordHash: text("password_hash"),
+  email: text("email"), // Recovery email
+  mfaEnabled: boolean("mfa_enabled").default(false).notNull(),
+  backupCodes: text("backup_codes").array().default([]), // Array of hashed backup codes
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
+// MFA tokens table for email verification codes
+export const mfaTokens = pgTable("mfa_tokens", {
+  id: serial("id").primaryKey(),
+  token: text("token").notNull().unique(),
+  type: text("type").notNull(), // 'login', 'password_reset', 'setup'
+  expiresAt: timestamp("expires_at").notNull(),
+  used: boolean("used").default(false).notNull(),
+  ipAddress: text("ip_address"),
+  userAgent: text("user_agent"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
 export type AdminSettings = typeof adminSettings.$inferSelect;
 export type InsertAdminSettings = typeof adminSettings.$inferInsert;
+export type MfaToken = typeof mfaTokens.$inferSelect;
+export type InsertMfaToken = typeof mfaTokens.$inferInsert;
 
 // Authentication logs table for security monitoring
 export const authLogs = pgTable("auth_logs", {
