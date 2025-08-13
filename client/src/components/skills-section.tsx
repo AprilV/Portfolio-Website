@@ -1,4 +1,4 @@
-import { ClipboardCheck, Code, BarChart3, Award, Shield, Monitor, Terminal, Network, GraduationCap, Computer } from "lucide-react";
+import { ClipboardCheck, Code, BarChart3, Award, Shield, Monitor, Terminal, Network, GraduationCap, Computer, Bot } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { motion } from "framer-motion";
 
@@ -30,6 +30,7 @@ const SkillsSection = () => {
         { name: "Cisco Networking", experience: "Academic", description: "CIS 270 Cisco I (4.0) + CIS 271 Cisco II (4.0)", accent: "primary-blue" },
         { name: "Technical Support", experience: "Professional + Academic", description: "CIS 172 Technical Support Skills (4.0) + professional experience", accent: "teal-blue" },
         { name: "Server Support", experience: "Academic", description: "CIS 241 - Applications Server Support", accent: "primary-blue" },
+        { name: "Artificial Intelligence", experience: "Applied Experience", description: "AI tools integration and workflow automation", accent: "teal-blue" },
       ],
     },
   ];
