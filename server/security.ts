@@ -3,7 +3,19 @@ import helmet from 'helmet';
 import cors from 'cors';
 import type { Request, Response, NextFunction } from 'express';
 import crypto from 'crypto';
-// Database removed - no admin functionality needed for static portfolio
+
+// Simple session store (in-memory, for single-instance deployment)
+const sessions = new Map<string, { createdAt: number }>();
+
+// Clean up old sessions every hour
+setInterval(() => {
+  const oneHourAgo = Date.now() - 3600000;
+  for (const [token, data] of sessions.entries()) {
+    if (data.createdAt < oneHourAgo) {
+      sessions.delete(token);
+    }
+  }
+}, 3600000);
 
 // Rate limiting for contact form submissions
 export const contactFormLimiter = rateLimit({
@@ -164,23 +176,40 @@ export const adminAuth = (req: Request, res: Response, next: NextFunction) => {
   next();
 };
 
-// Admin functionality removed - no database needed for static portfolio
-// These are stub functions to prevent import errors
-export const initializeAdminPassword = async (): Promise<void> => {
-  // No-op - admin features disabled
-  console.log("ℹ️  Admin features disabled - no database required");
-};
-
+// Admin authentication - simple password check with session management
 export const authenticateAdmin = async (password: string): Promise<string | null> => {
-  // Always return null - admin disabled
+  const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+  
+  if (password === adminPassword) {
+    const sessionToken = crypto.randomBytes(32).toString('hex');
+    adminSessions.add(sessionToken);
+    
+    // Auto-expire session after 4 hours
+    setTimeout(() => {
+      adminSessions.delete(sessionToken);
+    }, 4 * 60 * 60 * 1000);
+    
+    return sessionToken;
+  }
+  
   return null;
 };
 
+// Logout admin session
 export const logoutAdmin = (sessionToken: string): boolean => {
-  return false;
+  return adminSessions.delete(sessionToken);
 };
 
+// Change admin password (updates environment variable - requires restart)
 export const changeAdminPassword = async (currentPassword: string, newPassword: string): Promise<boolean> => {
+  const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+  
+  if (currentPassword === adminPassword) {
+    process.env.ADMIN_PASSWORD = newPassword;
+    console.log('⚠️  Admin password changed - update .env file and restart server for persistence');
+    return true;
+  }
+  
   return false;
 };
 
@@ -328,4 +357,43 @@ export const checkIPWhitelist = (allowedIPs: string[] = []) => {
 
     next();
   };
+};
+
+// Admin authentication middleware
+export const requireAdmin = (req: Request, res: Response, next: NextFunction) => {
+  const authHeader = req.headers.authorization;
+  
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return res.status(401).json({ error: 'Unauthorized - No token provided' });
+  }
+  
+  const token = authHeader.substring(7);
+  const session = sessions.get(token);
+  
+  if (!session) {
+    return res.status(401).json({ error: 'Unauthorized - Invalid or expired token' });
+  }
+  
+  // Check if session is still valid (1 hour)
+  if (Date.now() - session.createdAt > 3600000) {
+    sessions.delete(token);
+    return res.status(401).json({ error: 'Unauthorized - Session expired' });
+  }
+  
+  next();
+};
+
+// Admin login function
+export const adminLogin = (password: string): string | null => {
+  const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+  
+  if (password === adminPassword) {
+    const token = crypto.randomBytes(32).toString('hex');
+    sessions.set(token, { createdAt: Date.now() });
+    console.log('✅ Admin login successful');
+    return token;
+  }
+  
+  console.warn('❌ Failed admin login attempt');
+  return null;
 };

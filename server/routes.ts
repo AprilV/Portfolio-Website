@@ -7,6 +7,8 @@ import {
   sanitizeString,
   validateContactData
 } from "./security";
+import { storage } from "./memory-storage";
+import { registerAdminRoutes } from "./admin-routes";
 
 // Contact form schema
 const contactSchema = z.object({
@@ -17,6 +19,9 @@ const contactSchema = z.object({
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  
+  // Register admin routes
+  registerAdminRoutes(app);
   
   // Contact form submission endpoint with enhanced security
   app.post("/api/contact", contactFormLimiter, async (req, res) => {
@@ -67,6 +72,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       };
 
       const contactData = contactSchema.parse(sanitizedFields);
+      
+      // Store contact submission
+      await storage.createContactSubmission({
+        name: contactData.name,
+        email: contactData.email,
+        company: contactData.company,
+        message: contactData.message
+      });
       
       // Send email notification
       try {

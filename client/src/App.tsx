@@ -5,12 +5,63 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/contexts/theme-context";
 import Home from "@/pages/home.tsx";
+import ResumeHub from "@/pages/resume-hub";
+import AssistantPMResume from "@/pages/assistant-pm-resume";
+import ITAssistantPMResume from "@/pages/it-assistant-pm-resume";
+import PMInternshipResume from "@/pages/pm-internship-resume";
+import AdminLogin from "@/pages/admin-login";
+import AdminContacts from "@/pages/admin-contacts";
+import AdminDashboard from "@/pages/admin-dashboard";
+import AdminSettings from "@/pages/admin-settings";
+import AdminSecurityTest from "@/pages/admin-security-test";
+import AdminProtectedRoute from "@/components/AdminProtectedRoute";
 import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/admin/resume">
+        <AdminProtectedRoute>
+          <ResumeHub />
+        </AdminProtectedRoute>
+      </Route>
+      <Route path="/admin/resume/assistant-pm">
+        <AdminProtectedRoute>
+          <AssistantPMResume />
+        </AdminProtectedRoute>
+      </Route>
+      <Route path="/admin/resume/it-assistant-pm">
+        <AdminProtectedRoute>
+          <ITAssistantPMResume />
+        </AdminProtectedRoute>
+      </Route>
+      <Route path="/admin/resume/pm-internship">
+        <AdminProtectedRoute>
+          <PMInternshipResume />
+        </AdminProtectedRoute>
+      </Route>
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin">
+        <AdminProtectedRoute>
+          <AdminDashboard />
+        </AdminProtectedRoute>
+      </Route>
+      <Route path="/admin/contacts">
+        <AdminProtectedRoute>
+          <AdminContacts />
+        </AdminProtectedRoute>
+      </Route>
+      <Route path="/admin/settings">
+        <AdminProtectedRoute>
+          <AdminSettings />
+        </AdminProtectedRoute>
+      </Route>
+      <Route path="/admin/security">
+        <AdminProtectedRoute>
+          <AdminSecurityTest />
+        </AdminProtectedRoute>
+      </Route>
       <Route component={NotFound} />
     </Switch>
   );

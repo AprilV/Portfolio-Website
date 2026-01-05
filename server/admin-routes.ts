@@ -1,6 +1,6 @@
 import type { Express } from "express";
 import { adminAuth, adminLimiter, authenticateAdmin, logoutAdmin, changeAdminPassword } from "./security";
-import { storage } from "./storage";
+import { storage } from "./memory-storage";
 import { mfaService } from "./mfa-service";
 
 export function registerAdminRoutes(app: Express) {
