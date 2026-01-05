@@ -88,7 +88,7 @@ export const corsOptions = {
     if (!origin) return callback(null, true);
     
     const allowedOrigins = process.env.NODE_ENV === 'production' 
-      ? ['https://aprilsykes.com', 'https://www.aprilsykes.com']
+      ? ['https://aprilsykes.dev', 'https://www.aprilsykes.dev']
       : ['http://localhost:3000', 'http://localhost:5000', /\.replit\.dev$/, /\.repl\.co$/];
     
     // Check if origin is allowed

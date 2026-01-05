@@ -168,7 +168,7 @@ export class NotificationService {
             <!-- Footer -->
             <div style="background-color: #f8fafc; padding: 24px; text-align: center; border-top: 1px solid #e2e8f0;">
               <p style="margin: 0 0 8px 0; font-size: 14px; color: #64748b;">
-                📧 april_sykes@proton.me | 🌐 aprilsykes.com
+                📧 april_sykes@proton.me | 🌐 aprilsykes.dev
               </p>
               <p style="margin: 0; font-size: 12px; color: #94a3b8;">
                 This is an automated confirmation. I'll respond personally within 24 hours.

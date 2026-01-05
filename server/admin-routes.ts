@@ -441,7 +441,7 @@ export function registerAdminRoutes(app: Express) {
         },
         cors: {
           enabled: true,
-          origin: process.env.NODE_ENV === 'development' ? 'localhost' : 'aprilsykes.com'
+          origin: process.env.NODE_ENV === 'development' ? 'localhost' : 'aprilsykes.dev'
         },
         dependencyScanning: {
           enabled: true,
