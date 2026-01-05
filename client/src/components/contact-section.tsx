@@ -76,13 +76,31 @@ const ContactSection = () => {
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      // Include CAPTCHA verification in the request
-      const requestData = {
-        ...data,
-        captchaAnswer: parseInt(data.captchaAnswer),
-        captchaExpected: captcha.answer
-      };
-      const response = await apiRequest("POST", "/api/contact", requestData);
+      // Validate CAPTCHA client-side
+      const userAnswer = parseInt(data.captchaAnswer);
+      if (isNaN(userAnswer) || userAnswer !== captcha.answer) {
+        throw new Error("Incorrect CAPTCHA answer");
+      }
+
+      // Submit to Formspree
+      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          company: data.company,
+          message: data.message,
+          _subject: `New contact from ${data.name}`,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
       return response.json();
     },
     onSuccess: (data) => {
