@@ -76,14 +76,14 @@ const ContactSection = () => {
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      // Validate CAPTCHA client-side
+      // Parse and validate CAPTCHA answer
       const userAnswer = parseInt(data.captchaAnswer);
-      if (isNaN(userAnswer) || userAnswer !== captcha.answer) {
-        throw new Error("Incorrect CAPTCHA answer");
+      if (isNaN(userAnswer)) {
+        throw new Error("Please enter a valid number for the CAPTCHA");
       }
 
-      // Submit to Formspree
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      // Submit to backend API with CAPTCHA validation
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -93,15 +93,18 @@ const ContactSection = () => {
           email: data.email,
           company: data.company,
           message: data.message,
-          _subject: `New contact from ${data.name}`,
+          captchaAnswer: userAnswer,
+          captchaExpected: captcha.answer
         }),
       });
 
+      const result = await response.json();
+      
       if (!response.ok) {
-        throw new Error("Failed to send message");
+        throw new Error(result.message || "Failed to send message");
       }
 
-      return response.json();
+      return result;
     },
     onSuccess: (data) => {
       toast({
@@ -296,7 +299,7 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
                     placeholder="Your name"
-                    className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20 focus:border-primary-blue"
+                    className="w-full text-gray-900 dark:text-white transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20 focus:border-primary-blue"
                     aria-describedby={!formData.name ? "name-error" : undefined}
                     aria-invalid={!formData.name ? "true" : "false"}
                   />
@@ -318,7 +321,7 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="your.email@company.com"
-                    className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
+                    className="w-full text-gray-900 dark:text-white transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
                     aria-describedby={(!formData.email || !isValidEmail(formData.email)) ? "email-error" : undefined}
                   />
                   {!formData.email && (
@@ -345,7 +348,7 @@ const ContactSection = () => {
                   value={formData.company}
                   onChange={(e) => handleInputChange("company", e.target.value)}
                   placeholder="Your company name"
-                  className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
+                  className="w-full text-gray-900 dark:text-white transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
                 />
               </div>
               
@@ -361,7 +364,7 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
                   placeholder="Tell me about the opportunity or project you'd like to discuss..."
-                  className="w-full resize-none transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
+                  className="w-full resize-none text-gray-900 dark:text-white transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
                   aria-describedby={!formData.message ? "message-error" : undefined}
                 />
                 {!formData.message && (
@@ -388,7 +391,7 @@ const ContactSection = () => {
                     value={formData.captchaAnswer}
                     onChange={(e) => handleInputChange("captchaAnswer", e.target.value)}
                     placeholder="Answer"
-                    className="w-24 text-center"
+                    className="w-24 text-center text-gray-900 dark:text-white"
                     aria-describedby="captcha-help"
                   />
                   <Button
