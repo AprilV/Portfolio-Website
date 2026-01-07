@@ -1,6 +1,6 @@
 import { ArrowRight, Download, CheckCircle, GraduationCap, Briefcase, Users, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profilePhoto from "@assets/april_sykes_profile.jpg";
+import profilePhoto from "/attached_assets/april_sykes_profile.jpg";
 
 const HeroSection = () => {
   const scrollToContact = () => {
