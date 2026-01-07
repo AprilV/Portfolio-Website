@@ -299,7 +299,7 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
                     placeholder="Your name"
-                    className="w-full text-gray-900 dark:text-white transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20 focus:border-primary-blue"
+                    className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20 focus:border-primary-blue"
                     aria-describedby={!formData.name ? "name-error" : undefined}
                     aria-invalid={!formData.name ? "true" : "false"}
                   />
@@ -321,7 +321,7 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="your.email@company.com"
-                    className="w-full text-gray-900 dark:text-white transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
+                    className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
                     aria-describedby={(!formData.email || !isValidEmail(formData.email)) ? "email-error" : undefined}
                   />
                   {!formData.email && (
@@ -348,7 +348,7 @@ const ContactSection = () => {
                   value={formData.company}
                   onChange={(e) => handleInputChange("company", e.target.value)}
                   placeholder="Your company name"
-                  className="w-full text-gray-900 dark:text-white transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
+                  className="w-full transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
                 />
               </div>
               
@@ -364,7 +364,7 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
                   placeholder="Tell me about the opportunity or project you'd like to discuss..."
-                  className="w-full resize-none text-gray-900 dark:text-white transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
+                  className="w-full resize-none transition-all duration-200 focus:ring-2 focus:ring-primary-blue/20"
                   aria-describedby={!formData.message ? "message-error" : undefined}
                 />
                 {!formData.message && (
@@ -391,7 +391,7 @@ const ContactSection = () => {
                     value={formData.captchaAnswer}
                     onChange={(e) => handleInputChange("captchaAnswer", e.target.value)}
                     placeholder="Answer"
-                    className="w-24 text-center text-gray-900 dark:text-white"
+                    className="w-24 text-center"
                     aria-describedby="captcha-help"
                   />
                   <Button
